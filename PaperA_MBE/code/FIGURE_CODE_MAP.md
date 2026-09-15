@@ -12,6 +12,8 @@ Figures are delivered as PDF (PNGs are also produced alongside); tables are deli
 | Figure 2 (coding-selection scan & score construction, 5 panels) | `Figure2_BUSTED_pvalue_distribution.pdf` | `paperA_fig2_v2.py` |
 | Figure 3 (classification landscape & robustness, 6 panels) | `Figure3_GDS_RDS_scatter.pdf` | `paperA_fig3_v2.py` |
 | Figure 4 (non-circular validation, 5 panels) | `Figure4_LOO_enrichment_matrix.pdf` | `paperA_fig4_v2.py` |
+| Figure 5 (functional content of the classes, 6 panels) | `Figure5_class_functional_content.pdf` | `paperA_fig5.py` |
+| Figure 6 (independent evidence & cross-study context, 6 panels) | `Figure6_independent_evidence.pdf` | `paperA_fig6.py` |
 
 ## Supplementary figures (06_supplementary_figures/, PDF)
 
