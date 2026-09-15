@@ -1,0 +1,89 @@
+{
+  "meme": {
+    "genes_tested": 8,
+    "total_sites_tested": 3719,
+    "genes_with_episodic_selection": 7,
+    "total_sig_sites_p05": 40,
+    "total_sig_sites_p01": 8,
+    "rate_episodic_selection_pct": 1.08,
+    "gene_results": [
+      {
+        "gene_id": "ENSG00000072134",
+        "gene_symbol": "CEP350",
+        "n_sequences": 9,
+        "n_sites": 482,
+        "sig_p05": 7,
+        "sig_p01": 0,
+        "has_episodic_selection": true
+      },
+      {
+        "gene_id": "ENSG00000109046",
+        "gene_symbol": "SH2D3C",
+        "n_sequences": 9,
+        "n_sites": 343,
+        "sig_p05": 4,
+        "sig_p01": 2,
+        "has_episodic_selection": true
+      },
+      {
+        "gene_id": "ENSG00000111424",
+        "gene_symbol": "SH3TC2",
+        "n_sequences": 10,
+        "n_sites": 363,
+        "sig_p05": 6,
+        "sig_p01": 1,
+        "has_episodic_selection": true
+      },
+      {
+        "gene_id": "ENSG00000134897",
+        "gene_symbol": "SDK1",
+        "n_sequences": 10,
+        "n_sites": 418,
+        "sig_p05": 4,
+        "sig_p01": 2,
+        "has_episodic_selection": true
+      },
+      {
+        "gene_id": "ENSG00000162065",
+        "gene_symbol": "RBM20",
+        "n_sequences": 8,
+        "n_sites": 525,
+        "sig_p05": 9,
+        "sig_p01": 0,
+        "has_episodic_selection": true
+      },
+      {
+        "gene_id": "ENSG00000177119",
+        "gene_symbol": "ZNF678",
+        "n_sequences": 9,
+        "n_sites": 803,
+        "sig_p05": 0,
+        "sig_p01": 0,
+        "has_episodic_selection": false
+      },
+      {
+        "gene_id": "ENSG00000185591",
+        "gene_symbol": "C4orf48",
+        "n_sequences": 10,
+        "n_sites": 530,
+        "sig_p05": 9,
+        "sig_p01": 2,
+        "has_episodic_selection": true
+      },
+      {
+        "gene_id": "ENSG00000205937",
+        "gene_symbol": "STIP1",
+        "n_sequences": 9,
+        "n_sites": 255,
+        "sig_p05": 1,
+        "sig_p01": 1,
+        "has_episodic_selection": true
+      }
+    ]
+  },
+  "gard": {
+    "genes_attempted": 50,
+    "genes_successful": 0,
+    "failure_reason": "Numerical convergence issues in likelihood optimization during breakpoint search"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "n_stages": 31,
+  "n_regions": 26,
+  "n_genes_matched": 4936,
+  "n_region_stage_combos": 79,
+  "gd_dev_tau_median": 0.5929388744729835,
+  "rd_dev_tau_median": 0.5979173906309718,
+  "dev_tau_rd_vs_gd_p": 0.5440269649539397,
+  "prenatal_postnatal_rd_vs_gd_p": 0.6424345658745084,
+  "gd_fdr_sig_stages": [],
+  "rd_fdr_sig_stages": []
+}

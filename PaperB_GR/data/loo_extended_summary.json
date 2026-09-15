@@ -1,0 +1,453 @@
+{
+  "variants": [
+    "v7",
+    "loo_brain",
+    "loo_tau",
+    "loo_campra",
+    "loo_double"
+  ],
+  "classification_counts": {
+    "v7": {
+      "gd": 1214,
+      "rd": 293,
+      "gd_relaxed": 52,
+      "dual": 11,
+      "neutral": 3404
+    },
+    "loo_brain": {
+      "gd": 1099,
+      "rd": 613,
+      "gd_relaxed": 41,
+      "dual": 24,
+      "neutral": 3197
+    },
+    "loo_tau": {
+      "gd": 1339,
+      "rd": 148,
+      "gd_relaxed": 66,
+      "dual": 9,
+      "neutral": 3412
+    },
+    "loo_campra": {
+      "gd": 1020,
+      "rd": 800,
+      "gd_relaxed": 35,
+      "dual": 34,
+      "neutral": 3085
+    },
+    "loo_double": {
+      "gd": 1207,
+      "rd": 403,
+      "gd_relaxed": 49,
+      "dual": 21,
+      "neutral": 3294
+    }
+  },
+  "double_loo_gd_check": {
+    "gd_v7_n": 1214,
+    "gd_double_n": 1207,
+    "identical": false,
+    "lost_vs_v7": 86,
+    "gained_vs_v7": 79
+  },
+  "single_cell": {
+    "v7": {
+      "neuronal9_vs_non145": {
+        "neuronal_median": 3.22379390504092,
+        "nonneuronal_median": 1.098139845936641,
+        "mwu_p_greater": 1.906033325881351e-06,
+        "n_neuronal_rd_fdr_sig": 9
+      },
+      "brain3_vs_non145": {
+        "brain_median": 3.495016083555061,
+        "nonneuronal_median": 1.098139845936641,
+        "mwu_p_greater": 0.0015752591911485081,
+        "brain_rd_fdr_sig": 3
+      },
+      "retinal6_vs_non145": {
+        "retinal_median": 2.1779437092341016,
+        "nonneuronal_median": 1.098139845936641,
+        "mwu_p_greater": 0.0001343802988711332,
+        "retinal_rd_fdr_sig": 6
+      },
+      "brain3_vs_retinal6": {
+        "mwu_p_greater": 0.13095238095238093
+      },
+      "n_types_rd_fdr_sig": 50,
+      "top5_by_rd_OR": [
+        [
+          "retinal ganglion cells",
+          3.84
+        ],
+        [
+          "brain inhibitory neurons",
+          3.65
+        ],
+        [
+          "brain excitatory neurons",
+          3.5
+        ],
+        [
+          "retinal amacrine cells",
+          3.35
+        ],
+        [
+          "other brain neurons",
+          3.22
+        ]
+      ],
+      "neuronal_class_rank_of_15": 1,
+      "neuronal_class_rd_OR": 3.533979816574077
+    },
+    "loo_brain": {
+      "neuronal9_vs_non145": {
+        "neuronal_median": 2.7770089041203074,
+        "nonneuronal_median": 1.144599928238249,
+        "mwu_p_greater": 2.2933080022769545e-06,
+        "n_neuronal_rd_fdr_sig": 9
+      },
+      "brain3_vs_non145": {
+        "brain_median": 3.1536989032901297,
+        "nonneuronal_median": 1.144599928238249,
+        "mwu_p_greater": 1.8889451374774271e-06,
+        "brain_rd_fdr_sig": 3
+      },
+      "retinal6_vs_non145": {
+        "retinal_median": 2.1687922469061913,
+        "nonneuronal_median": 1.144599928238249,
+        "mwu_p_greater": 1.2492577580706307e-05,
+        "retinal_rd_fdr_sig": 6
+      },
+      "brain3_vs_retinal6": {
+        "mwu_p_greater": 0.13095238095238093
+      },
+      "n_types_rd_fdr_sig": 62,
+      "top5_by_rd_OR": [
+        [
+          "retinal ganglion cells",
+          3.33
+        ],
+        [
+          "brain inhibitory neurons",
+          3.28
+        ],
+        [
+          "brain excitatory neurons",
+          3.15
+        ],
+        [
+          "retinal amacrine cells",
+          2.86
+        ],
+        [
+          "other brain neurons",
+          2.78
+        ]
+      ],
+      "neuronal_class_rank_of_15": 1,
+      "neuronal_class_rd_OR": 3.010613716334768
+    },
+    "loo_tau": {
+      "neuronal9_vs_non145": {
+        "neuronal_median": 5.346420249608989,
+        "nonneuronal_median": 2.2883114655689907,
+        "mwu_p_greater": 2.6307228389414142e-05,
+        "n_neuronal_rd_fdr_sig": 9
+      },
+      "brain3_vs_non145": {
+        "brain_median": 6.345249294449671,
+        "nonneuronal_median": 2.2883114655689907,
+        "mwu_p_greater": 1.8889451374774271e-06,
+        "brain_rd_fdr_sig": 3
+      },
+      "retinal6_vs_non145": {
+        "retinal_median": 3.372046901939412,
+        "nonneuronal_median": 2.2883114655689907,
+        "mwu_p_greater": 0.0008894637728500229,
+        "retinal_rd_fdr_sig": 6
+      },
+      "brain3_vs_retinal6": {
+        "mwu_p_greater": 0.047619047619047616
+      },
+      "n_types_rd_fdr_sig": 139,
+      "top5_by_rd_OR": [
+        [
+          "brain inhibitory neurons",
+          7.06
+        ],
+        [
+          "brain excitatory neurons",
+          6.35
+        ],
+        [
+          "retinal amacrine cells",
+          5.88
+        ],
+        [
+          "retinal ganglion cells",
+          5.44
+        ],
+        [
+          "other brain neurons",
+          5.35
+        ]
+      ],
+      "neuronal_class_rank_of_15": 1,
+      "neuronal_class_rd_OR": 6.442459893048128
+    },
+    "loo_campra": {
+      "neuronal9_vs_non145": {
+        "neuronal_median": 2.374988765426843,
+        "nonneuronal_median": 1.0452168377276367,
+        "mwu_p_greater": 4.571338092639687e-06,
+        "n_neuronal_rd_fdr_sig": 9
+      },
+      "brain3_vs_non145": {
+        "brain_median": 2.7077844311377244,
+        "nonneuronal_median": 1.0452168377276367,
+        "mwu_p_greater": 1.8889451374774271e-06,
+        "brain_rd_fdr_sig": 3
+      },
+      "retinal6_vs_non145": {
+        "retinal_median": 1.8957474949207316,
+        "nonneuronal_median": 1.0452168377276367,
+        "mwu_p_greater": 5.5331526014850136e-05,
+        "retinal_rd_fdr_sig": 6
+      },
+      "brain3_vs_retinal6": {
+        "mwu_p_greater": 0.08333333333333333
+      },
+      "n_types_rd_fdr_sig": 51,
+      "top5_by_rd_OR": [
+        [
+          "brain inhibitory neurons",
+          2.85
+        ],
+        [
+          "retinal ganglion cells",
+          2.72
+        ],
+        [
+          "brain excitatory neurons",
+          2.71
+        ],
+        [
+          "retinal amacrine cells",
+          2.59
+        ],
+        [
+          "other brain neurons",
+          2.37
+        ]
+      ],
+      "neuronal_class_rank_of_15": 1,
+      "neuronal_class_rd_OR": 2.5062713797035348
+    },
+    "loo_double": {
+      "neuronal9_vs_non145": {
+        "neuronal_median": 4.863439894636016,
+        "nonneuronal_median": 2.156298904538341,
+        "mwu_p_greater": 4.571260737514902e-06,
+        "n_neuronal_rd_fdr_sig": 9
+      },
+      "brain3_vs_non145": {
+        "brain_median": 5.658137435736431,
+        "nonneuronal_median": 2.156298904538341,
+        "mwu_p_greater": 0.0015752591911485081,
+        "brain_rd_fdr_sig": 3
+      },
+      "retinal6_vs_non145": {
+        "retinal_median": 3.9714145019311755,
+        "nonneuronal_median": 2.156298904538341,
+        "mwu_p_greater": 0.00031883610734846553,
+        "retinal_rd_fdr_sig": 6
+      },
+      "brain3_vs_retinal6": {
+        "mwu_p_greater": 0.047619047619047616
+      },
+      "n_types_rd_fdr_sig": 147,
+      "top5_by_rd_OR": [
+        [
+          "brain inhibitory neurons",
+          5.68
+        ],
+        [
+          "brain excitatory neurons",
+          5.66
+        ],
+        [
+          "retinal ganglion cells",
+          5.3
+        ],
+        [
+          "retinal amacrine cells",
+          5.19
+        ],
+        [
+          "other brain neurons",
+          4.86
+        ]
+      ],
+      "neuronal_class_rank_of_15": 1,
+      "neuronal_class_rd_OR": 5.69134011902052
+    }
+  },
+  "layer1_bulk": {
+    "n_tissues": 30,
+    "brain_tissues": [
+      "Brain",
+      "Nerve"
+    ],
+    "permutation_n": 100000,
+    "original_layer1": {
+      "gd_fdr_sig_n": 30,
+      "rd_fdr_sig_n": 0,
+      "gd_OR_range": [
+        1.3217752357906893,
+        1.562198649951784
+      ],
+      "rd_OR_range": [
+        0.31455499519376373,
+        0.7108688212927756
+      ],
+      "brain_vs_nonbrain_gd": {
+        "obs_diff": 0.05555891724392459,
+        "brain_mean": 1.4964772383950766,
+        "nonbrain_mean": 1.440918321151152,
+        "perm_p_one_sided": 0.12743872561274389,
+        "n_perm": 100000
+      },
+      "brain_vs_nonbrain_rd": {
+        "obs_diff": 0.20823652423663347,
+        "brain_mean": 0.6685775202985562,
+        "nonbrain_mean": 0.46034099606192275,
+        "perm_p_one_sided": 0.0022099779002209977,
+        "n_perm": 100000
+      }
+    },
+    "loo_tau": {
+      "gd_n": 1339,
+      "rd_n": 148,
+      "gd_fdr_sig_n": 30,
+      "gd_fdr_sig_tissues": [
+        "Blood",
+        "Brain",
+        "Adipose Tissue",
+        "Muscle",
+        "Blood Vessel",
+        "Heart",
+        "Thyroid",
+        "Kidney",
+        "Uterus",
+        "Vagina",
+        "Breast",
+        "Skin",
+        "Salivary Gland",
+        "Adrenal Gland",
+        "Lung",
+        "Spleen",
+        "Pancreas",
+        "Esophagus",
+        "Stomach",
+        "Colon",
+        "Small Intestine",
+        "Prostate",
+        "Testis",
+        "Nerve",
+        "Liver",
+        "Pituitary",
+        "Ovary",
+        "Bladder",
+        "Cervix Uteri",
+        "Fallopian Tube"
+      ],
+      "rd_fdr_sig_n": 0,
+      "rd_fdr_sig_enriched": [],
+      "rd_fdr_sig_depleted": [],
+      "gd_OR_range": [
+        1.188877381708037,
+        1.4123080582498613
+      ],
+      "rd_OR_range": [
+        0.4385364569623585,
+        0.956178284286941
+      ],
+      "brain_vs_nonbrain_gd": {
+        "obs_diff": 0.008347927521558107,
+        "brain_mean": 1.2884671122694469,
+        "nonbrain_mean": 1.2801191847478888,
+        "perm_p_one_sided": 0.38922610773892263,
+        "n_perm": 100000
+      },
+      "brain_vs_nonbrain_rd": {
+        "obs_diff": 0.09322109810901924,
+        "brain_mean": 0.7958639498704292,
+        "nonbrain_mean": 0.70264285176141,
+        "perm_p_one_sided": 0.15566844331556684,
+        "n_perm": 100000
+      }
+    },
+    "loo_campra": {
+      "gd_n": 1020,
+      "rd_n": 800,
+      "gd_fdr_sig_n": 30,
+      "gd_fdr_sig_tissues": [
+        "Blood",
+        "Brain",
+        "Adipose Tissue",
+        "Muscle",
+        "Blood Vessel",
+        "Heart",
+        "Thyroid",
+        "Kidney",
+        "Uterus",
+        "Vagina",
+        "Breast",
+        "Skin",
+        "Salivary Gland",
+        "Adrenal Gland",
+        "Lung",
+        "Spleen",
+        "Pancreas",
+        "Esophagus",
+        "Stomach",
+        "Colon",
+        "Small Intestine",
+        "Prostate",
+        "Testis",
+        "Nerve",
+        "Liver",
+        "Pituitary",
+        "Ovary",
+        "Bladder",
+        "Cervix Uteri",
+        "Fallopian Tube"
+      ],
+      "rd_fdr_sig_n": 0,
+      "rd_fdr_sig_enriched": [],
+      "rd_fdr_sig_depleted": [],
+      "gd_OR_range": [
+        1.3645660040415433,
+        1.674239194429218
+      ],
+      "rd_OR_range": [
+        0.47447740760149365,
+        0.738870799249806
+      ],
+      "brain_vs_nonbrain_gd": {
+        "obs_diff": -0.025384723648838925,
+        "brain_mean": 1.4979208009175426,
+        "nonbrain_mean": 1.5233055245663816,
+        "perm_p_one_sided": 0.6904130958690413,
+        "n_perm": 100000
+      },
+      "brain_vs_nonbrain_rd": {
+        "obs_diff": 0.15844112450518633,
+        "brain_mean": 0.7191068805344618,
+        "nonbrain_mean": 0.5606657560292755,
+        "perm_p_one_sided": 0.0023999760002399975,
+        "n_perm": 100000
+      }
+    }
+  }
+}

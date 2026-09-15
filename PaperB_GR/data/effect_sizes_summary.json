@@ -1,0 +1,123 @@
+{
+  "method_note": "95% CI: Fisher conditional MLE via scipy.stats.contingency.odds_ratio(kind='conditional'); contingency tables reconstructed from published counts, OR validated against source JSONs",
+  "odds_ratios": {
+    "hCONDEL_RD_v7": {
+      "OR": 2.943271846914696,
+      "ci95_low": 1.8450729803935788,
+      "ci95_high": 4.5460059572249625,
+      "table": [
+        [
+          27,
+          266
+        ],
+        [
+          156,
+          4525
+        ]
+      ],
+      "method": "Fisher conditional MLE (scipy>=1.10)"
+    },
+    "hCONDEL_GD_v7": {
+      "OR": 0.525558113641672,
+      "ci95_low": 0.33387292150492937,
+      "ci95_high": 0.7992715971426764,
+      "table": [
+        [
+          27,
+          1187
+        ],
+        [
+          156,
+          3604
+        ]
+      ],
+      "method": "Fisher conditional MLE (scipy>=1.10)"
+    },
+    "caMPRA_activeHAR_RD_loo": {
+      "OR": 1.8421667891754419,
+      "ci95_low": 1.0865488551538334,
+      "ci95_high": 3.022482866731332,
+      "table": [
+        [
+          23,
+          777
+        ],
+        [
+          66,
+          4108
+        ]
+      ],
+      "method": "Fisher conditional MLE (scipy>=1.10)"
+    },
+    "caMPRA_activeHAR_GD_loo": {
+      "OR": 0.8472680825630617,
+      "ci95_low": 0.45816602969618575,
+      "ci95_high": 1.477611484685139,
+      "table": [
+        [
+          16,
+          1004
+        ],
+        [
+          73,
+          3881
+        ]
+      ],
+      "method": "Fisher conditional MLE (scipy>=1.10)"
+    },
+    "wholebody_neuronal_class_RD_loo_brain": {
+      "OR": 3.00980794444599,
+      "ci95_low": 2.5160087843631276,
+      "ci95_high": 3.598868124345063,
+      "table": [
+        [
+          274,
+          339
+        ],
+        [
+          923,
+          3438
+        ]
+      ],
+      "method": "Fisher conditional MLE (scipy>=1.10)"
+    },
+    "brain_singlenuclei_neuronal_class_RD_loo_brain": {
+      "OR": 3.250890917176869,
+      "ci95_low": 2.7191864635591436,
+      "ci95_high": 3.8856555963498622,
+      "table": [
+        [
+          286,
+          327
+        ],
+        [
+          922,
+          3428
+        ]
+      ],
+      "method": "Fisher conditional MLE (scipy>=1.10)"
+    }
+  },
+  "cliffs_delta_neuronal_vs_non": {
+    "v7": {
+      "cliffs_delta": 0.9203065134099617,
+      "mwu_two_sided_p": 3.812066651762702e-06
+    },
+    "loo_brain": {
+      "cliffs_delta": 0.9126436781609195,
+      "mwu_two_sided_p": 4.586616004553909e-06
+    },
+    "loo_tau": {
+      "cliffs_delta": 0.8053639846743295,
+      "mwu_two_sided_p": 5.2614456778828284e-05
+    },
+    "loo_campra": {
+      "cliffs_delta": 0.8835249042145594,
+      "mwu_two_sided_p": 9.142676185279374e-06
+    },
+    "loo_double": {
+      "cliffs_delta": 0.8835249042145594,
+      "mwu_two_sided_p": 9.142521475029804e-06
+    }
+  }
+}

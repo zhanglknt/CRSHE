@@ -1,0 +1,169 @@
+{
+  "loo_matrix": [
+    {
+      "variant": "full",
+      "agreement": 1.0,
+      "gene-driven": 1214,
+      "gene-driven (relaxed)": 52,
+      "regulation-driven": 293,
+      "dual-driven": 11,
+      "neutral": 3404,
+      "HAR_OR": 4.145760687843325,
+      "HAR_p": 3.348880227113217e-20,
+      "HAR_CI": "[3.15, 5.46]",
+      "HAR_k_over_n": "81/293",
+      "hCONDEL_OR": 2.9442596876807405,
+      "hCONDEL_p": 6.654409160391586e-06,
+      "hCONDEL_CI": "[1.92, 4.51]",
+      "hCONDEL_k_over_n": "27/293"
+    },
+    {
+      "variant": "LOO-caMPRA",
+      "agreement": 0.8361479694410937,
+      "gene-driven": 1020,
+      "gene-driven (relaxed)": 35,
+      "regulation-driven": 800,
+      "dual-driven": 34,
+      "neutral": 3085,
+      "HAR_OR": 1.6141304347826086,
+      "HAR_p": 4.741303037106418e-05,
+      "HAR_CI": "[1.28, 2.03]",
+      "HAR_k_over_n": "108/800",
+      "hCONDEL_OR": 2.269779911465802,
+      "hCONDEL_p": 2.473308121629363e-06,
+      "hCONDEL_CI": "[1.64, 3.15]",
+      "hCONDEL_k_over_n": "54/800"
+    },
+    {
+      "variant": "LOO-tau",
+      "agreement": 0.9276236429433052,
+      "gene-driven": 1339,
+      "gene-driven (relaxed)": 66,
+      "regulation-driven": 148,
+      "dual-driven": 9,
+      "neutral": 3412,
+      "HAR_OR": 6.385507246376812,
+      "HAR_p": 3.4173722414500556e-21,
+      "HAR_CI": "[4.51, 9.03]",
+      "HAR_k_over_n": "56/148",
+      "hCONDEL_OR": 3.9113286713286715,
+      "hCONDEL_p": 6.2016958532190185e-06,
+      "hCONDEL_CI": "[2.33, 6.56]",
+      "hCONDEL_k_over_n": "18/148"
+    },
+    {
+      "variant": "LOO-nc",
+      "agreement": 0.916767189384801,
+      "gene-driven": 1369,
+      "gene-driven (relaxed)": 71,
+      "regulation-driven": 110,
+      "dual-driven": 8,
+      "neutral": 3416,
+      "HAR_OR": 9.388418998048145,
+      "HAR_p": 3.5885348656594494e-25,
+      "HAR_CI": "[6.37, 13.83]",
+      "HAR_k_over_n": "52/110",
+      "hCONDEL_OR": 3.360544217687075,
+      "hCONDEL_p": 0.000642588903502502,
+      "hCONDEL_CI": "[1.81, 6.24]",
+      "hCONDEL_k_over_n": "12/110"
+    },
+    {
+      "variant": "LOO-brain",
+      "agreement": 0.9016887816646562,
+      "gene-driven": 1099,
+      "gene-driven (relaxed)": 41,
+      "regulation-driven": 613,
+      "dual-driven": 24,
+      "neutral": 3197,
+      "HAR_OR": 2.7752547807168213,
+      "HAR_p": 9.089679264113568e-17,
+      "HAR_CI": "[2.21, 3.48]",
+      "HAR_k_over_n": "121/613",
+      "hCONDEL_OR": 2.2744736842105264,
+      "hCONDEL_p": 1.4227057053097574e-05,
+      "hCONDEL_CI": "[1.60, 3.24]",
+      "hCONDEL_k_over_n": "43/613"
+    }
+  ],
+  "har_campra_correlation": {
+    "phi_binary": 0.43352658880185335,
+    "spearman_nHARs": 0.4366301645434467,
+    "spearman_p": 1.1108514760581193e-230,
+    "campra_genes_with_HAR_pct": 100.0
+  },
+  "pca": {
+    "explained_variance": [
+      0.25902952693322895,
+      0.16552093159476486,
+      0.12762742475487926
+    ],
+    "rd_vs_gd_PC1_p": 2.8982732536579484e-156,
+    "rd_vs_gd_PC2_p": 5.390068229985937e-20,
+    "kmeans4_sizes": {
+      "2": 16,
+      "3": 67,
+      "0": 2503,
+      "1": 2388
+    },
+    "rd_best_cluster": 0,
+    "rd_in_best_cluster": 259
+  },
+  "bootstrap_posteriors": {
+    "median": 1.0,
+    "p_ge_0.8": 0.879372738238842
+  },
+  "evidence_coverage": {
+    "coding_evidence": {
+      "available": 4974,
+      "pct": 100.0
+    },
+    "caMPRA_active_HAR": {
+      "available": 97,
+      "pct": 1.950140731805388
+    },
+    "any_HAR_pm50kb": {
+      "available": 476,
+      "pct": 9.569762766385203
+    },
+    "hCONDEL_mapped": {
+      "available": 183,
+      "pct": 3.6791314837153197
+    },
+    "RELAX_attempted": {
+      "available": 1610,
+      "pct": 32.36831523924407
+    }
+  },
+  "rd_yield_with_campra": {
+    "rd": 41,
+    "n": 59,
+    "pct": 69.49152542372882
+  },
+  "counterfactual_campra_universal": {
+    "rd_baseline": 293,
+    "rd_if_all_campra1": 1906
+  },
+  "relax_coverage_by_class": {
+    "regulation-driven": {
+      "active": 0,
+      "total": 293
+    },
+    "gene-driven (relaxed)": {
+      "active": 52,
+      "total": 52
+    },
+    "neutral": {
+      "active": 388,
+      "total": 3404
+    },
+    "dual-driven": {
+      "active": 11,
+      "total": 11
+    },
+    "gene-driven": {
+      "active": 1159,
+      "total": 1214
+    }
+  }
+}

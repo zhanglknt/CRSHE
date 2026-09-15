@@ -1,0 +1,22 @@
+{
+  "n_hcondels_parsed": 583,
+  "n_with_coord": 583,
+  "n_with_within_gene": 176,
+  "n_genes_by_name": 80,
+  "n_genes_by_coord": 121,
+  "n_genes_total": 183,
+  "n_gd_with_hcondel": 27,
+  "n_rd_with_hcondel": 27,
+  "n_neutral_with_hcondel": 125,
+  "rd_enrichment": {
+    "OR": 2.9442596876807405,
+    "p": 6.654409160391586e-06
+  },
+  "gd_enrichment": {
+    "OR": 0.5255006156438339,
+    "p": 0.9995933112970327
+  },
+  "brain_mean_OR": 0.74286351453459,
+  "non_brain_mean_OR": 0.7832536488797193,
+  "fdr_sig_tissues": []
+}

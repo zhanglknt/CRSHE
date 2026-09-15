@@ -1,0 +1,15 @@
+{
+  "n_seeds": 100,
+  "n_init_per_seed": 10,
+  "k": 4,
+  "n_rd": 293,
+  "rd_recovery_mean": 0.8740614334470987,
+  "rd_recovery_sd": 0.0513819096747542,
+  "rd_recovery_min": 0.7474402730375427,
+  "rd_recovery_max": 0.9829351535836177,
+  "rd_recovery_median": 0.8839590443686007,
+  "frac_seeds_recovery_ge_0.80": 0.9,
+  "frac_seeds_recovery_ge_0.85": 0.9,
+  "cluster_purity_median": 0.1030025890796826,
+  "note": "recovery = fraction of the 293 regulation-driven genes captured by the best cluster; features are the same 8 standardized component scores used by the classifier"
+}

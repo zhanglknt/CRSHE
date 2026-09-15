@@ -1,0 +1,91 @@
+threshold,variant,cell_type_class,n_types,rd_OR,rd_fdr,rank
+top10,v7,blood and immune cells,22,1.4436,0.04279339107595744,10
+top10,v7,ciliated cells,7,1.9904,0.00014490694521554086,6
+top10,v7,endocrine cells,10,3.0394,2.344690548576697e-11,3
+top10,v7,endothelial and mural cells,4,2.3419,1.0145021596924195e-06,5
+top10,v7,germ cells,7,0.5151,0.998561397577242,14
+top10,v7,glandular epithelial cells,22,1.2282,0.20153381901388145,12
+top10,v7,glial cells,8,3.7739,1.237983620086378e-16,2
+top10,v7,mesenchymal cells,9,1.7489,0.002133724132755465,8
+top10,v7,muscle cells,3,2.5438,7.75271385686508e-08,4
+top10,v7,neuronal cells,9,4.8917,9.612285613295772e-25,1
+top10,v7,pigment cells,2,1.8695,0.001397291284550168,7
+top10,v7,specialized epithelial cells,38,1.6696,0.004510019564348896,9
+top10,v7,squamous epithelial cells,3,0.6027,0.998561397577242,13
+top10,v7,stem and proliferating cells,6,1.2814,0.1566938501992024,11
+top10,v7,trophoblast cells,4,0.4849,0.998561397577242,15
+top10,loo_brain,blood and immune cells,22,1.3291,0.03254427590218752,10
+top10,loo_brain,ciliated cells,7,1.7621,2.7752570874476283e-05,6
+top10,loo_brain,endocrine cells,10,2.6098,3.032984256835407e-14,3
+top10,loo_brain,endothelial and mural cells,4,1.7552,2.7752570874476283e-05,7
+top10,loo_brain,germ cells,7,0.6457,0.9998985087689741,13
+top10,loo_brain,glandular epithelial cells,22,1.0022,0.6462870233180725,12
+top10,loo_brain,glial cells,8,2.9965,9.880951922812052e-19,2
+top10,loo_brain,mesenchymal cells,9,1.7006,5.961285520710506e-05,8
+top10,loo_brain,muscle cells,3,2.3151,9.61981247537427e-11,4
+top10,loo_brain,neuronal cells,9,3.7356,1.3499296638338186e-27,1
+top10,loo_brain,pigment cells,2,1.7664,5.961285520710506e-05,5
+top10,loo_brain,specialized epithelial cells,38,1.6947,5.961285520710506e-05,9
+top10,loo_brain,squamous epithelial cells,3,0.5367,0.9998985087689741,14
+top10,loo_brain,stem and proliferating cells,6,1.256,0.08111525266563943,11
+top10,loo_brain,trophoblast cells,4,0.5339,0.9998985087689741,15
+top25,v7,blood and immune cells,22,0.8673,0.986041189733257,13
+top25,v7,ciliated cells,7,1.4848,0.003610873284871972,7
+top25,v7,endocrine cells,10,2.4037,1.9913050922103092e-11,3
+top25,v7,endothelial and mural cells,4,1.408,0.010411309142167181,9
+top25,v7,germ cells,7,0.8703,0.986041189733257,12
+top25,v7,glandular epithelial cells,22,1.0283,0.6056231705068384,11
+top25,v7,glial cells,8,2.5309,1.3987695969482105e-12,2
+top25,v7,mesenchymal cells,9,1.4802,0.003610873284871972,8
+top25,v7,muscle cells,3,1.939,9.244276520438586e-07,4
+top25,v7,neuronal cells,9,3.534,5.833876267585439e-23,1
+top25,v7,pigment cells,2,1.5675,0.002310271068395138,5
+top25,v7,specialized epithelial cells,38,1.499,0.0033527528079224365,6
+top25,v7,squamous epithelial cells,3,0.7426,0.9978344520992717,14
+top25,v7,stem and proliferating cells,6,1.2118,0.13650358447204156,10
+top25,v7,trophoblast cells,4,0.6493,0.9978344520992717,15
+top25,loo_brain,blood and immune cells,22,0.9436,0.915243145724783,12
+top25,loo_brain,ciliated cells,7,1.5405,1.0515700590468672e-05,6
+top25,loo_brain,endocrine cells,10,2.1884,1.405535463171243e-16,3
+top25,loo_brain,endothelial and mural cells,4,1.3674,0.0011981669108720857,9
+top25,loo_brain,germ cells,7,0.8436,0.9999834118760899,13
+top25,loo_brain,glandular epithelial cells,22,1.023,0.5827327328524217,11
+top25,loo_brain,glial cells,8,2.314,8.648939147056428e-19,2
+top25,loo_brain,mesenchymal cells,9,1.5748,3.654947482142099e-06,5
+top25,loo_brain,muscle cells,3,2.0393,9.469884060945896e-14,4
+top25,loo_brain,neuronal cells,9,3.0106,2.647982024649436e-32,1
+top25,loo_brain,pigment cells,2,1.4691,0.00017355438778520878,8
+top25,loo_brain,specialized epithelial cells,38,1.4991,2.9212864826103696e-05,7
+top25,loo_brain,squamous epithelial cells,3,0.8023,0.9999834118760899,14
+top25,loo_brain,stem and proliferating cells,6,1.2986,0.006750386284835534,10
+top25,loo_brain,trophoblast cells,4,0.6363,0.9999834118760899,15
+top50,v7,blood and immune cells,22,0.7572,0.999998492997339,13
+top50,v7,ciliated cells,7,1.195,0.1671270878319862,7
+top50,v7,endocrine cells,10,1.8585,2.0573086324967575e-06,2
+top50,v7,endothelial and mural cells,4,1.0344,0.642976898572007,9
+top50,v7,germ cells,7,1.0048,0.6929328427018482,11
+top50,v7,glandular epithelial cells,22,0.8754,0.999998492997339,12
+top50,v7,glial cells,8,1.8176,3.3248067251092987e-06,3
+top50,v7,mesenchymal cells,9,1.2115,0.15709992373877504,6
+top50,v7,muscle cells,3,1.3613,0.023480986840385857,4
+top50,v7,neuronal cells,9,2.7472,1.0472353097770002e-14,1
+top50,v7,pigment cells,2,1.2221,0.15709992373877504,5
+top50,v7,specialized epithelial cells,38,1.1411,0.28199862746476906,8
+top50,v7,squamous epithelial cells,3,0.5619,0.999998492997339,15
+top50,v7,stem and proliferating cells,6,1.0293,0.642976898572007,10
+top50,v7,trophoblast cells,4,0.5925,0.999998492997339,14
+top50,loo_brain,blood and immune cells,22,0.7971,0.999998730010663,13
+top50,loo_brain,ciliated cells,7,1.192,0.04970640905517388,7
+top50,loo_brain,endocrine cells,10,1.5295,2.9578723886391997e-06,3
+top50,loo_brain,endothelial and mural cells,4,1.0419,0.4989734279957242,10
+top50,loo_brain,germ cells,7,1.0334,0.5013777277287009,11
+top50,loo_brain,glandular epithelial cells,22,0.9318,0.999998730010663,12
+top50,loo_brain,glial cells,8,1.6159,1.5486153283533013e-07,2
+top50,loo_brain,mesenchymal cells,9,1.2624,0.014874801456935314,4
+top50,loo_brain,muscle cells,3,1.2472,0.017796430740426965,5
+top50,loo_brain,neuronal cells,9,2.1429,4.4313691945689635e-17,1
+top50,loo_brain,pigment cells,2,1.1307,0.16152636600755316,8
+top50,loo_brain,specialized epithelial cells,38,1.2032,0.04474854128451075,6
+top50,loo_brain,squamous epithelial cells,3,0.663,0.999998730010663,15
+top50,loo_brain,stem and proliferating cells,6,1.0714,0.37466778458015815,9
+top50,loo_brain,trophoblast cells,4,0.6703,0.999998730010663,14

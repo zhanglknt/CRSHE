@@ -1,0 +1,315 @@
+{
+  "n_celltypes": 154,
+  "n_classes": 15,
+  "n_matched_genes": 4974,
+  "v7": {
+    "neuronal_rd_OR_median": 3.2237939050409197,
+    "nonneuronal_rd_OR_median": 1.098139845936641,
+    "glial_rd_OR_median": 1.8266944808892995,
+    "mwu_neuronal_gt_non_p": 1.906033325881351e-06,
+    "n_types_rd_fdr_sig": 50,
+    "n_types_gd_fdr_sig": 150,
+    "n_neuronal_types": 9,
+    "n_neuronal_rd_sig": 9,
+    "top10_by_rd_OR": [
+      [
+        "retinal ganglion cells",
+        "neuronal cells",
+        3.84
+      ],
+      [
+        "brain inhibitory neurons",
+        "neuronal cells",
+        3.65
+      ],
+      [
+        "brain excitatory neurons",
+        "neuronal cells",
+        3.5
+      ],
+      [
+        "retinal amacrine cells",
+        "neuronal cells",
+        3.35
+      ],
+      [
+        "other brain neurons",
+        "neuronal cells",
+        3.22
+      ],
+      [
+        "thyrotrophs",
+        "endocrine cells",
+        2.83
+      ],
+      [
+        "oligodendrocyte progenitor cells",
+        "glial cells",
+        2.66
+      ],
+      [
+        "adrenal medulla cells",
+        "endocrine cells",
+        2.63
+      ],
+      [
+        "astrocytes",
+        "glial cells",
+        2.47
+      ],
+      [
+        "ependymal cells",
+        "ciliated cells",
+        2.31
+      ]
+    ]
+  },
+  "loo_brain": {
+    "neuronal_rd_OR_median": 2.7770089041203074,
+    "nonneuronal_rd_OR_median": 1.144599928238249,
+    "glial_rd_OR_median": 1.8580781569619957,
+    "mwu_neuronal_gt_non_p": 2.2933080022769545e-06,
+    "n_types_rd_fdr_sig": 62,
+    "n_types_gd_fdr_sig": 143,
+    "n_neuronal_types": 9,
+    "n_neuronal_rd_sig": 9,
+    "top10_by_rd_OR": [
+      [
+        "retinal ganglion cells",
+        "neuronal cells",
+        3.33
+      ],
+      [
+        "brain inhibitory neurons",
+        "neuronal cells",
+        3.28
+      ],
+      [
+        "brain excitatory neurons",
+        "neuronal cells",
+        3.15
+      ],
+      [
+        "retinal amacrine cells",
+        "neuronal cells",
+        2.86
+      ],
+      [
+        "other brain neurons",
+        "neuronal cells",
+        2.78
+      ],
+      [
+        "thyrotrophs",
+        "endocrine cells",
+        2.55
+      ],
+      [
+        "oligodendrocyte progenitor cells",
+        "glial cells",
+        2.51
+      ],
+      [
+        "astrocytes",
+        "glial cells",
+        2.31
+      ],
+      [
+        "proximal tubule cells",
+        "specialized epithelial cells",
+        2.3
+      ],
+      [
+        "ependymal cells",
+        "ciliated cells",
+        2.29
+      ]
+    ]
+  },
+  "loo_tau": {
+    "neuronal_rd_OR_median": 5.346420249608989,
+    "nonneuronal_rd_OR_median": 2.2883114655689907,
+    "glial_rd_OR_median": 3.6950317823250423,
+    "mwu_neuronal_gt_non_p": 2.6307228389414142e-05,
+    "n_types_rd_fdr_sig": 139,
+    "n_types_gd_fdr_sig": 103,
+    "n_neuronal_types": 9,
+    "n_neuronal_rd_sig": 9,
+    "top10_by_rd_OR": [
+      [
+        "brain inhibitory neurons",
+        "neuronal cells",
+        7.06
+      ],
+      [
+        "brain excitatory neurons",
+        "neuronal cells",
+        6.35
+      ],
+      [
+        "retinal amacrine cells",
+        "neuronal cells",
+        5.88
+      ],
+      [
+        "retinal ganglion cells",
+        "neuronal cells",
+        5.44
+      ],
+      [
+        "other brain neurons",
+        "neuronal cells",
+        5.35
+      ],
+      [
+        "oligodendrocyte progenitor cells",
+        "glial cells",
+        5.3
+      ],
+      [
+        "thyrotrophs",
+        "endocrine cells",
+        4.57
+      ],
+      [
+        "pituicytes/fscs",
+        "glial cells",
+        4.53
+      ],
+      [
+        "astrocytes",
+        "glial cells",
+        4.52
+      ],
+      [
+        "ependymal cells",
+        "ciliated cells",
+        4.32
+      ]
+    ]
+  },
+  "loo_campra": {
+    "neuronal_rd_OR_median": 2.374988765426843,
+    "nonneuronal_rd_OR_median": 1.0452168377276367,
+    "glial_rd_OR_median": 1.7810936660390095,
+    "mwu_neuronal_gt_non_p": 4.571338092639687e-06,
+    "n_types_rd_fdr_sig": 51,
+    "n_types_gd_fdr_sig": 146,
+    "n_neuronal_types": 9,
+    "n_neuronal_rd_sig": 9,
+    "top10_by_rd_OR": [
+      [
+        "brain inhibitory neurons",
+        "neuronal cells",
+        2.85
+      ],
+      [
+        "retinal ganglion cells",
+        "neuronal cells",
+        2.72
+      ],
+      [
+        "brain excitatory neurons",
+        "neuronal cells",
+        2.71
+      ],
+      [
+        "retinal amacrine cells",
+        "neuronal cells",
+        2.59
+      ],
+      [
+        "other brain neurons",
+        "neuronal cells",
+        2.37
+      ],
+      [
+        "oligodendrocyte progenitor cells",
+        "glial cells",
+        2.29
+      ],
+      [
+        "astrocytes",
+        "glial cells",
+        2.28
+      ],
+      [
+        "thyrotrophs",
+        "endocrine cells",
+        2.23
+      ],
+      [
+        "proximal tubule cells",
+        "specialized epithelial cells",
+        2.11
+      ],
+      [
+        "adrenal medulla cells",
+        "endocrine cells",
+        2.09
+      ]
+    ]
+  },
+  "loo_double": {
+    "neuronal_rd_OR_median": 4.863439894636016,
+    "nonneuronal_rd_OR_median": 2.156298904538341,
+    "glial_rd_OR_median": 3.6520488562642877,
+    "mwu_neuronal_gt_non_p": 4.571260737514902e-06,
+    "n_types_rd_fdr_sig": 147,
+    "n_types_gd_fdr_sig": 60,
+    "n_neuronal_types": 9,
+    "n_neuronal_rd_sig": 9,
+    "top10_by_rd_OR": [
+      [
+        "brain inhibitory neurons",
+        "neuronal cells",
+        5.68
+      ],
+      [
+        "brain excitatory neurons",
+        "neuronal cells",
+        5.66
+      ],
+      [
+        "retinal ganglion cells",
+        "neuronal cells",
+        5.3
+      ],
+      [
+        "retinal amacrine cells",
+        "neuronal cells",
+        5.19
+      ],
+      [
+        "other brain neurons",
+        "neuronal cells",
+        4.86
+      ],
+      [
+        "oligodendrocyte progenitor cells",
+        "glial cells",
+        4.69
+      ],
+      [
+        "thyrotrophs",
+        "endocrine cells",
+        4.65
+      ],
+      [
+        "astrocytes",
+        "glial cells",
+        4.51
+      ],
+      [
+        "renal collecting duct intercalated cells",
+        "specialized epithelial cells",
+        4.36
+      ],
+      [
+        "gonadotrophs",
+        "endocrine cells",
+        4.34
+      ]
+    ]
+  }
+}

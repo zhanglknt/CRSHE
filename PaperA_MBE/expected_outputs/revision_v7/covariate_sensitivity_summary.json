@@ -1,0 +1,43 @@
+{
+  "baseline_replication_agreement": 0.9995979091274628,
+  "gc3_matched": 4974,
+  "median_expr_matched": 4967,
+  "variants": [
+    {
+      "variant": "baseline (log10 CDS length only)",
+      "agreement_with_baseline": 0.9996,
+      "gene_driven": 1216,
+      "gd_relaxed": 52,
+      "regulation_driven": 293,
+      "dual": 11,
+      "neutral": 3402
+    },
+    {
+      "variant": "+ GC3",
+      "agreement_with_baseline": 0.9879,
+      "gene_driven": 1213,
+      "gd_relaxed": 52,
+      "regulation_driven": 304,
+      "dual": 11,
+      "neutral": 3394
+    },
+    {
+      "variant": "+ log10 median expression",
+      "agreement_with_baseline": 0.9787,
+      "gene_driven": 1214,
+      "gd_relaxed": 50,
+      "regulation_driven": 275,
+      "dual": 11,
+      "neutral": 3424
+    },
+    {
+      "variant": "+ GC3 + log10 median expression",
+      "agreement_with_baseline": 0.9755,
+      "gene_driven": 1218,
+      "gd_relaxed": 52,
+      "regulation_driven": 276,
+      "dual": 12,
+      "neutral": 3416
+    }
+  ]
+}

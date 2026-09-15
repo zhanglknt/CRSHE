@@ -1,0 +1,119 @@
+{
+  "thresholds": {
+    "top10": "nonzero nCPM >= 90th pct",
+    "top25": "nonzero nCPM >= 75th pct (original)",
+    "top50": "nonzero nCPM >= 50th pct"
+  },
+  "variants": [
+    "v7",
+    "loo_brain"
+  ],
+  "per_threshold": {
+    "top10": {
+      "celltypes": {
+        "v7": {
+          "n_types_analyzed": 154,
+          "neuronal_median_rd_OR": 4.276172969187675,
+          "nonneuronal_median_rd_OR": 1.3638455974222397,
+          "mwu_two_sided_p": 4.758468388383634e-06,
+          "cliffs_delta": 0.9111111111111112,
+          "n_types_rd_fdr_sig": 68,
+          "n_neuronal_rd_fdr_sig": 9
+        },
+        "loo_brain": {
+          "n_types_analyzed": 154,
+          "neuronal_median_rd_OR": 3.7002467616622705,
+          "nonneuronal_median_rd_OR": 1.276578073089701,
+          "mwu_two_sided_p": 4.758553811463528e-06,
+          "cliffs_delta": 0.9111111111111112,
+          "n_types_rd_fdr_sig": 71,
+          "n_neuronal_rd_fdr_sig": 9
+        }
+      },
+      "neuronal_class": {
+        "v7": {
+          "rd_OR": 4.891663606316563,
+          "rd_fdr": 9.612285613295772e-25,
+          "rank_of_15": 1
+        },
+        "loo_brain": {
+          "rd_OR": 3.7355737243461795,
+          "rd_fdr": 1.3499296638338186e-27,
+          "rank_of_15": 1
+        }
+      }
+    },
+    "top25": {
+      "celltypes": {
+        "v7": {
+          "n_types_analyzed": 154,
+          "neuronal_median_rd_OR": 3.2237939050409197,
+          "nonneuronal_median_rd_OR": 1.098139845936641,
+          "mwu_two_sided_p": 3.812066651762702e-06,
+          "cliffs_delta": 0.9203065134099617,
+          "n_types_rd_fdr_sig": 50,
+          "n_neuronal_rd_fdr_sig": 9
+        },
+        "loo_brain": {
+          "n_types_analyzed": 154,
+          "neuronal_median_rd_OR": 2.7770089041203074,
+          "nonneuronal_median_rd_OR": 1.144599928238249,
+          "mwu_two_sided_p": 4.586616004553909e-06,
+          "cliffs_delta": 0.9126436781609195,
+          "n_types_rd_fdr_sig": 62,
+          "n_neuronal_rd_fdr_sig": 9
+        }
+      },
+      "neuronal_class": {
+        "v7": {
+          "rd_OR": 3.5339798165740772,
+          "rd_fdr": 5.833876267585439e-23,
+          "rank_of_15": 1
+        },
+        "loo_brain": {
+          "rd_OR": 3.010613716334768,
+          "rd_fdr": 2.647982024649436e-32,
+          "rank_of_15": 1
+        }
+      }
+    },
+    "top50": {
+      "celltypes": {
+        "v7": {
+          "n_types_analyzed": 154,
+          "neuronal_median_rd_OR": 2.2496282690457448,
+          "nonneuronal_median_rd_OR": 0.8287292517006802,
+          "mwu_two_sided_p": 9.819475052855708e-06,
+          "cliffs_delta": 0.8804597701149426,
+          "n_types_rd_fdr_sig": 22,
+          "n_neuronal_rd_fdr_sig": 8
+        },
+        "loo_brain": {
+          "n_types_analyzed": 154,
+          "neuronal_median_rd_OR": 1.8716581530406011,
+          "nonneuronal_median_rd_OR": 0.8845836531357888,
+          "mwu_two_sided_p": 9.475304470479099e-06,
+          "cliffs_delta": 0.8819923371647509,
+          "n_types_rd_fdr_sig": 38,
+          "n_neuronal_rd_fdr_sig": 8
+        }
+      },
+      "neuronal_class": {
+        "v7": {
+          "rd_OR": 2.747212706653333,
+          "rd_fdr": 1.0472353097770002e-14,
+          "rank_of_15": 1
+        },
+        "loo_brain": {
+          "rd_OR": 2.142934218622292,
+          "rd_fdr": 4.4313691945689635e-17,
+          "rank_of_15": 1
+        }
+      }
+    }
+  },
+  "conclusion": {
+    "neuronal_rank1_all_thresholds": true,
+    "neuronal_gt_non_all_thresholds": true
+  }
+}

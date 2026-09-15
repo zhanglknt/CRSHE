@@ -1,0 +1,5 @@
+variant,agreement_with_baseline,gene_driven,gd_relaxed,regulation_driven,dual,neutral
+baseline (log10 CDS length only),0.9996,1216,52,293,11,3402
++ GC3,0.9879,1213,52,304,11,3394
++ log10 median expression,0.9787,1214,50,275,11,3424
++ GC3 + log10 median expression,0.9755,1218,52,276,12,3416

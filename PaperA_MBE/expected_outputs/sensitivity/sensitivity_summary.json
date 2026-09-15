@@ -1,0 +1,316 @@
+{
+  "baseline": {
+    "gds_weights": {
+      "P-value (resid.)": 0.35,
+      "LRT (resid.)": 0.3,
+      "RELAX K": 0.2,
+      "Selectome": 0.15
+    },
+    "rds_weights": {
+      "caMPRA": 0.3,
+      "tau": 0.25,
+      "nc-conservation": 0.25,
+      "brain tau": 0.2
+    },
+    "threshold": 0.15,
+    "counts": {
+      "gene-driven": 1214,
+      "gene-driven (relaxed)": 52,
+      "regulation-driven": 293,
+      "dual-driven": 11,
+      "neutral": 3404
+    },
+    "reproduction_agreement": 1.0
+  },
+  "threshold_grid": [
+    {
+      "threshold": 0.05,
+      "agreement_with_baseline": 0.8632891033373542,
+      "gene-driven": 1382,
+      "gene-driven (relaxed)": 74,
+      "regulation-driven": 772,
+      "dual-driven": 22,
+      "neutral": 2724
+    },
+    {
+      "threshold": 0.1,
+      "agreement_with_baseline": 0.9310414153598713,
+      "gene-driven": 1313,
+      "gene-driven (relaxed)": 66,
+      "regulation-driven": 520,
+      "dual-driven": 14,
+      "neutral": 3061
+    },
+    {
+      "threshold": 0.15,
+      "agreement_with_baseline": 1.0,
+      "gene-driven": 1214,
+      "gene-driven (relaxed)": 52,
+      "regulation-driven": 293,
+      "dual-driven": 11,
+      "neutral": 3404
+    },
+    {
+      "threshold": 0.2,
+      "agreement_with_baseline": 0.9523522316043426,
+      "gene-driven": 1119,
+      "gene-driven (relaxed)": 41,
+      "regulation-driven": 166,
+      "dual-driven": 7,
+      "neutral": 3641
+    },
+    {
+      "threshold": 0.25,
+      "agreement_with_baseline": 0.9153598713309208,
+      "gene-driven": 1023,
+      "gene-driven (relaxed)": 33,
+      "regulation-driven": 90,
+      "dual-driven": 3,
+      "neutral": 3825
+    },
+    {
+      "threshold": 0.3,
+      "agreement_with_baseline": 0.8850020104543627,
+      "gene-driven": 918,
+      "gene-driven (relaxed)": 24,
+      "regulation-driven": 55,
+      "dual-driven": 1,
+      "neutral": 3976
+    }
+  ],
+  "single_weight": [
+    {
+      "score": "GDS",
+      "component": "P-value (resid.)",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.986529955770004,
+      "gene-driven": 1205,
+      "gene-driven (relaxed)": 54,
+      "regulation-driven": 320,
+      "dual-driven": 8,
+      "neutral": 3387
+    },
+    {
+      "score": "GDS",
+      "component": "P-value (resid.)",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9776839565741857,
+      "gene-driven": 1234,
+      "gene-driven (relaxed)": 48,
+      "regulation-driven": 270,
+      "dual-driven": 13,
+      "neutral": 3409
+    },
+    {
+      "score": "GDS",
+      "component": "LRT (resid.)",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.9756735022114998,
+      "gene-driven": 1279,
+      "gene-driven (relaxed)": 65,
+      "regulation-driven": 330,
+      "dual-driven": 11,
+      "neutral": 3289
+    },
+    {
+      "score": "GDS",
+      "component": "LRT (resid.)",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.974065138721351,
+      "gene-driven": 1138,
+      "gene-driven (relaxed)": 39,
+      "regulation-driven": 257,
+      "dual-driven": 9,
+      "neutral": 3531
+    },
+    {
+      "score": "GDS",
+      "component": "RELAX K",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.9732609569762767,
+      "gene-driven": 1224,
+      "gene-driven (relaxed)": 45,
+      "regulation-driven": 216,
+      "dual-driven": 12,
+      "neutral": 3477
+    },
+    {
+      "score": "GDS",
+      "component": "RELAX K",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9559710494571774,
+      "gene-driven": 1208,
+      "gene-driven (relaxed)": 61,
+      "regulation-driven": 446,
+      "dual-driven": 8,
+      "neutral": 3251
+    },
+    {
+      "score": "GDS",
+      "component": "Selectome",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.975070365902694,
+      "gene-driven": 1153,
+      "gene-driven (relaxed)": 48,
+      "regulation-driven": 349,
+      "dual-driven": 10,
+      "neutral": 3414
+    },
+    {
+      "score": "GDS",
+      "component": "Selectome",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9766787293928428,
+      "gene-driven": 1276,
+      "gene-driven (relaxed)": 60,
+      "regulation-driven": 253,
+      "dual-driven": 11,
+      "neutral": 3374
+    },
+    {
+      "score": "RDS",
+      "component": "caMPRA",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.9575794129473261,
+      "gene-driven": 1285,
+      "gene-driven (relaxed)": 60,
+      "regulation-driven": 186,
+      "dual-driven": 12,
+      "neutral": 3431
+    },
+    {
+      "score": "RDS",
+      "component": "caMPRA",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9312424607961399,
+      "gene-driven": 1135,
+      "gene-driven (relaxed)": 43,
+      "regulation-driven": 515,
+      "dual-driven": 9,
+      "neutral": 3272
+    },
+    {
+      "score": "RDS",
+      "component": "tau",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.9611982308001609,
+      "gene-driven": 1174,
+      "gene-driven (relaxed)": 51,
+      "regulation-driven": 418,
+      "dual-driven": 14,
+      "neutral": 3317
+    },
+    {
+      "score": "RDS",
+      "component": "tau",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9620024125452352,
+      "gene-driven": 1282,
+      "gene-driven (relaxed)": 55,
+      "regulation-driven": 203,
+      "dual-driven": 9,
+      "neutral": 3425
+    },
+    {
+      "score": "RDS",
+      "component": "nc-conservation",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.9497386409328509,
+      "gene-driven": 1159,
+      "gene-driven (relaxed)": 44,
+      "regulation-driven": 463,
+      "dual-driven": 12,
+      "neutral": 3296
+    },
+    {
+      "score": "RDS",
+      "component": "nc-conservation",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9527543224768797,
+      "gene-driven": 1292,
+      "gene-driven (relaxed)": 64,
+      "regulation-driven": 174,
+      "dual-driven": 11,
+      "neutral": 3433
+    },
+    {
+      "score": "RDS",
+      "component": "brain tau",
+      "perturbation": "+50%",
+      "agreement_with_baseline": 0.9712505026135907,
+      "gene-driven": 1263,
+      "gene-driven (relaxed)": 60,
+      "regulation-driven": 223,
+      "dual-driven": 7,
+      "neutral": 3421
+    },
+    {
+      "score": "RDS",
+      "component": "brain tau",
+      "perturbation": "-50%",
+      "agreement_with_baseline": 0.9567752312022517,
+      "gene-driven": 1160,
+      "gene-driven (relaxed)": 48,
+      "regulation-driven": 431,
+      "dual-driven": 14,
+      "neutral": 3321
+    }
+  ],
+  "joint_perturbation_1000": {
+    "agreement_mean": 0.946439284278247,
+    "agreement_sd": 0.026375930786386705,
+    "agreement_min": 0.7864897466827503,
+    "agreement_max": 0.9945717732207479,
+    "class_counts": {
+      "gene-driven": {
+        "mean": 1210.191,
+        "sd": 88.54354000985886,
+        "p5": 1063.95,
+        "p95": 1347.05
+      },
+      "gene-driven (relaxed)": {
+        "mean": 52.123,
+        "sd": 11.701914621368838,
+        "p5": 32.95,
+        "p95": 70.0
+      },
+      "regulation-driven": {
+        "mean": 342.1,
+        "sd": 167.75142485398013,
+        "p5": 107.0,
+        "p95": 641.1999999999998
+      },
+      "dual-driven": {
+        "mean": 11.115,
+        "sd": 4.044023878407387,
+        "p5": 5.0,
+        "p95": 17.0
+      },
+      "neutral": {
+        "mean": 3358.471,
+        "sd": 117.48395481357716,
+        "p5": 3136.95,
+        "p95": 3529.0
+      }
+    }
+  },
+  "joint_perturbation_with_threshold_jitter": {
+    "agreement_mean": 0.920601125854443,
+    "agreement_sd": 0.03427979808226743,
+    "threshold_range": [
+      0.05,
+      0.3
+    ]
+  },
+  "per_gene_stability": {
+    "median": 1.0,
+    "stable_core_ge_0.8_fraction": 0.879372738238842,
+    "by_class": {
+      "gene-driven": 1.0,
+      "gene-driven (relaxed)": 0.9815,
+      "regulation-driven": 0.833,
+      "dual-driven": 0.639,
+      "neutral": 1.0
+    }
+  }
+}
