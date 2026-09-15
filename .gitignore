@@ -1,0 +1,3 @@
+
+# Windows cache artifact (unexpanded env var from controlled subprocess env)
+%SystemDrive%/
