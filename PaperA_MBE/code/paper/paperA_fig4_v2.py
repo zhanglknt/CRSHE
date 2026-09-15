@@ -4,7 +4,7 @@ Paper A (MBE) — Figure 4 v2: Non-circular validation of the regulation-driven 
 ====================================================================================
 Design system per results/paperB/figure_spec_v1.md (Arial; GD #2166ac, RD #d6604d,
 dual #e08214, neutral #bdbdbd; bold 11pt panel labels; PNG 300dpi + vector PDF).
-Layout: 2 + 3 (top: LOO matrix + forest; bottom: purity-signal, HAR nesting, hCONDEL).
+Layout: 3 + 3 (top: LOO matrix, forest, evidence independence; bottom: purity-signal, HAR nesting, hCONDEL).
 
 Panel data sources:
   a | results/paper/revision_v7/loo_full_matrix.csv
@@ -12,12 +12,15 @@ Panel data sources:
       with OR [95% CI] and Fisher p; row labels carry agreement with the full model)
   b | same file: forest plot of all 10 tests (5 variants x 2 evidence types),
       log-scale OR + 95% CI (CIs parsed from the "[lo, hi]" strings in the CSV)
-  c | same file: purity-signal relation — RD class size vs hCONDEL OR (95% CI),
+  c | gene_classification_v7.csv + phase8_tissue_analysis/hcondel_gene_mapping.csv
+      (HAR/hCONDEL gene-level overlap: 447 HAR-only / 29 both / 154 hCONDEL-only,
+      chi2 phi; stratified RD enrichment per subset, Fisher exact)
+  d | same file: purity-signal relation — RD class size vs hCONDEL OR (95% CI),
       points labelled by variant with agreement annotated
-  d | results/phase8_tissue_analysis/campra_regulatory_summary.json
+  e | results/phase8_tissue_analysis/campra_regulatory_summary.json
       (HAR-caMPRA nesting warning: RD all-HAR OR 4.79 (p = 4.2e-21) vs
       LOO-caMPRA active-HAR OR 1.84 (p = 0.012); GD 0.74 / 0.85 n.s.)
-  e | results/phase8_tissue_analysis/hcondels_summary.json + effect_sizes_summary.json
+  f | results/phase8_tissue_analysis/hcondels_summary.json + effect_sizes_summary.json
       (hCONDEL main validation: RD OR 2.94 [1.92-4.51], p = 6.7e-06;
       GD OR 0.53 [0.33-0.80], enrichment n.s.)
 
@@ -185,6 +188,55 @@ axb.text(0.985, -0.30, "All Holm-adjusted p < 0.05 across variants (Table 3)",
          transform=axb.transAxes, ha="right", va="top", fontsize=6.4, color="#555555")
 
 # ================================================================ panel c
+# Evidence independence: HAR vs hCONDEL overlap + stratified RD enrichment
+from scipy.stats import fisher_exact as _fisher, chi2_contingency as _chi2
+
+axc2 = fig.add_subplot(gs[0, 2])
+_v7 = pd.read_csv(os.path.join(ROOT, "results/phase7_gene_vs_regulation/phase7g_classification_v7/gene_classification_v7.csv"))
+_hm = pd.read_csv(os.path.join(TIS, "hcondel_gene_mapping.csv"))
+_v7["has_hcondel"] = _v7["gene_id"].isin(set(_hm["gene_id"]))
+_v7["has_har"] = _v7["n_hars"] > 0
+_tab = pd.crosstab(_v7["has_har"], _v7["has_hcondel"])
+_chi2v, _phi_p, _, _ = _chi2(_tab)
+_phi = float(np.sqrt(_chi2v / len(_v7)))
+
+subsets = []
+for nm, m in [("HAR only", _v7["has_har"] & ~_v7["has_hcondel"]),
+              ("both", _v7["has_har"] & _v7["has_hcondel"]),
+              ("hCONDEL only", ~_v7["has_har"] & _v7["has_hcondel"])]:
+    sub = _v7[m]
+    rd = int((sub["classification_v7"] == "regulation-driven").sum())
+    rest = _v7[~m]
+    rd_rest = int((rest["classification_v7"] == "regulation-driven").sum())
+    orv, pv = _fisher([[rd, len(sub) - rd], [rd_rest, len(rest) - rd_rest]])
+    subsets.append((nm, len(sub), rd, orv, pv))
+
+ys2 = np.arange(3)[::-1]
+cols2 = [C_HAR, "#7f7f7f", C_HCONDEL]
+for (nm, n, rd, orv, pv), yv, col in zip(subsets, ys2, cols2):
+    axc2.barh(yv, n, height=0.62, color=col, edgecolor="white", linewidth=0.5, zorder=3)
+    axc2.text(n + 14, yv + 0.15, f"{n} genes; RD {rd} ({100 * rd / n:.1f}%)",
+              va="center", ha="left", fontsize=6.6, color="#444444")
+    axc2.text(n + 14, yv - 0.19, f"OR {orv:.2f}, p={fmt_p(pv)}",
+              va="center", ha="left", fontsize=6.4, color=C_RD, fontweight="bold")
+axc2.set_yticks(ys2)
+axc2.set_yticklabels([s[0] for s in subsets], fontsize=7.4)
+axc2.set_xlim(0, 1150)
+axc2.set_xticks([0, 200, 400])
+axc2.set_xticklabels(["0", "200", "400"])
+axc2.set_xlabel("Genes in subset")
+axc2.set_title("Evidence independence: HAR vs hCONDEL", loc="left", fontsize=FS_TITLE)
+style_ax(axc2, xgrid=True)
+panel_label(axc2, "c", dx=-0.30)
+_n_hc = int(_tab[True].sum())
+axc2.text(0.97, 0.60, f"Overlap: {subsets[1][1]}/{_n_hc} hCONDEL genes "
+          f"({100 * subsets[1][1] / _n_hc:.1f}%);\nφ = {_phi:.3f}, χ² p = {fmt_p(_phi_p)}\n"
+          "hCONDEL-only enrichment (bottom row)\nexcludes HAR re-detection",
+          transform=axc2.transAxes, ha="right", va="top", fontsize=6.3, color="#555555")
+print("panel c: phi=%.4f p=%.4g | subsets:" % (_phi, _phi_p),
+      [(s[0], s[1], s[2], round(s[3], 2), "%.3g" % s[4]) for s in subsets])
+
+# ================================================================ panel d
 # Purity-signal relation: RD class size vs hCONDEL OR
 axc = fig.add_subplot(gs[1, 0])
 x = loo["regulation-driven"].to_numpy()
@@ -219,9 +271,9 @@ axc.set_xscale("log")
 axc.set_xticks([100, 200, 400, 800])
 axc.set_xticklabels(["100", "200", "400", "800"])
 style_ax(axc, ygrid=True)
-panel_label(axc, "c", dx=-0.22)
+panel_label(axc, "d", dx=-0.22)
 
-# ================================================================ panel d
+# ================================================================ panel e
 # HAR-caMPRA nesting warning
 axd = fig.add_subplot(gs[1, 1])
 tests = ["All HARs\n(v7 classifier)", "Active HARs\n(LOO-caMPRA)"]
@@ -267,14 +319,14 @@ axd.set_title("HAR-caMPRA nesting: conservative estimate", loc="left",
               fontsize=FS_TITLE)
 axd.set_ylim(0, 6.3)
 style_ax(axd, ygrid=True)
-panel_label(axd, "d", dx=-0.20)
+panel_label(axd, "e", dx=-0.20)
 axd.legend(loc="upper right", frameon=False, fontsize=6.8, handletextpad=0.4,
            bbox_to_anchor=(1.0, 1.02))
 axd.text(0.47, 0.82, "caMPRA-active elements are 100% nested\n"
          "within HARs; LOO-caMPRA removes this circularity",
          transform=axd.transAxes, ha="left", va="top", fontsize=6.4, color="#555555")
 
-# ================================================================ panel e
+# ================================================================ panel f
 # hCONDEL main validation
 axe = fig.add_subplot(gs[1, 2])
 rd_e = hcondel["rd_enrichment"]
@@ -311,7 +363,7 @@ axe.set_ylim(-0.55, 1.55)
 axe.set_xlabel("hCONDEL enrichment OR (log scale)")
 axe.set_title("hCONDEL main validation (v7)", loc="left", fontsize=FS_TITLE)
 style_ax(axe, xgrid=True)
-panel_label(axe, "e", dx=-0.20)
+panel_label(axe, "f", dx=-0.20)
 axe.text(0.98, 0.985, "183 genes overlap 583 hCONDELs;\nFisher exact, one-sided (greater)",
          transform=axe.transAxes, ha="right", va="top", fontsize=6.4, color="#555555")
 
