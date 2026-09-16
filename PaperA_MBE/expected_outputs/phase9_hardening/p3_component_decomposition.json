@@ -1,0 +1,77 @@
+{
+  "regulation_driven": {
+    "n": 293,
+    "dominant_component_counts": {
+      "rds_nc": 153,
+      "rds_tau": 83,
+      "rds_doan": 41,
+      "rds_brain": 16
+    },
+    "mean_dominant_share": 0.563
+  },
+  "gene_driven": {
+    "n": 1214,
+    "dominant_component_counts": {
+      "gds_p_pct_resid": 818,
+      "gds_lrt_pct_resid": 368,
+      "gds_relax_pct": 27,
+      "gds_selectome": 1
+    },
+    "mean_dominant_share": 0.434
+  },
+  "dual_driven": {
+    "n": 11,
+    "dominant_component_counts": {
+      "rds_doan": 10,
+      "rds_nc": 1
+    },
+    "mean_dominant_share": 0.483
+  },
+  "rd_ea_gwas": {
+    "n": 103,
+    "dominant_component_counts": {
+      "rds_nc": 61,
+      "rds_tau": 22,
+      "rds_doan": 19,
+      "rds_brain": 1
+    },
+    "mean_component_contrib": {
+      "rds_doan": 0.0553,
+      "rds_tau": 0.1563,
+      "rds_nc": 0.2018,
+      "rds_brain": 0.0096
+    }
+  },
+  "rd_non_ea": {
+    "n": 190,
+    "dominant_component_counts": {
+      "rds_nc": 92,
+      "rds_tau": 61,
+      "rds_doan": 22,
+      "rds_brain": 15
+    },
+    "mean_component_contrib": {
+      "rds_doan": 0.0347,
+      "rds_tau": 0.1625,
+      "rds_nc": 0.1741,
+      "rds_brain": 0.0303
+    }
+  },
+  "dominant_component_ea_vs_non_ea_chi2": {
+    "chi2": 12.330204807148451,
+    "p": 0.006333517375039042,
+    "dof": 3
+  },
+  "p2_bucket_sizes_universe": {
+    "Metabolism & proteostasis": 1863,
+    "Transcription, RNA & chromatin": 1070,
+    "Transport & secretion": 952,
+    "Immune & defense": 634,
+    "Development & morphogenesis": 957,
+    "Multicellular & organ homeostasis": 645,
+    "Cell cycle, DNA repair & apoptosis": 898,
+    "Signal transduction": 1246,
+    "Neuronal & synaptic": 554,
+    "Reproduction": 46
+  }
+}

@@ -46,3 +46,5 @@ Figures are delivered as PDF (PNGs are also produced alongside); tables are deli
 | Table S4-1 (top 10 gene-driven) | `Supplementary_Text_Tables_v9.xlsx` sheet `S4-1 Top GD` | `paperA_tables_to_excel.py` |
 | Table S4-2 (top 10 regulation-driven) | `Supplementary_Text_Tables_v9.xlsx` sheet `S4-2 Top RD` | `paperA_tables_to_excel.py` |
 | Table S4-3 (dual-driven) | `Supplementary_Text_Tables_v9.xlsx` sheet `S4-3 Dual` | `paperA_tables_to_excel.py` |
+| Table S4-4 (GO-slim composition) | `Supplementary_Text_Tables_v9.xlsx` sheet `S4-4 GO-slim`; source CSV `TableS4-4_45_source_p2_goslim_composition.csv` | `phase9_p2_p3_followup.py` (P2 section) + `phase9_add_supp_tables.py` |
+| Table S4-5 (component decomposition) | `Supplementary_Text_Tables_v9.xlsx` sheet `S4-5 Components`; source CSV `TableS4-4_45_source_p3_component_decomposition.csv` | `phase9_p2_p3_followup.py` (P3 section) + `phase9_add_supp_tables.py` |
