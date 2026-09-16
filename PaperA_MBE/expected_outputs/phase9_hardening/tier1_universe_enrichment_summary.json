@@ -1,0 +1,713 @@
+{
+  "universe_n": 4974,
+  "universe_with_symbol": 4974,
+  "dropped_unnamed": 0,
+  "gene_driven": {
+    "n": 1214,
+    "GO_BP": {
+      "terms_tested": 2507,
+      "nominal_005": 59,
+      "bh_005": 0,
+      "top10_perm": [
+        {
+          "term": "Regulation Of Calcium Ion-Dependent Exocytosis (GO:0017158)",
+          "k": 7,
+          "K": 10,
+          "p_hyper": 0.0029928723454247953,
+          "p_bh": 1.0,
+          "p_perm": 0.004
+        },
+        {
+          "term": "Negative Regulation Of Type I Interferon Production (GO:0032480)",
+          "k": 6,
+          "K": 8,
+          "p_hyper": 0.003679332689059065,
+          "p_bh": 1.0,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Positive Regulation Of Immune System Process (GO:0002684)",
+          "k": 7,
+          "K": 11,
+          "p_hyper": 0.006503011189992728,
+          "p_bh": 1.0,
+          "p_perm": 0.00799
+        },
+        {
+          "term": "Carboxylic Acid Transmembrane Transport (GO:1905039)",
+          "k": 7,
+          "K": 11,
+          "p_hyper": 0.006503011189992728,
+          "p_bh": 1.0,
+          "p_perm": 0.00799
+        },
+        {
+          "term": "Double-Strand Break Repair (GO:0006302)",
+          "k": 19,
+          "K": 46,
+          "p_hyper": 0.008275476320393285,
+          "p_bh": 1.0,
+          "p_perm": 0.00899
+        },
+        {
+          "term": "Positive Regulation Of Oxidoreductase Activity (GO:0051353)",
+          "k": 5,
+          "K": 7,
+          "p_hyper": 0.011509077472363927,
+          "p_bh": 1.0,
+          "p_perm": 0.01798
+        },
+        {
+          "term": "Regulation Of RNA Splicing (GO:0043484)",
+          "k": 12,
+          "K": 26,
+          "p_hyper": 0.012552795859208842,
+          "p_bh": 1.0,
+          "p_perm": 0.01898
+        },
+        {
+          "term": "Positive Regulation Of Response To Stimulus (GO:0048584)",
+          "k": 13,
+          "K": 29,
+          "p_hyper": 0.012661059532210863,
+          "p_bh": 1.0,
+          "p_perm": 0.01199
+        },
+        {
+          "term": "Barbed-End Actin Filament Capping (GO:0051016)",
+          "k": 4,
+          "K": 5,
+          "p_hyper": 0.014233700627036426,
+          "p_bh": 1.0,
+          "p_perm": 0.01099
+        },
+        {
+          "term": "Glycerol Metabolic Process (GO:0006071)",
+          "k": 4,
+          "K": 5,
+          "p_hyper": 0.014233700627036426,
+          "p_bh": 1.0,
+          "p_perm": 0.01399
+        }
+      ]
+    },
+    "SynGO": {
+      "terms_tested": 74,
+      "nominal_005": 7,
+      "bh_005": 0,
+      "top10_perm": [
+        {
+          "term": "Synaptic Vesicle Priming (GO:0016082) BP",
+          "k": 3,
+          "K": 3,
+          "p_hyper": 0.014511982543430205,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.00899
+        },
+        {
+          "term": "Presynaptic Ribosome CC",
+          "k": 4,
+          "K": 6,
+          "p_hyper": 0.0344667766097165,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.03696
+        },
+        {
+          "term": "Translation At Presynapse (GO:0140236) BP",
+          "k": 4,
+          "K": 6,
+          "p_hyper": 0.0344667766097165,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.03796
+        },
+        {
+          "term": "Translation At Postsynapse (GO:0140242) BP",
+          "k": 4,
+          "K": 6,
+          "p_hyper": 0.0344667766097165,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.03097
+        },
+        {
+          "term": "Postsynaptic Density (GO:0014069) CC",
+          "k": 13,
+          "K": 33,
+          "p_hyper": 0.04006423156611054,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.03596
+        },
+        {
+          "term": "Postsynaptic Ribosome CC",
+          "k": 5,
+          "K": 9,
+          "p_hyper": 0.04430382002023771,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.04595
+        },
+        {
+          "term": "Regulation Of Synaptic Vesicle Endocytosis (GO:1900242) BP",
+          "k": 3,
+          "K": 4,
+          "p_hyper": 0.047442009316693665,
+          "p_bh": 0.5015298127764759,
+          "p_perm": 0.04995
+        },
+        {
+          "term": "Integral Component Of Synaptic Vesicle Membrane (GO:0030285) CC",
+          "k": 10,
+          "K": 25,
+          "p_hyper": 0.061431311577392136,
+          "p_bh": 0.5682396320908772,
+          "p_perm": 0.05694
+        },
+        {
+          "term": "Synapse (GO:0045202) CC",
+          "k": 21,
+          "K": 64,
+          "p_hyper": 0.07948455387192929,
+          "p_bh": 0.6535396651691964,
+          "p_perm": 0.07892
+        },
+        {
+          "term": "Regulation Of Synaptic Vesicle Fusion To Presynaptic Active Zone Membrane (GO:0031630) BP",
+          "k": 2,
+          "K": 3,
+          "p_hyper": 0.14957399829416676,
+          "p_bh": 0.8459371742039679,
+          "p_perm": 0.12987
+        }
+      ]
+    }
+  },
+  "regulation_driven": {
+    "n": 293,
+    "GO_BP": {
+      "terms_tested": 2507,
+      "nominal_005": 188,
+      "bh_005": 18,
+      "top10_perm": [
+        {
+          "term": "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+          "k": 8,
+          "K": 19,
+          "p_hyper": 5.63396716725322e-06,
+          "p_bh": 0.014124355688303824,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Protein Phosphorylation (GO:0006468)",
+          "k": 22,
+          "K": 137,
+          "p_hyper": 1.2596894409451652e-05,
+          "p_bh": 0.015790207142247645,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Axon Guidance (GO:0007411)",
+          "k": 11,
+          "K": 42,
+          "p_hyper": 2.0322596405750828e-05,
+          "p_bh": 0.016982916396405773,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Neuron Projection Guidance (GO:0097485)",
+          "k": 10,
+          "K": 38,
+          "p_hyper": 4.659432627097756e-05,
+          "p_bh": 0.022208591424928134,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Phosphorylation (GO:0016310)",
+          "k": 19,
+          "K": 118,
+          "p_hyper": 4.805717718649325e-05,
+          "p_bh": 0.022208591424928134,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Protein Modification Process (GO:0036211)",
+          "k": 26,
+          "K": 194,
+          "p_hyper": 5.571389347385227e-05,
+          "p_bh": 0.022208591424928134,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+          "k": 16,
+          "K": 91,
+          "p_hyper": 6.468375067207787e-05,
+          "p_bh": 0.022208591424928134,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Regulation Of Focal Adhesion Assembly (GO:0051893)",
+          "k": 6,
+          "K": 14,
+          "p_hyper": 7.97276915932801e-05,
+          "p_bh": 0.022208591424928134,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Phospholipid Transport (GO:0015914)",
+          "k": 6,
+          "K": 14,
+          "p_hyper": 7.97276915932801e-05,
+          "p_bh": 0.022208591424928134,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Transmembrane Receptor Protein Tyrosine Kinase Signaling Pathway (GO:0007169)",
+          "k": 15,
+          "K": 86,
+          "p_hyper": 0.0001204348590409476,
+          "p_bh": 0.028796261952101068,
+          "p_perm": 0.001
+        }
+      ]
+    },
+    "SynGO": {
+      "terms_tested": 74,
+      "nominal_005": 14,
+      "bh_005": 11,
+      "top10_perm": [
+        {
+          "term": "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP",
+          "k": 6,
+          "K": 9,
+          "p_hyper": 2.8713214976429474e-06,
+          "p_bh": 0.00021247779082557812,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+          "k": 10,
+          "K": 31,
+          "p_hyper": 6.326239524848134e-06,
+          "p_bh": 0.00023407086241938099,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+          "k": 6,
+          "K": 12,
+          "p_hyper": 2.7136875471134866e-05,
+          "p_bh": 0.0006693762616213267,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+          "k": 8,
+          "K": 26,
+          "p_hyper": 8.094664972565603e-05,
+          "p_bh": 0.0014975130199246366,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Postsynapse (GO:0098794) CC",
+          "k": 11,
+          "K": 61,
+          "p_hyper": 0.0007265027829365882,
+          "p_bh": 0.010752241187461506,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Regulation Of Postsynapse Assembly (GO:0150052) BP",
+          "k": 5,
+          "K": 16,
+          "p_hyper": 0.0017465408262742875,
+          "p_bh": 0.019571256668640534,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP",
+          "k": 3,
+          "K": 5,
+          "p_hyper": 0.0018513350902768073,
+          "p_bh": 0.019571256668640534,
+          "p_perm": 0.001
+        },
+        {
+          "term": "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+          "k": 6,
+          "K": 25,
+          "p_hyper": 0.002709256424498346,
+          "p_bh": 0.0250606219266097,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+          "k": 3,
+          "K": 6,
+          "p_hyper": 0.003541606678331607,
+          "p_bh": 0.029119877132948765,
+          "p_perm": 0.004
+        },
+        {
+          "term": "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+          "k": 7,
+          "K": 36,
+          "p_hyper": 0.004355635549227033,
+          "p_bh": 0.03223170306428004,
+          "p_perm": 0.003
+        }
+      ]
+    }
+  },
+  "dual_driven": {
+    "n": 11,
+    "GO_BP": {
+      "terms_tested": 2507,
+      "nominal_005": 31,
+      "bh_005": 0,
+      "top10_perm": [
+        {
+          "term": "Cellular Response To Calcium Ion (GO:0071277)",
+          "k": 2,
+          "K": 26,
+          "p_hyper": 0.001403997165476891,
+          "p_bh": 1.0,
+          "p_perm": 0.004
+        },
+        {
+          "term": "Cellular Response To Salt (GO:1902075)",
+          "k": 2,
+          "K": 33,
+          "p_hyper": 0.002261757871847237,
+          "p_bh": 1.0,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Response To Calcium Ion (GO:0051592)",
+          "k": 2,
+          "K": 43,
+          "p_hyper": 0.0038216970221324376,
+          "p_bh": 1.0,
+          "p_perm": 0.004
+        },
+        {
+          "term": "Cellular Response To Metal Ion (GO:0071248)",
+          "k": 2,
+          "K": 43,
+          "p_hyper": 0.0038216970221324376,
+          "p_bh": 1.0,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Establishment Of Protein Localization To Vacuole (GO:0072666)",
+          "k": 1,
+          "K": 5,
+          "p_hyper": 0.011013109292337068,
+          "p_bh": 1.0,
+          "p_perm": 0.01399
+        },
+        {
+          "term": "Regulation Of SNARE Complex Assembly (GO:0035542)",
+          "k": 1,
+          "K": 5,
+          "p_hyper": 0.011013109292337068,
+          "p_bh": 1.0,
+          "p_perm": 0.01099
+        },
+        {
+          "term": "Neurotransmitter Biosynthetic Process (GO:0042136)",
+          "k": 1,
+          "K": 6,
+          "p_hyper": 0.01320245439150879,
+          "p_bh": 1.0,
+          "p_perm": 0.01099
+        },
+        {
+          "term": "Calcium-Ion Regulated Exocytosis (GO:0017156)",
+          "k": 1,
+          "K": 6,
+          "p_hyper": 0.01320245439150879,
+          "p_bh": 1.0,
+          "p_perm": 0.01598
+        },
+        {
+          "term": "Late Endosome To Lysosome Transport (GO:1902774)",
+          "k": 1,
+          "K": 6,
+          "p_hyper": 0.01320245439150879,
+          "p_bh": 1.0,
+          "p_perm": 0.01199
+        },
+        {
+          "term": "Regulation Of Actin Filament Bundle Assembly (GO:0032231)",
+          "k": 1,
+          "K": 7,
+          "p_hyper": 0.015387392596358511,
+          "p_bh": 1.0,
+          "p_perm": 0.01299
+        }
+      ]
+    },
+    "SynGO": {
+      "terms_tested": 74,
+      "nominal_005": 2,
+      "bh_005": 0,
+      "top10_perm": [
+        {
+          "term": "Synapse (GO:0045202) CC",
+          "k": 2,
+          "K": 64,
+          "p_hyper": 0.008318558492057674,
+          "p_bh": 0.5693335260652649,
+          "p_perm": 0.004
+        },
+        {
+          "term": "Regulation Of Postsynaptic Neurotransmitter Receptor Endocytosis (GO:0099149) BP",
+          "k": 1,
+          "K": 7,
+          "p_hyper": 0.015387392596358511,
+          "p_bh": 0.5693335260652649,
+          "p_perm": 0.01998
+        },
+        {
+          "term": "Integral Component Of Synaptic Vesicle Membrane (GO:0030285) CC",
+          "k": 1,
+          "K": 25,
+          "p_hyper": 0.053971742337661784,
+          "p_bh": 1.0,
+          "p_perm": 0.05495
+        },
+        {
+          "term": "Anchored Component Of Postsynaptic Density Membrane (GO:0099031) CC",
+          "k": 0,
+          "K": 5,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        },
+        {
+          "term": "Extrinsic Component Of Postsynaptic Membrane (GO:0098890) CC",
+          "k": 0,
+          "K": 4,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        },
+        {
+          "term": "Extrinsic Component Of Synaptic Vesicle Membrane (GO:0098850) CC",
+          "k": 0,
+          "K": 7,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        },
+        {
+          "term": "Anchored Component Of Synaptic Vesicle Membrane (GO:0098993) CC",
+          "k": 0,
+          "K": 6,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        },
+        {
+          "term": "Anchored Component Of Presynaptic Active Zone Membrane (GO:0099029) CC",
+          "k": 0,
+          "K": 5,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        },
+        {
+          "term": "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+          "k": 0,
+          "K": 31,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        },
+        {
+          "term": "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC",
+          "k": 0,
+          "K": 13,
+          "p_hyper": 1.0,
+          "p_bh": 1.0,
+          "p_perm": 1.0
+        }
+      ]
+    }
+  },
+  "gene_driven_all": {
+    "n": 1266,
+    "GO_BP": {
+      "terms_tested": 2507,
+      "nominal_005": 76,
+      "bh_005": 0,
+      "top10_perm": [
+        {
+          "term": "Negative Regulation Of Inflammatory Response (GO:0050728)",
+          "k": 20,
+          "K": 42,
+          "p_hyper": 0.0015190232682947597,
+          "p_bh": 1.0,
+          "p_perm": 0.002
+        },
+        {
+          "term": "Negative Regulation Of Defense Response (GO:0031348)",
+          "k": 21,
+          "K": 46,
+          "p_hyper": 0.0022622870683412645,
+          "p_bh": 1.0,
+          "p_perm": 0.004
+        },
+        {
+          "term": "Regulation Of Calcium Ion-Dependent Exocytosis (GO:0017158)",
+          "k": 7,
+          "K": 10,
+          "p_hyper": 0.003879966622105355,
+          "p_bh": 1.0,
+          "p_perm": 0.005
+        },
+        {
+          "term": "Negative Regulation Of Type I Interferon Production (GO:0032480)",
+          "k": 6,
+          "K": 8,
+          "p_hyper": 0.004628596199235486,
+          "p_bh": 1.0,
+          "p_perm": 0.00599
+        },
+        {
+          "term": "NADH Dehydrogenase Complex Assembly (GO:0010257)",
+          "k": 9,
+          "K": 15,
+          "p_hyper": 0.004716688419229038,
+          "p_bh": 1.0,
+          "p_perm": 0.00799
+        },
+        {
+          "term": "Mitochondrial Respiratory Chain Complex I Assembly (GO:0032981)",
+          "k": 9,
+          "K": 15,
+          "p_hyper": 0.004716688419229038,
+          "p_bh": 1.0,
+          "p_perm": 0.003
+        },
+        {
+          "term": "Positive Regulation Of Immune System Process (GO:0002684)",
+          "k": 7,
+          "K": 11,
+          "p_hyper": 0.008335881430136577,
+          "p_bh": 1.0,
+          "p_perm": 0.01399
+        },
+        {
+          "term": "Carboxylic Acid Transmembrane Transport (GO:1905039)",
+          "k": 7,
+          "K": 11,
+          "p_hyper": 0.008335881430136577,
+          "p_bh": 1.0,
+          "p_perm": 0.01399
+        },
+        {
+          "term": "Regulation Of Immune Response (GO:0050776)",
+          "k": 11,
+          "K": 22,
+          "p_hyper": 0.011308168325021944,
+          "p_bh": 1.0,
+          "p_perm": 0.01399
+        },
+        {
+          "term": "Double-Strand Break Repair (GO:0006302)",
+          "k": 19,
+          "K": 46,
+          "p_hyper": 0.013152848304133508,
+          "p_bh": 1.0,
+          "p_perm": 0.01598
+        }
+      ]
+    },
+    "SynGO": {
+      "terms_tested": 74,
+      "nominal_005": 4,
+      "bh_005": 0,
+      "top10_perm": [
+        {
+          "term": "Synaptic Vesicle Priming (GO:0016082) BP",
+          "k": 3,
+          "K": 3,
+          "p_hyper": 0.01645947372620116,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.01499
+        },
+        {
+          "term": "Presynaptic Ribosome CC",
+          "k": 4,
+          "K": 6,
+          "p_hyper": 0.03993826131308996,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.03397
+        },
+        {
+          "term": "Translation At Presynapse (GO:0140236) BP",
+          "k": 4,
+          "K": 6,
+          "p_hyper": 0.03993826131308996,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.04196
+        },
+        {
+          "term": "Translation At Postsynapse (GO:0140242) BP",
+          "k": 4,
+          "K": 6,
+          "p_hyper": 0.03993826131308996,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.03596
+        },
+        {
+          "term": "Postsynaptic Ribosome CC",
+          "k": 5,
+          "K": 9,
+          "p_hyper": 0.05237378344697169,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.04695
+        },
+        {
+          "term": "Regulation Of Synaptic Vesicle Endocytosis (GO:1900242) BP",
+          "k": 3,
+          "K": 4,
+          "p_hyper": 0.05329214033860546,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.04595
+        },
+        {
+          "term": "Postsynaptic Density (GO:0014069) CC",
+          "k": 13,
+          "K": 33,
+          "p_hyper": 0.05450378433531396,
+          "p_bh": 0.576182862973319,
+          "p_perm": 0.05894
+        },
+        {
+          "term": "Regulation Of Postsynaptic Membrane Neurotransmitter Receptor Levels (GO:0099072) BP",
+          "k": 4,
+          "K": 7,
+          "p_hyper": 0.07466518254043367,
+          "p_bh": 0.6464320901377016,
+          "p_perm": 0.08292
+        },
+        {
+          "term": "Integral Component Of Synaptic Vesicle Membrane (GO:0030285) CC",
+          "k": 10,
+          "K": 25,
+          "p_hyper": 0.07862011907080155,
+          "p_bh": 0.6464320901377016,
+          "p_perm": 0.08791
+        },
+        {
+          "term": "Synapse (GO:0045202) CC",
+          "k": 21,
+          "K": 64,
+          "p_hyper": 0.11364992383366163,
+          "p_bh": 0.8410094363690961,
+          "p_perm": 0.11688
+        }
+      ]
+    }
+  }
+}

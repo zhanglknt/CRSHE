@@ -1,0 +1,134 @@
+{
+  "n_universe": 4974,
+  "n_campra_positives": 97,
+  "gd_reference": 1214,
+  "replication_agreement": 1.0,
+  "sweep": [
+    {
+      "k_pct": 0,
+      "n_pos": 0,
+      "RD_mean": 261.0,
+      "RD_sd": 0.0,
+      "GD_mean": 1280.0,
+      "GD_sd": 0.0,
+      "dual_mean": 1.0
+    },
+    {
+      "k_pct": 10,
+      "n_pos": 10,
+      "RD_mean": 264.38,
+      "RD_sd": 1.5797468151574163,
+      "GD_mean": 1278.44,
+      "GD_sd": 1.1774548823628022,
+      "dual_mean": 1.99
+    },
+    {
+      "k_pct": 20,
+      "n_pos": 19,
+      "RD_mean": 267.7,
+      "RD_sd": 1.94164878389476,
+      "GD_mean": 1277.34,
+      "GD_sd": 1.290116273829611,
+      "dual_mean": 2.89
+    },
+    {
+      "k_pct": 30,
+      "n_pos": 29,
+      "RD_mean": 270.62,
+      "RD_sd": 2.1437350582569668,
+      "GD_mean": 1275.86,
+      "GD_sd": 1.6614451540752104,
+      "dual_mean": 3.85
+    },
+    {
+      "k_pct": 40,
+      "n_pos": 39,
+      "RD_mean": 274.14,
+      "RD_sd": 2.486041029428115,
+      "GD_mean": 1274.27,
+      "GD_sd": 1.690295832095672,
+      "dual_mean": 4.96
+    },
+    {
+      "k_pct": 50,
+      "n_pos": 48,
+      "RD_mean": 276.9,
+      "RD_sd": 1.982422760159901,
+      "GD_mean": 1273.11,
+      "GD_sd": 1.7714118662806795,
+      "dual_mean": 5.72
+    },
+    {
+      "k_pct": 60,
+      "n_pos": 58,
+      "RD_mean": 279.8,
+      "RD_sd": 2.1166010488516727,
+      "GD_mean": 1271.38,
+      "GD_sd": 1.7422973339817747,
+      "dual_mean": 7.2
+    },
+    {
+      "k_pct": 70,
+      "n_pos": 68,
+      "RD_mean": 283.46,
+      "RD_sd": 2.1560148422494687,
+      "GD_mean": 1270.27,
+      "GD_sd": 1.642284993537967,
+      "dual_mean": 7.93
+    },
+    {
+      "k_pct": 80,
+      "n_pos": 78,
+      "RD_mean": 286.7,
+      "RD_sd": 1.862793601019716,
+      "GD_mean": 1268.57,
+      "GD_sd": 1.4577722730248373,
+      "dual_mean": 8.94
+    },
+    {
+      "k_pct": 90,
+      "n_pos": 87,
+      "RD_mean": 289.52,
+      "RD_sd": 1.459314907756376,
+      "GD_mean": 1267.31,
+      "GD_sd": 1.0265963179361204,
+      "dual_mean": 10.0
+    },
+    {
+      "k_pct": 100,
+      "n_pos": 97,
+      "RD_mean": 293.0,
+      "RD_sd": 0.0,
+      "GD_mean": 1266.0,
+      "GD_sd": 0.0,
+      "dual_mean": 11.0
+    }
+  ],
+  "linear_fit": {
+    "slope": 0.32699151574768504,
+    "intercept": 261.1757747369531,
+    "r": 0.9998552290928626
+  },
+  "crossing": {
+    "n_pos_star": 2913.9111548027754,
+    "pct_of_universe": 58.58285393652544,
+    "fold_over_current": 30.040321183533766
+  },
+  "ceilings": {
+    "doan_all": {
+      "dual-driven": 238,
+      "gene-driven": 543,
+      "gene-driven (relaxed)": 3,
+      "neutral": 2284,
+      "regulation-driven": 1906
+    },
+    "doan_har_only": {
+      "dual-driven": 35,
+      "gene-driven": 1162,
+      "gene-driven (relaxed)": 45,
+      "neutral": 3322,
+      "regulation-driven": 410
+    },
+    "n_har_proximate": 476
+  }
+}

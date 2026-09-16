@@ -1,0 +1,86 @@
+{
+  "universe_n": 4974,
+  "genome_busted_sig": 1690,
+  "genome_busted_rate": 0.3398,
+  "subset_table": [
+    {
+      "subset": "HAR-proximate (n_hars>0)",
+      "n": 476,
+      "busted_sig": 174,
+      "busted_rate": 0.3655,
+      "busted_OR": 1.133,
+      "busted_p": 0.22201216115856964,
+      "RD_or_dual": 91,
+      "RD_rate": 0.1912,
+      "RD_OR": 4.755,
+      "RD_p": 1.6740200962929436e-25,
+      "GD_class": 103,
+      "GD_rate": 0.2164
+    },
+    {
+      "subset": "hCONDEL-proximate",
+      "n": 183,
+      "busted_sig": 56,
+      "busted_rate": 0.306,
+      "busted_OR": 0.852,
+      "busted_p": 0.34102344570045146,
+      "RD_or_dual": 29,
+      "RD_rate": 0.1585,
+      "RD_OR": 3.092,
+      "RD_p": 1.4197937214027395e-06,
+      "GD_class": 29,
+      "GD_rate": 0.1585
+    },
+    {
+      "subset": "HAR or hCONDEL",
+      "n": 630,
+      "busted_sig": 220,
+      "busted_rate": 0.3492,
+      "busted_OR": 1.049,
+      "busted_p": 0.5894611896322446,
+      "RD_or_dual": 108,
+      "RD_rate": 0.1714,
+      "RD_OR": 4.379,
+      "RD_p": 1.523106529215244e-26,
+      "GD_class": 129,
+      "GD_rate": 0.2048
+    }
+  ],
+  "gds_rds_spearman_all": {
+    "rho": -0.0635,
+    "p": 7.450873044214623e-06,
+    "n": 4974
+  },
+  "gds_rds_spearman_classified": {
+    "rho": -0.2662,
+    "p": 7.239828361002488e-27,
+    "n": 1570
+  },
+  "spearman_gds_vs_rds_doan": {
+    "rho": -0.02,
+    "p": 0.15816833546591424,
+    "n": 4974
+  },
+  "spearman_gds_vs_rds_tau": {
+    "rho": 0.0494,
+    "p": 0.0004970944396116639,
+    "n": 4974
+  },
+  "spearman_gds_vs_rds_nc": {
+    "rho": -0.1291,
+    "p": 6.046401303085402e-20,
+    "n": 4974
+  },
+  "spearman_gds_vs_rds_brain": {
+    "rho": -0.0365,
+    "p": 0.010076284239620186,
+    "n": 4974
+  },
+  "gd_rate_campra_pos": {
+    "n_pos": 97,
+    "gd_rate_pos": 0.0825,
+    "gd_rate_neg": 0.2579,
+    "OR": 0.259,
+    "p": 2.6986108951554042e-05
+  }
+}
