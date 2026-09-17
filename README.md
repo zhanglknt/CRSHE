@@ -1,11 +1,11 @@
-# CRSHE — Coding versus Regulatory Selection in Human Evolution
+# CRSHE — Coding Selection Dominates by Prevalence, Regulatory Selection by Specificity
 
 Reproducibility repository for a pair of companion studies of human-lineage positive
 selection across 10 primate species (4,974 one-to-one orthologous genes):
 
-- **Paper A (submitted to *Molecular Biology and Evolution*)** — *"Coding versus Regulatory
-  Selection in Human Evolution: A Comparability-Corrected Framework for 10-Primate
-  Genomic Analysis."* Builds the gene-driven (GD) versus regulation-driven (RD)
+- **Paper A (submitted to *Molecular Biology and Evolution*)** — *"Coding Selection Dominates by
+  Prevalence, Regulatory Selection by Specificity: A Comparability-Corrected 10-Primate
+  Analysis."* Builds the gene-driven (GD) versus regulation-driven (RD)
   classification: 1,214 GD / 52 GD-relaxed / 293 RD / 11 dual-driven / 3,404 unclassified,
   with leave-one-out circularity control and hCONDEL/HAR validation.
   → see [`PaperA_MBE/`](PaperA_MBE/)

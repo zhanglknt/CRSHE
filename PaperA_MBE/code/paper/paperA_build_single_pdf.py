@@ -40,7 +40,7 @@ for f in ["Figure1_analysis_pipeline.pdf", "Figure2_BUSTED_pvalue_distribution.p
     doc.insert_pdf(fd)
     fd.close()
     log.append("appended " + f)
-doc.set_metadata({"title": "Coding versus Regulatory Selection in Human Evolution",
+doc.set_metadata({"title": "Coding Selection Dominates by Prevalence, Regulatory Selection by Specificity",
                   "author": "Xianming Wu, Li Zhang"})
 doc.save(out_pdf, deflate=True)
 doc.close()
