@@ -1,0 +1,153 @@
+{
+  "task": "Selectome-flag sensitivity reclassification (P0-D follow-up)",
+  "stored_flag_n": 16,
+  "corrected_nhx_flag_n": 24,
+  "flag_overlap": 1,
+  "flag_symmetric_difference": 38,
+  "flag_old_only_genes": [
+    "ADAT2",
+    "C15orf61",
+    "C2orf74",
+    "DKK4",
+    "E4F1",
+    "FIRRM",
+    "GLRX",
+    "LDB1",
+    "LDLRAD1",
+    "MGST1",
+    "NUDCD2",
+    "RBM22",
+    "TAPT1",
+    "TXNDC16",
+    "YPEL5"
+  ],
+  "flag_new_only_genes": [
+    "ALKBH4",
+    "ATP5PB",
+    "C2orf78",
+    "CCDC122",
+    "CCDC175",
+    "CCHCR1",
+    "CD14",
+    "CMBL",
+    "COX8A",
+    "DCAF4",
+    "JCAD",
+    "MRPL18",
+    "MRPS5",
+    "NDUFB4",
+    "NUB1",
+    "PTER",
+    "RAD17",
+    "SLC28A3",
+    "SLC38A9",
+    "SNRNP48",
+    "TMEM171",
+    "TNFSF4",
+    "TOPAZ1"
+  ],
+  "gds_formula_max_abs_error": 8.000000000230045e-07,
+  "classification_replication_agreement": 1.0,
+  "n_flips": 3,
+  "flips_csv": "results/phase9_hardening/selectome_sensitivity_flips.csv",
+  "class_counts_old": {
+    "neutral": 3404,
+    "gene-driven": 1214,
+    "regulation-driven": 293,
+    "gene-driven (relaxed)": 52,
+    "dual-driven": 11
+  },
+  "class_counts_new": {
+    "neutral": 3403,
+    "gene-driven": 1215,
+    "regulation-driven": 293,
+    "gene-driven (relaxed)": 52,
+    "dual-driven": 11
+  },
+  "robustness_checks": {
+    "hcondel_RD_enrichment_old": {
+      "table": [
+        [
+          27,
+          266
+        ],
+        [
+          156,
+          4525
+        ]
+      ],
+      "OR": 2.9442596876807405,
+      "p": 6.654409160391586e-06,
+      "ci95": [
+        1.8450729803935788,
+        4.5460059572249625
+      ]
+    },
+    "hcondel_RD_enrichment_new": {
+      "table": [
+        [
+          27,
+          266
+        ],
+        [
+          156,
+          4525
+        ]
+      ],
+      "OR": 2.9442596876807405,
+      "p": 6.654409160391586e-06,
+      "ci95": [
+        1.8450729803935788,
+        4.5460059572249625
+      ]
+    },
+    "class_sizes_old": {
+      "RD": 293,
+      "GD_all": 1266
+    },
+    "class_sizes_new": {
+      "RD": 293,
+      "GD_all": 1267
+    },
+    "RD_class_flips": 0,
+    "GD_class_flips": 3,
+    "tier1_q_margins": {
+      "gene_driven_GO_BP": {
+        "n_terms": 2507,
+        "min_p_bh": 1.0,
+        "n_p_bh_lt_0.05": 0,
+        "n_p_lt_0.05": 59
+      },
+      "gene_driven_SynGO": {
+        "n_terms": 74,
+        "min_p_bh": 0.5015298127764759,
+        "n_p_bh_lt_0.05": 0,
+        "n_p_lt_0.05": 7
+      },
+      "gene_driven_all_GO_BP": {
+        "n_terms": 2507,
+        "min_p_bh": 1.0,
+        "n_p_bh_lt_0.05": 0,
+        "n_p_lt_0.05": 76
+      },
+      "gene_driven_all_SynGO": {
+        "n_terms": 74,
+        "min_p_bh": 0.576182862973319,
+        "n_p_bh_lt_0.05": 0,
+        "n_p_lt_0.05": 4
+      },
+      "regulation_driven_GO_BP": {
+        "n_terms": 2507,
+        "min_p_bh": 0.0141243556883038,
+        "n_p_bh_lt_0.05": 18,
+        "n_p_lt_0.05": 188
+      },
+      "regulation_driven_SynGO": {
+        "n_terms": 74,
+        "min_p_bh": 0.0002124777908255,
+        "n_p_bh_lt_0.05": 11,
+        "n_p_lt_0.05": 14
+      }
+    }
+  }
+}

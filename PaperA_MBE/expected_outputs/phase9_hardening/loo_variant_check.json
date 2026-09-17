@@ -1,0 +1,185 @@
+{
+  "n_universe": 4974,
+  "weights_full": {
+    "doan": 0.3,
+    "tau": 0.25,
+    "nc": 0.25,
+    "brain": 0.2
+  },
+  "loo_weights": {
+    "full": {
+      "doan": 0.3,
+      "tau": 0.25,
+      "nc": 0.25,
+      "brain": 0.2
+    },
+    "LOO-caMPRA": {
+      "doan": null,
+      "tau": 0.35,
+      "nc": 0.35,
+      "brain": 0.3
+    },
+    "LOO-tau": {
+      "doan": 0.4,
+      "tau": null,
+      "nc": 0.33,
+      "brain": 0.27
+    },
+    "LOO-nc": {
+      "doan": 0.4,
+      "tau": 0.33,
+      "nc": null,
+      "brain": 0.27
+    },
+    "LOO-brain": {
+      "doan": 0.375,
+      "tau": 0.3125,
+      "nc": 0.3125,
+      "brain": null
+    }
+  },
+  "loo_weights_source": "canonical published weights from paperA_revision_v7_analysis.py (produce loo_full_matrix.csv); LOO-tau/nc are rounded, not exact proportional renormalization",
+  "counts": {
+    "full": {
+      "dual-driven": 11,
+      "gene-driven": 1214,
+      "gene-driven (relaxed)": 52,
+      "neutral": 3404,
+      "regulation-driven": 293
+    },
+    "LOO-caMPRA": {
+      "dual-driven": 34,
+      "gene-driven": 1020,
+      "gene-driven (relaxed)": 35,
+      "neutral": 3085,
+      "regulation-driven": 800
+    },
+    "LOO-tau": {
+      "dual-driven": 9,
+      "gene-driven": 1339,
+      "gene-driven (relaxed)": 66,
+      "neutral": 3412,
+      "regulation-driven": 148
+    },
+    "LOO-nc": {
+      "dual-driven": 8,
+      "gene-driven": 1369,
+      "gene-driven (relaxed)": 71,
+      "neutral": 3416,
+      "regulation-driven": 110
+    },
+    "LOO-brain": {
+      "dual-driven": 24,
+      "gene-driven": 1099,
+      "gene-driven (relaxed)": 41,
+      "neutral": 3197,
+      "regulation-driven": 613
+    }
+  },
+  "agreement_with_saved_columns": {
+    "full": {
+      "agreement_with_saved_column": 1.0,
+      "match": true
+    },
+    "LOO-caMPRA": {
+      "agreement_with_saved_column": 1.0,
+      "match": true
+    },
+    "LOO-tau": {
+      "agreement_with_saved_column": 1.0,
+      "match": true
+    },
+    "LOO-brain": {
+      "agreement_with_saved_column": 1.0,
+      "match": true
+    }
+  },
+  "loo_full_matrix_validation": {
+    "full": {
+      "expected": {
+        "gene-driven": 1214,
+        "gene-driven (relaxed)": 52,
+        "regulation-driven": 293,
+        "dual-driven": 11,
+        "neutral": 3404
+      },
+      "got": {
+        "dual-driven": 11,
+        "gene-driven": 1214,
+        "gene-driven (relaxed)": 52,
+        "neutral": 3404,
+        "regulation-driven": 293
+      },
+      "match": true
+    },
+    "LOO-caMPRA": {
+      "expected": {
+        "gene-driven": 1020,
+        "gene-driven (relaxed)": 35,
+        "regulation-driven": 800,
+        "dual-driven": 34,
+        "neutral": 3085
+      },
+      "got": {
+        "dual-driven": 34,
+        "gene-driven": 1020,
+        "gene-driven (relaxed)": 35,
+        "neutral": 3085,
+        "regulation-driven": 800
+      },
+      "match": true
+    },
+    "LOO-tau": {
+      "expected": {
+        "gene-driven": 1339,
+        "gene-driven (relaxed)": 66,
+        "regulation-driven": 148,
+        "dual-driven": 9,
+        "neutral": 3412
+      },
+      "got": {
+        "dual-driven": 9,
+        "gene-driven": 1339,
+        "gene-driven (relaxed)": 66,
+        "neutral": 3412,
+        "regulation-driven": 148
+      },
+      "match": true
+    },
+    "LOO-nc": {
+      "expected": {
+        "gene-driven": 1369,
+        "gene-driven (relaxed)": 71,
+        "regulation-driven": 110,
+        "dual-driven": 8,
+        "neutral": 3416
+      },
+      "got": {
+        "dual-driven": 8,
+        "gene-driven": 1369,
+        "gene-driven (relaxed)": 71,
+        "neutral": 3416,
+        "regulation-driven": 110
+      },
+      "match": true
+    },
+    "LOO-brain": {
+      "expected": {
+        "gene-driven": 1099,
+        "gene-driven (relaxed)": 41,
+        "regulation-driven": 613,
+        "dual-driven": 24,
+        "neutral": 3197
+      },
+      "got": {
+        "dual-driven": 24,
+        "gene-driven": 1099,
+        "gene-driven (relaxed)": 41,
+        "neutral": 3197,
+        "regulation-driven": 613
+      },
+      "match": true
+    }
+  },
+  "loo_full_matrix_all_match": true
+}

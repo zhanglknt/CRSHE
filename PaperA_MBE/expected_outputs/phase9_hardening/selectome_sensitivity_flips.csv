@@ -1,0 +1,4 @@
+gene_id,gene_symbol,old_class,new_class,stored_selectome_flag,corrected_selectome_flag,gds_old,gds_new,rds_v7,bh_fdr_sig
+ENSG00000087301,TXNDC16,gene-driven,neutral,True,False,0.3893,0.2393,0.1419,True
+ENSG00000144029,MRPS5,neutral,gene-driven,False,True,0.1747,0.3247,0.1227,True
+ENSG00000165983,PTER,neutral,gene-driven,False,True,0.3434,0.4934,0.1983,True

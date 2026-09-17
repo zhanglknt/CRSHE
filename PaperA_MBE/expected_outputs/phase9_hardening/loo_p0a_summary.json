@@ -1,0 +1,493 @@
+{
+  "task": "P0-A: Tier 1/2 re-runs under LOO classification variants + GWAS negative controls",
+  "step1_loo_classification": {
+    "all_match_loo_full_matrix": true,
+    "per_gene_agreement_with_saved_columns": {
+      "full": {
+        "agreement_with_saved_column": 1.0,
+        "match": true
+      },
+      "LOO-caMPRA": {
+        "agreement_with_saved_column": 1.0,
+        "match": true
+      },
+      "LOO-tau": {
+        "agreement_with_saved_column": 1.0,
+        "match": true
+      },
+      "LOO-brain": {
+        "agreement_with_saved_column": 1.0,
+        "match": true
+      }
+    },
+    "counts": {
+      "full": {
+        "dual-driven": 11,
+        "gene-driven": 1214,
+        "gene-driven (relaxed)": 52,
+        "neutral": 3404,
+        "regulation-driven": 293
+      },
+      "LOO-caMPRA": {
+        "dual-driven": 34,
+        "gene-driven": 1020,
+        "gene-driven (relaxed)": 35,
+        "neutral": 3085,
+        "regulation-driven": 800
+      },
+      "LOO-tau": {
+        "dual-driven": 9,
+        "gene-driven": 1339,
+        "gene-driven (relaxed)": 66,
+        "neutral": 3412,
+        "regulation-driven": 148
+      },
+      "LOO-nc": {
+        "dual-driven": 8,
+        "gene-driven": 1369,
+        "gene-driven (relaxed)": 71,
+        "neutral": 3416,
+        "regulation-driven": 110
+      },
+      "LOO-brain": {
+        "dual-driven": 24,
+        "gene-driven": 1099,
+        "gene-driven (relaxed)": 41,
+        "neutral": 3197,
+        "regulation-driven": 613
+      }
+    },
+    "loo_weights": {
+      "full": {
+        "doan": 0.3,
+        "tau": 0.25,
+        "nc": 0.25,
+        "brain": 0.2
+      },
+      "LOO-caMPRA": {
+        "doan": null,
+        "tau": 0.35,
+        "nc": 0.35,
+        "brain": 0.3
+      },
+      "LOO-tau": {
+        "doan": 0.4,
+        "tau": null,
+        "nc": 0.33,
+        "brain": 0.27
+      },
+      "LOO-nc": {
+        "doan": 0.4,
+        "tau": 0.33,
+        "nc": null,
+        "brain": 0.27
+      },
+      "LOO-brain": {
+        "doan": 0.375,
+        "tau": 0.3125,
+        "nc": 0.3125,
+        "brain": null
+      }
+    },
+    "loo_weights_note": "canonical published weights from paperA_revision_v7_analysis.py (produce loo_full_matrix.csv); LOO-tau/nc are rounded, not exact proportional renormalization"
+  },
+  "step2_tier1_loo": {
+    "v7_baseline": {
+      "gene_driven": {
+        "GO_BP_bh005": 0,
+        "SynGO_bh005": 0
+      },
+      "regulation_driven": {
+        "GO_BP_bh005": 18,
+        "SynGO_bh005": 11
+      }
+    },
+    "by_variant": {
+      "LOO-brain": {
+        "gene_driven": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 0
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 0
+          }
+        },
+        "gene_driven_all": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 0
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 0
+          }
+        },
+        "regulation_driven": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 15
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 7
+          }
+        },
+        "dual_driven": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 0
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 0
+          }
+        }
+      },
+      "LOO-tau": {
+        "gene_driven": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 0
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 0
+          }
+        },
+        "gene_driven_all": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 0
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 0
+          }
+        },
+        "regulation_driven": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 1
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 5
+          }
+        },
+        "dual_driven": {
+          "GO_BP": {
+            "terms_tested": 2507,
+            "bh_005": 0
+          },
+          "SynGO": {
+            "terms_tested": 74,
+            "bh_005": 0
+          }
+        }
+      }
+    },
+    "key_findings": "RD retains SynGO FDR-significant enrichment under both LOO variants (LOO-brain: SynGO 7 terms, GO BP 15 terms; LOO-tau: SynGO 5 terms, GO BP 1 term). GD retains 0 FDR-significant terms in every library under every variant (v7: 0/0; LOO-brain: 0/0; LOO-tau: 0/0)."
+  },
+  "step3_tier2_loo": {
+    "v7_baseline_32test_family": {
+      "n_tests": 32,
+      "RD_sig_q05": 8,
+      "RD_total": 8,
+      "RD_by_trait": {
+        "Educational attainment": {
+          "OR": 2.987,
+          "p": 8.683759842761343e-16,
+          "q": 2.7788031496836294e-14
+        },
+        "Bipolar disorder": {
+          "OR": 4.005,
+          "p": 6.108719796068543e-07,
+          "q": 6.807931816009771e-06
+        },
+        "Schizophrenia": {
+          "OR": 2.827,
+          "p": 6.382436077509161e-07,
+          "q": 6.807931816009771e-06
+        },
+        "Major depression": {
+          "OR": 3.292,
+          "p": 2.573991445558128e-06,
+          "q": 2.0591931564465023e-05
+        },
+        "Cognitive performance": {
+          "OR": 3.252,
+          "p": 4.7443283753684345e-06,
+          "q": 3.036370160235798e-05
+        },
+        "Neuroticism": {
+          "OR": 3.501,
+          "p": 6.550659537947252e-06,
+          "q": 3.493685086905201e-05
+        },
+        "ASD": {
+          "OR": 2.646,
+          "p": 0.0011277502523163,
+          "q": 0.0051554297248748
+        },
+        "Intelligence": {
+          "OR": 1.947,
+          "p": 0.0090040427435825,
+          "q": 0.0360161709743303
+        }
+      }
+    },
+    "by_variant_32test_family": {
+      "LOO-brain": {
+        "n_tests": 32,
+        "RD_sig_q05": 6,
+        "RD_total": 8,
+        "RD_by_trait": {
+          "Educational attainment": {
+            "OR": 2.625,
+            "p": 2.2751227776155685e-21,
+            "q": 7.280392888369819e-20
+          },
+          "Bipolar disorder": {
+            "OR": 2.839,
+            "p": 4.65685576279646e-06,
+            "q": 5.181389941978406e-05
+          },
+          "Cognitive performance": {
+            "OR": 2.53,
+            "p": 6.036139006377781e-06,
+            "q": 5.181389941978406e-05
+          },
+          "Neuroticism": {
+            "OR": 2.731,
+            "p": 6.4767374274730074e-06,
+            "q": 5.181389941978406e-05
+          },
+          "Major depression": {
+            "OR": 2.418,
+            "p": 1.3863086950774733e-05,
+            "q": 8.872375648495829e-05
+          },
+          "Schizophrenia": {
+            "OR": 1.782,
+            "p": 0.0005196052093761332,
+            "q": 0.002771227783339377
+          },
+          "Intelligence": {
+            "OR": 1.631,
+            "p": 0.0113114187065665,
+            "q": 0.051709342658589716
+          },
+          "ASD": {
+            "OR": 1.593,
+            "p": 0.04328409889772824,
+            "q": 0.15389901830303374
+          }
+        }
+      },
+      "LOO-tau": {
+        "n_tests": 32,
+        "RD_sig_q05": 5,
+        "RD_total": 8,
+        "RD_by_trait": {
+          "Educational attainment": {
+            "OR": 3.426,
+            "p": 1.7601318660874937e-11,
+            "q": 5.63242197147998e-10
+          },
+          "Schizophrenia": {
+            "OR": 2.657,
+            "p": 0.0005411089423392707,
+            "q": 0.008657743077428332
+          },
+          "Neuroticism": {
+            "OR": 3.411,
+            "p": 0.0009163091340642841,
+            "q": 0.009773964096685697
+          },
+          "Cognitive performance": {
+            "OR": 3.02,
+            "p": 0.0014627532076389252,
+            "q": 0.011702025661111401
+          },
+          "Major depression": {
+            "OR": 2.911,
+            "p": 0.0019421070088960712,
+            "q": 0.012429484856934856
+          },
+          "Intelligence": {
+            "OR": 2.213,
+            "p": 0.01764131928244762,
+            "q": 0.09408703617305397
+          },
+          "ASD": {
+            "OR": 2.496,
+            "p": 0.021534193162927255,
+            "q": 0.09844202588766746
+          },
+          "Bipolar disorder": {
+            "OR": 1.829,
+            "p": 0.12675333617261314,
+            "q": 0.5070133446904526
+          }
+        }
+      }
+    },
+    "key_findings": "RD enrichment for neuro/cognitive GWAS traits is robust but attenuated under LOO: v7 8/8 traits FDR-sig; LOO-brain 6/8 (Intelligence q=0.052, ASD q=0.154); LOO-tau 5/8 (Intelligence q=0.094, ASD q=0.098, Bipolar q=0.507). GD shows no enrichment in any variant."
+  },
+  "step4_negative_controls": {
+    "control_traits": [
+      "Height",
+      "LDL cholesterol",
+      "Crohn disease",
+      "Type 2 diabetes"
+    ],
+    "gwas_scan": {
+      "n_rows_scanned": 1150105,
+      "n_gws_rows_target_traits": 82665
+    },
+    "trait_gene_counts": {
+      "Schizophrenia": 257,
+      "ASD": 116,
+      "Educational attainment": 822,
+      "Intelligence": 180,
+      "Major depression": 154,
+      "Bipolar disorder": 115,
+      "Neuroticism": 122,
+      "Cognitive performance": 149,
+      "Height": 2191,
+      "LDL cholesterol": 256,
+      "Crohn disease": 95,
+      "Type 2 diabetes": 561
+    },
+    "by_classification": {
+      "full_v7": {
+        "RD_neuro_sig_q05": 8,
+        "RD_neuro_total": 8,
+        "RD_control_sig_q05": 2,
+        "RD_control_total": 4,
+        "RD_control_detail": {
+          "Height": {
+            "OR": 2.215,
+            "p": 5.154673847080334e-11,
+            "q": 1.2371217232992802e-09
+          },
+          "Type 2 diabetes": {
+            "OR": 2.148,
+            "p": 1.724951008630618e-06,
+            "q": 1.6559529682853932e-05
+          },
+          "LDL cholesterol": {
+            "OR": 1.543,
+            "p": 0.04555838777243093,
+            "q": 0.19880023755242587
+          },
+          "Crohn disease": {
+            "OR": 0.516,
+            "p": 0.9255024857570309,
+            "q": 1.0
+          }
+        },
+        "control_trait_gene_counts": {
+          "Height": 2191,
+          "LDL cholesterol": 256,
+          "Crohn disease": 95,
+          "Type 2 diabetes": 561
+        }
+      },
+      "LOO-brain": {
+        "RD_neuro_sig_q05": 6,
+        "RD_neuro_total": 8,
+        "RD_control_sig_q05": 2,
+        "RD_control_total": 4,
+        "RD_control_detail": {
+          "Height": {
+            "OR": 1.878,
+            "p": 2.490739486331831e-13,
+            "q": 5.977774767196395e-12
+          },
+          "Type 2 diabetes": {
+            "OR": 1.77,
+            "p": 2.301180529757971e-06,
+            "q": 3.6818888476127534e-05
+          },
+          "LDL cholesterol": {
+            "OR": 1.174,
+            "p": 0.2176223372297256,
+            "q": 0.5803262326126016
+          },
+          "Crohn disease": {
+            "OR": 1.029,
+            "p": 0.510775790118126,
+            "q": 0.889514449435566
+          }
+        },
+        "control_trait_gene_counts": {
+          "Height": 2191,
+          "LDL cholesterol": 256,
+          "Crohn disease": 95,
+          "Type 2 diabetes": 561
+        }
+      },
+      "LOO-tau": {
+        "RD_neuro_sig_q05": 5,
+        "RD_neuro_total": 8,
+        "RD_control_sig_q05": 2,
+        "RD_control_total": 4,
+        "RD_control_detail": {
+          "Height": {
+            "OR": 2.335,
+            "p": 4.448267203259836e-07,
+            "q": 1.0675841287823607e-05
+          },
+          "Type 2 diabetes": {
+            "OR": 2.336,
+            "p": 7.375360084873312e-05,
+            "q": 0.00118005761357973
+          },
+          "LDL cholesterol": {
+            "OR": 2.146,
+            "p": 0.008638975730330867,
+            "q": 0.051833854381985206
+          },
+          "Crohn disease": {
+            "OR": 0.342,
+            "p": 0.9448387260958372,
+            "q": 1.0
+          }
+        },
+        "control_trait_gene_counts": {
+          "Height": 2191,
+          "LDL cholesterol": 256,
+          "Crohn disease": 95,
+          "Type 2 diabetes": 561
+        }
+      }
+    },
+    "key_findings": "Negative-control specificity is PARTIAL: RD is enriched for Crohn (OR<1, null) and LDL cholesterol (null at v7/LOO-brain, borderline LOO-tau q=0.052), but IS significantly enriched for Height (OR 2.2-2.3, all classifications) and Type 2 diabetes (OR 2.1-2.3, all classifications). RD neuro enrichment persists after joint BH with controls (v7 8/8; LOO-brain 6/8; LOO-tau 5/8), but RD is NOT specific to neuro traits among highly polygenic, regulatory-architectured traits. Height/T2D enrichment likely reflects the regulatory/noncoding architecture of RD genes rather than cognition-specific biology."
+  },
+  "output_files": {
+    "step1": [
+      "loo_variant_per_gene.csv",
+      "loo_variant_check.json"
+    ],
+    "step2": [
+      "loo_tier1_summary.json",
+      "loo_tier1_{variant}_{class}_{lib}.csv (16 files)"
+    ],
+    "step3": [
+      "loo_tier2_LOO-brain.csv/.json",
+      "loo_tier2_LOO-tau.csv/.json"
+    ],
+    "step4": [
+      "tier2_negative_controls.csv/.json"
+    ]
+  },
+  "scripts": [
+    "scripts/phase9_loo_tier12_rerun.py (step 1)",
+    "scripts/phase9_loo_tier1.py (step 2)",
+    "scripts/phase9_loo_tier2_negctl.py (steps 3+4)",
+    "scripts/phase9_loo_p0a_summary.py (step 5)"
+  ]
+}

@@ -15,8 +15,10 @@ import os
 import numpy as np
 import pandas as pd
 
-BASE = os.environ.get("HSD_BASE") or (
-    "/mnt/d/人类正选择基因项目" if os.path.exists("/mnt/d") else "D:/人类正选择基因项目")
+if os.path.exists("/mnt/d"):
+    BASE = "/mnt/d/人类正选择基因项目"
+else:
+    BASE = "D:/人类正选择基因项目"
 
 OUT_DIR = f"{BASE}/results/paper/supplementary"
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -80,6 +82,19 @@ if "stability" not in s1.columns:
     s1 = s1.merge(stab[["gene_id", "stability"]].rename(
         columns={"gene_id": "Ensembl Gene ID", "stability": "Classification Stability (1000 perturbations)"}),
         on="Ensembl Gene ID", how="left")
+
+# P0-D correction: the 'Selectome Positive Selection' column is overwritten with
+# the corrected Selectome v6 NHX primate-ancestral flag (24 genes in the universe).
+# The v9 classification and GDS component columns are intentionally left as
+# published (the 3-gene sensitivity is quantified in the manuscript Limitations).
+_sel_nhx = pd.read_csv(f"{BASE}/data/selectome/selectome_primate_positive_selection.tsv", sep="\t")
+_nhx_ids = set(str(g).split(".")[0] for g in _sel_nhx["gene_id"].dropna())
+_n_changed = int((s1["Selectome Positive Selection"].astype(bool)
+                  != s1["Ensembl Gene ID"].map(lambda g: str(g).split(".")[0] in _nhx_ids)).sum())
+s1["Selectome Positive Selection"] = s1["Ensembl Gene ID"].map(
+    lambda g: str(g).split(".")[0] in _nhx_ids)
+print(f"  S1 Selectome column corrected to NHX flag: {_nhx_ids and len(_nhx_ids)} source genes, "
+      f"{_n_changed} rows changed")
 print(f"  S1: {len(s1)} genes × {len(s1.columns)} columns")
 s1.to_csv(f"{OUT_DIR}/TableS1_full_gene_classification.csv", index=False)
 
@@ -128,10 +143,10 @@ s3 = pd.DataFrame([
      "Data Source": "HyPhy RELAX v3",
      "Notes": "Genes without active RELAX result assigned neutral 0.5"},
     {"Score": "GDS", "Component": "Selectome positive selection", "Weight": 0.15,
-     "Data Source": "Selectome v6 (41 primates)",
-     "Notes": "Binary 0/1"},
+     "Data Source": "Selectome v6, primate ancestral branches (NHX parse)",
+     "Notes": "Binary 0/1; see manuscript Limitations for flag-provenance sensitivity"},
     # RDS
-    {"Score": "RDS", "Component": "caMPRA active HAR (Shin et al. 2024)", "Weight": 0.30,
+    {"Score": "RDS", "Component": "caMPRA active HAR (Doan 2024)", "Weight": 0.30,
      "Data Source": "Shin et al. 2024 caMPRA (508 active HARs)",
      "Notes": "Binary: ≥1 active HAR within ±50kb"},
     {"Score": "RDS", "Component": "GTEx tau percentile", "Weight": 0.25,

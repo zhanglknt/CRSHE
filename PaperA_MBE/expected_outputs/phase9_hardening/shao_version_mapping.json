@@ -1,0 +1,60 @@
+{
+  "task": "Shao 2023 version-drift mapping (67->64 absent, 3->4 significant)",
+  "symbol_matching_current_universe": {
+    "in_universe": 17,
+    "absent": 65,
+    "busted_sig": 4
+  },
+  "ensg_matching": {
+    "in_universe": 18,
+    "absent": 64,
+    "busted_sig": 4
+  },
+  "old_version": {
+    "method": "symbol matching vs 4,045-symbol BUSTED v3 set",
+    "in_universe": 15,
+    "absent": 67,
+    "busted_sig": [
+      "CD2",
+      "IZUMO3",
+      "N4BP2L1"
+    ]
+  },
+  "new_version": {
+    "method": "ENSG version-stripped matching vs 4,974 universe",
+    "in_universe": 18,
+    "absent": 64,
+    "busted_sig": [
+      "CD2",
+      "IZUMO3",
+      "N4BP2L1",
+      "PDHB"
+    ]
+  },
+  "genes_recovered_old_absent_to_new_matched": [
+    "C8ORF37",
+    "PDHB",
+    "TLN1"
+  ],
+  "genes_lost_new_absent": [],
+  "busted_sig_symbol_version": [
+    "CD2",
+    "IZUMO3",
+    "PDHB",
+    "N4BP2L1"
+  ],
+  "busted_sig_ensg_version": [
+    "CD2",
+    "IZUMO3",
+    "PDHB",
+    "N4BP2L1"
+  ],
+  "the_fourth_gene": [
+    "PDHB"
+  ],
+  "recomputed_or_0.55_test": {
+    "OR": 0.5541433655312659,
+    "p": 0.33227612949725593
+  },
+  "explanation": "Drift decomposition: 67->64 absent = 3 Shao genes matched in the new analysis but not the old (alias/renamed symbols + universe growth 4,045->4,974); 3->4 significant = PDHB (BUSTED FDR-significant in the current 4,974-gene universe but not in the old 4,045/1,369 analysis). Both v9 numbers (4 of 18, 64/82 absent) are internally consistent with ENSG version-stripped matching."
+}

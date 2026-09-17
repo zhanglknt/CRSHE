@@ -1,0 +1,43 @@
+{
+  "task": "strict 1:1 vs permissive-call BUSTED FDR rate sensitivity (reviewer 1, P2)",
+  "strict_n": 4119,
+  "permissive_n": 855,
+  "busted_fdr_strict": {
+    "k": 1345,
+    "rate": 0.3265
+  },
+  "busted_fdr_permissive": {
+    "k": 345,
+    "rate": 0.4035
+  },
+  "fisher": {
+    "OR": 0.7167486912635967,
+    "p_two_sided": 2.128545464861882e-05,
+    "p_greater": 0.9999922277243374,
+    "p_less": 1.1026942685804179e-05
+  },
+  "rate_diff_pp": -7.7,
+  "one_line_conclusion": "BUSTED FDR-significant rates differ between strict one-to-one orthologs (1345/4119 = 32.7%) and permissive-call genes (345/855 = 40.4%; Fisher OR = 0.72, two-sided P = 2.1e-05): permissive-call genes show an elevated coding-selection rate. Because permissive calls are only 17.2% of the universe, the impact on the universe-wide rate is bounded (strict-only 32.7% vs overall 34.0%).",
+  "classification_by_stratum": {
+    "dual-driven": {
+      "False": 2,
+      "True": 9
+    },
+    "gene-driven": {
+      "False": 267,
+      "True": 947
+    },
+    "gene-driven (relaxed)": {
+      "False": 8,
+      "True": 44
+    },
+    "neutral": {
+      "False": 551,
+      "True": 2853
+    },
+    "regulation-driven": {
+      "False": 27,
+      "True": 266
+    }
+  }
+}

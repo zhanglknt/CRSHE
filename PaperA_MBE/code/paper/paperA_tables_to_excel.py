@@ -7,6 +7,7 @@ Note: Table 2 'Unclassified / Current' corrected 68.5% -> 68.4% (3,404/4,974 = 6
 consistent with Table 1 and the round-4 R3 numeric-fidelity fix).
 """
 import os
+import pandas as pd
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
 from openpyxl.utils import get_column_letter
@@ -19,6 +20,52 @@ else:
 TITLE_FONT = Font(bold=True, size=12)
 HEADER_FONT = Font(bold=True)
 NOTE_FONT = Font(italic=True, size=10)
+
+
+# ------------------------------------------------------------------
+# Table S3-1 data (P0-D corrected Selectome cross-reference):
+# built from the raw Selectome v6 NHX parse (primate ancestral branches)
+# instead of the invalid summary_v3 family->gene mapping. The nine genes
+# are those with Selectome primate-ancestral support AND BUSTED FDR < 0.05
+# in the 4,974-gene universe.
+# ------------------------------------------------------------------
+strip = lambda s: str(s).split(".")[0]
+_gc = pd.read_csv(f"{BASE}/results/phase7_gene_vs_regulation/phase7g_classification_v7/"
+                  "gene_classification_v7.csv", low_memory=False)
+_gc["ensg"] = _gc["gene_id"].map(strip)
+_pps = pd.read_csv(f"{BASE}/data/selectome/selectome_primate_positive_selection.tsv", sep="\t")
+_pps["ensg"] = _pps["gene_id"].map(strip)
+_hps = pd.read_csv(f"{BASE}/data/selectome/selectome_human_positive_selection.tsv", sep="\t")
+_hps["ensg"] = _hps["gene_id"].map(strip)
+_desc = dict(zip(_hps["ensg"], _hps["gene_description"].astype(str)))
+_gmap = pd.read_csv(f"{BASE}/data/gene_id_to_symbol_gencode47.csv")
+_id2sym = {strip(g): s for g, s in zip(_gmap["gene_id"], _gmap["gene_symbol"])}
+_gc["sym"] = _gc["gene_symbol"].where(
+    _gc["gene_symbol"].notna() & (_gc["gene_symbol"].astype(str).str.strip() != ""),
+    _gc["ensg"].map(_id2sym)).astype(str)
+_sel = _gc[_gc["ensg"].isin(set(_pps["ensg"])) & _gc["bh_fdr_sig"].astype(bool)].copy()
+_sel = _sel.sort_values("sym")
+FUNC = {  # concise functional annotation (HGNC descriptions)
+    "CCDC122": "Coiled-coil domain containing 122",
+    "CCHCR1": "Coiled-coil alpha-helical rod protein 1",
+    "CD14": "CD14 molecule, monocyte/innate immune receptor",
+    "MRPS5": "Mitochondrial ribosomal protein S5",
+    "NUB1": "Negative regulator of ubiquitin-like proteins 1",
+    "PTER": "Phosphotriesterase-related protein",
+    "RAD17": "RAD17 checkpoint clamp loader, DNA damage response",
+    "SLC38A9": "Solute carrier 38A9, lysosomal arginine sensor (mTORC1)",
+    "TMEM171": "Transmembrane protein 171",
+}
+tier1_rows = []
+for _, r in _sel.iterrows():
+    pp = _pps[_pps["ensg"] == r["ensg"]]
+    branch = "; ".join(str(x) for x in pp["primate_pos_details"]) if len(pp) else ""
+    tier1_rows.append([
+        r["sym"],
+        float(r["busted_p"]), float(r["busted_lrt"]),
+        branch, float(r["relax_K"]) if pd.notna(r["relax_K"]) else None,
+        FUNC.get(r["sym"].upper(), _desc.get(r["ensg"], ""))])
+assert len(tier1_rows) == 9, f"expected 9 Tier-1 genes, got {len(tier1_rows)}"
 
 
 def write_sheet(ws, title, headers, rows, notes=None):
@@ -79,7 +126,10 @@ write_sheet(
     notes=["***p < 0.001 (all survive Holm correction across variants).",
            "Class membership is threshold-sensitive - RD ranges from 110 (LOO-nc) to 800 (LOO-caMPRA),",
            "and per-gene median stability is 0.833 for RD versus 1.000 for GD -",
-           "but the enrichment signal is robust to the removal of any single component."])
+           "but the enrichment signal is robust to the removal of any single component.",
+           "95% CIs by normal approximation on log(OR). The companion manuscript reports the",
+           "Fisher conditional-MLE interval for the full-variant hCONDEL test (OR 2.94, 95% CI 1.85-4.55);",
+           "both intervals lead to the same conclusion."])
 
 write_sheet(
     wb.create_sheet("Table 4"),
@@ -116,24 +166,24 @@ wb2.active.title = "S2-1 MEME"
 
 write_sheet(
     wb2.create_sheet("S3-1 Tier1"),
-    "Table S3-1. Genes detected by both BUSTED (FDR < 0.05) and Selectome v6",
-    ["Gene", "BUSTED p", "BUSTED LRT", "Selectome FDR", "RELAX K", "Function"],
-    [["E4F1", 0, 86.7, 0.087, 1.64, "E4F transcription factor, cell cycle"],
-     ["TAPT1", 0, 88.1, 0.049, 1.00, "Transmembrane adaptor, 3 branches"],
-     ["GLRX", 4.1e-15, 64.9, 0.049, 7.59, "Glutaredoxin, redox regulation"],
-     ["RBM22", 4.4e-12, 50.9, 0.074, 1.18, "RNA-binding motif, spliceosome"],
-     ["C2orf74", 5.6e-10, 41.2, 0.023, 1.00, "Unknown function, cardiac expression"],
-     ["LDB1", 3.6e-6, 23.7, 0.026, 1.04, "LIM domain binding, transcription"],
-     ["YPEL5", 1.4e-4, 16.3, 0.055, 1.00, "Ypel-like protein, cell cycle"],
-     ["TXNDC16", 5.1e-4, 13.8, 0.063, 1.00, "Thioredoxin domain-containing"]])
+    "Table S3-1. Genes detected by both BUSTED (FDR < 0.05) and Selectome v6 "
+    "(primate ancestral branches)",
+    ["Gene", "BUSTED p", "BUSTED LRT", "Selectome branch (branch-site p)", "RELAX K", "Function"],
+    tier1_rows,
+    notes=["Selectome support: positive selection on primate ancestral branches in the Selectome v6",
+           "database (NHX tree parse; branch-site p-values as reported by Selectome).",
+           "RAD17 shows support on three nested primate branches (Homininae, Catarrhini, Simiiformes;",
+           "p < 1e-200, saturation-level values). MRPS5 and PTER are classified neutral under v9;",
+           "see manuscript Limitations for the 3-gene sensitivity of the classification to the",
+           "Selectome flag. Site-level evidence is not part of the NHX extract (branch-level calls only)."])
 
 write_sheet(
     wb2.create_sheet("S4-1 Top GD"),
     "Table S4-1. Top 10 gene-driven genes by GDS (RELAX K >= 50 = censored upper boundary)",
     ["Gene", "GDS", "BUSTED LRT", "RELAX K", "Function"],
-    [["GLRX", 0.914, 64.9, 7.59, "Glutaredoxin, redox regulation (Tier 1)"],
-     ["E4F1", 0.886, 86.7, 1.64, "E4F transcription factor, cell cycle (Tier 1)"],
-     ["TAPT1", 0.854, 88.1, 1.00, "Transmembrane adaptor (Tier 1)"],
+    [["GLRX", 0.914, 64.9, 7.59, "Glutaredoxin, redox regulation"],
+     ["E4F1", 0.886, 86.7, 1.64, "E4F transcription factor, cell cycle"],
+     ["TAPT1", 0.854, 88.1, 1.00, "Transmembrane adaptor"],
      ["GNRHR", 0.846, 286.0, 10.56, "Gonadotropin-releasing hormone receptor"],
      ["RNF151", 0.844, 208.6, 6.78, "RING finger protein, spermatogenesis"],
      ["RPL35", 0.842, 193.6, 4.41, "Ribosomal protein L35"],

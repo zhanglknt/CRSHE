@@ -1,0 +1,40 @@
+{
+  "task": "P2 GO-slim one-sided vs two-sided q audit",
+  "n_tests": 40,
+  "fisher_p_recomputed_from_counts": "all match",
+  "stored_q_convention": "BH over p_greater (one-sided enrichment)",
+  "min_q_by_class": {
+    "gene_driven": {
+      "q_greater": 0.45833151909424,
+      "q_two_sided": 0.20109273059626248
+    },
+    "gene_driven_all": {
+      "q_greater": 0.4472964438960391,
+      "q_two_sided": 0.3909151142293091
+    },
+    "regulation_driven": {
+      "q_greater": 0.000189923587692574,
+      "q_two_sided": 0.0002455247393249656
+    },
+    "dual_driven": {
+      "q_greater": 0.17668723947702067,
+      "q_two_sided": 0.20109273059626248
+    }
+  },
+  "reviewer_0.46_vs_0.38": {
+    "0.46": "gene_driven minimum one-sided (greater) BH q = 0.4583 (Metabolism & proteostasis, p_greater = 0.126) -- this is the correct value under the manuscript's one-sided convention",
+    "0.38": "not reproducible from the current 40-test CSV under either BH family; consistent with BH over 30 tests (3 classes, before dual_driven was added): 0.12604*30/10 = 0.378",
+    "recommended_manuscript_edit": "'none significant, all q >= 0.38' should read 'all q >= 0.46' (or '>= 0.45' if the gene-driven-incl-relaxed class is meant: min q = 0.447)"
+  },
+  "rd_class_check": {
+    "enriched_buckets_q": {
+      "Multicellular & organ homeostasis": 0.000189923587692574,
+      "Signal transduction": 0.00029590118287665983,
+      "Neuronal & synaptic": 0.0006271539242730556,
+      "Development & morphogenesis": 0.009112343000288
+    },
+    "manuscript_claim_all_q_below_0.01": true
+  },
+  "csv_action": "q_bh verified one-sided; q_bh_two_sided column added",
+  "changed_rows": []
+}

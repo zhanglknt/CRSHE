@@ -1,0 +1,4 @@
+subset,n,busted_sig,subset_rate,genome_rate,rate_diff,newcombe_low,newcombe_high,wilson_bound_subtraction_low,wilson_bound_subtraction_high,wald_low,wald_high,fisher_p_vs_genome
+HAR-proximate (n_hars>0),476,174,0.3655,0.3398,0.0258,-0.0183,0.0718,-0.0295,0.083,-0.0194,0.071,0.2659920226880409
+hCONDEL-proximate,183,56,0.306,0.3398,-0.0338,-0.0974,0.0376,-0.1092,0.0495,-0.1018,0.0343,0.3817648083341877
+HAR or hCONDEL,630,220,0.3492,0.3398,0.0094,-0.0291,0.0496,-0.0401,0.0605,-0.03,0.0489,0.6555573149840519

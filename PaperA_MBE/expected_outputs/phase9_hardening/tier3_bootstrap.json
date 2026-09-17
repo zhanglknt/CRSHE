@@ -1,0 +1,53 @@
+{
+  "task": "Tier 3 hardening: bootstrap CI of crossing point, equal-coverage point, endpoint checks",
+  "method_note": "replicate-level bootstrap: 100 independent sweep series (same classifier, same downsampling design as phase9_tier3_campra_sensitivity.py, seed 20260915); per-series OLS fit of RD(n_pos) over the 11 observable levels; percentile CI of the solved roots",
+  "gd_reference": 1214,
+  "rd_fit": {
+    "slope": 0.32699151574768504,
+    "intercept": 261.1757747369531,
+    "r": 0.9998552290928626
+  },
+  "crossing_n_star": {
+    "point": 2913.9111548027754,
+    "pct_of_universe": 58.58285393652543,
+    "bootstrap_median": 2905.6281924972327,
+    "ci95": [
+      2740.6017531823313,
+      3145.645500636211
+    ],
+    "ci95_pct_of_universe": [
+      55.09854751070228,
+      63.24176720217554
+    ]
+  },
+  "equal_coverage_point": {
+    "definition": "n where RD(n) = GD(n) with both counts linear in n_pos (equal-class-size coverage)",
+    "gd_fit": {
+      "slope": -0.14518356198071505,
+      "intercept": 1279.9938944123382
+    },
+    "point": 2157.712610705429,
+    "pct_of_universe": 43.37982731615258,
+    "bootstrap_ci95": [
+      2019.46774605529,
+      2277.497185297738
+    ]
+  },
+  "endpoint_validation": [
+    {
+      "scenario": "caMPRA-positive for all 476 HAR-proximate genes",
+      "n_pos": 476,
+      "extrapolated_RD": 417,
+      "measured_RD": 410,
+      "deviation_pct": 1.7
+    },
+    {
+      "scenario": "caMPRA-positive for all 4,974 genes",
+      "n_pos": 4974,
+      "extrapolated_RD": 1888,
+      "measured_RD": 1906,
+      "deviation_pct": -1.0
+    }
+  ],
+  "mean_curve_matches_published": true
+}

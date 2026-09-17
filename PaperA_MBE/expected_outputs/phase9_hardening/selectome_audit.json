@@ -1,0 +1,370 @@
+{
+  "claim_audited": "manuscript_english_v9.md L78 & Fig 5d: 'Eight genes detected by both BUSTED and Selectome v6 ... Fisher OR = 2.94, P = 0.030'",
+  "universe_n": 4974,
+  "busted_fdr_sig": 1690,
+  "selectome_sources": {
+    "pps_nhx_primate_ancestral": {
+      "file": "data/selectome/selectome_primate_positive_selection.tsv",
+      "unique_genes": 94
+    },
+    "hps_rest_any_branch": {
+      "file": "data/selectome/selectome_human_positive_selection.tsv",
+      "unique_genes": 1332
+    },
+    "summary_v3_sql": {
+      "file": "results/phase4_hyphy/selectome_analysis/selectome_primate_genes_summary_v3.tsv",
+      "unique_genes": 41,
+      "status": "SUSPECT: family->gene mapping joins Selectome SQL internal tree ids (1-6 digit integers) with ENSGT-derived family numbers -- different id spaces; only 3/94 genes shared with the NHX-parsed list"
+    }
+  },
+  "stored_flag_analysis": {
+    "n_in_universe": 16,
+    "by_class": {
+      "gene-driven": [
+        7,
+        1214
+      ],
+      "gene-driven (relaxed)": [
+        1,
+        52
+      ],
+      "dual-driven": [
+        0,
+        11
+      ],
+      "regulation-driven": [
+        0,
+        293
+      ],
+      "neutral": [
+        8,
+        3404
+      ]
+    },
+    "dual_method_genes": [
+      "C2orf74",
+      "E4F1",
+      "GLRX",
+      "LDB1",
+      "RBM22",
+      "TAPT1",
+      "TXNDC16",
+      "YPEL5"
+    ],
+    "fisher": {
+      "name": "STORED has_selectome (summary_v3, suspect): GD incl. relaxed vs rest",
+      "table": [
+        [
+          8,
+          1258
+        ],
+        [
+          8,
+          3700
+        ]
+      ],
+      "OR": 2.9411764705882355,
+      "p_two_sided": 0.03889484465671648,
+      "p_greater": 0.029871717005195957,
+      "OR_ci95_low": 0.9597786420773977,
+      "OR_ci95_high": 9.008347948470844
+    }
+  },
+  "corrected_pps_analysis": {
+    "n_in_universe": 24,
+    "by_class": {
+      "gene-driven": [
+        6,
+        1214
+      ],
+      "gene-driven (relaxed)": [
+        1,
+        52
+      ],
+      "dual-driven": [
+        0,
+        11
+      ],
+      "regulation-driven": [
+        0,
+        293
+      ],
+      "neutral": [
+        17,
+        3404
+      ]
+    },
+    "dual_method_genes": [
+      "CCDC122",
+      "CCHCR1",
+      "CD14",
+      "MRPS5",
+      "NUB1",
+      "PTER",
+      "RAD17",
+      "SLC38A9",
+      "TMEM171"
+    ],
+    "fisher": {
+      "name": "CORRECTED pps (NHX primate-ancestral, raw Selectome v6): GD incl. relaxed vs rest",
+      "table": [
+        [
+          7,
+          1259
+        ],
+        [
+          17,
+          3691
+        ]
+      ],
+      "OR": 1.2071672195486614,
+      "p_two_sided": 0.6431640379509088,
+      "p_greater": 0.412686196584326,
+      "OR_ci95_low": 0.4221985496859366,
+      "OR_ci95_high": 3.071538191095132
+    }
+  },
+  "sensitivity_hps_any_branch": {
+    "n_in_universe": 365,
+    "by_class": {
+      "gene-driven": [
+        97,
+        1214
+      ],
+      "gene-driven (relaxed)": [
+        1,
+        52
+      ],
+      "dual-driven": [
+        0,
+        11
+      ],
+      "regulation-driven": [
+        17,
+        293
+      ],
+      "neutral": [
+        250,
+        3404
+      ]
+    },
+    "dual_method_genes": [
+      "AFAP1L2",
+      "AMPD1",
+      "ASAH2",
+      "AUP1",
+      "BAAT",
+      "BCAT1",
+      "BMT2",
+      "BPGM",
+      "BROX",
+      "BTD",
+      "CARS2",
+      "CASQ1",
+      "CCDC122",
+      "CCHCR1",
+      "CD14",
+      "CD5",
+      "CDCA8",
+      "CENPC",
+      "CFAP91",
+      "CLUAP1",
+      "COQ2",
+      "CPQ",
+      "DAG1",
+      "DAP3",
+      "DAZAP2",
+      "DNALI1",
+      "E4F1",
+      "ECPAS",
+      "ELP4",
+      "EVC",
+      "EVC2",
+      "EXOC5",
+      "FBXL6",
+      "FDFT1",
+      "GDA",
+      "GGH",
+      "GPATCH3",
+      "GPD1",
+      "GPR78",
+      "HDDC2",
+      "IL15",
+      "IQUB",
+      "JAKMIP1",
+      "JKAMP",
+      "L2HGDH",
+      "LARS2",
+      "LETM2",
+      "LETMD1",
+      "MAD1L1",
+      "MAN1C1",
+      "MKRN2",
+      "MLF1",
+      "MPI",
+      "MRPL48",
+      "MRPS33",
+      "MRPS5",
+      "MRRF",
+      "MTMR14",
+      "MVK",
+      "NAMPT",
+      "NANS",
+      "NAXE",
+      "NDUFS2",
+      "NEMF",
+      "NFKB2",
+      "NPRL2",
+      "NUB1",
+      "NUDT1",
+      "NUP155",
+      "NUTM2A",
+      "NUTM2B",
+      "NUTM2E",
+      "OXCT1",
+      "OXNAD1",
+      "PARP1",
+      "PARP3",
+      "PGM1",
+      "PIGS",
+      "PIGV",
+      "PKLR",
+      "POC5",
+      "POLA2",
+      "PRKAG3",
+      "PSMD5",
+      "PTER",
+      "PTRH1",
+      "RAD17",
+      "RAG1",
+      "SAXO1",
+      "SAXO4",
+      "SFXN3",
+      "SGPL1",
+      "SLC29A3",
+      "SLC34A2",
+      "SLC38A9",
+      "SLC45A1",
+      "SLIRP",
+      "SNAPC3",
+      "SPACA9",
+      "SPART",
+      "TAF11",
+      "TBC1D24",
+      "TCF19",
+      "TIMELESS",
+      "TLCD5",
+      "TMEM106B",
+      "TMEM171",
+      "TMEM185B",
+      "TMEM260",
+      "TMEM40",
+      "TMEM43",
+      "TPP2",
+      "TXLNA",
+      "TXNDC16",
+      "UAP1L1",
+      "VASH1",
+      "VHL",
+      "WDCP",
+      "YARS2",
+      "ZC3H3",
+      "ZC3HC1",
+      "ZMYND12",
+      "ZNF598",
+      "ZNF609"
+    ],
+    "fisher": {
+      "name": "SENSITIVITY hps (REST any-branch selection): GD incl. relaxed vs rest",
+      "table": [
+        [
+          98,
+          1168
+        ],
+        [
+          267,
+          3441
+        ]
+      ],
+      "OR": 1.0813259966138218,
+      "p_two_sided": 0.5326337332244058,
+      "p_greater": 0.28100686012351955,
+      "OR_ci95_low": 0.8408244690576406,
+      "OR_ci95_high": 1.3817982743156165
+    }
+  },
+  "reviewer_hand_calculations": {
+    "eight_vs_zero_rest": {
+      "name": "8 dual genes vs 0 in rest (reviewer calc 1)",
+      "table": [
+        [
+          8,
+          1258
+        ],
+        [
+          0,
+          3708
+        ]
+      ],
+      "OR": null,
+      "p_two_sided": 1.7323877993974294e-05,
+      "p_greater": 1.7323877993974294e-05,
+      "OR_ci95_low": 5.020458263571101,
+      "OR_ci95_high": Infinity
+    },
+    "eight_vs_rd_only": {
+      "name": "8 in GD+GDr vs 0/293 RD (reviewer calc 2)",
+      "table": [
+        [
+          8,
+          1258
+        ],
+        [
+          0,
+          293
+        ]
+      ],
+      "OR": null,
+      "p_two_sided": 0.36501130943731097,
+      "p_greater": 0.18831677937053296,
+      "OR_ci95_low": 0.39509706984447845,
+      "OR_ci95_high": Infinity
+    }
+  },
+  "verdict": {
+    "or_2.94_p_0.030_reproduced": true,
+    "reproduced_from": "stored has_selectome (16-gene summary_v3 flag); 2x2 = [[8,1258],[8,3708-8=3700]]",
+    "reported_P_is": "one-sided greater (p=0.0299); two-sided p=0.0389",
+    "hcondel_OR_identity": "numerical coincidence, not copy-paste (hCONDEL test is a different 2x2)",
+    "but_stored_flag_invalid": true,
+    "invalidity_evidence": [
+      "extract_selectome_detailed_v3.py maps SQL branch-table 'id' (Selectome internal tree ids, small integers) to ENSGT-derived family numbers from the NHX/REST files -- different id spaces",
+      "pps(NHX, 94 genes) ∩ summary_v3(41 genes) = 3 genes",
+      "0 of the 8 manuscript Tier-1 genes (E4F1,TAPT1,GLRX,RBM22,C2orf74,LDB1,YPEL5,TXNDC16) appear in the raw NHX primate list; only 2 (E4F1,TXNDC16) appear even in the 1,332-gene any-branch REST list"
+    ],
+    "corrected_numbers": {
+      "selectome_primate_genes_in_universe": 24,
+      "dual_method_genes_busted_and_selectome": [
+        "CCDC122",
+        "CCHCR1",
+        "CD14",
+        "MRPS5",
+        "NUB1",
+        "PTER",
+        "RAD17",
+        "SLC38A9",
+        "TMEM171"
+      ],
+      "fisher_gd_vs_rest": {
+        "OR": 1.2071672195486614,
+        "p_one_sided_greater": 0.412686196584326,
+        "p_two_sided": 0.6431640379509088,
+        "ci95": [
+          0.4221985496859366,
+          3.071538191095132
+        ]
+      }
+    },
+    "manuscript_impact": "The Selectome enrichment claim (OR=2.94, P=0.030) and the 'eight Tier-1 highest-confidence genes' list do not survive recomputation from the raw Selectome v6 data. With the corrected primate-ancestral list the enrichment is null (OR~1.2, p~0.2). Recommend either removing the Selectome enrichment sentence + Fig 5d Fisher annotation + Table S3-1 list, or rebuilding the Selectome cross-reference from the NHX/REST data with verified ENSG matching and reporting the corrected (null) result."
+  }
+}
