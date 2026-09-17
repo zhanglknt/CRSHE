@@ -2,7 +2,7 @@
 """
 Phase 8 Component 5b: caMPRA Regulatory Element Tissue Mapping
 
-Map active HARs (from Doan 2024 caMPRA) to genes,
+Map active HARs (from Shin et al. 2024 caMPRA) to genes,
 test tissue enrichment across GTEx V11 tissues.
 
 Uses classification_loo_campra for non-circular testing

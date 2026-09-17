@@ -207,7 +207,7 @@ with open(V5_CSV) as f:
         v5_data[gid] = row
 print(f"  v5 classification: {len(v5_data)} genes")
 
-# Doan caMPRA
+# Shin et al. 2024 caMPRA (data folder: doan2024_campra)
 doan_genes = set()
 doan_active_hars_file = f"{DOAN_DIR}/active_hars.csv"
 gene_bed_file = f"{BASE}/results/phase4_conservation/gene_body.bed"
