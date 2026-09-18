@@ -85,3 +85,9 @@
 | 6 | baseline 复现差 0.509pp | 0.49873−0.49364=0.509pp | "within 0.5" → "within 0.51 percentage points" |
 
 脚本：.workbuddy/tmp_r6fix8.py（7 处 count==1 断言全过）。补充：Supplementary_Text_v9.md 与 Main_Tables_v9.md 扫描确认无同类表述，无需改。
+
+
+### Batch 8 交付状态 (2026-09-15 晚)
+- 复核: general-purpose-30 聚焦复核 7/7 PASS（blind_verification_r6_batch8_recheck.md），无新错误；采纳其微调建议第 3 处改 "neither the gene-driven nor the regulation-driven class"（dual-driven 严格属两个 driven class）
+- 交付链: 4 docx 重建→包同步→单 PDF 54 页（18/18 探针含 8 条 batch-8 新探针）→zip 6.15MB/180 文件 CRC OK→CRSHE 提交并推送 c9fab1a..5adf311
+- 注: PDF 长短语探针因换行断裂需用短形（'0.51'、'regulation-driven class (n = 3,415'）
