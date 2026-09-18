@@ -2,6 +2,27 @@
 
 来源：`review_round6_merged.md`（4位新专家：primate-genomics 7.5 / popgen 7.0 / molevol-methods 7.5 / editor 8.0，均分 7.5）
 
+## 盲验证 + 最终关闭（2026-09-15 深夜）
+
+- **盲验证员（fresh agent，独立重算）**：62 项检查 **56 PASS / 6 FAIL**；三链 headline 全部精确复现（含 115 万行 GWAS TSV + GENCODE GTF 全量重扫、种子 20260917 置换逐位置复现）。6 项 FAIL 全部为表述级（无一影响结论）：
+  - #1 HAR p 范围 3.3e-20→**3.6e-25**（下端点漏了 LOO-nc，实际更强）✅ batch 7
+  - #2 "89 of the 97"→**all 97** 在 universe 内（89 溯自被取代的 phase8 口径）✅ batch 7
+  - #3 Height/T2D OR 范围 2.2–2.3/2.1–2.3→**1.9–2.3/1.8–2.3**（LOO-brain 值在范围外）✅ batch 7
+  - #4 长度比 1.6–3.5→1.3–4.1 ✅（batch 6 已修，验证员读的是旧版）
+  - #5 srv 34.5%→**34.6%**（289 可比基因口径；34.5 为 290 全组率）✅ batch 7
+  - #6 caMPRA LOO 检验 1.84/0.012/0.059 为旧 89 基因集口径→生产 97 基因集 **1.64 (CI 1.02–2.63) / 0.032 / Holm 0.16**（定性结论两口径一致）✅ batch 7（自算复现 k=23/97, OR=1.640, p=0.0315）
+- **交付链最终重建**：docx×4 → 包同步 → 单 PDF 54 页（11/11 探针过）→ zip 6.15MB/180 文件/CRC OK → CRSHE 提交 **c9fab1a** 推送
+- 附带修复：loo_full_matrix.csv（Table 3 源文件）hCONDEL 列三处刷新（results/paper + 包内 + CRSHE），消除与 Table 3 xlsx 的口径不一致
+- 验证报告入 CRSHE：blind_verification_r6.md + 两份 recheck
+
+## 审稿人复核（2026-09-15）
+
+- **r6-molevol-methods**：P0-1/P0-2 均 **CLOSED**，"稿件在 dN/dS 检测统计基础维度已达 MBE 可发表标准，修正 2 处文本残留后无需再审"。两处残留已修（batch 6）：①srv 超时偏倚方向写反（非"偏小基因"——复算超时基因 69% 为生产显著、即偏**长**基因；−8.0pp 来自显著稀释子集已披露，绝对/相对外推一致 ~26–28%）②Methods L52 "genome-wide rate"→"respective complement sets"。小建议已采纳：模拟句补 "all 400 completed"。
+- **r6-popgen**：P0-3/P0-4 + P1 全部 **CLOSED**，复核意见 "Minor revision → accept"。新增 2 个改进项已修（batch 6）：③CMH 与映射敏感性完整披露（CMH 下 height 1.33/T2D 1.42 亦名义显著、intelligence 不显著；locus-dedup 下 intelligence OR=4.09 与 height OR=3.06 显著、author-reported 仅 EA/SCZ）④长度比范围 1.6–3.5→1.3–4.1 倍。
+- 复核文件：review_round6_molevol_recheck.md / review_round6_popgen_recheck.md
+- 盲验证员（独立重算三链）：在跑
+- 遗留：Zenodo DOI 占位符（P2-7，交付时替换）
+
 ## P0 项处置
 
 | # | 问题 | 处置 | 状态 |
@@ -48,3 +69,19 @@
 4. ~~fig-fix 已派~~ ✅ 图件全部完成（fig-lead-a + fig-fix 双 worker 汇合互证）：Fig 4（a/b/d 动态读 JSON 重算；c 单侧 greater 口径修正 p=0.081 ✓ doubly p=1.9e-6 ✓；f GD 双侧 0.037 ✓）+ Fig 7a（n=112/566 + assert）→ results/paper/figures_v2/（17:43 最终版）；Table 3 主表 md + xlsx 两处（results/paper/ 与包内 04_tables/）均已核验新值（3.19/2.13/4.60/4.67/2.56 + k/n + 单侧 p）✓。**图-文-表三方一致性已核验**
 5. 交付链重建 + 交叉验证
 6. **用户决策点：标题** — "Regulatory Selection by Specificity" 的 GWAS 支柱被长度混杂削弱后，specificity 主要落在 SynGO 突触富集（每分类变体下 RD 独有）。选项：A. 维持标题（默认）；B. "...Functional Specificity"；C. "...Targeted Function"。待用户定夺。
+
+
+## Batch 8 (2026-09-15): 盲验证 6 条附带口径备注修复
+
+对象：blind_verification_r6.md 附带口径备注（不计 FAIL，但按用户指令一并核销）。每条均先从 phase9_hardening JSON/CSV 独立核数再修改，共 7 处替换（φ 双处）：
+
+| # | 备注 | 独立核数 | 修改 |
+|---|------|---------|------|
+| 1 | Fig 4f GD OR=0.59 实为含 relaxed | strict GD k=17/1,214 OR=0.5479；GD+relaxed k=19/1,266 OR=0.5923（hcondel_gene_mapping_fixed.csv × v7 分类，gene_id 键） | 图例改为 "including relaxed-constraint genes (n = 1,266; OR = 0.59 …; the strict gene-driven class alone gives OR = 0.55)" |
+| 2 | CpG 括号混用分母 | 共同 391 基因：47.83% vs 49.10%（Δ=−1.28pp）；保留 180/192=93.8% | "(47.8% vs. 49.1% across the 391 genes common to both runs; 93.8% …)" |
+| 3 | remainder of the universe 措辞 | 对照集=3,415（neutral 3,404 + dual 11，剔 GD±relaxed）；非 RD 全集 4,681 中位 28.8kb | 改为 "for genes in neither driven class (n = 3,415, unclassified plus dual-driven…)"；L50 Fisher 口径（RD vs 4,681 含 GD）经复算（EA OR 2.987 ✓）无需改 |
+| 4 | φ 未校正 vs χ² p Yates 混用 | phi=0.052（未校正 χ²），chi2_p=4.60e-4（Yates） | 正文 L76 + 图例 L293 均标注 "φ = 0.052 from the uncorrected χ²; Yates-corrected (p/P) = 4.6 × 10⁻⁴" |
+| 5 | adj OR 1.02–1.64 不含 Crohn 0.33 | 12 性状调整 OR：Crohn 0.331 唯一耗竭方向，其余 11 个 1.022–1.641 | 改为 "adjusted OR 0.33–1.64 … Crohn disease is the sole depletion-direction estimate at 0.33, the remaining 11 traits span 1.02–1.64" |
+| 6 | baseline 复现差 0.509pp | 0.49873−0.49364=0.509pp | "within 0.5" → "within 0.51 percentage points" |
+
+脚本：.workbuddy/tmp_r6fix8.py（7 处 count==1 断言全过）。补充：Supplementary_Text_v9.md 与 Main_Tables_v9.md 扫描确认无同类表述，无需改。
