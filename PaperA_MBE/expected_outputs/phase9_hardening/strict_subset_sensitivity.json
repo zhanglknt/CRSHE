@@ -1,0 +1,496 @@
+{
+  "task": "R6 primate-genomics P1-1: strict one-to-one subset sensitivity",
+  "strict_n": 4119,
+  "permissive_n": 855,
+  "a_class_composition": [
+    {
+      "class": "gene-driven",
+      "n_total": 1214,
+      "n_strict": 947,
+      "n_permissive": 267,
+      "permissive_pct": 22.0
+    },
+    {
+      "class": "gene-driven (relaxed)",
+      "n_total": 52,
+      "n_strict": 44,
+      "n_permissive": 8,
+      "permissive_pct": 15.4
+    },
+    {
+      "class": "regulation-driven",
+      "n_total": 293,
+      "n_strict": 266,
+      "n_permissive": 27,
+      "permissive_pct": 9.2
+    },
+    {
+      "class": "dual-driven",
+      "n_total": 11,
+      "n_strict": 9,
+      "n_permissive": 2,
+      "permissive_pct": 18.2
+    },
+    {
+      "class": "neutral",
+      "n_total": 3404,
+      "n_strict": 2853,
+      "n_permissive": 551,
+      "permissive_pct": 16.2
+    }
+  ],
+  "a_gd_permissive_enrichment": {
+    "gene_driven_vs_rest": {
+      "OR": 1.521,
+      "p": 5.832725934562603e-07
+    },
+    "gd_all_vs_rest": {
+      "OR": 1.497,
+      "p": 1.2863842493086965e-06
+    }
+  },
+  "b_class_counts_strict": [
+    {
+      "class": "gene-driven",
+      "n_strict": 947,
+      "rate_strict": 0.2299,
+      "n_full": 1214,
+      "rate_full": 0.2441
+    },
+    {
+      "class": "gene-driven (relaxed)",
+      "n_strict": 44,
+      "rate_strict": 0.0107,
+      "n_full": 52,
+      "rate_full": 0.0105
+    },
+    {
+      "class": "regulation-driven",
+      "n_strict": 266,
+      "rate_strict": 0.0646,
+      "n_full": 293,
+      "rate_full": 0.0589
+    },
+    {
+      "class": "dual-driven",
+      "n_strict": 9,
+      "rate_strict": 0.0022,
+      "n_full": 11,
+      "rate_full": 0.0022
+    },
+    {
+      "class": "neutral",
+      "n_strict": 2853,
+      "rate_strict": 0.6926,
+      "n_full": 3404,
+      "rate_full": 0.6844
+    }
+  ],
+  "b_rd_enrichment": {
+    "HAR": {
+      "strict": {
+        "n_subset": 398,
+        "rd_or_dual": 83,
+        "rd_rate": 0.2085,
+        "OR": 4.843,
+        "p": 1.353055375226404e-23
+      },
+      "full": {
+        "n_subset": 476,
+        "rd_or_dual": 91,
+        "rd_rate": 0.1912,
+        "OR": 4.755,
+        "p": 1.6740200962929436e-25
+      }
+    },
+    "hCONDEL": {
+      "strict": {
+        "n_subset": 153,
+        "rd_or_dual": 24,
+        "rd_rate": 0.1569,
+        "OR": 2.754,
+        "p": 7.846067998244611e-05
+      },
+      "full": {
+        "n_subset": 183,
+        "rd_or_dual": 29,
+        "rd_rate": 0.1585,
+        "OR": 3.092,
+        "p": 1.4197937214027395e-06
+      }
+    }
+  },
+  "b_gwas_regulation_driven_core_traits": {
+    "Educational attainment": {
+      "strict": {
+        "K": 706,
+        "n_class": 275,
+        "k_overlap": 97,
+        "OR": 2.895,
+        "p": 3.88814851813054e-14
+      },
+      "strict_rd_only": {
+        "K": 706,
+        "n_class": 266,
+        "k_overlap": 94,
+        "OR": 2.894,
+        "p": 8.981798553776761e-14
+      },
+      "full": {
+        "K": 822,
+        "n_class": 304,
+        "k_overlap": 107,
+        "OR": 3.004,
+        "p": 1.995960165822772e-16
+      },
+      "full_rd_only": {
+        "K": 822,
+        "n_class": 293,
+        "k_overlap": 103,
+        "OR": 2.987,
+        "p": 8.683759842761343e-16
+      }
+    },
+    "Schizophrenia": {
+      "strict": {
+        "K": 221,
+        "n_class": 275,
+        "k_overlap": 31,
+        "OR": 2.443,
+        "p": 4.552611335506215e-05
+      },
+      "strict_rd_only": {
+        "K": 221,
+        "n_class": 266,
+        "k_overlap": 31,
+        "OR": 2.543,
+        "p": 2.349361440312142e-05
+      },
+      "full": {
+        "K": 257,
+        "n_class": 304,
+        "k_overlap": 37,
+        "OR": 2.803,
+        "p": 5.555175107252543e-07
+      },
+      "full_rd_only": {
+        "K": 257,
+        "n_class": 293,
+        "k_overlap": 36,
+        "OR": 2.827,
+        "p": 6.382436077509161e-07
+      }
+    },
+    "Intelligence": {
+      "strict": {
+        "K": 147,
+        "n_class": 275,
+        "k_overlap": 16,
+        "OR": 1.751,
+        "p": 0.03434812807423267
+      },
+      "strict_rd_only": {
+        "K": 147,
+        "n_class": 266,
+        "k_overlap": 15,
+        "OR": 1.685,
+        "p": 0.05027012427794937
+      },
+      "full": {
+        "K": 180,
+        "n_class": 304,
+        "k_overlap": 20,
+        "OR": 1.985,
+        "p": 0.006336056322014403
+      },
+      "full_rd_only": {
+        "K": 180,
+        "n_class": 293,
+        "k_overlap": 19,
+        "OR": 1.947,
+        "p": 0.009004042743582581
+      }
+    }
+  },
+  "b_gdas_all_traits_strict": {
+    "Schizophrenia": {
+      "regulation_driven": {
+        "K": 221,
+        "n_class": 275,
+        "k_overlap": 31,
+        "OR": 2.443,
+        "p": 4.552611335506215e-05
+      },
+      "regulation_driven_only": {
+        "K": 221,
+        "n_class": 266,
+        "k_overlap": 31,
+        "OR": 2.543,
+        "p": 2.349361440312142e-05
+      },
+      "gene_driven": {
+        "K": 221,
+        "n_class": 947,
+        "k_overlap": 49,
+        "OR": 0.952,
+        "p": 0.6436099665139238
+      },
+      "gene_driven_all": {
+        "K": 221,
+        "n_class": 991,
+        "k_overlap": 52,
+        "OR": 0.97,
+        "p": 0.6020142559710988
+      }
+    },
+    "ASD": {
+      "regulation_driven": {
+        "K": 93,
+        "n_class": 275,
+        "k_overlap": 12,
+        "OR": 2.12,
+        "p": 0.019707262839585758
+      },
+      "regulation_driven_only": {
+        "K": 93,
+        "n_class": 266,
+        "k_overlap": 12,
+        "OR": 2.2,
+        "p": 0.015505121128178697
+      },
+      "gene_driven": {
+        "K": 93,
+        "n_class": 947,
+        "k_overlap": 23,
+        "OR": 1.103,
+        "p": 0.3827198699514261
+      },
+      "gene_driven_all": {
+        "K": 93,
+        "n_class": 991,
+        "k_overlap": 23,
+        "OR": 1.038,
+        "p": 0.4796679699497942
+      }
+    },
+    "Educational attainment": {
+      "regulation_driven": {
+        "K": 706,
+        "n_class": 275,
+        "k_overlap": 97,
+        "OR": 2.895,
+        "p": 3.88814851813054e-14
+      },
+      "regulation_driven_only": {
+        "K": 706,
+        "n_class": 266,
+        "k_overlap": 94,
+        "OR": 2.894,
+        "p": 8.981798553776761e-14
+      },
+      "gene_driven": {
+        "K": 706,
+        "n_class": 947,
+        "k_overlap": 163,
+        "OR": 1.007,
+        "p": 0.4904909245025731
+      },
+      "gene_driven_all": {
+        "K": 706,
+        "n_class": 991,
+        "k_overlap": 173,
+        "OR": 1.03,
+        "p": 0.39718446643741573
+      }
+    },
+    "Intelligence": {
+      "regulation_driven": {
+        "K": 147,
+        "n_class": 275,
+        "k_overlap": 16,
+        "OR": 1.751,
+        "p": 0.03434812807423267
+      },
+      "regulation_driven_only": {
+        "K": 147,
+        "n_class": 266,
+        "k_overlap": 15,
+        "OR": 1.685,
+        "p": 0.05027012427794937
+      },
+      "gene_driven": {
+        "K": 147,
+        "n_class": 947,
+        "k_overlap": 38,
+        "OR": 1.175,
+        "p": 0.227618519384085
+      },
+      "gene_driven_all": {
+        "K": 147,
+        "n_class": 991,
+        "k_overlap": 39,
+        "OR": 1.146,
+        "p": 0.2659046679145073
+      }
+    },
+    "Major depression": {
+      "regulation_driven": {
+        "K": 130,
+        "n_class": 275,
+        "k_overlap": 21,
+        "OR": 2.833,
+        "p": 0.00011015137916840988
+      },
+      "regulation_driven_only": {
+        "K": 130,
+        "n_class": 266,
+        "k_overlap": 21,
+        "OR": 2.944,
+        "p": 6.781023684652535e-05
+      },
+      "gene_driven": {
+        "K": 130,
+        "n_class": 947,
+        "k_overlap": 22,
+        "OR": 0.675,
+        "p": 0.9658256936001612
+      },
+      "gene_driven_all": {
+        "K": 130,
+        "n_class": 991,
+        "k_overlap": 25,
+        "OR": 0.745,
+        "p": 0.9240189245263086
+      }
+    },
+    "Bipolar disorder": {
+      "regulation_driven": {
+        "K": 96,
+        "n_class": 275,
+        "k_overlap": 17,
+        "OR": 3.14,
+        "p": 0.00016049681055732806
+      },
+      "regulation_driven_only": {
+        "K": 96,
+        "n_class": 266,
+        "k_overlap": 17,
+        "OR": 3.262,
+        "p": 0.00010637907304661016
+      },
+      "gene_driven": {
+        "K": 96,
+        "n_class": 947,
+        "k_overlap": 18,
+        "OR": 0.769,
+        "p": 0.8705031374455571
+      },
+      "gene_driven_all": {
+        "K": 96,
+        "n_class": 991,
+        "k_overlap": 19,
+        "OR": 0.775,
+        "p": 0.8678811632175194
+      }
+    },
+    "Neuroticism": {
+      "regulation_driven": {
+        "K": 106,
+        "n_class": 275,
+        "k_overlap": 18,
+        "OR": 2.989,
+        "p": 0.00017982283237308056
+      },
+      "regulation_driven_only": {
+        "K": 106,
+        "n_class": 266,
+        "k_overlap": 17,
+        "OR": 2.887,
+        "p": 0.00036970216098798967
+      },
+      "gene_driven": {
+        "K": 106,
+        "n_class": 947,
+        "k_overlap": 25,
+        "OR": 1.035,
+        "p": 0.4799301626151348
+      },
+      "gene_driven_all": {
+        "K": 106,
+        "n_class": 991,
+        "k_overlap": 26,
+        "OR": 1.027,
+        "p": 0.49267895386574817
+      }
+    },
+    "Cognitive performance": {
+      "regulation_driven": {
+        "K": 126,
+        "n_class": 275,
+        "k_overlap": 23,
+        "OR": 3.315,
+        "p": 6.519638627553797e-06
+      },
+      "regulation_driven_only": {
+        "K": 126,
+        "n_class": 266,
+        "k_overlap": 23,
+        "OR": 3.446,
+        "p": 3.691700850212052e-06
+      },
+      "gene_driven": {
+        "K": 126,
+        "n_class": 947,
+        "k_overlap": 31,
+        "OR": 1.096,
+        "p": 0.3649295893567402
+      },
+      "gene_driven_all": {
+        "K": 126,
+        "n_class": 991,
+        "k_overlap": 32,
+        "OR": 1.077,
+        "p": 0.3947772618333287
+      }
+    }
+  },
+  "b_gd_null_preserved_strict": true,
+  "c_audit_crosscheck": {
+    "gene-driven": {
+      "audit_strict": 947,
+      "mine_strict": 947,
+      "audit_permissive": 267,
+      "mine_permissive": 267,
+      "match": true
+    },
+    "gene-driven (relaxed)": {
+      "audit_strict": 44,
+      "mine_strict": 44,
+      "audit_permissive": 8,
+      "mine_permissive": 8,
+      "match": true
+    },
+    "regulation-driven": {
+      "audit_strict": 266,
+      "mine_strict": 266,
+      "audit_permissive": 27,
+      "mine_permissive": 27,
+      "match": true
+    },
+    "dual-driven": {
+      "audit_strict": 9,
+      "mine_strict": 9,
+      "audit_permissive": 2,
+      "mine_permissive": 2,
+      "match": true
+    },
+    "neutral": {
+      "audit_strict": 2853,
+      "mine_strict": 2853,
+      "audit_permissive": 551,
+      "mine_permissive": 551,
+      "match": true
+    }
+  },
+  "conclusion": "Core conclusions are qualitatively invariant on the strict-only subset. See per-metric values above; RD enrichments (HAR, hCONDEL, GWAS EA/SCZ/intelligence) remain significant with comparable ORs; GD remains null across all traits."
+}

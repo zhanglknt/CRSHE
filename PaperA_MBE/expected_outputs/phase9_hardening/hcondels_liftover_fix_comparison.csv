@@ -1,0 +1,32 @@
+metric,old,new_fixed
+liftOver success (of 583),0 (not attempted),581
+name-method genes (universe),80,80
+"coord-method genes (universe, hg18-as-hg38 BUG)",121,102
+name-coord overlap,18,70
+union hCONDEL genes,183,112
+"coverage of 4,974 universe",3.68%,2.25%
+RD enrichment OR (union),2.944,3.194
+RD enrichment p (union),6.65e-06,7.81e-05
+GD enrichment OR (union),0.526,0.592
+GD enrichment p (union),1,0.0371
+RD class count among hCONDEL genes,27,18
+GD class count among hCONDEL genes,27,19
+neutral count among hCONDEL genes,125,74
+HAR & hCONDEL double-evidence genes,29,22
+% of hCONDEL genes also HAR-proximate,15.8%,19.6%
+% of HAR genes also hCONDEL-proximate,6.1%,4.6%
+phi (HAR x hCONDEL),0.0417,0.0520
+chi2 p (HAR x hCONDEL),0.0049,0.0004603
+LOO hCONDEL OR range (5 variants),2.27-3.91,2.13-4.67
+LOO hCONDEL p range (5 variants),2.47e-06-6.43e-04,2.27e-05-0.000534
+Tier4 hCONDEL n,183,112
+Tier4 hCONDEL BUSTED rate,0.306,0.3036
+Tier4 hCONDEL rate_diff vs complement,-0.035,-0.037
+Tier4 hCONDEL Newcombe 95% CI,"[-0.0987, 0.0364]","[-0.1157, 0.0544]"
+Tier4 hCONDEL RD_or_dual,29,19
+Tier4 'HAR or hCONDEL' n,630,566
+Tier4 'HAR or hCONDEL' BUSTED rate,0.3492,0.3551
+within-gene direct recovery (of 44),7,40
+within-gene wrong locus (of 44),32,2
+old coord-only genes retained,-,7/103
+name vs coord Jaccard,-,0.625

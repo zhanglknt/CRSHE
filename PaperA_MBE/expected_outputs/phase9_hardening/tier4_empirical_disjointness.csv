@@ -1,4 +1,4 @@
-subset,n,busted_sig,busted_rate,busted_OR,busted_p,RD_or_dual,RD_rate,RD_OR,RD_p,GD_class,GD_rate,rate_diff,rate_diff_ci95_newcombe_low,rate_diff_ci95_newcombe_high,rate_diff_ci95_wald_low,rate_diff_ci95_wald_high
-HAR-proximate (n_hars>0),476,174,0.3655,1.133,0.2220121611585696,91,0.1912,4.755,1.6740200962929436e-25,103,0.2164,0.0258,-0.0295,0.083,-0.0194,0.071
-hCONDEL-proximate,183,56,0.306,0.852,0.3410234457004514,29,0.1585,3.092,1.4197937214027395e-06,29,0.1585,-0.0338,-0.1092,0.0495,-0.1018,0.0343
-HAR or hCONDEL,630,220,0.3492,1.049,0.5894611896322446,108,0.1714,4.379,1.523106529215244e-26,129,0.2048,0.0094,-0.0401,0.0605,-0.03,0.0489
+subset,n,busted_sig,busted_rate,busted_OR,busted_p,RD_or_dual,RD_rate,RD_OR,RD_p,GD_class,GD_rate,complement_n,complement_sig,complement_rate,rate_diff,rate_diff_ci95_newcombe_low,rate_diff_ci95_newcombe_high,rate_diff_ci95_wilson_bound_subtraction_low,rate_diff_ci95_wilson_bound_subtraction_high,rate_diff_ci95_wald_low,rate_diff_ci95_wald_high,fisher_p_vs_complement
+HAR-proximate (n_hars>0),476,174,0.3655,1.133,0.22201216115856964,91,0.1912,4.755,1.6740200962929436e-25,103,0.2164,4498,1516,0.337,0.0285,-0.0158,0.0748,-0.0275,0.0864,-0.0169,0.0739,0.22201216115856964
+hCONDEL-proximate,112,34,0.3036,0.844,0.48008716024811093,19,0.1696,3.281,3.788727154424215e-05,19,0.1696,4862,1656,0.3406,-0.037,-0.1157,0.0544,-0.1279,0.0667,-0.1232,0.0492,0.48008716024811093
+HAR or hCONDEL,566,201,0.3551,1.08,0.4230376412103164,100,0.1767,4.422,2.112497165234941e-25,119,0.2102,4408,1489,0.3378,0.0173,-0.0235,0.0599,-0.0351,0.0714,-0.0245,0.0592,0.4230376412103164

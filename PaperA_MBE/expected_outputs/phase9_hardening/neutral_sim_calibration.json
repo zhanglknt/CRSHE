@@ -1,0 +1,61 @@
+{
+  "task": "P0-1a neutral simulation calibration (R6)",
+  "method": {
+    "simulator": "PAML evolver 4.10.10, codon model M0 (option 6)",
+    "omega": 1.0,
+    "kappa": 2.0,
+    "codon_frequencies": "F3x4 estimated from all 4,974 real alignments",
+    "tree": "per-gene species tree (same topology/branch lengths as BUSTED runs), human foreground irrelevant under neutrality",
+    "missing_data": "real gene per-species per-codon gap masks applied to simulated sequences",
+    "n_sim_genes": 400,
+    "test": "HyPhy BUSTED 2.5.101, --branches Test --srv No, 300s timeout, same pipeline as production"
+  },
+  "empirical_null_distribution": {
+    "frac_p_lt_0.05": 0.0175,
+    "n_p_lt_0.05": 7,
+    "frac_p_eq_0.5_point_mass": 0.4575,
+    "frac_p_gt_0.5": 0.0,
+    "histogram_0.05_bins": {
+      "0.00-0.05": 7,
+      "0.05-0.10": 13,
+      "0.10-0.15": 16,
+      "0.15-0.20": 20,
+      "0.20-0.25": 13,
+      "0.25-0.30": 33,
+      "0.30-0.35": 13,
+      "0.35-0.40": 37,
+      "0.40-0.45": 14,
+      "0.45-0.50": 51,
+      "0.50-0.55": 183,
+      "0.55-0.60": 0,
+      "0.60-0.65": 0,
+      "0.65-0.70": 0,
+      "0.70-0.75": 0,
+      "0.75-0.80": 0,
+      "0.80-0.85": 0,
+      "0.85-0.90": 0,
+      "0.90-0.95": 0,
+      "0.95-1.00": 0
+    },
+    "ks_test_p_lt_0.5_vs_U05_05_pvalue": 3.614504274623298e-07
+  },
+  "empirical_fdr": {
+    "bh_alpha_0.05_rejections_out_of_nulls": 0,
+    "empirical_fdr_bh005": 0.0,
+    "bh_alpha_0.10_rejections": 0,
+    "bh_alpha_0.25_rejections": 0,
+    "note": "all simulated genes are true nulls (omega=1), so any BH rejection is a false positive"
+  },
+  "mechanism_determination": {
+    "observed": {
+      "frac_p_eq_0.5": 0.4575,
+      "frac_p_gt_0.5": 0.0,
+      "frac_p_lt_0.5": 0.5425,
+      "mean_p_below_0.5": 0.30999628713336347
+    },
+    "truncation_like": true,
+    "compression_like": false,
+    "verdict": "TRUNCATION"
+  },
+  "implication_for_1690": "Simulated nulls reproduce a large point mass at p=0.5 (45.8%) with virtually no p>0.5 (0.0%) and near-nominal small-p tail (1.8% < 0.05, expected 5%): the bounded support arises from TRUNCATION (LRT<=0 clamped to p=0.5), not anti-conservative compression. Per bh_bounded_support_check.json, truncation leaves the BH procedure unchanged, so the 1,690 significant genes are not an artifact of the bounded support. The measured BH false-positive rate on simulated nulls is 0/400 = 0.0%."
+}

@@ -1,0 +1,30 @@
+{
+  "task": "P0-6b topology sensitivity (ILS) (R6)",
+  "alternative_topology": "((human{Test},gorilla),(chimpanzee,bonobo)) replacing (((chimpanzee,bonobo),human),gorilla); branch lengths approximately preserved",
+  "example_tree": "(((((human{Test}:0.006,gorilla:0.012):0.003,(chimpanzee:0.006,bonobo:0.009):0.003):0.004,gibbon:0.016):0.01,((baboon:0.02,rhesus:0.02):0.008,vervet:0.018):0.008):0.015,(marmoset:0.018,squirrel_m:0.025):0.015);",
+  "n_genes": 377,
+  "results": {
+    "n_genes_with_results": 377,
+    "bh_sig_count": 177,
+    "bh_sig_rate": 0.46949602122015915,
+    "orig_bh_sig_rate_same_genes": 0.4907161803713528,
+    "pearson_r_vs_production_p": 0.8763665080113476,
+    "spearman_rho_vs_production_p": 0.8806097334673721,
+    "significance_agreement_with_production": 0.946949602122016,
+    "embedded_full_family_bh_sig_count": 177,
+    "embedded_full_family_agreement_with_production": 0.946949602122016,
+    "timeout_or_missing": 23
+  },
+  "vs_baseline": {
+    "n_common": 371,
+    "baseline_sig_rate": 0.4797843665768194,
+    "topo_sig_rate": 0.46630727762803237,
+    "delta_rate": -0.01347708894878702,
+    "both_sig": 164,
+    "baseline_only": 14,
+    "topo_only": 9,
+    "jaccard": 0.8770053475935828,
+    "of_baseline_sig_retained": 0.9213483146067416
+  },
+  "conclusion": "Under the alternative (human,gorilla) topology, BH FDR<0.05 detection is 46.6% vs 48.0% under the species-tree topology (164/371 genes significant in both; 92.1% of baseline-significant genes retained). Detection rate difference: -1.3%."
+}

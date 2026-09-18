@@ -1,0 +1,125 @@
+{
+  "task": "P0-2 stratified control reruns (R6)",
+  "design": {
+    "n_genes": 400,
+    "stratification": "significant/non-significant (production BH) x CDS alignment-length tercile x BUSTED LRT tercile; 200 sig + 200 non-sig",
+    "groups": {
+      "baseline": "identical rerun of production settings (internal consistency control)",
+      "srv": "--srv Yes (synonymous-rate variation enabled)",
+      "cpg": "CpG-masked alignments (codons containing human-reference CpG dinucleotides, incl. codon-boundary, masked)",
+      "topo": "alternative topology ((human,gorilla) sister instead of ((chimp,bonobo),human); see topology_sensitivity.json)"
+    },
+    "software_note": "HyPhy 2.5.101 (production run used 2.5.100); same command-line otherwise (--branches Test, 300s timeout, 4 workers)",
+    "bh_note": "BH is applied within each 400-gene group; per-gene significance calls are family-size dependent (production used the 4,974-gene family), so group comparisons use detection RATES within the same 400-gene family, plus an 'embedded' diagnostic where rerun p-values are substituted into the full 4,974-gene family before BH"
+  },
+  "group_results": {
+    "baseline": {
+      "n_genes_with_results": 393,
+      "bh_sig_count": 194,
+      "bh_sig_rate": 0.49363867684478374,
+      "orig_bh_sig_rate_same_genes": 0.49872773536895676,
+      "pearson_r_vs_production_p": 0.9727931651937758,
+      "spearman_rho_vs_production_p": 0.9766396505840059,
+      "significance_agreement_with_production": 0.9847328244274809,
+      "embedded_full_family_bh_sig_count": 193,
+      "embedded_full_family_agreement_with_production": 0.9872773536895675,
+      "timeout_or_missing": 7
+    },
+    "srv": {
+      "n_genes_with_results": 290,
+      "bh_sig_count": 100,
+      "bh_sig_rate": 0.3448275862068966,
+      "orig_bh_sig_rate_same_genes": 0.42758620689655175,
+      "pearson_r_vs_production_p": 0.7571133326032539,
+      "spearman_rho_vs_production_p": 0.7583452361047057,
+      "significance_agreement_with_production": 0.8758620689655172,
+      "embedded_full_family_bh_sig_count": 100,
+      "embedded_full_family_agreement_with_production": 0.8758620689655172,
+      "timeout_or_missing": 110
+    },
+    "cpg": {
+      "n_genes_with_results": 397,
+      "bh_sig_count": 191,
+      "bh_sig_rate": 0.4811083123425693,
+      "orig_bh_sig_rate_same_genes": 0.4987405541561713,
+      "pearson_r_vs_production_p": 0.8852902971124592,
+      "spearman_rho_vs_production_p": 0.9252544262585777,
+      "significance_agreement_with_production": 0.9420654911838791,
+      "embedded_full_family_bh_sig_count": 189,
+      "embedded_full_family_agreement_with_production": 0.9420654911838791,
+      "timeout_or_missing": 3
+    },
+    "topo": {
+      "n_genes_with_results": 377,
+      "bh_sig_count": 177,
+      "bh_sig_rate": 0.46949602122015915,
+      "orig_bh_sig_rate_same_genes": 0.4907161803713528,
+      "pearson_r_vs_production_p": 0.8763665080113476,
+      "spearman_rho_vs_production_p": 0.8806097334673721,
+      "significance_agreement_with_production": 0.946949602122016,
+      "embedded_full_family_bh_sig_count": 177,
+      "embedded_full_family_agreement_with_production": 0.946949602122016,
+      "timeout_or_missing": 23
+    },
+    "srv_vs_baseline": {
+      "n_common": 289,
+      "baseline_sig_rate": 0.42560553633217996,
+      "srv_sig_rate": 0.3460207612456747,
+      "delta_rate": -0.07958477508650524,
+      "both_sig": 92,
+      "baseline_only": 31,
+      "srv_only": 8,
+      "jaccard": 0.7022900763358778,
+      "of_baseline_sig_retained": 0.7479674796747967
+    },
+    "cpg_vs_baseline": {
+      "n_common": 391,
+      "baseline_sig_rate": 0.49104859335038364,
+      "cpg_sig_rate": 0.4782608695652174,
+      "delta_rate": -0.012787723785166238,
+      "both_sig": 180,
+      "baseline_only": 12,
+      "cpg_only": 7,
+      "jaccard": 0.9045226130653267,
+      "of_baseline_sig_retained": 0.9375
+    },
+    "topo_vs_baseline": {
+      "n_common": 371,
+      "baseline_sig_rate": 0.4797843665768194,
+      "topo_sig_rate": 0.46630727762803237,
+      "delta_rate": -0.01347708894878702,
+      "both_sig": 164,
+      "baseline_only": 14,
+      "topo_only": 9,
+      "jaccard": 0.8770053475935828,
+      "of_baseline_sig_retained": 0.9213483146067416
+    }
+  },
+  "cpg_masking": {
+    "n_genes_masked": 400,
+    "mean_frac_codons_masked": 0.08744289999999999,
+    "median_frac_codons_masked": 0.0733,
+    "mean_n_cpg_sites_human": 152.915,
+    "definition": "CpG dinucleotides in the human reference sequence (including codon-boundary-spanning CpG); affected codon columns masked as ??? across all species"
+  },
+  "alignment_quality_500_gene_sample": {
+    "n_genes_sampled": 500,
+    "mean_pairwise_identity": {
+      "mean": 0.8628684458234703,
+      "median": 0.8562918514507059,
+      "p5": 0.7498554078726754,
+      "p95": 0.9740787265906854
+    },
+    "gap_fraction_per_sequence": {
+      "mean": 0.5462764307938864,
+      "median": 0.5577811789884106,
+      "p5": 0.3037355936257861,
+      "p95": 0.735507095923282
+    },
+    "n_species_per_alignment": {
+      "mean": 9.982,
+      "min": 9,
+      "max": 10
+    }
+  }
+}

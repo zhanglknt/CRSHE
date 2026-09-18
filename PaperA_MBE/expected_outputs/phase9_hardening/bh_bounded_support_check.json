@@ -1,0 +1,44 @@
+{
+  "task": "P0-1b bounded-support correction check (R6)",
+  "n_genes_total": 4974,
+  "n_valid_p": 4974,
+  "n_nan_p": 0,
+  "baseline": {
+    "bh_alpha": 0.05,
+    "n_significant": 1690,
+    "note": "BH on original BUSTED p-values (busted_results_v3 pipeline, n=4,974)"
+  },
+  "mechanism_A_anticonservative_compression": {
+    "assumption": "null p ~ U(0, 0.5); observed p deflated 2x relative to Uniform(0,1)",
+    "correction": "p* = p / 0.5, capped at 1",
+    "bh_alpha": 0.05,
+    "n_significant_corrected": 1639,
+    "equivalent_to": "BH at alpha=0.025 on original p (monotone transform preserves order)",
+    "change_vs_baseline": -51,
+    "nominal_p_lt_005_raw": 1782,
+    "nominal_pstar_lt_005": 1722
+  },
+  "mechanism_B_truncation_clipping": {
+    "assumption": "p > 0.5 values are truncated/clipped to the 0.5 boundary (point mass at 0.5)",
+    "correction": "p* = min(p, 0.5)",
+    "bh_alpha": 0.05,
+    "n_significant_corrected": 1690,
+    "change_vs_baseline": 0,
+    "argument": "BH critical values i/n*alpha <= alpha = 0.05 << 0.5, so the clipped point mass at 0.5 can never cross a BH threshold; and the relative order of all p<0.5 values is unchanged by clipping the upper tail, so the BH rejection set is identical to baseline."
+  },
+  "observed_p_distribution": {
+    "n_p_eq_0.5": 1960,
+    "n_p_gt_0.5": 0,
+    "quantiles": {
+      "0": 0.0,
+      "5": 0.0,
+      "25": 1.3970582269096086e-06,
+      "50": 0.36370924687144035,
+      "75": 0.5,
+      "90": 0.5,
+      "95": 0.5,
+      "100": 0.5
+    }
+  },
+  "conclusion": "Under the truncation mechanism (B), the 1,690 BH-significant genes are entirely unchanged (1690 = 1,690): clipping cannot create or destroy rejections. Under the anti-conservative compression mechanism (A, null U(0,0.5)), correcting p* = 2p reduces BH significance from 1,690 to 1639 genes (97.0% of baseline). Which mechanism actually operates is determined empirically by the neutral simulation calibration (neutral_sim_calibration.json)."
+}

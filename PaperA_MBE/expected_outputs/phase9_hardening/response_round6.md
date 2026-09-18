@@ -1,0 +1,50 @@
+# R6 审稿回复 — 决策与修改日志（滚动更新）
+
+来源：`review_round6_merged.md`（4位新专家：primate-genomics 7.5 / popgen 7.0 / molevol-methods 7.5 / editor 8.0，均分 7.5）
+
+## P0 项处置
+
+| # | 问题 | 处置 | 状态 |
+|---|------|------|------|
+| P0-1 | 34% 上界需有界双峰 p→BH 模拟校准 | fix-busted-wsl **全部完成**：任务1 解析（截断 BH 不变 / 压缩 −3.0%）+ 任务2 中性模拟（400 个 ω=1 evolver + 真实缺失模式 + 同一管线）：机制判定=截断（45.8% 点质量，无 p>0.5）；p<0.05 仅 1.75%（<5% 名义，偏保守）；经验 BH FDR=0/400（α=0.05/0.10/0.25 全 0）；真实数据 35.8% p<0.05 vs 零假设 1.75% —— 小 p 富集非伪影。已写入 Limitations (2) + cover letter。环境基线复跑一致性：检出率 49.4% vs 49.9%，p 相关 0.97，逐基因一致 98.5% | ✅ 已修复 |
+| P0-2 | 34% 需分层重跑（--srv Yes / CpG mask） | fix-busted-wsl **完成**（948 分钟）：baseline 复跑一致性极佳（49.4% vs 49.9%，r=0.97，98.5%）；CpG 屏蔽 −1.3pp（47.8%，保留 93.8%）；替代拓扑 −1.3pp（46.6%，保留 92.1%）；**--srv Yes 唯一实质敏感**：−8.0pp（42.6%→34.5%，289 共同基因，110 超时偏小基因），相对降 19% → 宇宙外推 ~27%。表述改为 "27–34% 取决于 srv 建模"（batch 5 六处：Methods 敏感性设计 / Interpreting 34% 测量化 / L60 / Limitations(2) / ILS 拓扑证据句 / cover letter） | ✅ 已修复 |
+| P0-3 | GWAS 基因长度/映射混杂 | fix-gwas 完成：**审稿人质疑成立** — RD 基因中位 133.6kb vs 28.6kb（4.7×，p=1.5e-71），nc 分量驱动（ρ=0.47）；logistic 校正后 12 性状全部失去显著（OR 1.02–1.64，q>0.44）；CMH 粗分层 EA（OR=1.87, p=3.9e-6）与 SCZ（1.95, p=8.2e-4）存活；作者报告基因映射 EA p=0.015、SCZ p=0.007 存活。文本已集成（batch 3，15 处） | ✅ 已修复 |
+| P0-4 | "strongest and most consistent" 缺组间 log-OR 检验 | fix-gwas 完成：未校正神经族 3.00 (2.60–3.47) vs 对照族 2.02 (1.70–2.39)，z=3.49 p=4.8e-4，置换 p=0.009；长度校正后 1.23 vs 1.06 (p=0.24) — "stronger" 亦被长度解释。一致性 8/8 vs 2/4（Fisher p=0.091，功效有限）。文本已集成 | ✅ 已修复 |
+| P0-5 | HAR/hCONDEL 来源审计（3,171 vs Pollard 202；583 vs McLean 510） | fix-provenance 完成：3,171=Girskis 2021 七研究合并目录（Shin 2024 复用 mmc2，hg19→hg38 liftOver 3,169；HARsv2 原生 hg38 3,168 驱动分类管线）；583=McLean 完整目录（510=序列验证子集）。Methods provenance 段已替换（E9），Introduction 加 Girskis 目录注（E11） | ✅ 已修复（正文层） |
+| P0-6 | ILS 结构性混杂（~25–30%） | fix-provenance（Discussion 段 + 引文，batch 3 E8）✅ + fix-busted-wsl 替代拓扑实测（−1.3pp，92.1% 保留，实际影响小）已并入 ILS 段（batch 5 B5） | ✅ 已修复 |
+| P0-新 | hCONDEL hg18/hg38 坐标错配（修复中发现） | ✅ 已闭环（见上方 batch 4 记录）：183→112，全链路数字+图+表三方一致 | ✅ 已修复 |
+
+## P1 项处置（fix-gwas 完成）
+
+| 项 | 结果 |
+|----|------|
+| P1-1 映射敏感性 | EA/SCZ 两种替代约定下均显著（作者报告 EA OR=2.99 p=0.015、SCZ OR=1.81 p=0.007）；intelligence（n=70）与 height 失去显著 — 部分支持特异性 |
+| P1-2 Jaccard/Meff | 均值 0.148、最大 ASD-intelligence 0.31；Li&Ji 有效检验数=3（Kaiser=2），8 性状 BH 偏保守 |
+| P1-3 功效表 | 含 CI 宽度（Crohn log 宽 2.31、LDL 0.91，null 可信） |
+| P1-4 anchoring 主表 | tier2_anchoring_master_table.csv（108 行：12 性状×3 分类×RD/GD_strict/GD_all，n/OR/CI/p/q）→ 待打包为 Supplementary Table S2 xlsx |
+
+## P1/P2 项处置（文本层已完成）
+
+| 项 | 内容 | 处置 |
+|----|------|------|
+| 段落压缩（editor） | Results "Evidence-availability asymmetry" 与 Fig 7d coverage 段重叠 | L86 压缩：删除与 L128 重复的反事实推演句，改为前向引用 "The coverage-sensitivity analysis below (Fig. 7d) quantifies this dependence" ✅ |
+| GTEx 措辞（molevol P2-6） | 正文 L28 与 S1 L21 日期措辞不一致 | 统一为 "open-access release 2026-01-16; updated bulk RNA-seq files of 2026-05-19, which separate the laser-capture microdissection pilot samples" ✅ |
+| Cover letter 34%（editor） | 预防性说明 | cover_letter_v1.md 加入上界框架句（不预支分层重跑结果）：34% 为上界，类级结论在 strict 子集与更严阈值下不变 ✅ |
+| Fig 6 降级（editor，可选） | 降为补充图 | **婉拒**：Fig 6 承载功能内容叙事（5 处正文引用），MBE 允许 7 张主图；压缩诉求已通过段落合并实现；降级将触发 Fig 7→6 级联重编号（10 处引用）+ 补充材料交叉引用重写，风险收益不成比例 |
+
+## 前 batch 已落地（v9 文本 18 处）
+
+- Batch 1（13 处方法学措辞）：树澄清（枝长为起始值，BUSTED 重优化）/ RELAX 运行清单简化 / MEME 选择偏倚句 / 无预注册声明 / PRDS 句 + Benjamini & Yekutieli 2001 / K>1 操作性连用 / "ten strongest terms" / Selectome 94→24 保守低召回 / 单侧 P=0.41（双侧 0.64）/ 取样理由 / Fig 2e omega 注 / 12.2% 操作性限定
+- Batch 2（5 处数字整合）：complement-based Tier4 比较（正文+摘要+Fig 7a 图例）/ Limitation 8 strict-only / Limitation 10 窗口敏感性
+- Batch 3（15 处，fix-gwas + fix-provenance 集成）：摘要 GWAS 句+结论句诚实化 / Methods 校准方法段（logistic+CMH+双映射+Jaccard+主表 S2）/ Results 组间检验替代 "strongest and most consistent" / Results 第三混杂（长度）整段 / Discussion "in unadjusted tests"+长度段 / Limitations (15) 长度混杂 (16) segdup / ILS Discussion 段 / Methods provenance 段（Girskis 目录+liftOver 口径+583/510 调和+97/89 口径+14.2% vs 16.1%）/ Introduction Girskis 目录注 / 新引文 5 条（Li&Ji 2005, Mendes&Hahn 2016, Scally&Durbin 2012, Scally et al. 2012, Vanderpool 2020）
+- 残留清理 2 处：结论段 "unadjusted odds ratios + directionally robust though gene-length-sensitive"、S1 同步长度校准句
+- fix-subsets 已完成：Tier4 complement 修复（HAR +2.85pp P=0.222）、strict-only 4,119 全结论稳健、窗口敏感性 25/50/100kb 单调稀释
+
+## 待办（等 worker）
+
+1. ~~fix-provenance hCONDEL liftOver 重跑~~ ✅ 完成：183→112 基因（金标准 within 恢复 7→40/44，旧坐标法仅 7/103 保留证实伪影）；RD OR 2.94→**3.19**（p=7.8e-5）更干净；GD 显著耗竭 OR=0.59 p=0.037；LOO OR 区间 2.3–3.9→**2.1–4.7**；φ 0.0417→0.052；Tier4 全部 ns 结论不变（hCONDEL −3.7pp p=0.48 / 合并 +1.7pp p=0.42）；名称法与坐标法 Jaccard 0.625 双法各自显著。正文 batch 4（12 处）已落地。**诚实化代价**：hCONDEL-only 子集 9/90 OR=1.80 P=0.081 不再显著（旧 17/154 p=0.013），Fig 4c 与 L76 已改写为"方向一致但不单独显著，非冗余论证主要依赖 assay 独立性+全集富集"
+2. fix-busted-wsl → BH 校准数字 / 分层重跑 / 替代拓扑 → Limitations (2) 更新
+3. ~~anchoring 主表~~ 待打包 TableS2 xlsx（数据已就绪 tier2_anchoring_master_table.csv）
+4. ~~fig-fix 已派~~ ✅ 图件全部完成（fig-lead-a + fig-fix 双 worker 汇合互证）：Fig 4（a/b/d 动态读 JSON 重算；c 单侧 greater 口径修正 p=0.081 ✓ doubly p=1.9e-6 ✓；f GD 双侧 0.037 ✓）+ Fig 7a（n=112/566 + assert）→ results/paper/figures_v2/（17:43 最终版）；Table 3 主表 md + xlsx 两处（results/paper/ 与包内 04_tables/）均已核验新值（3.19/2.13/4.60/4.67/2.56 + k/n + 单侧 p）✓。**图-文-表三方一致性已核验**
+5. 交付链重建 + 交叉验证
+6. **用户决策点：标题** — "Regulatory Selection by Specificity" 的 GWAS 支柱被长度混杂削弱后，specificity 主要落在 SynGO 突触富集（每分类变体下 RD 独有）。选项：A. 维持标题（默认）；B. "...Functional Specificity"；C. "...Targeted Function"。待用户定夺。

@@ -1,0 +1,994 @@
+{
+  "meta": {
+    "script": "scripts/phase9_gwas_confound.py",
+    "universe_symbols": 4974,
+    "n_gwas_rows_scanned": 1150105,
+    "n_gws_rows_target_traits": 82665,
+    "gene_span_source": "GENCODE v47 basic annotation (GTEx v11 download)",
+    "genes_with_span": 4974,
+    "genes_missing_span": 0
+  },
+  "P0_3a_length_vs_RDS": {
+    "rds_v7": {
+      "spearman_rho": 0.35088102158258466,
+      "p": 4.573108329041686e-144,
+      "n": 4974
+    },
+    "rds_doan": {
+      "spearman_rho": 0.08610796097307681,
+      "p": 1.1819423812057998e-09,
+      "n": 4974
+    },
+    "rds_tau": {
+      "spearman_rho": -0.0690950147592366,
+      "p": 1.0736215551393722e-06,
+      "n": 4974
+    },
+    "rds_nc": {
+      "spearman_rho": 0.4719450520535503,
+      "p": 2.1789790409836893e-274,
+      "n": 4974
+    },
+    "rds_brain": {
+      "spearman_rho": 0.0647998738910955,
+      "p": 4.790191120957579e-06,
+      "n": 4974
+    },
+    "gene_len_summary": {
+      "n_with_span": 4974,
+      "n_missing_span": 0,
+      "median": 31721.0,
+      "mean": 72094.15199034981
+    },
+    "RD_vs_rest_len": {
+      "median_RD": 133590.0,
+      "median_rest": 28648.0,
+      "ratio": 4.663152750628316,
+      "wilcoxon_p": 1.4534018281152672e-71
+    },
+    "GD_vs_rest_len": {
+      "median_GD": 30295.5,
+      "median_rest": 28648.0,
+      "ratio": 1.0575083775481708,
+      "wilcoxon_p": 0.033340096540692116
+    },
+    "trait_gene_set_length": {
+      "Schizophrenia": {
+        "median_in": 75739.0,
+        "median_out": 30551.0,
+        "ratio": 2.4791005204412295,
+        "p": 3.0050044701698434e-18
+      },
+      "ASD": {
+        "median_in": 58934.0,
+        "median_out": 31350.0,
+        "ratio": 1.879872408293461,
+        "p": 6.371855688366705e-06
+      },
+      "Educational attainment": {
+        "median_in": 76319.5,
+        "median_out": 27416.5,
+        "ratio": 2.783706891835209,
+        "p": 1.1219028694487064e-68
+      },
+      "Intelligence": {
+        "median_in": 50585.5,
+        "median_out": 31228.0,
+        "ratio": 1.6198763929806583,
+        "p": 2.1528650712479107e-05
+      },
+      "Major depression": {
+        "median_in": 83947.0,
+        "median_out": 30830.0,
+        "ratio": 2.722899772948427,
+        "p": 1.8491623146389847e-15
+      },
+      "Bipolar disorder": {
+        "median_in": 109572.0,
+        "median_out": 31120.0,
+        "ratio": 3.5209511568123393,
+        "p": 7.295782013029715e-11
+      },
+      "Neuroticism": {
+        "median_in": 90172.5,
+        "median_out": 30770.0,
+        "ratio": 2.930532986675333,
+        "p": 1.875996101474433e-15
+      },
+      "Cognitive performance": {
+        "median_in": 126080.0,
+        "median_out": 30588.0,
+        "ratio": 4.121877860598928,
+        "p": 1.2662104642222483e-21
+      },
+      "Height": {
+        "median_in": 50974.0,
+        "median_out": 22509.0,
+        "ratio": 2.2646052690035097,
+        "p": 7.639696063352635e-99
+      },
+      "LDL cholesterol": {
+        "median_in": 40456.5,
+        "median_out": 31264.5,
+        "ratio": 1.294007580482656,
+        "p": 0.0003787369515209938
+      },
+      "Crohn disease": {
+        "median_in": 56518.0,
+        "median_out": 31379.0,
+        "ratio": 1.8011408904044106,
+        "p": 0.0013801828417336667
+      },
+      "Type 2 diabetes": {
+        "median_in": 65611.0,
+        "median_out": 28835.0,
+        "ratio": 2.275394485867869,
+        "p": 5.328156837943648e-35
+      }
+    }
+  },
+  "P0_3b_logistic": [
+    {
+      "trait": "Schizophrenia",
+      "is_control": false,
+      "OR_unadj": 2.8269098720002823,
+      "p_unadj": 5.167047255778441e-08,
+      "OR_adj": 1.2715164578632334,
+      "CI_lo": 0.83690696388429,
+      "CI_hi": 1.9318205874561163,
+      "p_adj": 0.26030759151460625,
+      "len_logOR": 2.1857537378057375,
+      "len_p": 2.576257034731372e-62,
+      "n_trait_genes_in_reg": 257,
+      "q_adj_bh": 0.624738219635055
+    },
+    {
+      "trait": "ASD",
+      "is_control": false,
+      "OR_unadj": 2.6460649819494653,
+      "p_unadj": 0.0004281303568431198,
+      "OR_adj": 1.0999546905526487,
+      "CI_lo": 0.5954198014601768,
+      "CI_hi": 2.032012234564044,
+      "p_adj": 0.7609480106496184,
+      "len_logOR": 2.209341223413071,
+      "len_p": 3.517077358621274e-64,
+      "n_trait_genes_in_reg": 116,
+      "q_adj_bh": 0.830263848214199
+    },
+    {
+      "trait": "Educational attainment",
+      "is_control": false,
+      "OR_unadj": 2.987233731059227,
+      "p_unadj": 2.0677587136585356e-17,
+      "OR_adj": 1.2194993969722654,
+      "CI_lo": 0.9131137631969026,
+      "CI_hi": 1.6286894789636697,
+      "p_adj": 0.17886268093831437,
+      "len_logOR": 2.1481057715108216,
+      "len_p": 6.1195053120910234e-55,
+      "n_trait_genes_in_reg": 822,
+      "q_adj_bh": 0.624738219635055
+    },
+    {
+      "trait": "Intelligence",
+      "is_control": false,
+      "OR_unadj": 1.9467742666727061,
+      "p_unadj": 0.007810524838985943,
+      "OR_adj": 1.0216804986897332,
+      "CI_lo": 0.5918077497533384,
+      "CI_hi": 1.7638008995961332,
+      "p_adj": 0.9386294141326489,
+      "len_logOR": 2.214976212424767,
+      "len_p": 4.888405221732217e-65,
+      "n_trait_genes_in_reg": 180,
+      "q_adj_bh": 0.9386294141326489
+    },
+    {
+      "trait": "Major depression",
+      "is_control": false,
+      "OR_unadj": 3.291681129237543,
+      "p_unadj": 1.6091281679937543e-07,
+      "OR_adj": 1.2341339560967606,
+      "CI_lo": 0.7441904552201803,
+      "CI_hi": 2.046635523080462,
+      "p_adj": 0.4149879610677596,
+      "len_logOR": 2.1932145460947012,
+      "len_p": 1.7548045588356892e-62,
+      "n_trait_genes_in_reg": 154,
+      "q_adj_bh": 0.7114079332590164
+    },
+    {
+      "trait": "Bipolar disorder",
+      "is_control": false,
+      "OR_unadj": 4.004920049200495,
+      "p_unadj": 1.521601193867947e-08,
+      "OR_adj": 1.6406804631507457,
+      "CI_lo": 0.9519318024201682,
+      "CI_hi": 2.8277575928453027,
+      "p_adj": 0.07464591245650934,
+      "len_logOR": 2.1758631209482355,
+      "len_p": 1.0932583936042015e-62,
+      "n_trait_genes_in_reg": 115,
+      "q_adj_bh": 0.44787547473905603
+    },
+    {
+      "trait": "Neuroticism",
+      "is_control": false,
+      "OR_unadj": 3.50101921956902,
+      "p_unadj": 4.274607498927873e-07,
+      "OR_adj": 1.412791189385729,
+      "CI_lo": 0.8226595846892947,
+      "CI_hi": 2.4262513704982744,
+      "p_adj": 0.2103979276647686,
+      "len_logOR": 2.189675864362747,
+      "len_p": 1.7365378847607456e-63,
+      "n_trait_genes_in_reg": 122,
+      "q_adj_bh": 0.624738219635055
+    },
+    {
+      "trait": "Cognitive performance",
+      "is_control": false,
+      "OR_unadj": 3.2518661710037287,
+      "p_unadj": 3.518448337049792e-07,
+      "OR_adj": 1.0822030789511512,
+      "CI_lo": 0.6503660089799103,
+      "CI_hi": 1.8007760060036113,
+      "p_adj": 0.761075194196349,
+      "len_logOR": 2.207358121383328,
+      "len_p": 8.655406833931134e-63,
+      "n_trait_genes_in_reg": 149,
+      "q_adj_bh": 0.830263848214199
+    },
+    {
+      "trait": "Height",
+      "is_control": true,
+      "OR_unadj": 2.2145916334661346,
+      "p_unadj": 1.542352151001232e-10,
+      "OR_adj": 1.0625476137762946,
+      "CI_lo": 0.8135994220486145,
+      "CI_hi": 1.3876699035735511,
+      "p_adj": 0.6560046475115051,
+      "len_logOR": 2.1982628154620523,
+      "len_p": 8.605651257318423e-60,
+      "n_trait_genes_in_reg": 2191,
+      "q_adj_bh": 0.830263848214199
+    },
+    {
+      "trait": "LDL cholesterol",
+      "is_control": true,
+      "OR_unadj": 1.5427823509004353,
+      "p_unadj": 0.06119792094552026,
+      "OR_adj": 1.2672135400036741,
+      "CI_lo": 0.7808195880370911,
+      "CI_hi": 2.056595634345641,
+      "p_adj": 0.33777731908916087,
+      "len_logOR": 2.2128549942489535,
+      "len_p": 2.8229774366942e-66,
+      "n_trait_genes_in_reg": 256,
+      "q_adj_bh": 0.6755546381783217
+    },
+    {
+      "trait": "Crohn disease",
+      "is_control": true,
+      "OR_unadj": 0.5160044977511236,
+      "p_unadj": 0.26194939164643505,
+      "OR_adj": 0.33100845759791414,
+      "CI_lo": 0.10096837134895291,
+      "CI_hi": 1.085157634391083,
+      "p_adj": 0.06798718596670354,
+      "len_logOR": 2.2297279498316804,
+      "len_p": 5.629119686916248e-67,
+      "n_trait_genes_in_reg": 95,
+      "q_adj_bh": 0.44787547473905603
+    },
+    {
+      "trait": "Type 2 diabetes",
+      "is_control": true,
+      "OR_unadj": 2.148492714142538,
+      "p_unadj": 5.123901795071509e-07,
+      "OR_adj": 1.0729259045415431,
+      "CI_lo": 0.7735380053689486,
+      "CI_hi": 1.4881880252117974,
+      "p_adj": 0.6732536039006489,
+      "len_logOR": 2.2041578806188356,
+      "len_p": 8.334146601963515e-63,
+      "n_trait_genes_in_reg": 561,
+      "q_adj_bh": 0.830263848214199
+    }
+  ],
+  "P0_3c_tertiles": {
+    "fisher_by_tertile": [
+      {
+        "trait": "Educational attainment",
+        "tertile": 1,
+        "n_genes": 1658,
+        "a_trait_RD": 1,
+        "b_trait_nonRD": 150,
+        "c_nontrait_RD": 14,
+        "OR": 0.710952380952381,
+        "p": 1.0
+      },
+      {
+        "trait": "Educational attainment",
+        "tertile": 2,
+        "n_genes": 1658,
+        "a_trait_RD": 9,
+        "b_trait_nonRD": 185,
+        "c_nontrait_RD": 48,
+        "OR": 1.4351351351351351,
+        "p": 0.29828350725851405
+      },
+      {
+        "trait": "Educational attainment",
+        "tertile": 3,
+        "n_genes": 1658,
+        "a_trait_RD": 93,
+        "b_trait_nonRD": 384,
+        "c_nontrait_RD": 128,
+        "OR": 1.99237060546875,
+        "p": 6.718865845651384e-06
+      },
+      {
+        "trait": "Schizophrenia",
+        "tertile": 1,
+        "n_genes": 1658,
+        "a_trait_RD": 0,
+        "b_trait_nonRD": 50,
+        "c_nontrait_RD": 15,
+        "OR": 0.0,
+        "p": 1.0
+      },
+      {
+        "trait": "Schizophrenia",
+        "tertile": 2,
+        "n_genes": 1658,
+        "a_trait_RD": 1,
+        "b_trait_nonRD": 61,
+        "c_nontrait_RD": 56,
+        "OR": 0.45081967213114754,
+        "p": 0.7211560538952522
+      },
+      {
+        "trait": "Schizophrenia",
+        "tertile": 3,
+        "n_genes": 1658,
+        "a_trait_RD": 35,
+        "b_trait_nonRD": 110,
+        "c_nontrait_RD": 186,
+        "OR": 2.270039100684262,
+        "p": 0.0001818585362777578
+      },
+      {
+        "trait": "Intelligence",
+        "tertile": 1,
+        "n_genes": 1658,
+        "a_trait_RD": 0,
+        "b_trait_nonRD": 50,
+        "c_nontrait_RD": 15,
+        "OR": 0.0,
+        "p": 1.0
+      },
+      {
+        "trait": "Intelligence",
+        "tertile": 2,
+        "n_genes": 1658,
+        "a_trait_RD": 2,
+        "b_trait_nonRD": 43,
+        "c_nontrait_RD": 55,
+        "OR": 1.3175475687103595,
+        "p": 0.6660350641030465
+      },
+      {
+        "trait": "Intelligence",
+        "tertile": 3,
+        "n_genes": 1658,
+        "a_trait_RD": 17,
+        "b_trait_nonRD": 68,
+        "c_nontrait_RD": 204,
+        "OR": 1.6776960784313726,
+        "p": 0.07105904660124479
+      },
+      {
+        "trait": "Height",
+        "tertile": 1,
+        "n_genes": 1658,
+        "a_trait_RD": 5,
+        "b_trait_nonRD": 481,
+        "c_nontrait_RD": 10,
+        "OR": 1.207900207900208,
+        "p": 0.7772174164590554
+      },
+      {
+        "trait": "Height",
+        "tertile": 2,
+        "n_genes": 1658,
+        "a_trait_RD": 27,
+        "b_trait_nonRD": 637,
+        "c_nontrait_RD": 30,
+        "OR": 1.3620094191522762,
+        "p": 0.2722668039732829
+      },
+      {
+        "trait": "Height",
+        "tertile": 3,
+        "n_genes": 1658,
+        "a_trait_RD": 151,
+        "b_trait_nonRD": 890,
+        "c_nontrait_RD": 70,
+        "OR": 1.3257945425361155,
+        "p": 0.07283477265555677
+      },
+      {
+        "trait": "Type 2 diabetes",
+        "tertile": 1,
+        "n_genes": 1658,
+        "a_trait_RD": 0,
+        "b_trait_nonRD": 115,
+        "c_nontrait_RD": 15,
+        "OR": 0.0,
+        "p": 0.618020298202222
+      },
+      {
+        "trait": "Type 2 diabetes",
+        "tertile": 2,
+        "n_genes": 1658,
+        "a_trait_RD": 3,
+        "b_trait_nonRD": 132,
+        "c_nontrait_RD": 54,
+        "OR": 0.6182659932659933,
+        "p": 0.6204351208623242
+      },
+      {
+        "trait": "Type 2 diabetes",
+        "tertile": 3,
+        "n_genes": 1658,
+        "a_trait_RD": 57,
+        "b_trait_nonRD": 254,
+        "c_nontrait_RD": 164,
+        "OR": 1.6187584021509507,
+        "p": 0.005382382514775411
+      }
+    ],
+    "cmh": {
+      "Educational attainment": {
+        "cmh_common_OR": 1.865329608195304,
+        "cmh_CI": [
+          1.4300065348274131,
+          2.433173878908169
+        ],
+        "cmh_p": 3.886237444739038e-06,
+        "cmh_stat": 21.32015623953474
+      },
+      "Schizophrenia": {
+        "cmh_common_OR": 1.9485503126776578,
+        "cmh_CI": [
+          1.3164468393660105,
+          2.8841638017564977
+        ],
+        "cmh_p": 0.0008153607328664769,
+        "cmh_stat": 11.20593636653251
+      },
+      "Intelligence": {
+        "cmh_common_OR": 1.55348207452758,
+        "cmh_CI": [
+          0.9319465628997802,
+          2.589533189938956
+        ],
+        "cmh_p": 0.09034089698829195,
+        "cmh_stat": 2.868288460667197
+      },
+      "Height": {
+        "cmh_common_OR": 1.3272442588726512,
+        "cmh_CI": [
+          1.0281390748288568,
+          1.7133648217811817
+        ],
+        "cmh_p": 0.029455404138878594,
+        "cmh_stat": 4.740798066109723
+      },
+      "Type 2 diabetes": {
+        "cmh_common_OR": 1.4222811776119106,
+        "cmh_CI": [
+          1.0408947380882085,
+          1.9434085639672993
+        ],
+        "cmh_p": 0.028021629634489287,
+        "cmh_stat": 4.826736191849809
+      }
+    }
+  },
+  "P0_4a_family_test": {
+    "neuro_pooled_logOR": 1.099628074713745,
+    "neuro_pooled_SE": 0.07300902520852358,
+    "neuro_pooled_OR": 3.0030489063930297,
+    "neuro_CI": [
+      2.6026505948913843,
+      3.465045500878972
+    ],
+    "control_pooled_logOR": 0.7005718043582465,
+    "control_pooled_SE": 0.08789166890203401,
+    "control_pooled_OR": 2.0149045093163136,
+    "control_CI": [
+      1.6960535875617404,
+      2.3936980596819892
+    ],
+    "z_between": 3.4925394704785386,
+    "p_between": 0.00047845088012967547,
+    "len_adjusted_between": {
+      "neuro_pooled_OR": 1.234308391810636,
+      "control_pooled_OR": 1.06310105019445,
+      "z_between": 1.1807928319308312,
+      "p_between": 0.2376850323378037
+    }
+  },
+  "P0_4b_permutation": {
+    "n_perm": 1000,
+    "obs_diff_logOR": 0.3990562703554985,
+    "perm_mean_diff": 0.009820114189114897,
+    "perm_sd": 0.16328675868351133,
+    "p_two_sided_empirical": 0.008991008991008992,
+    "perm_q025": -0.3249353853951423,
+    "perm_q975": 0.3085553061660541
+  },
+  "P0_4c_consistency": {
+    "full": {
+      "RD_neuro_sig": 8,
+      "RD_neuro_total": 8,
+      "RD_control_sig": 2,
+      "RD_control_total": 4,
+      "prop_test_fisher_p": 0.0909090909090909,
+      "which_neuro_sig": [
+        "Schizophrenia",
+        "ASD",
+        "Educational attainment",
+        "Intelligence",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "which_control_sig": [
+        "Height",
+        "Type 2 diabetes"
+      ]
+    },
+    "LOO-brain": {
+      "RD_neuro_sig": 6,
+      "RD_neuro_total": 8,
+      "RD_control_sig": 2,
+      "RD_control_total": 4,
+      "prop_test_fisher_p": 0.5474747474747474,
+      "which_neuro_sig": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "which_control_sig": [
+        "Height",
+        "Type 2 diabetes"
+      ]
+    },
+    "LOO-tau": {
+      "RD_neuro_sig": 5,
+      "RD_neuro_total": 8,
+      "RD_control_sig": 2,
+      "RD_control_total": 4,
+      "prop_test_fisher_p": 1.0,
+      "which_neuro_sig": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "which_control_sig": [
+        "Height",
+        "Type 2 diabetes"
+      ]
+    }
+  },
+  "P1_1_mapping_sensitivity": [
+    {
+      "trait": "Educational attainment",
+      "convention": "original_MAPPED",
+      "n_genes": 822,
+      "k_RD": 103,
+      "n_class": 293,
+      "OR": 2.987233731059219,
+      "CI_lo": 2.3203186248586016,
+      "CI_hi": 3.845836200414837,
+      "p_one_sided": 8.683759842761343e-16,
+      "loci": NaN
+    },
+    {
+      "trait": "Educational attainment",
+      "convention": "locus_dedup",
+      "n_genes": 200,
+      "k_RD": 31,
+      "n_class": 293,
+      "OR": 3.158950268756493,
+      "CI_lo": 2.1117963853452792,
+      "CI_hi": 4.725345146778985,
+      "p_one_sided": 4.364641547012426e-07,
+      "loci": 843.0
+    },
+    {
+      "trait": "Educational attainment",
+      "convention": "author_reported",
+      "n_genes": 45,
+      "k_RD": 7,
+      "n_class": 293,
+      "OR": 2.990522635259477,
+      "CI_lo": 1.323780345357478,
+      "CI_hi": 6.755822945523663,
+      "p_one_sided": 0.015060952443880204,
+      "loci": NaN
+    },
+    {
+      "trait": "Schizophrenia",
+      "convention": "original_MAPPED",
+      "n_genes": 257,
+      "k_RD": 36,
+      "n_class": 293,
+      "OR": 2.8269098720002823,
+      "CI_lo": 1.9447782101252276,
+      "CI_hi": 4.109167504451868,
+      "p_one_sided": 6.382436077509161e-07,
+      "loci": NaN
+    },
+    {
+      "trait": "Schizophrenia",
+      "convention": "locus_dedup",
+      "n_genes": 133,
+      "k_RD": 25,
+      "n_class": 293,
+      "OR": 3.9498687119955775,
+      "CI_lo": 2.5132242004415515,
+      "CI_hi": 6.207748134551849,
+      "p_one_sided": 1.4473099099738962e-07,
+      "loci": 522.0
+    },
+    {
+      "trait": "Schizophrenia",
+      "convention": "author_reported",
+      "n_genes": 254,
+      "k_RD": 25,
+      "n_class": 293,
+      "OR": 1.8135306002737406,
+      "CI_lo": 1.1787089139808389,
+      "CI_hi": 2.7902505861448827,
+      "p_one_sided": 0.007220624715628862,
+      "loci": NaN
+    },
+    {
+      "trait": "Intelligence",
+      "convention": "original_MAPPED",
+      "n_genes": 180,
+      "k_RD": 19,
+      "n_class": 293,
+      "OR": 1.9467742666727117,
+      "CI_lo": 1.1916477979681508,
+      "CI_hi": 3.1804112354683918,
+      "p_one_sided": 0.009004042743582581,
+      "loci": NaN
+    },
+    {
+      "trait": "Intelligence",
+      "convention": "locus_dedup",
+      "n_genes": 76,
+      "k_RD": 15,
+      "n_class": 293,
+      "OR": 4.0865668121240715,
+      "CI_lo": 2.2933373395725916,
+      "CI_hi": 7.281976367709722,
+      "p_one_sided": 2.6864338860374214e-05,
+      "loci": 313.0
+    },
+    {
+      "trait": "Intelligence",
+      "convention": "author_reported",
+      "n_genes": 70,
+      "k_RD": 7,
+      "n_class": 293,
+      "OR": 1.794094794094794,
+      "CI_lo": 0.8142705679459071,
+      "CI_hi": 3.9529564949372795,
+      "p_one_sided": 0.1160548670557125,
+      "loci": NaN
+    },
+    {
+      "trait": "Height",
+      "convention": "original_MAPPED",
+      "n_genes": 2191,
+      "k_RD": 183,
+      "n_class": 293,
+      "OR": 2.2145916334661355,
+      "CI_lo": 1.7360653719413561,
+      "CI_hi": 2.825018102592438,
+      "p_one_sided": 5.154673847080334e-11,
+      "loci": NaN
+    },
+    {
+      "trait": "Height",
+      "convention": "locus_dedup",
+      "n_genes": 116,
+      "k_RD": 18,
+      "n_class": 293,
+      "OR": 3.0610018552875697,
+      "CI_lo": 1.825047496655141,
+      "CI_hi": 5.133966307861213,
+      "p_one_sided": 0.0001247701648485733,
+      "loci": 473.0
+    },
+    {
+      "trait": "Height",
+      "convention": "author_reported",
+      "n_genes": 238,
+      "k_RD": 18,
+      "n_class": 293,
+      "OR": 1.3272396694214876,
+      "CI_lo": 0.8084836888090137,
+      "CI_hi": 2.1788505624412053,
+      "p_one_sided": 0.16227059296808086,
+      "loci": NaN
+    }
+  ],
+  "P1_2_jaccard_meff": {
+    "jaccard_range_offdiag": [
+      0.06884057971014493,
+      0.30973451327433627,
+      0.14820386307793115
+    ],
+    "eigenvalues": [
+      2.0634267940944016,
+      1.1317967395234065,
+      0.9824951798347625,
+      0.9287803966998674,
+      0.8003784878834722,
+      0.7470890770293948,
+      0.7179957860471322,
+      0.6280375388875643
+    ],
+    "Meff_LiJi2005": 3,
+    "Meff_Kaiser_ge1": 2,
+    "pairwise_max_jaccard_traitpair": [
+      "ASD",
+      "Intelligence",
+      0.30973451327433627
+    ]
+  },
+  "P1_3_power_table": [
+    {
+      "trait": "Schizophrenia",
+      "is_control": false,
+      "n_universe_mapped_genes": 257,
+      "k_RD_overlap": 36,
+      "n_RD": 293,
+      "expected": 15.1389223964616,
+      "OR": 2.8269098720002823,
+      "CI_lo": 1.9447782101252276,
+      "CI_hi": 4.109167504451868,
+      "CI_width_log": 0.7480725145455732,
+      "fisher_p": 7.471921478826338e-07,
+      "q_bh": 2.2415764436479015e-06
+    },
+    {
+      "trait": "ASD",
+      "is_control": false,
+      "n_universe_mapped_genes": 116,
+      "k_RD_overlap": 16,
+      "n_RD": 293,
+      "expected": 6.833132287897064,
+      "OR": 2.6460649819494586,
+      "CI_lo": 1.5396771621075227,
+      "CI_hi": 4.54748570740327,
+      "CI_width_log": 1.0830017289943157,
+      "fisher_p": 0.001127750252316382,
+      "q_bh": 0.0015036670030885095
+    },
+    {
+      "trait": "Educational attainment",
+      "is_control": false,
+      "n_universe_mapped_genes": 822,
+      "k_RD_overlap": 103,
+      "n_RD": 293,
+      "expected": 48.42098914354644,
+      "OR": 2.987233731059219,
+      "CI_lo": 2.3203186248586016,
+      "CI_hi": 3.845836200414837,
+      "CI_width_log": 0.5052865421146003,
+      "fisher_p": 1.015419275358604e-15,
+      "q_bh": 1.2185031304303247e-14
+    },
+    {
+      "trait": "Intelligence",
+      "is_control": false,
+      "n_universe_mapped_genes": 180,
+      "k_RD_overlap": 19,
+      "n_RD": 293,
+      "expected": 10.60313630880579,
+      "OR": 1.9467742666727117,
+      "CI_lo": 1.1916477979681508,
+      "CI_hi": 3.1804112354683918,
+      "CI_width_log": 0.981673454281121,
+      "fisher_p": 0.013979211388510954,
+      "q_bh": 0.016775053666213145
+    },
+    {
+      "trait": "Major depression",
+      "is_control": false,
+      "n_universe_mapped_genes": 154,
+      "k_RD_overlap": 25,
+      "n_RD": 293,
+      "expected": 9.071572175311621,
+      "OR": 3.2916811292375328,
+      "CI_lo": 2.1079755050680773,
+      "CI_hi": 5.140080912006877,
+      "CI_width_log": 0.891340810353832,
+      "fisher_p": 2.573991445558128e-06,
+      "q_bh": 5.147982891116256e-06
+    },
+    {
+      "trait": "Bipolar disorder",
+      "is_control": false,
+      "n_universe_mapped_genes": 115,
+      "k_RD_overlap": 22,
+      "n_RD": 293,
+      "expected": 6.774225975070366,
+      "OR": 4.004920049200492,
+      "CI_lo": 2.4767886736338403,
+      "CI_hi": 6.4758793397402625,
+      "CI_width_log": 0.9611215723111175,
+      "fisher_p": 6.108719796068543e-07,
+      "q_bh": 2.2415764436479015e-06
+    },
+    {
+      "trait": "Neuroticism",
+      "is_control": false,
+      "n_universe_mapped_genes": 122,
+      "k_RD_overlap": 21,
+      "n_RD": 293,
+      "expected": 7.186570164857257,
+      "OR": 3.5010192195690157,
+      "CI_lo": 2.153999938143472,
+      "CI_hi": 5.690406651708653,
+      "CI_width_log": 0.971455163354503,
+      "fisher_p": 6.550659537947252e-06,
+      "q_bh": 9.825989306920878e-06
+    },
+    {
+      "trait": "Cognitive performance",
+      "is_control": false,
+      "n_universe_mapped_genes": 149,
+      "k_RD_overlap": 24,
+      "n_RD": 293,
+      "expected": 8.777040611178126,
+      "OR": 3.251866171003717,
+      "CI_lo": 2.06564157428786,
+      "CI_hi": 5.119297425916708,
+      "CI_width_log": 0.9075763402483275,
+      "fisher_p": 4.7443283753684345e-06,
+      "q_bh": 8.133134357774458e-06
+    },
+    {
+      "trait": "Height",
+      "is_control": true,
+      "n_universe_mapped_genes": 2191,
+      "k_RD_overlap": 183,
+      "n_RD": 293,
+      "expected": 129.06373140329714,
+      "OR": 2.2145916334661355,
+      "CI_lo": 1.7360653719413561,
+      "CI_hi": 2.825018102592438,
+      "CI_width_log": 0.4868935003977851,
+      "fisher_p": 8.279337022322514e-11,
+      "q_bh": 4.967602213393509e-10
+    },
+    {
+      "trait": "LDL cholesterol",
+      "is_control": true,
+      "n_universe_mapped_genes": 256,
+      "k_RD_overlap": 22,
+      "n_RD": 293,
+      "expected": 15.080016083634902,
+      "OR": 1.5427823509004321,
+      "CI_lo": 0.9798389094051494,
+      "CI_hi": 2.4291517303541728,
+      "CI_width_log": 0.9079092132374208,
+      "fisher_p": 0.07444278220272796,
+      "q_bh": 0.08121030785752141
+    },
+    {
+      "trait": "Crohn disease",
+      "is_control": true,
+      "n_universe_mapped_genes": 95,
+      "k_RD_overlap": 3,
+      "n_RD": 293,
+      "expected": 5.596099718536389,
+      "OR": 0.5160044977511244,
+      "CI_lo": 0.16240595509558173,
+      "CI_hi": 1.639475852610739,
+      "CI_width_log": 2.312032771304952,
+      "fisher_p": 0.37511166321024814,
+      "q_bh": 0.3751116632102482
+    },
+    {
+      "trait": "Type 2 diabetes",
+      "is_control": true,
+      "n_universe_mapped_genes": 561,
+      "k_RD_overlap": 60,
+      "n_RD": 293,
+      "expected": 33.04644149577805,
+      "OR": 2.1484927141425305,
+      "CI_lo": 1.5940348017263017,
+      "CI_hi": 2.895809387426483,
+      "CI_width_log": 0.596996240016278,
+      "fisher_p": 2.28146653346122e-06,
+      "q_bh": 5.147982891116256e-06
+    }
+  ],
+  "P1_4_master_table_stats": {
+    "n_rows": 108,
+    "RD_sig_q05_by_classification": {
+      "full": {
+        "neuro": 8,
+        "control": 2
+      },
+      "LOO-brain": {
+        "neuro": 6,
+        "control": 2
+      },
+      "LOO-tau": {
+        "neuro": 5,
+        "control": 2
+      }
+    }
+  },
+  "sanity_vs_prior_negative_controls": {
+    "n_prior_rows_compared": 48,
+    "k_matches": 48,
+    "mismatches": []
+  },
+  "locus_stats": {
+    "Schizophrenia": {
+      "n_loci": 522
+    },
+    "ASD": {
+      "n_loci": 279
+    },
+    "Educational attainment": {
+      "n_loci": 843
+    },
+    "Intelligence": {
+      "n_loci": 313
+    },
+    "Major depression": {
+      "n_loci": 391
+    },
+    "Bipolar disorder": {
+      "n_loci": 288
+    },
+    "Neuroticism": {
+      "n_loci": 282
+    },
+    "Cognitive performance": {
+      "n_loci": 428
+    },
+    "Height": {
+      "n_loci": 473
+    },
+    "LDL cholesterol": {
+      "n_loci": 403
+    },
+    "Crohn disease": {
+      "n_loci": 233
+    },
+    "Type 2 diabetes": {
+      "n_loci": 781
+    }
+  }
+}

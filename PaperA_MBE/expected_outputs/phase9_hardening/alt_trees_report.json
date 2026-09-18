@@ -1,0 +1,10 @@
+{
+  "n_genes": 400,
+  "n_ok": 389,
+  "status_counts": {
+    "error: could not convert string to float: '0.006:0.003'": 11,
+    "ok": 389
+  },
+  "example_original": "((((((chimpanzee:0.006,bonobo:0.009):0.003,human{Test}:0.006):0.003,gorilla:0.012):0.004,gibbon:0.016):0.010,((baboon:0.020,rhesus:0.020):0.008,vervet:0.018):0.008):0.015,(marmoset:0.018,squirrel_m:0.025):0.015);",
+  "example_alt": "(((((human{Test}:0.006,gorilla:0.012):0.003,(chimpanzee:0.006,bonobo:0.009):0.003):0.004,gibbon:0.016):0.01,((baboon:0.02,rhesus:0.02):0.008,vervet:0.018):0.008):0.015,(marmoset:0.018,squirrel_m:0.025):0.015);"
+}

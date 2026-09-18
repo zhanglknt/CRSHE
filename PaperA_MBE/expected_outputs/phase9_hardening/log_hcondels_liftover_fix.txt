@@ -1,0 +1,39 @@
+========================================================================
+Phase 9 hardening: hCONDEL hg18->hg38 liftOver repair
+========================================================================
+Universe: 4974 genes | GD(+relaxed)=1266, RD=293, dual=11, HAR-proximate=476
+
+hCONDELs parsed from Supplementary Table 2: 583
+panTro2->hg38 chain unavailable ('NoneType' object has no attribute 'readline'); fallback disabled
+liftOver hg18->hg38: success 581/583 (panTro2 fallback used: 0); failures: 2
+  failed hCONDELs: hCONDEL.449, hCONDEL.577
+
+Gene mapping (fixed): name-only=80, coord-only-fixed=102, overlap=70, union=112 (old: 80 / 121 / 18 / 183)
+  coverage: 112/4974 = 2.25% (old 183/4974 = 3.68%)
+
+Gold-standard within-gene recovery (n=44 in universe): direct body overlap=40 (old 7), +/-50kb only=2 (old 5), wrong locus=2 (old 32)
+Old coord-only genes (103) retained by fixed coord method: 7
+  RD enrichment [union_fixed ]: k=18/293, OR=3.194, p=7.81e-05 | GD: k=19, OR=0.592, p=0.0371
+  RD enrichment [name_only   ]: k=12/293, OR=2.897, p=0.00226 | GD: k=12, OR=0.512, p=0.0281
+  RD enrichment [coord_fixed ]: k=18/293, OR=3.582, p=2.14e-05 | GD: k=18, OR=0.622, p=0.084
+  (old union: RD OR=2.944, p=6.65e-06; GD OR=0.526, p=1)
+  name vs fixed-coord Jaccard: 0.625
+  class counts (union fixed): {'gd': 19, 'rd': 18, 'neutral': 74, 'dual': 1} (old gd=27, rd=27, neutral=125)
+
+HAR x hCONDEL overlap: 22 genes (old 29); 22/112 = 19.6% of hCONDEL genes (old 15.8%); 22/476 = 4.6% of HAR genes (old 6.1%)
+  phi=0.0520 (old 0.0417), chi2 p=0.0004603 (old 0.0049)
+
+Baseline v7 classification reproduced (agreement 100%).
+  full       : RD= 293, hCONDEL k=18/293, OR=3.194, p=7.81e-05 (old OR=2.944, p=6.65e-06, k=27/293) | HAR OR=4.146 (unchanged)
+  LOO-caMPRA : RD= 800, hCONDEL k=32/800, OR=2.132, p=0.000534 (old OR=2.270, p=2.47e-06, k=54/800) | HAR OR=1.614 (unchanged)
+  LOO-tau    : RD= 148, hCONDEL k=13/148, OR=4.598, p=2.27e-05 (old OR=3.911, p=6.2e-06, k=18/148) | HAR OR=6.386 (unchanged)
+  LOO-nc     : RD= 110, hCONDEL k=10/110, OR=4.669, p=0.000159 (old OR=3.361, p=0.000643, k=12/110) | HAR OR=9.388 (unchanged)
+  LOO-brain  : RD= 613, hCONDEL k=29/613, OR=2.559, p=5.71e-05 (old OR=2.274, p=1.42e-05, k=43/613) | HAR OR=2.775 (unchanged)
+  new LOO hCONDEL OR range: 2.13-4.67 (old 2.27-3.91); p range: 2.27e-05-0.000534 (old 2.47e-06-6.43e-04)
+
+Newcombe method-10 reproduction of old hCONDEL row verified.
+  HAR-proximate (n_hars>0): n=476, BUSTED=174 (36.6%) vs complement 1516/4498 (33.7%), diff=+0.0285 [-0.0158, 0.0748], fisher p=0.222
+  hCONDEL-proximate: n=112, BUSTED=34 (30.4%) vs complement 1656/4862 (34.1%), diff=-0.0370 [-0.1157, 0.0544], fisher p=0.48
+  HAR or hCONDEL: n=566, BUSTED=201 (35.5%) vs complement 1489/4408 (33.8%), diff=+0.0173 [-0.0235, 0.0599], fisher p=0.423
+  (old tier4 CSV backed up to tier4_empirical_disjointness.csv.bak_pre_hcondel_fix)
+  HAR row reproduced identically (n=476, sig=174, diff=0.0285).

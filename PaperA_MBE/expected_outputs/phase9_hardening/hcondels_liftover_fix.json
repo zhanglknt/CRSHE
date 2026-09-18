@@ -1,0 +1,235 @@
+{
+  "task": "R6 P0 fix: hCONDEL hg18->hg38 liftOver repair (provenance audit 1.3, plan A)",
+  "universe_n": 4974,
+  "liftover": {
+    "total": 583,
+    "success": 581,
+    "fail": 2,
+    "failed_names": [
+      "hCONDEL.449",
+      "hCONDEL.577"
+    ],
+    "pantro2_fallback_used": 0,
+    "pantro2_chain_available": false
+  },
+  "gene_sets": {
+    "name_only": 80,
+    "coord_fixed": 102,
+    "name_coord_overlap": 70,
+    "union_fixed": 112,
+    "union_old": 183,
+    "coverage_pct_new": 2.25,
+    "coverage_pct_old": 3.68,
+    "jaccard_name_vs_coord": 0.625,
+    "old_coord_only_retained": "7/103"
+  },
+  "validation_within_gene": {
+    "n_in_universe": 44,
+    "direct_recovery_new": 40,
+    "direct_recovery_old": 7,
+    "ext50kb_only_new": 2,
+    "wrong_locus_new": 2,
+    "wrong_locus_old": 32
+  },
+  "enrichment": {
+    "old_union": {
+      "rd_or": 2.9442596876807405,
+      "rd_p": 6.654409160391586e-06,
+      "gd_or": 0.5255006156438339,
+      "gd_p": 0.9995933112970327
+    },
+    "new": {
+      "union_fixed": {
+        "n_genes": 112.0,
+        "rd_k": 18.0,
+        "rd_or": 3.1940425531914896,
+        "rd_p": 7.809426913882364e-05,
+        "gd_k": 19.0,
+        "gd_or": 0.592260133999017,
+        "gd_p": 0.03705301840226549
+      },
+      "name_only": {
+        "n_genes": 80.0,
+        "rd_k": 12.0,
+        "rd_or": 2.8970064894285117,
+        "rd_p": 0.002260359890796685,
+        "gd_k": 12.0,
+        "gd_or": 0.5122431747818744,
+        "gd_p": 0.028133926689144193
+      },
+      "coord_fixed": {
+        "n_genes": 102.0,
+        "rd_k": 18.0,
+        "rd_or": 3.582077922077922,
+        "rd_p": 2.1396774322920276e-05,
+        "gd_k": 18.0,
+        "gd_or": 0.6222527472527473,
+        "gd_p": 0.08401905729027226
+      }
+    }
+  },
+  "class_counts_union": {
+    "gd": 19,
+    "rd": 18,
+    "neutral": 74,
+    "dual": 1
+  },
+  "har_hcondel_overlap": {
+    "both": 22,
+    "pct_of_hcondel": 19.6,
+    "pct_of_har": 4.6,
+    "phi": 0.052,
+    "chi2_p": 0.00046028966445848407,
+    "old": {
+      "both": 29,
+      "phi": 0.0417,
+      "chi2_p": 0.0049
+    }
+  },
+  "loo_hcondel": {
+    "full": {
+      "OR": 3.194,
+      "p": 7.809426913882364e-05,
+      "k_over_n": "18/293",
+      "old_OR": 2.944,
+      "old_p": 6.654409160391586e-06,
+      "old_k_over_n": "27/293"
+    },
+    "LOO-caMPRA": {
+      "OR": 2.132,
+      "p": 0.0005344428267942148,
+      "k_over_n": "32/800",
+      "old_OR": 2.27,
+      "old_p": 2.473308121629363e-06,
+      "old_k_over_n": "54/800"
+    },
+    "LOO-tau": {
+      "OR": 4.598,
+      "p": 2.2707145672937984e-05,
+      "k_over_n": "13/148",
+      "old_OR": 3.911,
+      "old_p": 6.2016958532190185e-06,
+      "old_k_over_n": "18/148"
+    },
+    "LOO-nc": {
+      "OR": 4.669,
+      "p": 0.00015897816717791306,
+      "k_over_n": "10/110",
+      "old_OR": 3.361,
+      "old_p": 0.000642588903502502,
+      "old_k_over_n": "12/110"
+    },
+    "LOO-brain": {
+      "OR": 2.559,
+      "p": 5.7116871746996265e-05,
+      "k_over_n": "29/613",
+      "old_OR": 2.274,
+      "old_p": 1.4227057053097574e-05,
+      "old_k_over_n": "43/613"
+    }
+  },
+  "loo_hcondel_or_range": {
+    "new": [
+      2.13,
+      4.67
+    ],
+    "old": [
+      2.27,
+      3.91
+    ]
+  },
+  "loo_hcondel_p_range": {
+    "new": [
+      2.2707145672937984e-05,
+      0.0005344428267942148
+    ],
+    "old": [
+      2.47e-06,
+      0.000643
+    ]
+  },
+  "tier4_rows": [
+    {
+      "subset": "HAR-proximate (n_hars>0)",
+      "n": 476,
+      "busted_sig": 174,
+      "busted_rate": 0.3655,
+      "busted_OR": 1.133,
+      "busted_p": 0.22201216115856964,
+      "RD_or_dual": 91,
+      "RD_rate": 0.1912,
+      "RD_OR": 4.755,
+      "RD_p": 1.6740200962929436e-25,
+      "GD_class": 103,
+      "GD_rate": 0.2164,
+      "complement_n": 4498,
+      "complement_sig": 1516,
+      "complement_rate": 0.337,
+      "rate_diff": 0.0285,
+      "rate_diff_ci95_newcombe_low": -0.0158,
+      "rate_diff_ci95_newcombe_high": 0.0748,
+      "rate_diff_ci95_wilson_bound_subtraction_low": -0.0275,
+      "rate_diff_ci95_wilson_bound_subtraction_high": 0.0864,
+      "rate_diff_ci95_wald_low": -0.0169,
+      "rate_diff_ci95_wald_high": 0.0739,
+      "fisher_p_vs_complement": 0.22201216115856964
+    },
+    {
+      "subset": "hCONDEL-proximate",
+      "n": 112,
+      "busted_sig": 34,
+      "busted_rate": 0.3036,
+      "busted_OR": 0.844,
+      "busted_p": 0.48008716024811093,
+      "RD_or_dual": 19,
+      "RD_rate": 0.1696,
+      "RD_OR": 3.281,
+      "RD_p": 3.788727154424215e-05,
+      "GD_class": 19,
+      "GD_rate": 0.1696,
+      "complement_n": 4862,
+      "complement_sig": 1656,
+      "complement_rate": 0.3406,
+      "rate_diff": -0.037,
+      "rate_diff_ci95_newcombe_low": -0.1157,
+      "rate_diff_ci95_newcombe_high": 0.0544,
+      "rate_diff_ci95_wilson_bound_subtraction_low": -0.1279,
+      "rate_diff_ci95_wilson_bound_subtraction_high": 0.0667,
+      "rate_diff_ci95_wald_low": -0.1232,
+      "rate_diff_ci95_wald_high": 0.0492,
+      "fisher_p_vs_complement": 0.48008716024811093
+    },
+    {
+      "subset": "HAR or hCONDEL",
+      "n": 566,
+      "busted_sig": 201,
+      "busted_rate": 0.3551,
+      "busted_OR": 1.08,
+      "busted_p": 0.4230376412103164,
+      "RD_or_dual": 100,
+      "RD_rate": 0.1767,
+      "RD_OR": 4.422,
+      "RD_p": 2.112497165234941e-25,
+      "GD_class": 119,
+      "GD_rate": 0.2102,
+      "complement_n": 4408,
+      "complement_sig": 1489,
+      "complement_rate": 0.3378,
+      "rate_diff": 0.0173,
+      "rate_diff_ci95_newcombe_low": -0.0235,
+      "rate_diff_ci95_newcombe_high": 0.0599,
+      "rate_diff_ci95_wilson_bound_subtraction_low": -0.0351,
+      "rate_diff_ci95_wilson_bound_subtraction_high": 0.0714,
+      "rate_diff_ci95_wald_low": -0.0245,
+      "rate_diff_ci95_wald_high": 0.0592,
+      "fisher_p_vs_complement": 0.4230376412103164
+    }
+  ],
+  "files": {
+    "comparison_csv": "d:/人类正选择基因项目/results/phase9_hardening/hcondels_liftover_fix_comparison.csv",
+    "fixed_mapping_csv": "d:/人类正选择基因项目/results/phase9_hardening/hcondel_gene_mapping_fixed.csv",
+    "tier4_csv_updated": "d:/人类正选择基因项目/results/phase9_hardening/tier4_empirical_disjointness.csv",
+    "tier4_backup": "d:/人类正选择基因项目/results/phase9_hardening/tier4_empirical_disjointness.csv.bak_pre_hcondel_fix",
+    "log": "d:/人类正选择基因项目/results/phase9_hardening/log_hcondels_liftover_fix.txt"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "task": "R6 window sensitivity (primate P2-3, molevol P2-4, popgen P1-1c): HAR / hCONDEL RD enrichment at +/-25/50/100 kb mapping windows",
+  "metric": "RD (regulation-driven + dual-driven) vs rest of the 4,974-gene universe, Fisher exact two-sided OR",
+  "HAR": {
+    "25kb": {
+      "n_genes": 359,
+      "rd_or_dual": 74,
+      "rd_rate": 0.2061,
+      "OR": 4.95,
+      "p": 1.592048579030204e-22
+    },
+    "50kb": {
+      "n_genes": 476,
+      "rd_or_dual": 91,
+      "rd_rate": 0.1912,
+      "OR": 4.755,
+      "p": 1.6740200962929436e-25
+    },
+    "100kb": {
+      "n_genes": 716,
+      "rd_or_dual": 104,
+      "rd_rate": 0.1453,
+      "OR": 3.448,
+      "p": 2.0078592338743893e-19
+    }
+  },
+  "hCONDEL": {
+    "25kb": {
+      "n_genes": 145,
+      "rd_or_dual": 28,
+      "rd_rate": 0.1931,
+      "OR": 3.948,
+      "p": 3.004879387877431e-08,
+      "n_by_name": 63,
+      "n_by_coord": 95
+    },
+    "50kb": {
+      "n_genes": 183,
+      "rd_or_dual": 29,
+      "rd_rate": 0.1585,
+      "OR": 3.092,
+      "p": 1.4197937214027395e-06,
+      "n_by_name": 80,
+      "n_by_coord": 121
+    },
+    "100kb": {
+      "n_genes": 237,
+      "rd_or_dual": 30,
+      "rd_rate": 0.1266,
+      "OR": 2.361,
+      "p": 0.00012185061351872043,
+      "n_by_name": 105,
+      "n_by_coord": 161
+    }
+  },
+  "conclusion": "HAR RD OR: 4.95 (25kb) / 4.755 (50kb) / 3.448 (100kb); hCONDEL RD OR: 3.948 / 3.092 / 2.361. Both enrichments remain significant (p<0.05) across all three windows."
+}
