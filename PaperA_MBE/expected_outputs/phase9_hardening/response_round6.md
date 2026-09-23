@@ -183,3 +183,32 @@ general-purpose-30 验证（blind_verification_r7_batch9g.md）：1 FAIL + 2 备
 - **图注**：Fig 4a/4b 十二检验+joint；4c 异质性；4f 长度限定；7c 未校正警示
 - **cover letter**：srv 29.2% CI + 重比对对称化 + hCONDEL 降级
 - 摘要词数三口径检查（见输出）
+
+### R8 batch 10C2/10C3 摘要压缩 (2026-09-24)
+
+10C 整合后摘要 276/272/269 词超 250 上限，两轮压缩（七处 + 四处）至 **249/246/243 词三口径全部达标**（split/regex/alnum），终版摘要全文已打印核验。
+
+### R8 fig-fix 三项 (2026-09-24)
+
+- Fig 4a/4b/4d 末行联合变体标签换真值：RD=403、HAR 3.86 [3.02-4.95]、hCONDEL 3.05 [1.90-4.88]、joint-vs-full 一致率 0.908（fig-fix 自算），标签折行防裁剪
+- Fig 4c 删除 "excludes HAR re-detection" 误述
+- Fig 7c 加红色斜体长度警示（"RD 8/8 FDR-sig. — but uncorrected for gene length; 0/48 survive length-matched permutation"）
+- 旧版备份 `_bak_pre_r8/`；PNG 300dpi + PDF 渲染目检通过
+
+### R8 交叉验证 (2026-09-24)
+
+general-purpose-30 盲验证 batch 10：**8/8 项 PASS，0 FAIL**（覆盖 GWAS 降级措辞、srv 29.2% CI 一致性、span-resid 变体 B 数字、hCONDEL 异质性、Table 3 joint 行、Fig 4/7c 修图、摘要词数、cover letter 同步）。核验中抓到 tier4_empirical_disjointness.json 滞后（hCONDEL n=183 旧值）→ `tmp_r8fix_tier4b.py` 从 CSV 全字段重填（112/566/p=0.4801/0.423），断言通过后保存。
+
+### R8 交付链 (2026-09-24)
+
+- docx x4 重建（pandoc）+ 同步入包；图件同步 03_figures（14 文件）
+- 单 PDF **61 页**（R7 为 57 页），**35/35 探针全部 True**（含 R8 新探针 29.2% / 26.4-32.1 / 1,450 / 0 of 48 / z = 2.84 / family-level residual signal / OR = 6.23 / 237 genes / seed 20260924 / 3.86）
+- zip **10.65 MB / 191 文件**，CRC OK
+- CRSHE 新增：phase9_hardening 17 个 R8 JSON/CSV + 五份 R8 评审 + blind_verification_r8_batch10.md + 本日志
+- CRSHE commit **a41a976** 已推送（2026-09-24）
+
+### R8 终局状态
+
+- 均分 6.9（R5 7.5 / R6 7.5 / R7 6.6 / R8 6.9），3 Minor + 2 Major
+- 7 个 P0 簇全部关闭；P0-5 GARD 清洁比对对照待 WSL 黑名单解除（50 基因 Faster rc2/rc4 双跑已就绪，~3-4h）
+- 用户侧待决：标题、Zenodo DOI、基金号、AI 披露、审稿人邮箱（Scally/Fraser）、**MBE 格式决策（Discoveries 短格式 vs full Research Article，editor 警告 desk return 风险）**
