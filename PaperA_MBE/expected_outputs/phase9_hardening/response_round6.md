@@ -145,3 +145,11 @@ general-purpose-30 验证（blind_verification_r7_batch9g.md）：1 FAIL + 2 备
 - **备注A（已修）**：SI S2 GARD "nucleotide mode with 3–4 rate classes" → "codon mode with 2–4 rate classes"（JSON 生产命令 --type codon，复现 rc=2/rc=4）。
 - **备注B（无需行动）**：JSON 内部 median 为上中位数（第 26 顺位），值未入稿。
 - PASS：重比对 64.1%/+14.8/80.4%/59.1%；bootstrap 0.26%/73.7%/ω0.54/κ3.02；GARD 根因与 site 200 Δc-AIC≈1,519；旧口径残留扫描 0 命中；算术自检全闭合。
+
+### R7 交付链刷新完成 (2026-09-23)
+
+- docx×4 重建（pandoc）+ 同步入包；单 PDF **57 页**（较 R6 54 页 +3，R7 新增内容），**29/29 探针通过**（含 R7 新探针 28.0%/1,394/40.7%/64.1%/0.26%/49.4%/codon mode/Faster mode/alignment-block/48-test/OR=3.40/93%/seed 20260923）
+- zip **6.17 MB / 180 文件**，CRC OK
+- CRSHE 新增 R7 交付物：phase9_hardening 19 个 JSON/CSV + gard_rerun/ 50 JSON + 五份 R7 评审 + 两轮盲验证报告 + 本日志
+- CRSHE commit **3d89dce**，已推送
+- **R7 闭环状态：5/5 P0 关闭 + 9A–9H 全部整合 + 两轮盲验证核销（batch9: 2 FAIL+5 备注已修；batch9g: 1 FAIL+1 备注已修）——"解决所有问题后交叉验证"指令完成**
