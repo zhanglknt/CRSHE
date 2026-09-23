@@ -1,0 +1,75 @@
+term,K,k,p,p_bh
+Synaptic Vesicle Priming (GO:0016082) BP,3,3,0.014262191539614628,0.7788524747136303
+Regulation Of Synaptic Vesicle Endocytosis (GO:1900242) BP,4,3,0.046685652933536353,0.7788524747136303
+Integral Component Of Synaptic Vesicle Membrane (GO:0030285) CC,25,10,0.05933684250066332,0.7788524747136303
+Postsynaptic Density (GO:0014069) CC,33,12,0.08134025190830654,0.7788524747136303
+Presynapse (GO:0098793) CC,50,16,0.1331576914291153,0.7788524747136303
+"Postsynaptic Specialization, Intracellular Component (GO:0099091) CC",3,2,0.1480190600783573,0.7788524747136303
+Maintenance Of Postsynaptic Density Structure (GO:0099562) BP,3,2,0.1480190600783573,0.7788524747136303
+Regulation Of Synaptic Vesicle Fusion To Presynaptic Active Zone Membrane (GO:0031630) BP,3,2,0.1480190600783573,0.7788524747136303
+Postsynaptic Ribosome CC,9,4,0.15209291722662396,0.7788524747136303
+Presynaptic Ribosome CC,6,3,0.15787550163114128,0.7788524747136303
+Regulation Protein Catabolic Process At Postsynapse (GO:0140252) BP,6,3,0.15787550163114128,0.7788524747136303
+Regulation Of Neurotransmitter Receptor Localization To Postsynaptic Specialization Membrane (GO:0098696) BP,6,3,0.15787550163114128,0.7788524747136303
+Translation At Presynapse (GO:0140236) BP,6,3,0.15787550163114128,0.7788524747136303
+Translation At Postsynapse (GO:0140242) BP,6,3,0.15787550163114128,0.7788524747136303
+Synaptic Vesicle Endocytosis (GO:0048488) BP,6,3,0.15787550163114128,0.7788524747136303
+Neuronal Dense Core Vesicle (GO:0098992) CC,7,3,0.22839631604331523,0.994195728659137
+Regulation Of Postsynaptic Membrane Neurotransmitter Receptor Levels (GO:0099072) BP,7,3,0.22839631604331523,0.994195728659137
+Synapse (GO:0045202) CC,64,18,0.27624647077532083,1.0
+Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP,5,2,0.35170532514410396,1.0
+Synaptic Vesicle Proton Loading (GO:0097401) BP,5,2,0.35170532514410396,1.0
+Postsynaptic Cytosol (GO:0099524) CC,10,3,0.4523246800141043,1.0
+Presynaptic Modulation Of Chemical Synaptic Transmission (GO:0099171) BP,15,4,0.512175089692396,1.0
+Postsynapse (GO:0098794) CC,61,15,0.5261068160084537,1.0
+Extrinsic Component Of Synaptic Vesicle Membrane (GO:0098850) CC,7,2,0.5367098052434932,1.0
+Regulation Of Postsynaptic Neurotransmitter Receptor Endocytosis (GO:0099149) BP,7,2,0.5367098052434932,1.0
+Neuronal Dense Core Vesicle Lumen (GO:0099013) CC,3,1,0.5657042731106168,1.0
+Presynaptic Active Zone Cytoplasmic Component (GO:0098831) CC,3,1,0.5657042731106168,1.0
+Regulation Of Presynaptic Cytosolic Calcium Levels (GO:0099509) BP,3,1,0.5657042731106168,1.0
+Presynaptic Actin Cytoskeleton Organization (GO:0099140) BP,3,1,0.5657042731106168,1.0
+Regulation Of Modification Of Postsynaptic Structure (GO:0099159) BP,3,1,0.5657042731106168,1.0
+"Neurotransmitter Receptor Transport, Endosome To Postsynaptic Membrane (GO:0098887) BP",3,1,0.5657042731106168,1.0
+Regulation Of Synaptic Vesicle Exocytosis (GO:2000300) BP,12,3,0.5864847632113364,1.0
+Postsynaptic Modulation Of Chemical Synaptic Transmission (GO:0099170) BP,12,3,0.5864847632113364,1.0
+Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC,13,3,0.6450972771417043,1.0
+Regulation Of Postsynapse Organization (GO:0099175) BP,13,3,0.6450972771417043,1.0
+Synaptic Vesicle Clustering (GO:0097091) BP,4,1,0.6711548750730962,1.0
+Regulation Of Postsynaptic Specialization Assembly (GO:0099150) BP,4,1,0.6711548750730962,1.0
+Postsynaptic Membrane (GO:0045211) CC,4,1,0.6711548750730962,1.0
+Presynaptic Cytosol (GO:0099523) CC,9,2,0.6819213441271722,1.0
+Transmitter-Gated IC Activity Involved In Regulation Of Postsynaptic Membrane Potential (GO:1904315) BP,15,3,0.7439005135477702,1.0
+Voltage-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099508) BP,5,1,0.7510172625553443,1.0
+Modification Of Postsynaptic Actin Cytoskeleton (GO:0098885) BP,5,1,0.7510172625553443,1.0
+Anchored Component Of Postsynaptic Density Membrane (GO:0099031) CC,5,1,0.7510172625553443,1.0
+Neurotransmitter Receptor Localization To Postsynaptic Specialization Membrane (GO:0099645) BP,6,1,0.8114966676862961,1.0
+Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC,12,2,0.8278418537694157,1.0
+Regulation Of Synaptic Vesicle Cycle (GO:0098693) BP,7,1,0.8572944780934298,1.0
+Regulation Of Synapse Maturation (GO:0090128) BP,7,1,0.8572944780934298,1.0
+Postsynaptic Specialization (GO:0099572) CC,7,1,0.8572944780934298,1.0
+Modulation Of Chemical Synaptic Transmission (GO:0050804) BP,25,4,0.8897556008980385,1.0
+Regulation Of Synapse Organization (GO:0050807) BP,8,1,0.8919724658005428,1.0
+Postsynaptic Actin Cytoskeleton Organization (GO:0098974) BP,8,1,0.8919724658005428,1.0
+Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC,26,4,0.9073628692929182,1.0
+Regulation Of Presynapse Assembly (GO:1905606) BP,9,1,0.9182288560097142,1.0
+Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP,9,1,0.9182288560097142,1.0
+Regulation Of Postsynapse Assembly (GO:0150052) BP,16,2,0.9285595866204315,1.0
+Integral Component Of Presynaptic Membrane (GO:0099056) CC,36,5,0.9584332480796042,1.0
+Integral Component Of Postsynaptic Membrane (GO:0099055) CC,31,4,0.9630161496615117,1.0
+Postsynaptic Neurotransmitter Receptor Endocytosis (GO:0098884) BP,4,0,1.0,1.0
+Postsynaptic Actin Cytoskeleton (GO:0098871) CC,3,0,1.0,1.0
+"Postsynaptic Density, Intracellular Component (GO:0099092) CC",3,0,1.0,1.0
+Postsynapse Organization (GO:0099173) BP,6,0,1.0,1.0
+Anchored Component Of Presynaptic Active Zone Membrane (GO:0099029) CC,5,0,1.0,1.0
+Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP,6,0,1.0,1.0
+Modification Of Postsynaptic Structure (GO:0099010) BP,4,0,1.0,1.0
+Synaptic Cleft (GO:0043083) CC,3,0,1.0,1.0
+Regulation Of Postsynaptic Neurotransmitter Receptor Activity (GO:0098962) BP,3,0,1.0,1.0
+Presynaptic Active Zone (GO:0048786) CC,4,0,1.0,1.0
+Presynaptic Membrane (GO:0042734) CC,3,0,1.0,1.0
+Postsynapse To Nucleus Signaling Pathway (GO:0099527) BP,4,0,1.0,1.0
+Anchored Component Of Synaptic Vesicle Membrane (GO:0098993) CC,6,0,1.0,1.0
+Exocytic Insertion Of Neurotransmitter Receptor To Postsynaptic Membrane (GO:0098967) BP,3,0,1.0,1.0
+Extrinsic Component Of Postsynaptic Membrane (GO:0098890) CC,4,0,1.0,1.0
+Synaptic Vesicle To Endosome Fusion (GO:0016189) BP,4,0,1.0,1.0
+Synaptic Vesicle (GO:0008021) CC,6,0,1.0,1.0

@@ -1,0 +1,30 @@
+{
+  "n_relax_rows": 1701,
+  "n_relax_valid": 1660,
+  "n_fdr_sig": 728,
+  "n_fdr_sig_flag": 728,
+  "n_fdr_sig_K_lt_1": 124,
+  "n_fdr_sig_K_gt_1": 604,
+  "n_fdr_sig_K_eq_0": 7,
+  "n_fdr_sig_K_lt1_K_eq0": 7,
+  "n_0_lt_K_lt_1": 117,
+  "n_relax_run_busted_sig": 1660,
+  "v7_relax_relaxed_true": 117,
+  "v7_relax_relaxed_equals_FDR_Klt1": false,
+  "v7_relax_relaxed_equals_0ltKlt1": true,
+  "classification_of_relax_relaxed": {
+    "neutral": 65,
+    "gene-driven (relaxed)": 52
+  },
+  "n_gene_driven_relaxed_v7": 52,
+  "gdr_in_relax_relaxed": 52,
+  "gdr_in_0ltKlt1": 52,
+  "gdr_busted_sig": 52,
+  "rest_of_0ltKlt1_not_gdr": {
+    "neutral": 65
+  },
+  "classification_of_K0_fdr_sig": {
+    "neutral": 5,
+    "gene-driven": 2
+  }
+}

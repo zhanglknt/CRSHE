@@ -1,0 +1,994 @@
+{
+  "seed": 20260923,
+  "n_perm": 1000,
+  "median_span": {
+    "RD_bp": 133590.0,
+    "universe_bp": 31721.0,
+    "ratio": 4.211405693389238,
+    "n_missing_span_universe": 0,
+    "n_RD_missing_span": 0
+  },
+  "reproduce": {
+    "SynGO": {
+      "terms_tested": 74,
+      "n_fdr005": 11,
+      "matches_production_csv": true,
+      "fdr_terms": [
+        "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP",
+        "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+        "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+        "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+        "Postsynapse (GO:0098794) CC",
+        "Regulation Of Postsynapse Assembly (GO:0150052) BP",
+        "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP",
+        "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+        "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+        "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+        "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC"
+      ]
+    },
+    "GO_BP": {
+      "terms_tested": 2507,
+      "n_fdr005": 18,
+      "matches_production_csv": true,
+      "fdr_terms": [
+        "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+        "Protein Phosphorylation (GO:0006468)",
+        "Axon Guidance (GO:0007411)",
+        "Neuron Projection Guidance (GO:0097485)",
+        "Phosphorylation (GO:0016310)",
+        "Protein Modification Process (GO:0036211)",
+        "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+        "Regulation Of Focal Adhesion Assembly (GO:0051893)",
+        "Phospholipid Transport (GO:0015914)",
+        "Transmembrane Receptor Protein Tyrosine Kinase Signaling Pathway (GO:0007169)",
+        "Positive Regulation Of Synaptic Transmission (GO:0050806)",
+        "Regulation Of Cell-Substrate Junction Assembly (GO:0090109)",
+        "Cyclic Nucleotide Biosynthetic Process (GO:0009190)",
+        "Peptidyl-Tyrosine Modification (GO:0018212)",
+        "Ephrin Receptor Signaling Pathway (GO:0048013)",
+        "Cellular Response To Organic Cyclic Compound (GO:0071407)",
+        "Axonogenesis (GO:0007409)",
+        "Regulation Of Cellular Response To Growth Factor Stimulus (GO:0090287)"
+      ]
+    }
+  },
+  "rd_decile_counts": {
+    "1": 1,
+    "2": 8,
+    "3": 11,
+    "4": 14,
+    "5": 16,
+    "6": 27,
+    "7": 29,
+    "8": 65,
+    "9": 122
+  },
+  "loo_joint_synGO": {
+    "RD_loo_brain_tau": {
+      "n_genes": 403,
+      "n_fdr005": 7,
+      "fdr_terms": [
+        "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+        "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP",
+        "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+        "Postsynapse (GO:0098794) CC",
+        "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC",
+        "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+        "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP"
+      ]
+    },
+    "GD_loo_brain_tau": {
+      "n_genes": 1207,
+      "n_fdr005": 0,
+      "fdr_terms": []
+    }
+  },
+  "verdict": {
+    "SynGO": {
+      "n_fdr_terms": 11,
+      "n_survive_permutation": 7,
+      "n_survive_logistic_bh": 9,
+      "n_survive_both": 7,
+      "lost_terms": [
+        "Regulation Of Postsynapse Assembly (GO:0150052) BP",
+        "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP",
+        "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+        "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC"
+      ],
+      "core_terms": [
+        "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP",
+        "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+        "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+        "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+        "Postsynapse (GO:0098794) CC",
+        "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+        "Integral Component Of Presynaptic Membrane (GO:0099056) CC"
+      ]
+    },
+    "GO_BP": {
+      "n_fdr_terms": 18,
+      "n_survive_permutation": 18,
+      "n_survive_logistic_bh": 18,
+      "n_survive_both": 18,
+      "lost_terms": [],
+      "core_terms": [
+        "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+        "Protein Phosphorylation (GO:0006468)",
+        "Axon Guidance (GO:0007411)",
+        "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+        "Neuron Projection Guidance (GO:0097485)",
+        "Phospholipid Transport (GO:0015914)",
+        "Phosphorylation (GO:0016310)",
+        "Protein Modification Process (GO:0036211)",
+        "Regulation Of Focal Adhesion Assembly (GO:0051893)",
+        "Positive Regulation Of Synaptic Transmission (GO:0050806)",
+        "Transmembrane Receptor Protein Tyrosine Kinase Signaling Pathway (GO:0007169)",
+        "Cyclic Nucleotide Biosynthetic Process (GO:0009190)",
+        "Regulation Of Cell-Substrate Junction Assembly (GO:0090109)",
+        "Peptidyl-Tyrosine Modification (GO:0018212)",
+        "Ephrin Receptor Signaling Pathway (GO:0048013)",
+        "Cellular Response To Organic Cyclic Compound (GO:0071407)",
+        "Axonogenesis (GO:0007409)",
+        "Regulation Of Cellular Response To Growth Factor Stimulus (GO:0090287)"
+      ]
+    }
+  },
+  "terms": [
+    {
+      "library": "GO_BP",
+      "term": "Axon Guidance (GO:0007411)",
+      "K_universe": 42,
+      "k_obs": 11,
+      "p_hyper_production": 2.0322596405750828e-05,
+      "p_bh_production": 0.016982916396405773,
+      "OR_obs": 6.009917123191459,
+      "OR_null_median": 1.874772895498284,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 4.725179798719837,
+      "p_logistic": 9.349155812133858e-05,
+      "p_bh_logistic": 0.00033924035741670375,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Axonogenesis (GO:0007409)",
+      "K_universe": 55,
+      "k_obs": 11,
+      "p_hyper_production": 0.0002853705752618729,
+      "p_bh_production": 0.042083766598912664,
+      "OR_obs": 4.242318782937257,
+      "OR_null_median": 1.7484256224582597,
+      "p_perm_lengthmatched": 0.003996003996003996,
+      "OR_logistic_adj": 3.568949584615869,
+      "p_logistic": 0.0007216160782762923,
+      "p_bh_logistic": 0.001298908940897326,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Cellular Response To Organic Cyclic Compound (GO:0071407)",
+      "K_universe": 46,
+      "k_obs": 10,
+      "p_hyper_production": 0.00026369417237554084,
+      "p_bh_production": 0.041317580634092556,
+      "OR_obs": 4.713850837138509,
+      "OR_null_median": 1.696860713197196,
+      "p_perm_lengthmatched": 0.006993006993006993,
+      "OR_logistic_adj": 3.773615864555944,
+      "p_logistic": 0.0008950500732769315,
+      "p_bh_logistic": 0.0014646273926349788,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Cyclic Nucleotide Biosynthetic Process (GO:0009190)",
+      "K_universe": 6,
+      "k_obs": 4,
+      "p_hyper_production": 0.00016106350222200706,
+      "p_bh_production": 0.031060476928505516,
+      "OR_obs": 29.09533678756477,
+      "OR_null_median": 4.360372960372961,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 26.922679746147868,
+      "p_logistic": 0.001066968672491013,
+      "p_bh_logistic": 0.0015867100469198839,
+      "OR_cmh": 24.758620689655174,
+      "p_cmh": 1.3875398331530953e-05,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Ephrin Receptor Signaling Pathway (GO:0048013)",
+      "K_universe": 11,
+      "k_obs": 5,
+      "p_hyper_production": 0.00023597041503044844,
+      "p_bh_production": 0.03943852203208895,
+      "OR_obs": 13.712971603786162,
+      "OR_null_median": 2.2815628815628815,
+      "p_perm_lengthmatched": 0.002997002997002997,
+      "OR_logistic_adj": 13.9844380322903,
+      "p_logistic": 0.00023439143621183708,
+      "p_bh_logistic": 0.00046878287242367415,
+      "OR_cmh": 34.48826291079812,
+      "p_cmh": 4.74050404486448e-08,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+      "K_universe": 91,
+      "k_obs": 16,
+      "p_hyper_production": 6.468375067207787e-05,
+      "p_bh_production": 0.022208591424928134,
+      "OR_obs": 3.6278145695364237,
+      "OR_null_median": 1.63961743762912,
+      "p_perm_lengthmatched": 0.002997002997002997,
+      "OR_logistic_adj": 2.4576477161708636,
+      "p_logistic": 0.0031409793707185417,
+      "p_bh_logistic": 0.0035336017920583594,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Neuron Projection Guidance (GO:0097485)",
+      "K_universe": 38,
+      "k_obs": 10,
+      "p_hyper_production": 4.659432627097756e-05,
+      "p_bh_production": 0.022208591424928134,
+      "OR_obs": 6.0474333983105915,
+      "OR_null_median": 1.5769557101646021,
+      "p_perm_lengthmatched": 0.001998001998001998,
+      "OR_logistic_adj": 4.839603025535068,
+      "p_logistic": 0.00015793364273709412,
+      "p_bh_logistic": 0.0004061150813239563,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Peptidyl-Tyrosine Modification (GO:0018212)",
+      "K_universe": 16,
+      "k_obs": 6,
+      "p_hyper_production": 0.0001922355461763456,
+      "p_bh_production": 0.03442389387600703,
+      "OR_obs": 10.058716356107661,
+      "OR_null_median": 1.5439205955334987,
+      "p_perm_lengthmatched": 0.001998001998001998,
+      "OR_logistic_adj": 10.730253201974413,
+      "p_logistic": 9.423343261575105e-05,
+      "p_bh_logistic": 0.00033924035741670375,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Phospholipid Transport (GO:0015914)",
+      "K_universe": 14,
+      "k_obs": 6,
+      "p_hyper_production": 7.97276915932801e-05,
+      "p_bh_production": 0.022208591424928134,
+      "OR_obs": 12.43079283887468,
+      "OR_null_median": 3.2037735849056603,
+      "p_perm_lengthmatched": 0.002997002997002997,
+      "OR_logistic_adj": 10.575299067320417,
+      "p_logistic": 0.00018533264969724996,
+      "p_bh_logistic": 0.0004169984618188124,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Phosphorylation (GO:0016310)",
+      "K_universe": 118,
+      "k_obs": 19,
+      "p_hyper_production": 4.805717718649325e-05,
+      "p_bh_production": 0.022208591424928134,
+      "OR_obs": 3.2716863003542302,
+      "OR_null_median": 1.7322658983329904,
+      "p_perm_lengthmatched": 0.005994005994005994,
+      "OR_logistic_adj": 2.3422310882804687,
+      "p_logistic": 0.002153060409159196,
+      "p_bh_logistic": 0.002768220526061824,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Positive Regulation Of Synaptic Transmission (GO:0050806)",
+      "K_universe": 15,
+      "k_obs": 6,
+      "p_hyper_production": 0.0001263497732242169,
+      "p_bh_production": 0.028796261952101068,
+      "OR_obs": 11.119908466819222,
+      "OR_null_median": 1.6507515473032714,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 14.64594971058996,
+      "p_logistic": 2.1235927155373413e-05,
+      "p_bh_logistic": 0.0001911233443983607,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Protein Modification Process (GO:0036211)",
+      "K_universe": 194,
+      "k_obs": 26,
+      "p_hyper_production": 5.571389347385227e-05,
+      "p_bh_production": 0.022208591424928134,
+      "OR_obs": 2.653601042735517,
+      "OR_null_median": 1.3960332661542385,
+      "p_perm_lengthmatched": 0.005994005994005994,
+      "OR_logistic_adj": 2.027914714190594,
+      "p_logistic": 0.002560522364553106,
+      "p_bh_logistic": 0.003072626837463727,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Protein Phosphorylation (GO:0006468)",
+      "K_universe": 137,
+      "k_obs": 22,
+      "p_hyper_production": 1.2596894409451652e-05,
+      "p_bh_production": 0.015790207142247645,
+      "OR_obs": 3.2765300997345195,
+      "OR_null_median": 1.4659694288012872,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 2.684618321383153,
+      "p_logistic": 0.00014546790262280707,
+      "p_bh_logistic": 0.0004061150813239563,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+      "K_universe": 19,
+      "k_obs": 8,
+      "p_hyper_production": 5.63396716725322e-06,
+      "p_bh_production": 0.014124355688303824,
+      "OR_obs": 12.09144902154877,
+      "OR_null_median": 2.285959323695173,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 11.131429270663757,
+      "p_logistic": 1.0184311449122485e-05,
+      "p_bh_logistic": 0.00018331760608420472,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Regulation Of Cell-Substrate Junction Assembly (GO:0090109)",
+      "K_universe": 6,
+      "k_obs": 4,
+      "p_hyper_production": 0.00016106350222200706,
+      "p_bh_production": 0.031060476928505516,
+      "OR_obs": 29.09533678756477,
+      "OR_null_median": 4.360372960372961,
+      "p_perm_lengthmatched": 0.001998001998001998,
+      "OR_logistic_adj": 26.241343336312216,
+      "p_logistic": 0.001145957256108805,
+      "p_bh_logistic": 0.0015867100469198839,
+      "OR_cmh": 25.36051502145923,
+      "p_cmh": 1.4007251699643675e-06,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Regulation Of Cellular Response To Growth Factor Stimulus (GO:0090287)",
+      "K_universe": 7,
+      "k_obs": 4,
+      "p_hyper_production": 0.000358397946882189,
+      "p_bh_production": 0.04991686960186933,
+      "OR_obs": 20.777942264988898,
+      "OR_null_median": 3.688757396449704,
+      "p_perm_lengthmatched": 0.006993006993006993,
+      "OR_logistic_adj": 9.81030119539433,
+      "p_logistic": 0.007686929765161067,
+      "p_bh_logistic": 0.007686929765161067,
+      "OR_cmh": 12.064908722109534,
+      "p_cmh": 2.866122407618743e-05,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Regulation Of Focal Adhesion Assembly (GO:0051893)",
+      "K_universe": 14,
+      "k_obs": 6,
+      "p_hyper_production": 7.97276915932801e-05,
+      "p_bh_production": 0.022208591424928134,
+      "OR_obs": 12.43079283887468,
+      "OR_null_median": 1.77340930674264,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 12.180802529502042,
+      "p_logistic": 8.652354242021298e-05,
+      "p_bh_logistic": 0.00033924035741670375,
+      "OR_cmh": 20.226244343891402,
+      "p_cmh": 6.161172572127782e-09,
+      "survives_both": true
+    },
+    {
+      "library": "GO_BP",
+      "term": "Transmembrane Receptor Protein Tyrosine Kinase Signaling Pathway (GO:0007169)",
+      "K_universe": 86,
+      "k_obs": 15,
+      "p_hyper_production": 0.0001204348590409476,
+      "p_bh_production": 0.028796261952101068,
+      "OR_obs": 3.58879361213293,
+      "OR_null_median": 1.5155257005499028,
+      "p_perm_lengthmatched": 0.004995004995004995,
+      "OR_logistic_adj": 2.4514136891584704,
+      "p_logistic": 0.004256297898249524,
+      "p_bh_logistic": 0.0045066683628524375,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+      "K_universe": 26,
+      "k_obs": 8,
+      "p_hyper_production": 8.094664972565603e-05,
+      "p_bh_production": 0.0014975130199246366,
+      "OR_obs": 7.505040942869314,
+      "OR_null_median": 2.3883619584721867,
+      "p_perm_lengthmatched": 0.00999000999000999,
+      "OR_logistic_adj": 4.199931680624301,
+      "p_logistic": 0.0025513966288432215,
+      "p_bh_logistic": 0.007016340729318859,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+      "K_universe": 31,
+      "k_obs": 10,
+      "p_hyper_production": 6.326239524848134e-06,
+      "p_bh_production": 0.00023407086241938099,
+      "OR_obs": 8.02842377260982,
+      "OR_null_median": 1.9672373705347708,
+      "p_perm_lengthmatched": 0.001998001998001998,
+      "OR_logistic_adj": 4.407931201998096,
+      "p_logistic": 0.0005839044591169454,
+      "p_bh_logistic": 0.0037674518706738535,
+      "OR_cmh": 5.21961774251713,
+      "p_cmh": 9.94926340225355e-06,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC",
+      "K_universe": 13,
+      "k_obs": 4,
+      "p_hyper_production": 0.005518496824962466,
+      "p_bh_production": 0.03712443318611113,
+      "OR_obs": 7.64521407144805,
+      "OR_null_median": 3.4831083600566783,
+      "p_perm_lengthmatched": 0.07392607392607392,
+      "OR_logistic_adj": 4.161891927573119,
+      "p_logistic": 0.03332690890545038,
+      "p_bh_logistic": 0.04073288866221712,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": false
+    },
+    {
+      "library": "SynGO",
+      "term": "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+      "K_universe": 12,
+      "k_obs": 6,
+      "p_hyper_production": 2.7136875471134866e-05,
+      "p_bh_production": 0.0006693762616213267,
+      "OR_obs": 16.262608695652172,
+      "OR_null_median": 3.8156497590459852,
+      "p_perm_lengthmatched": 0.004995004995004995,
+      "OR_logistic_adj": 7.074859638619245,
+      "p_logistic": 0.0024348362993278517,
+      "p_bh_logistic": 0.007016340729318859,
+      "OR_cmh": 8.97950819672131,
+      "p_cmh": 1.0307606871262642e-05,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+      "K_universe": 36,
+      "k_obs": 7,
+      "p_hyper_production": 0.004355635549227033,
+      "p_bh_production": 0.03223170306428004,
+      "OR_obs": 4.128582837873813,
+      "OR_null_median": 1.671821614817479,
+      "p_perm_lengthmatched": 0.030969030969030968,
+      "OR_logistic_adj": 2.765934994676088,
+      "p_logistic": 0.02786391552084341,
+      "p_bh_logistic": 0.03831288384115969,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+      "K_universe": 6,
+      "k_obs": 3,
+      "p_hyper_production": 0.003541606678331607,
+      "p_bh_production": 0.029119877132948765,
+      "OR_obs": 16.10499139414802,
+      "OR_null_median": 4.360372960372961,
+      "p_perm_lengthmatched": 0.04795204795204795,
+      "OR_logistic_adj": 8.757749541562003,
+      "p_logistic": 0.01924344752513047,
+      "p_bh_logistic": 0.03527965379607253,
+      "OR_cmh": 9.869757174392937,
+      "p_cmh": 0.000636618999233618,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+      "K_universe": 25,
+      "k_obs": 6,
+      "p_hyper_production": 0.002709256424498346,
+      "p_bh_production": 0.0250606219266097,
+      "OR_obs": 5.405797101449275,
+      "OR_null_median": 2.495046854082999,
+      "p_perm_lengthmatched": 0.06393606393606394,
+      "OR_logistic_adj": 2.4768805433048504,
+      "p_logistic": 0.07601687893209733,
+      "p_bh_logistic": 0.07601687893209733,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": false
+    },
+    {
+      "library": "SynGO",
+      "term": "Postsynapse (GO:0098794) CC",
+      "K_universe": 61,
+      "k_obs": 11,
+      "p_hyper_production": 0.0007265027829365882,
+      "p_bh_production": 0.010752241187461506,
+      "OR_obs": 3.733444317883116,
+      "OR_null_median": 1.5607275962025122,
+      "p_perm_lengthmatched": 0.015984015984015984,
+      "OR_logistic_adj": 2.5091703100656613,
+      "p_logistic": 0.011969304941677602,
+      "p_bh_logistic": 0.026332470871690727,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": true
+    },
+    {
+      "library": "SynGO",
+      "term": "Regulation Of Postsynapse Assembly (GO:0150052) BP",
+      "K_universe": 16,
+      "k_obs": 5,
+      "p_hyper_production": 0.0017465408262742875,
+      "p_bh_production": 0.019571256668640534,
+      "OR_obs": 7.742521287016803,
+      "OR_null_median": 2.7606908381143906,
+      "p_perm_lengthmatched": 0.055944055944055944,
+      "OR_logistic_adj": 3.8004940263096336,
+      "p_logistic": 0.02567206687398798,
+      "p_bh_logistic": 0.03831288384115969,
+      "OR_cmh": null,
+      "p_cmh": null,
+      "survives_both": false
+    },
+    {
+      "library": "SynGO",
+      "term": "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP",
+      "K_universe": 5,
+      "k_obs": 3,
+      "p_hyper_production": 0.0018513350902768073,
+      "p_bh_production": 0.019571256668640534,
+      "OR_obs": 22.551807228915663,
+      "OR_null_median": 5.330484330484331,
+      "p_perm_lengthmatched": 0.06293706293706294,
+      "OR_logistic_adj": 6.402837104341211,
+      "p_logistic": 0.05835401367795881,
+      "p_bh_logistic": 0.06418941504575469,
+      "OR_cmh": 9.873853211009175,
+      "p_cmh": 0.002111584703132219,
+      "survives_both": false
+    },
+    {
+      "library": "SynGO",
+      "term": "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP",
+      "K_universe": 9,
+      "k_obs": 6,
+      "p_hyper_production": 2.8713214976429474e-06,
+      "p_bh_production": 0.00021247779082557812,
+      "OR_obs": 30.22136645962733,
+      "OR_null_median": 2.819607843137255,
+      "p_perm_lengthmatched": 0.000999000999000999,
+      "OR_logistic_adj": 14.49747324803231,
+      "p_logistic": 0.0006849912492134279,
+      "p_bh_logistic": 0.0037674518706738535,
+      "OR_cmh": 19.348314606741575,
+      "p_cmh": 3.245759823133909e-07,
+      "survives_both": true
+    }
+  ],
+  "cmh": {
+    "SynGO::Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP": {
+      "OR_pooled": 19.348314606741575,
+      "p": 3.245759823133909e-07,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            1,
+            1642
+          ]
+        ],
+        [
+          [
+            0,
+            57
+          ],
+          [
+            0,
+            1601
+          ]
+        ],
+        [
+          [
+            6,
+            215
+          ],
+          [
+            2,
+            1435
+          ]
+        ]
+      ]
+    },
+    "SynGO::Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP": {
+      "OR_pooled": 9.873853211009175,
+      "p": 0.002111584703132219,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            0,
+            1643
+          ]
+        ],
+        [
+          [
+            0,
+            57
+          ],
+          [
+            0,
+            1601
+          ]
+        ],
+        [
+          [
+            3,
+            218
+          ],
+          [
+            2,
+            1435
+          ]
+        ]
+      ]
+    },
+    "SynGO::Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC": {
+      "OR_pooled": 8.97950819672131,
+      "p": 1.0307606871262642e-05,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            0,
+            1643
+          ]
+        ],
+        [
+          [
+            1,
+            56
+          ],
+          [
+            2,
+            1599
+          ]
+        ],
+        [
+          [
+            5,
+            216
+          ],
+          [
+            4,
+            1433
+          ]
+        ]
+      ]
+    },
+    "SynGO::Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP": {
+      "OR_pooled": 9.869757174392937,
+      "p": 0.000636618999233618,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            1,
+            1642
+          ]
+        ],
+        [
+          [
+            1,
+            56
+          ],
+          [
+            0,
+            1601
+          ]
+        ],
+        [
+          [
+            2,
+            219
+          ],
+          [
+            2,
+            1435
+          ]
+        ]
+      ]
+    },
+    "SynGO::Integral Component Of Postsynaptic Membrane (GO:0099055) CC": {
+      "OR_pooled": 5.21961774251713,
+      "p": 9.94926340225355e-06,
+      "tables": [
+        [
+          [
+            1,
+            14
+          ],
+          [
+            3,
+            1640
+          ]
+        ],
+        [
+          [
+            0,
+            57
+          ],
+          [
+            7,
+            1594
+          ]
+        ],
+        [
+          [
+            9,
+            212
+          ],
+          [
+            11,
+            1426
+          ]
+        ]
+      ]
+    },
+    "GO_BP::Regulation Of Cell-Substrate Junction Assembly (GO:0090109)": {
+      "OR_pooled": 25.36051502145923,
+      "p": 1.4007251699643675e-06,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            1,
+            1642
+          ]
+        ],
+        [
+          [
+            1,
+            56
+          ],
+          [
+            0,
+            1601
+          ]
+        ],
+        [
+          [
+            3,
+            218
+          ],
+          [
+            1,
+            1436
+          ]
+        ]
+      ]
+    },
+    "GO_BP::Cyclic Nucleotide Biosynthetic Process (GO:0009190)": {
+      "OR_pooled": 24.758620689655174,
+      "p": 1.3875398331530953e-05,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            1,
+            1642
+          ]
+        ],
+        [
+          [
+            0,
+            57
+          ],
+          [
+            0,
+            1601
+          ]
+        ],
+        [
+          [
+            4,
+            217
+          ],
+          [
+            1,
+            1436
+          ]
+        ]
+      ]
+    },
+    "GO_BP::Regulation Of Cellular Response To Growth Factor Stimulus (GO:0090287)": {
+      "OR_pooled": 12.064908722109534,
+      "p": 2.866122407618743e-05,
+      "tables": [
+        [
+          [
+            1,
+            14
+          ],
+          [
+            0,
+            1643
+          ]
+        ],
+        [
+          [
+            0,
+            57
+          ],
+          [
+            1,
+            1600
+          ]
+        ],
+        [
+          [
+            3,
+            218
+          ],
+          [
+            2,
+            1435
+          ]
+        ]
+      ]
+    },
+    "GO_BP::Ephrin Receptor Signaling Pathway (GO:0048013)": {
+      "OR_pooled": 34.48826291079812,
+      "p": 4.74050404486448e-08,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            3,
+            1640
+          ]
+        ],
+        [
+          [
+            1,
+            56
+          ],
+          [
+            3,
+            1598
+          ]
+        ],
+        [
+          [
+            4,
+            217
+          ],
+          [
+            0,
+            1437
+          ]
+        ]
+      ]
+    },
+    "GO_BP::Regulation Of Focal Adhesion Assembly (GO:0051893)": {
+      "OR_pooled": 20.226244343891402,
+      "p": 6.161172572127782e-09,
+      "tables": [
+        [
+          [
+            0,
+            15
+          ],
+          [
+            4,
+            1639
+          ]
+        ],
+        [
+          [
+            2,
+            55
+          ],
+          [
+            3,
+            1598
+          ]
+        ],
+        [
+          [
+            4,
+            217
+          ],
+          [
+            1,
+            1436
+          ]
+        ]
+      ]
+    }
+  }
+}

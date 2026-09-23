@@ -1,0 +1,34 @@
+{
+  "description": "R7 Task 3: BUSTED --srv Yes on the 400 stratified genes with 1800s timeout completion of the 110 genes that timed out at 300s (R6). Rates are BH FDR<0.05 within the 400-gene family; srv-No comparison on the common-gene basis.",
+  "n_srv_valid": 400,
+  "n_missing_after_rerun": 0,
+  "missing_genes": [],
+  "rate_srvYes_full400": 0.41,
+  "rate_srvNo_on_common": 0.49363867684478374,
+  "rate_srvYes_on_common": 0.4071246819338422,
+  "n_common": 393,
+  "both_sig": 150,
+  "srvNo_only": 44,
+  "srvYes_only": 10,
+  "retention_of_srvNo_sig": 0.7731958762886598,
+  "relative_reduction_srv_vs_srvNo": 0.17525773195876293,
+  "extrapolation_to_universe": {
+    "production_rate": 0.33976678729392845,
+    "point_estimate_rate": 0.2802200307578791,
+    "point_estimate_genes_of_4974": 1394,
+    "bound_derivation": "estimate = production_rate x (srvYes/srvNo rate ratio on common genes); absolute bounds assign all still-missing genes to non-sig (lower) or sig (upper) under srv before rescaling",
+    "absolute_rate_bounds_400": [
+      0.41,
+      0.41
+    ],
+    "universe_rate_bounds": [
+      0.2802200307578791,
+      0.2802200307578791
+    ]
+  },
+  "r6_partial_estimate": {
+    "n_common": 289,
+    "rate_srv": 0.345,
+    "rate_srvNo": 0.426
+  }
+}

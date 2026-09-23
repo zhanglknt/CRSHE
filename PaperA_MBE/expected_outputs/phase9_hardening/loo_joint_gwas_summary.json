@@ -1,0 +1,111 @@
+{
+  "variant": "LOO-brain-tau",
+  "class_counts": {
+    "neutral": 3294,
+    "gene-driven": 1207,
+    "regulation-driven": 403,
+    "gene-driven (relaxed)": 49,
+    "dual-driven": 21
+  },
+  "rd_neuro_sig_36": 6,
+  "rd_neuro_sig_48": 6,
+  "rd_neuro_sig_traits_48": [
+    "Schizophrenia",
+    "Educational attainment",
+    "Major depression",
+    "Bipolar disorder",
+    "Neuroticism",
+    "Cognitive performance"
+  ],
+  "rd_neuro_sig_traits_36": [
+    "Schizophrenia",
+    "Educational attainment",
+    "Major depression",
+    "Bipolar disorder",
+    "Neuroticism",
+    "Cognitive performance"
+  ],
+  "decay_chain_all_variants": {
+    "full": {
+      "neuro_sig_36": 8,
+      "neuro_sig_48": 7,
+      "sig_traits_36": [
+        "Schizophrenia",
+        "ASD",
+        "Educational attainment",
+        "Intelligence",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "sig_traits_48": [
+        "Schizophrenia",
+        "ASD",
+        "Educational attainment",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ]
+    },
+    "LOO-brain": {
+      "neuro_sig_36": 6,
+      "neuro_sig_48": 6,
+      "sig_traits_36": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "sig_traits_48": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ]
+    },
+    "LOO-tau": {
+      "neuro_sig_36": 5,
+      "neuro_sig_48": 5,
+      "sig_traits_36": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "sig_traits_48": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Neuroticism",
+        "Cognitive performance"
+      ]
+    },
+    "LOO-brain-tau": {
+      "neuro_sig_36": 6,
+      "neuro_sig_48": 6,
+      "sig_traits_36": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ],
+      "sig_traits_48": [
+        "Schizophrenia",
+        "Educational attainment",
+        "Major depression",
+        "Bipolar disorder",
+        "Neuroticism",
+        "Cognitive performance"
+      ]
+    }
+  }
+}

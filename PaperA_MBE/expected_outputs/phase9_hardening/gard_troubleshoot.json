@@ -1,0 +1,852 @@
+{
+  "background": "Production GARD screening (50 BUSTED-significant genes, 'hyphy gard --type codon --rate-classes 4', timeout 600s) failed 50/50 with 'no output' (0-byte JSONs).",
+  "diagnosis": {
+    "reproduction_tests": [
+      {
+        "config": "Normal mode, rc=4 (original), gene ENSG00000177119",
+        "result": "timeout at 900s, 0-byte output"
+      },
+      {
+        "config": "Normal mode, rc=4, --rv None, same gene",
+        "result": "timeout at 900s, 0-byte output"
+      },
+      {
+        "config": "Normal mode, rc=4, gene ENSG00000100796",
+        "result": "timeout at 900s, 0-byte output"
+      },
+      {
+        "config": "Faster mode, rc=2, ENSG00000177119",
+        "result": "analysis complete (timeElapsed 1683s), final JSON written"
+      },
+      {
+        "config": "Faster mode, rc=2, ENSG00000100796",
+        "result": "analysis complete (timeElapsed 942s), final JSON written"
+      },
+      {
+        "config": "Faster mode, rc=4, ENSG00000177119",
+        "result": "analysis complete (timeElapsed 1436s); identical breakpoint (site 200) and delta-cAIC (1519.3 vs 1519.8) as rc=2"
+      }
+    ],
+    "root_cause": "Configuration mismatch, not data/format/installation: GARD Normal mode performs an exhaustive single-breakpoint scan with a full codon-model optimization at every candidate site; these alignments have ~750-800 sites of which 100% are 'variable' (high gap content), so a single gene needs hours, while the production timeout was 600s -> every run was killed before writing output. --rv None does not help (default is None). HyPhy GARD's Faster mode evaluates a reduced candidate set (~250-260 models) and completes in ~16-28 min per gene; the final JSON is written before the slow best-gard snapshot phase, so a generous timeout with JSON-presence success criteria yields complete results.",
+    "min_sequence_count_ok": true,
+    "alignment_format_ok": true
+  },
+  "rerun_config": {
+    "mode": "Faster",
+    "type": "codon",
+    "rate_classes": 4,
+    "timeout_s": 3600,
+    "success": "JSON > 50 bytes"
+  },
+  "rerun_results": {
+    "n_genes": 50,
+    "n_valid": 50,
+    "n_with_breakpoints": 50,
+    "fraction_with_breakpoints": 1.0,
+    "delta_cAIC_median": 1255.1387195143616,
+    "time_elapsed_median_s": 593,
+    "per_gene": {
+      "ENSG00000012822": {
+        "baseline_cAIC": 34212.61070871125,
+        "best_cAIC": 32202.09665549662,
+        "delta_cAIC": 2010.5140532146252,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 179,
+        "time_elapsed_s": 1571,
+        "breakpoint_sites": [
+          [
+            [
+              284
+            ]
+          ]
+        ]
+      },
+      "ENSG00000014138": {
+        "baseline_cAIC": 34843.50255325239,
+        "best_cAIC": 33274.68181553742,
+        "delta_cAIC": 1568.8207377149665,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 144,
+        "time_elapsed_s": 948,
+        "breakpoint_sites": [
+          [
+            [
+              443
+            ]
+          ]
+        ]
+      },
+      "ENSG00000032219": {
+        "baseline_cAIC": 38715.97508055357,
+        "best_cAIC": 37960.62831384275,
+        "delta_cAIC": 755.3467667108198,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 266,
+        "time_elapsed_s": 648,
+        "breakpoint_sites": [
+          [
+            [
+              341
+            ]
+          ]
+        ]
+      },
+      "ENSG00000060339": {
+        "baseline_cAIC": 25165.0561794302,
+        "best_cAIC": 24610.60849219979,
+        "delta_cAIC": 554.4476872304112,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 138,
+        "time_elapsed_s": 442,
+        "breakpoint_sites": [
+          [
+            [
+              221
+            ]
+          ]
+        ]
+      },
+      "ENSG00000064763": {
+        "baseline_cAIC": 25010.64232114913,
+        "best_cAIC": 23755.50360163477,
+        "delta_cAIC": 1255.1387195143616,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 140,
+        "time_elapsed_s": 593,
+        "breakpoint_sites": [
+          [
+            [
+              173
+            ]
+          ]
+        ]
+      },
+      "ENSG00000065357": {
+        "baseline_cAIC": 37574.34451367044,
+        "best_cAIC": 36721.12534258106,
+        "delta_cAIC": 853.2191710893821,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 178,
+        "time_elapsed_s": 1846,
+        "breakpoint_sites": [
+          [
+            [
+              149
+            ]
+          ]
+        ]
+      },
+      "ENSG00000072134": {
+        "baseline_cAIC": 25437.53578473875,
+        "best_cAIC": 23748.93114279515,
+        "delta_cAIC": 1688.6046419435988,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 153,
+        "time_elapsed_s": 592,
+        "breakpoint_sites": [
+          [
+            [
+              467
+            ]
+          ]
+        ]
+      },
+      "ENSG00000089169": {
+        "baseline_cAIC": 38180.55299059703,
+        "best_cAIC": 36178.53084215287,
+        "delta_cAIC": 2002.0221484441645,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 169,
+        "time_elapsed_s": 1317,
+        "breakpoint_sites": [
+          [
+            [
+              188
+            ]
+          ]
+        ]
+      },
+      "ENSG00000092529": {
+        "baseline_cAIC": 37947.44067334066,
+        "best_cAIC": 36887.14254677889,
+        "delta_cAIC": 1060.298126561771,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 236,
+        "time_elapsed_s": 621,
+        "breakpoint_sites": [
+          [
+            [
+              713
+            ]
+          ]
+        ]
+      },
+      "ENSG00000092871": {
+        "baseline_cAIC": 18418.17088551924,
+        "best_cAIC": 16042.55622112516,
+        "delta_cAIC": 2375.614664394081,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 98,
+        "time_elapsed_s": 219,
+        "breakpoint_sites": [
+          [
+            [
+              305
+            ]
+          ]
+        ]
+      },
+      "ENSG00000100796": {
+        "baseline_cAIC": 31901.57375872505,
+        "best_cAIC": 30534.77346662497,
+        "delta_cAIC": 1366.8002921000807,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 246,
+        "time_elapsed_s": 838,
+        "breakpoint_sites": [
+          [
+            [
+              647
+            ]
+          ]
+        ]
+      },
+      "ENSG00000109046": {
+        "baseline_cAIC": 19698.13027411345,
+        "best_cAIC": 19042.15045858151,
+        "delta_cAIC": 655.9798155319404,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 106,
+        "time_elapsed_s": 345,
+        "breakpoint_sites": [
+          [
+            [
+              281
+            ]
+          ]
+        ]
+      },
+      "ENSG00000110844": {
+        "baseline_cAIC": 46552.24741689722,
+        "best_cAIC": 44462.18017108491,
+        "delta_cAIC": 2090.067245812308,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 206,
+        "time_elapsed_s": 1389,
+        "breakpoint_sites": [
+          [
+            [
+              620
+            ]
+          ]
+        ]
+      },
+      "ENSG00000111424": {
+        "baseline_cAIC": 25571.69866327208,
+        "best_cAIC": 24057.55862543023,
+        "delta_cAIC": 1514.1400378418512,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 111,
+        "time_elapsed_s": 682,
+        "breakpoint_sites": [
+          [
+            [
+              233
+            ]
+          ]
+        ]
+      },
+      "ENSG00000115839": {
+        "baseline_cAIC": 51187.3713695032,
+        "best_cAIC": 50145.1749915316,
+        "delta_cAIC": 1042.1963779715952,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 275,
+        "time_elapsed_s": 1522,
+        "breakpoint_sites": [
+          [
+            [
+              428
+            ]
+          ]
+        ]
+      },
+      "ENSG00000134897": {
+        "baseline_cAIC": 20731.19140998638,
+        "best_cAIC": 19022.36512071414,
+        "delta_cAIC": 1708.8262892722378,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 130,
+        "time_elapsed_s": 438,
+        "breakpoint_sites": [
+          [
+            [
+              401
+            ]
+          ]
+        ]
+      },
+      "ENSG00000134899": {
+        "baseline_cAIC": 21182.35726252178,
+        "best_cAIC": 19374.82751578503,
+        "delta_cAIC": 1807.529746736749,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 133,
+        "time_elapsed_s": 395,
+        "breakpoint_sites": [
+          [
+            [
+              410
+            ]
+          ]
+        ]
+      },
+      "ENSG00000135119": {
+        "baseline_cAIC": 22237.82211325281,
+        "best_cAIC": 21568.18807513281,
+        "delta_cAIC": 669.6340381199989,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 120,
+        "time_elapsed_s": 469,
+        "breakpoint_sites": [
+          [
+            [
+              281
+            ]
+          ]
+        ]
+      },
+      "ENSG00000136942": {
+        "baseline_cAIC": 5333.965712284026,
+        "best_cAIC": 4989.327708214459,
+        "delta_cAIC": 344.6380040695676,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 27,
+        "time_elapsed_s": 63,
+        "breakpoint_sites": [
+          [
+            [
+              101
+            ]
+          ]
+        ]
+      },
+      "ENSG00000137075": {
+        "baseline_cAIC": 21385.4554949293,
+        "best_cAIC": 20590.36624688721,
+        "delta_cAIC": 795.0892480420916,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 108,
+        "time_elapsed_s": 347,
+        "breakpoint_sites": [
+          [
+            [
+              278
+            ]
+          ]
+        ]
+      },
+      "ENSG00000137700": {
+        "baseline_cAIC": 22645.46704865643,
+        "best_cAIC": 21346.33933215266,
+        "delta_cAIC": 1299.1277165037682,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 128,
+        "time_elapsed_s": 508,
+        "breakpoint_sites": [
+          [
+            [
+              305
+            ]
+          ]
+        ]
+      },
+      "ENSG00000137727": {
+        "baseline_cAIC": 60681.0586686782,
+        "best_cAIC": 58467.14024186282,
+        "delta_cAIC": 2213.9184268153767,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 276,
+        "time_elapsed_s": 1843,
+        "breakpoint_sites": [
+          [
+            [
+              839
+            ]
+          ]
+        ]
+      },
+      "ENSG00000139131": {
+        "baseline_cAIC": 15175.47713694928,
+        "best_cAIC": 14008.83454963656,
+        "delta_cAIC": 1166.6425873127191,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 140,
+        "time_elapsed_s": 264,
+        "breakpoint_sites": [
+          [
+            [
+              431
+            ]
+          ]
+        ]
+      },
+      "ENSG00000139155": {
+        "baseline_cAIC": 31721.85167792254,
+        "best_cAIC": 30208.9023871718,
+        "delta_cAIC": 1512.949290750741,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 181,
+        "time_elapsed_s": 1198,
+        "breakpoint_sites": [
+          [
+            [
+              365
+            ]
+          ]
+        ]
+      },
+      "ENSG00000139567": {
+        "baseline_cAIC": 24749.45478268562,
+        "best_cAIC": 24092.61220732044,
+        "delta_cAIC": 656.8425753651827,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 136,
+        "time_elapsed_s": 982,
+        "breakpoint_sites": [
+          [
+            [
+              356
+            ]
+          ]
+        ]
+      },
+      "ENSG00000139579": {
+        "baseline_cAIC": 4212.889390970221,
+        "best_cAIC": 4053.232590475533,
+        "delta_cAIC": 159.656800494688,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 25,
+        "time_elapsed_s": 56,
+        "breakpoint_sites": [
+          [
+            [
+              83
+            ]
+          ]
+        ]
+      },
+      "ENSG00000139636": {
+        "baseline_cAIC": 21044.22528954772,
+        "best_cAIC": 20242.41233681768,
+        "delta_cAIC": 801.8129527300407,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 134,
+        "time_elapsed_s": 431,
+        "breakpoint_sites": [
+          [
+            [
+              341
+            ]
+          ]
+        ]
+      },
+      "ENSG00000144401": {
+        "baseline_cAIC": 9230.17605465726,
+        "best_cAIC": 8760.761384966761,
+        "delta_cAIC": 469.41466969049907,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 48,
+        "time_elapsed_s": 92,
+        "breakpoint_sites": [
+          [
+            [
+              113
+            ]
+          ]
+        ]
+      },
+      "ENSG00000149091": {
+        "baseline_cAIC": 58193.86247737818,
+        "best_cAIC": 55552.23019018061,
+        "delta_cAIC": 2641.6322871975644,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 269,
+        "time_elapsed_s": 1781,
+        "breakpoint_sites": [
+          [
+            [
+              425
+            ]
+          ]
+        ]
+      },
+      "ENSG00000151461": {
+        "baseline_cAIC": 58588.11313770162,
+        "best_cAIC": 57268.82932578815,
+        "delta_cAIC": 1319.2838119134685,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 263,
+        "time_elapsed_s": 1298,
+        "breakpoint_sites": [
+          [
+            [
+              575
+            ]
+          ]
+        ]
+      },
+      "ENSG00000151746": {
+        "baseline_cAIC": 55252.88230291294,
+        "best_cAIC": 52627.10418329038,
+        "delta_cAIC": 2625.7781196225624,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 228,
+        "time_elapsed_s": 1382,
+        "breakpoint_sites": [
+          [
+            [
+              383
+            ]
+          ]
+        ]
+      },
+      "ENSG00000153179": {
+        "baseline_cAIC": 11018.11408865435,
+        "best_cAIC": 10753.64481789432,
+        "delta_cAIC": 264.4692707600316,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 62,
+        "time_elapsed_s": 222,
+        "breakpoint_sites": [
+          [
+            [
+              167
+            ]
+          ]
+        ]
+      },
+      "ENSG00000162065": {
+        "baseline_cAIC": 16933.74088814918,
+        "best_cAIC": 16171.71671458225,
+        "delta_cAIC": 762.0241735669297,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 167,
+        "time_elapsed_s": 434,
+        "breakpoint_sites": [
+          [
+            [
+              290
+            ]
+          ]
+        ]
+      },
+      "ENSG00000166866": {
+        "baseline_cAIC": 37515.09450658357,
+        "best_cAIC": 36105.62377810207,
+        "delta_cAIC": 1409.4707284815013,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 259,
+        "time_elapsed_s": 1140,
+        "breakpoint_sites": [
+          [
+            [
+              788
+            ]
+          ]
+        ]
+      },
+      "ENSG00000167612": {
+        "baseline_cAIC": 9081.001460447991,
+        "best_cAIC": 8954.968280369412,
+        "delta_cAIC": 126.03318007857888,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 52,
+        "time_elapsed_s": 128,
+        "breakpoint_sites": [
+          [
+            [
+              32
+            ]
+          ]
+        ]
+      },
+      "ENSG00000167965": {
+        "baseline_cAIC": 19713.94959451628,
+        "best_cAIC": 18955.84258603687,
+        "delta_cAIC": 758.1070084794119,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 90,
+        "time_elapsed_s": 305,
+        "breakpoint_sites": [
+          [
+            [
+              116
+            ]
+          ]
+        ]
+      },
+      "ENSG00000168961": {
+        "baseline_cAIC": 23483.85185111346,
+        "best_cAIC": 22127.79406422783,
+        "delta_cAIC": 1356.0577868856308,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 103,
+        "time_elapsed_s": 392,
+        "breakpoint_sites": [
+          [
+            [
+              317
+            ]
+          ]
+        ]
+      },
+      "ENSG00000171723": {
+        "baseline_cAIC": 36932.38522746182,
+        "best_cAIC": 35643.81182098756,
+        "delta_cAIC": 1288.5734064742574,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 214,
+        "time_elapsed_s": 991,
+        "breakpoint_sites": [
+          [
+            [
+              506
+            ]
+          ]
+        ]
+      },
+      "ENSG00000176658": {
+        "baseline_cAIC": 56545.85289481468,
+        "best_cAIC": 54897.7778817347,
+        "delta_cAIC": 1648.0750130799788,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 249,
+        "time_elapsed_s": 977,
+        "breakpoint_sites": [
+          [
+            [
+              137
+            ]
+          ]
+        ]
+      },
+      "ENSG00000177119": {
+        "baseline_cAIC": 58219.73779673972,
+        "best_cAIC": 56700.62605322755,
+        "delta_cAIC": 1519.1117435121705,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 260,
+        "time_elapsed_s": 1349,
+        "breakpoint_sites": [
+          [
+            [
+              200
+            ]
+          ]
+        ]
+      },
+      "ENSG00000179580": {
+        "baseline_cAIC": 13332.83266326762,
+        "best_cAIC": 11613.69121443379,
+        "delta_cAIC": 1719.1414488338305,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 65,
+        "time_elapsed_s": 186,
+        "breakpoint_sites": [
+          [
+            [
+              203
+            ]
+          ]
+        ]
+      },
+      "ENSG00000182732": {
+        "baseline_cAIC": 21209.76547170708,
+        "best_cAIC": 20120.09132385829,
+        "delta_cAIC": 1089.6741478487893,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 121,
+        "time_elapsed_s": 448,
+        "breakpoint_sites": [
+          [
+            [
+              239
+            ]
+          ]
+        ]
+      },
+      "ENSG00000183621": {
+        "baseline_cAIC": 47513.84656654292,
+        "best_cAIC": 46226.24871674914,
+        "delta_cAIC": 1287.5978497937758,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 212,
+        "time_elapsed_s": 2328,
+        "breakpoint_sites": [
+          [
+            [
+              455
+            ]
+          ]
+        ]
+      },
+      "ENSG00000185033": {
+        "baseline_cAIC": 38875.37432551212,
+        "best_cAIC": 38611.77505088292,
+        "delta_cAIC": 263.59927462920314,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 239,
+        "time_elapsed_s": 3125,
+        "breakpoint_sites": [
+          [
+            [
+              110
+            ]
+          ]
+        ]
+      },
+      "ENSG00000185591": {
+        "baseline_cAIC": 26553.47038854571,
+        "best_cAIC": 26027.73104782665,
+        "delta_cAIC": 525.7393407190575,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 167,
+        "time_elapsed_s": 1359,
+        "breakpoint_sites": [
+          [
+            [
+              269
+            ]
+          ]
+        ]
+      },
+      "ENSG00000196547": {
+        "baseline_cAIC": 75339.78795189156,
+        "best_cAIC": 73413.3024685707,
+        "delta_cAIC": 1926.485483320852,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 338,
+        "time_elapsed_s": 1699,
+        "breakpoint_sites": [
+          [
+            [
+              257
+            ]
+          ]
+        ]
+      },
+      "ENSG00000197859": {
+        "baseline_cAIC": 7160.997506046267,
+        "best_cAIC": 6271.248485049854,
+        "delta_cAIC": 889.7490209964126,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 32,
+        "time_elapsed_s": 72,
+        "breakpoint_sites": [
+          [
+            [
+              77
+            ]
+          ]
+        ]
+      },
+      "ENSG00000198040": {
+        "baseline_cAIC": 27234.78696911563,
+        "best_cAIC": 27156.49577523236,
+        "delta_cAIC": 78.29119388326944,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 131,
+        "time_elapsed_s": 401,
+        "breakpoint_sites": [
+          [
+            [
+              20
+            ]
+          ]
+        ]
+      },
+      "ENSG00000198353": {
+        "baseline_cAIC": 8647.802570262202,
+        "best_cAIC": 8021.831738292182,
+        "delta_cAIC": 625.9708319700194,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 71,
+        "time_elapsed_s": 122,
+        "breakpoint_sites": [
+          [
+            [
+              227
+            ]
+          ]
+        ]
+      },
+      "ENSG00000205937": {
+        "baseline_cAIC": 14447.52524591053,
+        "best_cAIC": 14069.49316251216,
+        "delta_cAIC": 378.03208339836965,
+        "n_partitions": 2,
+        "n_breakpoints": 1,
+        "total_models": 77,
+        "time_elapsed_s": 250,
+        "breakpoint_sites": [
+          [
+            [
+              215
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  "caveat": "Fitted partition trees show pathological branch lengths (>100 substitutions/site) and scrambled topologies on these nucleotide alignments (100% variable sites), indicating that detected 'breakpoints' are dominated by alignment-block artifacts rather than biological recombination; see alignment_rerun_sensitivity.json for the codon-aware realignment sensitivity analysis."
+}

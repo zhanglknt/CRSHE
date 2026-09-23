@@ -1,0 +1,73 @@
+{
+  "description": "R7 Task 1: codon-aware realignment (MAFFT protein + back-translation) with column filtering (>50% gap columns dropped, ragged ends trimmed) vs R6 baseline (production nucleotide alignment), BUSTED srv=No, BH within each 400-gene family",
+  "method": {
+    "realignment": "ungap production alignment -> translate -> MAFFT --auto (protein) -> back-translate -> drop codon columns with >50% gaps -> trim ends",
+    "stop_codon_handling": "in-frame stop codons and non-ACGT codons masked as NNN",
+    "busted": "HyPhy 2.5.101 BUSTED --srv No --branches Test, 300s timeout"
+  },
+  "n_baseline_results": 393,
+  "n_realign_results": 400,
+  "rate_baseline_full": 0.49363867684478374,
+  "rate_realign_full": 0.645,
+  "comparison_on_common": {
+    "n_common": 393,
+    "rate_baseline_common": 0.49363867684478374,
+    "rate_other_common": 0.6412213740458015,
+    "delta_pp": 14.75826972010178,
+    "both_sig": 156,
+    "baseline_only": 38,
+    "other_only": 96,
+    "jaccard": 0.5379310344827586,
+    "retention_of_baseline_sig": 0.8041237113402062
+  },
+  "pvalue_spearman_on_common": 0.3847822218520196,
+  "filtering_summary": {
+    "n_genes": 400,
+    "frac_removed_mean": 0.5911745,
+    "frac_removed_median": 0.61465,
+    "frac_removed_p5": 0.2593,
+    "frac_removed_p95": 0.815,
+    "stop_codons_masked_total": 68680,
+    "genes_with_stop_codons": 378,
+    "genes_with_nonmultiple3_species": 254,
+    "kept_cols_median": 685.5
+  },
+  "switch_stratification": [
+    {
+      "tercile": "low",
+      "frac_removed_range": [
+        0.0,
+        0.554
+      ],
+      "n": 131,
+      "baseline_sig": 48,
+      "realign_sig": 68,
+      "gained": 28,
+      "lost": 8
+    },
+    {
+      "tercile": "mid",
+      "frac_removed_range": [
+        0.557,
+        0.682
+      ],
+      "n": 131,
+      "baseline_sig": 65,
+      "realign_sig": 93,
+      "gained": 39,
+      "lost": 11
+    },
+    {
+      "tercile": "high",
+      "frac_removed_range": [
+        0.683,
+        0.914
+      ],
+      "n": 131,
+      "baseline_sig": 81,
+      "realign_sig": 91,
+      "gained": 29,
+      "lost": 19
+    }
+  ]
+}

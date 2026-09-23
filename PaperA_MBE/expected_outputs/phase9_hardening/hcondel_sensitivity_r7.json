@@ -1,0 +1,330 @@
+{
+  "task": "R7 hCONDEL sensitivity (5 items)",
+  "universe_n": 4974,
+  "task1_intersection_sensitivity": {
+    "n_genes": 70,
+    "table": [
+      [
+        12,
+        58
+      ],
+      [
+        281,
+        4623
+      ]
+    ],
+    "rd_k": 12,
+    "rd_n": 293,
+    "OR": 3.4038532335255858,
+    "p": 0.0006773158606865738,
+    "CI95": [
+      1.8071965841558333,
+      6.411154678446158
+    ],
+    "union_112_reference": {
+      "rd_k": 18,
+      "OR": 3.1940425531914896,
+      "p": 7.809426913882364e-05,
+      "CI95": [
+        1.9013250700096949,
+        5.365683118850367
+      ]
+    }
+  },
+  "task2_510_validated_subset": {
+    "n_loci_total": 583,
+    "n_loci_validated": 510,
+    "validated_flag_source": "Supplementary Table 2 'Comp verif' column == 'Y'",
+    "liftover_success": 509,
+    "liftover_fail": 1,
+    "gene_sets": {
+      "name": 67,
+      "coord": 89,
+      "overlap": 59,
+      "union": 97
+    },
+    "enrichment_name": {
+      "n_genes": 67,
+      "table": [
+        [
+          11,
+          56
+        ],
+        [
+          282,
+          4625
+        ]
+      ],
+      "rd_k": 11,
+      "rd_n": 293,
+      "OR": 3.221567882472138,
+      "p": 0.0016281783679942684,
+      "CI95": [
+        1.6692807451699405,
+        6.217348191073415
+      ]
+    },
+    "enrichment_coord": {
+      "n_genes": 89,
+      "table": [
+        [
+          16,
+          73
+        ],
+        [
+          277,
+          4608
+        ]
+      ],
+      "rd_k": 16,
+      "rd_n": 293,
+      "OR": 3.646110479204787,
+      "p": 4.8811506382644554e-05,
+      "CI95": [
+        2.0942808499234626,
+        6.3478217962279535
+      ]
+    },
+    "enrichment_union": {
+      "n_genes": 97,
+      "table": [
+        [
+          16,
+          81
+        ],
+        [
+          277,
+          4600
+        ]
+      ],
+      "rd_k": 16,
+      "rd_n": 293,
+      "OR": 3.28029593974239,
+      "p": 0.00014265258016251599,
+      "CI95": [
+        1.893048414934991,
+        5.684134313416346
+      ]
+    },
+    "gd_union": {
+      "gd_k": 18,
+      "OR": 0.6625486854917235,
+      "p": 0.12641234004886331
+    }
+  },
+  "task3_posthoc_power": {
+    "subset_definition": "hCONDEL union minus HAR-proximate genes",
+    "n1": 90,
+    "k1": 9,
+    "n0": 4884,
+    "k0": 284,
+    "observed_OR": 1.7996870109546166,
+    "observed_p_one_sided": 0.08135067374316758,
+    "p0": 0.05814905814905815,
+    "assumed_true_OR": 3.19,
+    "implied_p1": 0.16454169663419274,
+    "alpha": 0.05,
+    "sidedness": "one-sided Fisher exact",
+    "null_size_check": 0.03274,
+    "posthoc_power_mc": 0.93292,
+    "nsim": 200000,
+    "posthoc_power_exact2d": 0.9325757572232246,
+    "n_for_80pct_power": 57,
+    "power_at_n80": 0.8025219067251941,
+    "power_curve_scan": {
+      "30": 0.5629,
+      "35": 0.6043,
+      "40": 0.6635,
+      "45": 0.7201,
+      "50": 0.7435,
+      "55": 0.7977,
+      "60": 0.8128,
+      "65": 0.8498,
+      "70": 0.8666,
+      "75": 0.8889,
+      "80": 0.9056,
+      "85": 0.9187,
+      "90": 0.9326,
+      "95": 0.9425,
+      "100": 0.9515,
+      "105": 0.9592,
+      "110": 0.9655,
+      "115": 0.9714,
+      "120": 0.9758,
+      "125": 0.9796,
+      "130": 0.9829,
+      "135": 0.9857,
+      "140": 0.988,
+      "145": 0.9899,
+      "150": 0.9916,
+      "155": 0.9929,
+      "160": 0.9941,
+      "165": 0.995,
+      "170": 0.9959,
+      "175": 0.9965,
+      "180": 0.9971,
+      "185": 0.9976,
+      "190": 0.998,
+      "195": 0.9983,
+      "200": 0.9986
+    }
+  },
+  "task4_window_length_capture": {
+    "tertile_edges_bp": [
+      17492.33333333333,
+      54663.99999999999
+    ],
+    "missing_span": 0,
+    "strata": {
+      "T1_short": {
+        "stratum_n": 1658,
+        "hcondel_n": 15,
+        "table": [
+          [
+            0,
+            15
+          ],
+          [
+            15,
+            1628
+          ]
+        ],
+        "rd_k": 0,
+        "OR": 0.0,
+        "p": 1.0,
+        "CI95": [
+          NaN,
+          NaN
+        ]
+      },
+      "T2_mid": {
+        "stratum_n": 1658,
+        "hcondel_n": 24,
+        "table": [
+          [
+            1,
+            23
+          ],
+          [
+            56,
+            1578
+          ]
+        ],
+        "rd_k": 1,
+        "OR": 1.2251552795031055,
+        "p": 0.5706965212691697,
+        "CI95": [
+          0.16255932468929132,
+          9.233585718710923
+        ]
+      },
+      "T3_long": {
+        "stratum_n": 1658,
+        "hcondel_n": 73,
+        "table": [
+          [
+            17,
+            56
+          ],
+          [
+            204,
+            1381
+          ]
+        ],
+        "rd_k": 17,
+        "OR": 2.0550595238095237,
+        "p": 0.012350392047019461,
+        "CI95": [
+          1.1711752780095597,
+          3.6060098993702927
+        ]
+      }
+    },
+    "hcondel_vs_non_span": {
+      "median_hcondel": 113821.0,
+      "median_non": 30954.0,
+      "MWU_U": 397506.5,
+      "MWU_p_one_sided": 3.8785308188398395e-17,
+      "tertile_counts_hcondel": {
+        "T1_short": 15,
+        "T2_mid": 24,
+        "T3_long": 73
+      },
+      "tertile_counts_universe": {
+        "T1_short": 1658,
+        "T2_mid": 1658,
+        "T3_long": 1658
+      }
+    },
+    "rd_median_span_by_variant": {
+      "full": {
+        "rd_n": 293,
+        "rd_median_span": 133590.0,
+        "neutral_median_span": 28582.0
+      },
+      "LOO-caMPRA": {
+        "rd_n": 800,
+        "rd_median_span": 82017.5,
+        "neutral_median_span": 24795.0
+      },
+      "LOO-tau": {
+        "rd_n": 148,
+        "rd_median_span": 160195.0,
+        "neutral_median_span": 29949.5
+      },
+      "LOO-brain": {
+        "rd_n": 613,
+        "rd_median_span": 95420.0,
+        "neutral_median_span": 26456.0
+      },
+      "LOO-joint(brain+tau)": {
+        "rd_n": 403,
+        "rd_median_span": 105793.0,
+        "neutral_median_span": 27607.5
+      }
+    }
+  },
+  "task5_conservation_coupling": {
+    "a_rds_nc_mwu": {
+      "median_hcondel": 0.667471,
+      "n_hcondel": 112,
+      "median_non": 0.4962805,
+      "n_non": 4862,
+      "MWU_U": 338511.5,
+      "p_one_sided_greater": 5.202754161011028e-06,
+      "rank_biserial": 0.24328428924017165
+    },
+    "b_top_decile_contingency": {
+      "q90_threshold": 0.8998187,
+      "top_decile_n": 498,
+      "table": [
+        [
+          26,
+          86
+        ],
+        [
+          472,
+          4390
+        ]
+      ],
+      "pct_hcondel_in_top": 23.2,
+      "pct_non_in_top": 9.7,
+      "OR": 2.8118841150965705,
+      "p": 2.8664711686251312e-05
+    },
+    "c_loo_nc_precomputed": {
+      "source": "results/paper/revision_v7/loo_full_matrix.csv",
+      "loo_nc_OR": 4.669,
+      "loo_nc_p": 0.000159,
+      "loo_nc_CI": "[2.37, 9.21]",
+      "loo_nc_k_over_n": "10/110",
+      "full_OR": 3.194,
+      "full_p": 7.809e-05,
+      "full_CI": "[1.90, 5.37]"
+    }
+  },
+  "verdict": "hCONDEL validation holds with caveats: intersection-70 OR=3.40 (p=0.00068); 510-validated subset OR=3.28 (p=0.00014); hCONDEL-only n=90 test had high power (0.93 at OR=3.19, 80% power already at n~57), so its null is a genuine (mild) attenuation rather than a power artifact; enrichment concentrates in long genes (OR>1 in 2/3 span tertiles, p<0.05 only in T3_long OR=2.06 p=0.012), consistent with +/-50kb length capture amplified by RD genes being long; nc-coupling exists (top-decile OR=2.81) but LOO-nc OR=4.67 (p=1.6e-4) shows enrichment is not driven by the shared phyloP track.",
+  "environment_notes": [
+    "none (shell broken -> python file IO used)"
+  ]
+}

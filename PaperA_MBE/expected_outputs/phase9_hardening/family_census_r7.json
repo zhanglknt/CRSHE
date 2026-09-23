@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "script": "scripts/phase9_r7_family_census.py",
+    "universe_symbols": 4974,
+    "gwas_rows_scanned": 1150105,
+    "gws_target_rows": 82665,
+    "trait_set_sizes": {
+      "Schizophrenia": 257,
+      "ASD": 116,
+      "Educational attainment": 822,
+      "Intelligence": 180,
+      "Major depression": 154,
+      "Bipolar disorder": 115,
+      "Neuroticism": 122,
+      "Cognitive performance": 149,
+      "Height": 2191,
+      "LDL cholesterol": 256,
+      "Crohn disease": 95,
+      "Type 2 diabetes": 561
+    },
+    "convention": "two-sided Fisher, BH within variant; matches phase9_gwas_confound.py P1-4"
+  },
+  "task1": {
+    "S5_family_size_per_variant": 36,
+    "S5_classes": [
+      "gene_driven_all",
+      "gene_driven_strict",
+      "regulation_driven"
+    ],
+    "dual_rows_in_S5": 0,
+    "S5_reproduction_exact_match_rows": 108,
+    "S5_reproduction_mismatches": [],
+    "S5_q_equals_BH36": true,
+    "rd_neuro_survival": {
+      "full": {
+        "n_sig_S5_36": 8,
+        "n_sig_unified_48": 7,
+        "sig_traits_36": [
+          "Schizophrenia",
+          "ASD",
+          "Educational attainment",
+          "Intelligence",
+          "Major depression",
+          "Bipolar disorder",
+          "Neuroticism",
+          "Cognitive performance"
+        ],
+        "sig_traits_48": [
+          "Schizophrenia",
+          "ASD",
+          "Educational attainment",
+          "Major depression",
+          "Bipolar disorder",
+          "Neuroticism",
+          "Cognitive performance"
+        ],
+        "lost_36_to_48": [
+          "Intelligence"
+        ]
+      },
+      "LOO-brain": {
+        "n_sig_S5_36": 6,
+        "n_sig_unified_48": 6,
+        "sig_traits_36": [
+          "Schizophrenia",
+          "Educational attainment",
+          "Major depression",
+          "Bipolar disorder",
+          "Neuroticism",
+          "Cognitive performance"
+        ],
+        "sig_traits_48": [
+          "Schizophrenia",
+          "Educational attainment",
+          "Major depression",
+          "Bipolar disorder",
+          "Neuroticism",
+          "Cognitive performance"
+        ],
+        "lost_36_to_48": []
+      },
+      "LOO-tau": {
+        "n_sig_S5_36": 5,
+        "n_sig_unified_48": 5,
+        "sig_traits_36": [
+          "Schizophrenia",
+          "Educational attainment",
+          "Major depression",
+          "Neuroticism",
+          "Cognitive performance"
+        ],
+        "sig_traits_48": [
+          "Schizophrenia",
+          "Educational attainment",
+          "Major depression",
+          "Neuroticism",
+          "Cognitive performance"
+        ],
+        "lost_36_to_48": []
+      }
+    },
+    "n_significance_flips_36_to_48": 1,
+    "flips": [
+      {
+        "classification": "full",
+        "trait": "Intelligence",
+        "class": "regulation_driven",
+        "q_bh_S5_36": 0.0457501463623994,
+        "q_bh_unified_48": 0.06100019514986599
+      }
+    ]
+  },
+  "task2_mdd": {
+    "full": {
+      "table_2x2": [
+        24,
+        1190,
+        130,
+        3630
+      ],
+      "OR": 0.5631544925662573,
+      "p_two_sided": 0.00976875084252949,
+      "p_one_sided_less": 0.0047613232371226215,
+      "p_one_sided_greater": 0.9974758174502576,
+      "q_bh_S5_36": 0.0351675030331061,
+      "q_bh_unified_48": 0.04689000404414155
+    },
+    "LOO-brain": {
+      "table_2x2": [
+        23,
+        1076,
+        131,
+        3744
+      ],
+      "OR": 0.6109140440988677,
+      "p_two_sided": 0.029718307870812463,
+      "p_one_sided_less": 0.015950320393797505,
+      "p_one_sided_greater": 0.9909173029231395,
+      "q_bh_S5_36": 0.1069859083349248,
+      "q_bh_unified_48": 0.14264787777989982
+    },
+    "LOO-tau": {
+      "table_2x2": [
+        30,
+        1309,
+        124,
+        3511
+      ],
+      "OR": 0.6489193918036423,
+      "p_two_sided": 0.03387936641954486,
+      "p_one_sided_less": 0.0191802696518522,
+      "p_one_sided_greater": 0.9883584837507049,
+      "q_bh_S5_36": 0.110877926463965,
+      "q_bh_unified_48": 0.14783723528528664
+    }
+  },
+  "task3_relax_file": "relax_derivation_r7.json",
+  "task4_joint_file": "loo_joint_gwas_summary.json"
+}

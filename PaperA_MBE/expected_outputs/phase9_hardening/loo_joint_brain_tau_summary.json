@@ -1,0 +1,27 @@
+{
+ "weights": {
+  "doan": 0.5455,
+  "nc": 0.4545
+ },
+ "counts": {
+  "dual-driven": 21,
+  "gene-driven": 1207,
+  "gene-driven (relaxed)": 49,
+  "neutral": 3294,
+  "regulation-driven": 403
+ },
+ "rd_full": 293,
+ "rd_joint": 403,
+ "agreement": {
+  "full": {
+   "agreement": 0.9075
+  },
+  "LOO-brain": {
+   "agreement": 0.8888
+  },
+  "LOO-tau": {
+   "agreement": 0.9063
+  }
+ },
+ "n_rd_lost_vs_full": -110
+}

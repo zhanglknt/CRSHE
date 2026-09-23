@@ -91,3 +91,57 @@
 - 复核: general-purpose-30 聚焦复核 7/7 PASS（blind_verification_r6_batch8_recheck.md），无新错误；采纳其微调建议第 3 处改 "neither the gene-driven nor the regulation-driven class"（dual-driven 严格属两个 driven class）
 - 交付链: 4 docx 重建→包同步→单 PDF 54 页（18/18 探针含 8 条 batch-8 新探针）→zip 6.15MB/180 文件 CRC OK→CRSHE 提交并推送 c9fab1a..5adf311
 - 注: PDF 长短语探针因换行断裂需用短形（'0.51'、'regulation-driven class (n = 3,415'）
+
+
+# R7 修复进度 (2026-09-23 凌晨起)
+
+## 已关闭
+- P0-1 SynGO/GO-BP 长度校正（r7-length-syngo）: 生产 11/18 term 精确复现；7/11 SynGO + 18/18 GO_BP 双校正存活（9/11 仅 logistic）；联合 LOO SynGO 7 个、GD 0。标题 "by Specificity" 存活（带打折）。length_correction_syngo.json
+- P0-2 hCONDEL 敏感性（r7-hcondel-sens）: 交集70 OR=3.40/510验证集 OR=3.28/power 93%(信息性衰减)/跨度分层 T3 OR=2.06 唯一显著/nc 耦合量化(0.667 vs 0.496, LOO-nc 4.67 回应)。hcondel_sensitivity_r7.json。**注意：worker 汇报数字与其 JSON 矛盾，一律以 JSON 为准**
+- P0-3 三硬伤（r7-family-census）: 统一 48 家族（12×4/变体）→ 全变体 8/8 保留（Intelligence 单侧 q48=0.043；双侧参考 0.061 已披露）；MDD GD_strict 双侧 q=0.035（full 显著、LOO 不显著）→ 正文修正；RELAX 链 1660→728→124→117→52+65 写出
+- P0-4 联合 LOO-brain-tau: RD 293→403；GWAS 6/8（与 LOO-brain 同集）；SynGO 7 term；S5 重建 192 行（4 变体×48）
+- 文字组: chi-bar-square 推理修正/Meff 删除(+参考文献)/Tier4 校正边界/GDS 有效权重/φ 2×期望/χ² df=3/Shao 单侧声明/置换种子(20260915,20260917)/508 措辞/摘要 312→248 词(+59% 交叉点)/S6 hCONDEL 专节(含三集合清单)/cover letter 审稿人 Pollard+Noonan→Scally+Fraser(邮箱待用户核实)/Fig4a 图例 LOO 一致率注
+
+## 进行中
+- P0-5 WSL（fix-busted-wsl）: codon-aware 重比对+过滤分层 / 参数化 bootstrap 模拟 / srv Yes 补跑(110 超时基因) / GARD 排查
+- fig-fix: Fig3d 口径注 / Fig2d 拟合线 / Fig6 标签截断
+
+## 待办
+- srv 叙事反转 + GARD + 比对/模拟结果整合（等 WSL）→ batch 9G
+- 交叉验证（general-purpose-30）→ 交付链
+
+### 更正 (2026-09-23 06:xx)
+r7-hcondel-sens 终版回报与其 JSON 完全一致（早前矛盾消息系中间版本）；batch 9F 按 JSON 整合的数字（3.40/3.28/93%/2.06/4.67）与终版相符，无需改动。Table 3 已加各 LOO 变体 RD 中位跨度脚注（popgen M2）。
+
+### Batch 9H (2026-09-23): 盲验证 2 FAIL + 4 备注核销
+- F1: 508/3,171=16.1% → 508/3,161=16.1% (16.0% of all 3,171)
+- F2: 604 (12.2%) → 12.1%（3 处：摘要、L134、L180）
+- N1: MDD 双侧 q 标注统一家族值 0.047
+- N2: Discussion 分母 1,690 → 1,660 valid RELAX
+- N3: S6 符号计数加注（103 vs 112，1 个无名 locus）
+- N4: 摘要 248→236–240 词（三种分词口径均 <250）
+- N5: LOO-brain intelligence marginal 措辞接受不改
+- 验证员其余 11 项全 PASS（含 S6 符号级匹配、Table 3 脚注、R6 遗留 6 FAIL 确认关闭）
+
+## R7 batch 9G — WSL 四块结果整合 (2026-09-23)
+
+来源：fix-busted-wsl 交付的 4 个 JSON（srv_primary_estimate / alignment_rerun_sensitivity / neutral_sim_parametric / gard_troubleshoot），逐数字与 JSON 核对后整合，共 8 处：
+
+1. **Results L60**：27–34% 区间 → 完成版 srv Yes 重跑点估计 28.0%（≈1,394/4,974；400/400 完成，去除旧 289 基因超时偏倚）
+2. **Methods L32**：敏感性重跑清单新增 (v) codon-aware 重比对（蛋白 MAFFT→回译→剔 >50% gap 列）+ 逐基因参数化 bootstrap；srv 注明 400/400 完成
+3. **Methods L32**：GARD 句改写——根因=配置病理（全可变位点高 gap 比对上穷举候选断点超时），非数据问题；Faster 模式 50/50 完成，断点为比对块伪影
+4. **Discussion L142**：srv 段重写（49.4%→41.0%，−8.4pp，相对 −17.5%，外推 28.0%）；新增重比对方向反转（49.4%→64.1%，+14.8pp，80.4% 保留——比对噪声是降功效非假阳性）；经验 null FDR 补参数化 bootstrap 0.26%（1/388）
+5. **Limitations (2)**：srv 尾段同上口径；新增重比对（59.1% 列剔除）+ bootstrap（中位 ω=0.54/κ=3.02/F3x4/拟合枝长；73.7% p=0.5 点质量；局限三条：无 indel/单 ω 近似/无 SRV）
+6. **Limitations (3)**：GARD 改写（Faster 50/50 完成、断点共定位比对块伪影、枝长 >100 subst/site；重组贡献仍不可排除）
+7. **Supplementary Text S2**：GARD 段全段重写（根因诊断 + Faster 完成 + site 200 Δc-AIC≈1,519 复现性 + 伪影判定 + 不影响主推论三理由）
+8. **cover letter**：headline range 27–34% → 点估计 28.0% + 重比对 64.1% 方向说明
+
+待办：batch 9G 盲验证（WSL 侧数字）→ 交付链刷新（docx→PDF→zip→CRSHE）。
+
+### batch 9G 盲验证核销 (2026-09-23)
+
+general-purpose-30 验证（blind_verification_r7_batch9g.md）：1 FAIL + 2 备注，其余全 PASS。
+- **FAIL-1（已修）**：srv 框架混用——41.0% 是全 400 框架；393 共同框架精确值为 40.7%（160/393）、−8.7pp。Discussion L142 + Limitations (2) 两处已改。28.0% 外推与 1,394 按共同框架精确闭合（0.339767×0.824742=0.280220；×4974=1393.8），不动。
+- **备注A（已修）**：SI S2 GARD "nucleotide mode with 3–4 rate classes" → "codon mode with 2–4 rate classes"（JSON 生产命令 --type codon，复现 rc=2/rc=4）。
+- **备注B（无需行动）**：JSON 内部 median 为上中位数（第 26 顺位），值未入稿。
+- PASS：重比对 64.1%/+14.8/80.4%/59.1%；bootstrap 0.26%/73.7%/ω0.54/κ3.02；GARD 根因与 site 200 Δc-AIC≈1,519；旧口径残留扫描 0 命中；算术自检全闭合。
