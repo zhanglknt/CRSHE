@@ -1,0 +1,148 @@
+{
+  "item1_EA_OR_2.99_pvalue": {
+    "finding": "OR=2.99 arises in TWO different cells of gwas_p11_mapping_sensitivity.csv: original MAPPED_GENE convention (OR=2.9872) and author-REPORTED convention (OR=2.9905). They are different 2x2 tables, so the identical 3-s.f. OR is coincidence, not a copy error in the table.",
+    "cells": {
+      "original_MAPPED": {
+        "table_2x2": [
+          [
+            103,
+            190
+          ],
+          [
+            719,
+            3962
+          ]
+        ],
+        "OR": 2.9872337310592196,
+        "p_one_sided_greater": 8.683759842761343e-16,
+        "p_two_sided": 1.015419275358604e-15
+      },
+      "author_reported": {
+        "table_2x2": [
+          [
+            7,
+            286
+          ],
+          [
+            38,
+            4643
+          ]
+        ],
+        "OR": 2.9905226352594774,
+        "p_one_sided_greater": 0.015060952443880204,
+        "p_two_sided": 0.015060952443880204
+      }
+    },
+    "verdict": "Both p-values are correct for their own 2x2: MAPPED p_one_sided=8.68e-16 (two-sided 1.02e-15, matches S5 RD x EA); author-reported p=0.01506 (one-sided and two-sided coincide here: no more-extreme table exists in the other tail). If the manuscript pairs author-reported OR=2.99 with p=8.7e-16 that association is wrong; the author-reported cell (n=45 genes, k=7) is only nominally significant."
+  },
+  "item2_MDD_GDstrict_LOO_q": {
+    "two_sided_q_36_family": {
+      "full": 0.0351675030331061,
+      "LOO-brain": 0.1069859083349248,
+      "LOO-tau": 0.110877926463965
+    },
+    "two_sided_q_36_family_joint": 0.0675968378119489,
+    "two_sided_q_48_family": {
+      "full": 0.0468900040441415,
+      "LOO-brain": 0.1426478777798998,
+      "LOO-tau": 0.1478372352852866,
+      "LOO-brain-tau": 0.0811162053743387
+    },
+    "p_two_sided": {
+      "full": 0.0097687508425294,
+      "LOO-brain": 0.0297183078708124,
+      "LOO-tau": 0.0338793664195448,
+      "LOO-brain-tau": 0.0168992094529872
+    },
+    "ranges": {
+      "36_family_LOO_brain_tau": [
+        0.1069859083349248,
+        0.110877926463965
+      ],
+      "48_family_LOO_brain_tau": [
+        0.1426478777798998,
+        0.1478372352852866
+      ],
+      "48_family_all_three_LOO": [
+        0.0811162053743387,
+        0.1478372352852866
+      ]
+    },
+    "verdict": "Text \"0.11-0.15\" matches NEITHER family exactly. 36-family LOO range = 0.107-0.111; 48-family LOO range = 0.143-0.148; including the joint LOO-brain-tau variant (48-family) the range is 0.081-0.148. popgen read 0.1426/0.1478/0.0811 = the 48-family xlsx S5 values, correct. Recommend (48-family convention): \"q = 0.14-0.15 for the single-component LOO variants (0.081 for the joint LOO-brain-tau variant)\"; under the 36-family convention \"q = 0.107-0.111\"."
+  },
+  "item3_trait_set_sizes": {
+    "sizes": {
+      "Schizophrenia": 257,
+      "ASD": 116,
+      "Educational attainment": 822,
+      "Intelligence": 180,
+      "Major depression": 154,
+      "Bipolar disorder": 115,
+      "Neuroticism": 122,
+      "Cognitive performance": 149,
+      "Height": 2191,
+      "LDL cholesterol": 256,
+      "Crohn disease": 95,
+      "Type 2 diabetes": 561
+    },
+    "min": {
+      "trait": "Crohn disease",
+      "n": 95
+    },
+    "max": {
+      "trait": "Height",
+      "n": 2191
+    },
+    "verdict": "Minimum trait set = Crohn disease (95 universe genes), not 103. 103 is k_overlap of RD x Educational attainment (see S5), i.e. an overlap count, not a trait-set size. Correct text: \"trait sets span 95 (Crohn disease) to 2,191 (height) universe genes\"."
+  },
+  "item4_sensitivity_rerun_bases": {
+    "design_n_genes": 400,
+    "per_group": {
+      "baseline": {
+        "n_results": 393,
+        "timeout_or_missing": 7
+      },
+      "srv": {
+        "n_results": 290,
+        "timeout_or_missing": 110,
+        "n_common_vs_baseline": 289
+      },
+      "cpg": {
+        "n_results": 397,
+        "timeout_or_missing": 3,
+        "n_common_vs_baseline": 391
+      },
+      "topo": {
+        "n_results": 377,
+        "timeout_or_missing": 23,
+        "n_common_vs_baseline": 371
+      }
+    },
+    "verdict": "Reviewer guess \"391/393/371/377\" conflates two quantities. Per-group genes with results: baseline 393 (7 timeouts), srv 290 (110 timeouts!), cpg 397 (3), topo 377 (23). Comparison bases vs baseline (n_common): srv 289, cpg 391, topo 371. Topology rerun timeout count = 23 (confirmed). Any cited \"common genes\" must be 289/391/371 for srv/cpg/topo; 393/290/397/377 are per-group result counts."
+  },
+  "item5_tier4_correction": {
+    "reported_p_values_convention": "uncorrected raw Fisher/Spearman p (tier4_empirical_disjointness.csv has no q columns; phase9_tier4_disjointness.py applies no multiple-testing correction)",
+    "results_paragraph_six_tests": {
+      "HAR_subset_vs_complement_fisher": 0.2220121611585696,
+      "hCONDEL_subset_vs_complement_fisher": 0.4800871602481109,
+      "combined_subset_vs_complement_fisher": 0.4230376412103164,
+      "gds_rds_spearman_all": 7.450873044214623e-06,
+      "campra_gd_depletion": 2.6986108951554042e-05,
+      "gd_hcondel_depletion_two_sided": 0.037
+    },
+    "bh6_q_values": {
+      "HAR_subset_vs_complement_fisher": 0.3330182417378544,
+      "hCONDEL_subset_vs_complement_fisher": 0.4800871602481109,
+      "combined_subset_vs_complement_fisher": 0.4800871602481109,
+      "gds_rds_spearman_all": 4.4705238265287735e-05,
+      "campra_gd_depletion": 8.095832685466213e-05,
+      "gd_hcondel_depletion_two_sided": 0.074
+    },
+    "bh6_claim_check": {
+      "spearman_survives_q_lt_0.02": true,
+      "campra_depletion_survives_q_lt_0.02": true,
+      "gd_hcondel_depletion_fails": true
+    },
+    "verdict": "Both statements are numerically correct but the framing is contradictory. The CSV/JSON report raw P (Methods \"reported uncorrected\" is true of the reported values); the Results BH-across-six is an additional on-the-fly sensitivity, and it replicates exactly: Spearman q=4.5e-5 and caMPRA depletion q=8.1e-5 survive (q<0.02), GD hCONDEL depletion q=0.074 does not. Fix: Methods should say Tier-4 P values are reported uncorrected WITH a BH-across-six sensitivity stated in Results (or drop the Results BH). Note: tier4_empirical_disjointness.json subset_table/rate_difference still carry pre-hCONDEL-fix numbers (n=183) while the CSV is post-fix (n=112) - the JSON should be regenerated for consistency."
+  }
+}

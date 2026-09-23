@@ -1,0 +1,177 @@
+{
+  "task": "R8 task1 joint LOO-brain-tau variant enrichments",
+  "variant": "LOO-joint(brain+tau)",
+  "weights": {
+    "doan": 0.5455,
+    "nc": 0.4545
+  },
+  "class_sizes": {
+    "regulation_driven": 403,
+    "gene_driven_incl_relaxed": 1256,
+    "dual_driven": 21,
+    "neutral": 3294
+  },
+  "HAR_enrichment": {
+    "table": [
+      [
+        103,
+        373
+      ],
+      [
+        300,
+        4198
+      ]
+    ],
+    "k": 103,
+    "class_n": 403,
+    "OR": 3.8641108132260946,
+    "p": 7.152786543460585e-23,
+    "CI95": [
+      3.016550660757666,
+      4.949809917377794
+    ]
+  },
+  "hCONDEL_enrichment": {
+    "table": [
+      [
+        23,
+        89
+      ],
+      [
+        380,
+        4482
+      ]
+    ],
+    "k": 23,
+    "class_n": 403,
+    "OR": 3.048078060319338,
+    "p": 2.244836307223684e-05,
+    "CI95": [
+      1.9045520856616613,
+      4.878196785346716
+    ]
+  },
+  "GD_depletion_hcondel": {
+    "table": [
+      [
+        18,
+        94
+      ],
+      [
+        1238,
+        3624
+      ]
+    ],
+    "k": 18,
+    "OR": 0.5605472106692332,
+    "p": 0.027132191069843322
+  },
+  "HAR_x_hCONDEL_overlap": {
+    "both": 22,
+    "phi": 0.052,
+    "chi2_yates": 12.270034893043773,
+    "chi2_yates_p": 0.00046028966445848407,
+    "dual_evidence_rd_full": 9,
+    "dual_evidence_rd_joint": 10
+  },
+  "rd_set_algebra": {
+    "full_rd": 293,
+    "joint_rd": 403,
+    "intersection": 215,
+    "joint_only": 188,
+    "full_only": 78
+  },
+  "spans": {
+    "joint_rd_median": 105793.0,
+    "full_rd_median": 133590.0,
+    "joint_only_median": 72839.0,
+    "full_only_median": 83450.0,
+    "neutral_median": 27607.5
+  },
+  "rds_component_profile": {
+    "full_rd_293": {
+      "n": 293,
+      "mean_components": {
+        "rds_doan": 0.1399,
+        "rds_tau": 0.6413,
+        "rds_nc": 0.7353,
+        "rds_brain": 0.1152
+      },
+      "share": {
+        "rds_doan": 0.086,
+        "rds_tau": 0.393,
+        "rds_nc": 0.451,
+        "rds_brain": 0.071
+      },
+      "dominant_counts": {
+        "doan": 41,
+        "tau": 72,
+        "nc": 147,
+        "brain": 33
+      }
+    },
+    "joint_rd_403": {
+      "n": 403,
+      "mean_components": {
+        "rds_doan": 0.1365,
+        "rds_tau": 0.4427,
+        "rds_nc": 0.804,
+        "rds_brain": 0.0246
+      },
+      "share": {
+        "rds_doan": 0.097,
+        "rds_tau": 0.314,
+        "rds_nc": 0.571,
+        "rds_brain": 0.017
+      },
+      "dominant_counts": {
+        "doan": 55,
+        "tau": 22,
+        "nc": 317,
+        "brain": 9
+      }
+    },
+    "joint_only_188": {
+      "n": 188,
+      "mean_components": {
+        "rds_doan": 0.0745,
+        "rds_tau": 0.2711,
+        "rds_nc": 0.798,
+        "rds_brain": 0.0
+      },
+      "share": {
+        "rds_doan": 0.065,
+        "rds_tau": 0.237,
+        "rds_nc": 0.698,
+        "rds_brain": 0.0
+      },
+      "dominant_counts": {
+        "doan": 14,
+        "tau": 0,
+        "nc": 174,
+        "brain": 0
+      }
+    },
+    "full_only_78": {
+      "n": 78,
+      "mean_components": {
+        "rds_doan": 0.0,
+        "rds_tau": 0.775,
+        "rds_nc": 0.5318,
+        "rds_brain": 0.3057
+      },
+      "share": {
+        "rds_doan": 0.0,
+        "rds_tau": 0.481,
+        "rds_nc": 0.33,
+        "rds_brain": 0.19
+      },
+      "dominant_counts": {
+        "doan": 0,
+        "tau": 50,
+        "nc": 4,
+        "brain": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "description": "R8 P0-3: srv-Yes extrapolation estimators, CI, flip table, and propagation to v7 classification",
+  "inputs": {
+    "n_stratified_genes": 400,
+    "n_common_baseline_srv": 393,
+    "universe_size": 4974,
+    "universe_production_sig": 1690,
+    "universe_production_rate": 0.33976678729392845,
+    "stratification": "production BH FDR sig (200) vs non-sig (200); flip rates below use baseline-rerun significance for reviewer parity and production strata for design-based weighting"
+  },
+  "flip_table_verification": {
+    "n_common": 393,
+    "baseline_sig": 194,
+    "baseline_nonsig": 199,
+    "both_sig_retained": 150,
+    "flip_out_srvNo_only": 44,
+    "flip_in_srvYes_only": 10,
+    "both_nonsig_retained": 189,
+    "flip_out_rate_in_sig_layer": 0.2268041237113402,
+    "flip_in_rate_in_nonsig_layer": 0.05025125628140704,
+    "retention_of_baseline_sig": 0.7731958762886598,
+    "matches_reviewer_numbers_44_10_150_189": true
+  },
+  "estimators": {
+    "a_ratio_method_current_manuscript": {
+      "value": 0.2802200307578791,
+      "formula": "prod_rate x (srvYes_rate_common / srvNo_rate_common)",
+      "statistical_property": "Assumes a single multiplicative factor homogeneous across strata. Contradicted by own data (flip-out 22.7% in sig layer vs flip-in 5.0% in nonsig layer; heterogeneity chi2=213.8, p=2.05e-48). Because the 50/50 sample over-weights the sig stratum relative to the 34/66 universe, and the sig stratum is where srv erodes signal multiplicatively, the pooled ratio is too small -> DOWNWARD biased here (28.0% < 29.6%)."
+    },
+    "b_stratified_weighting_recommended": {
+      "value": 0.2919220451892158,
+      "value_reviewer_layers": 0.2958838272127012,
+      "formula": "w_sig x P(sig_srv|prod-sig stratum) + w_nonsig x P(sig_srv|prod-nonsig stratum), w=(1690,3284)/4974",
+      "components": {
+        "p_sig_stratum_srv": 0.7704081632653061,
+        "n_sig_stratum": 196,
+        "p_nonsig_stratum_srv": 0.04568527918781726,
+        "n_nonsig_stratum": 197
+      },
+      "statistical_property": "Design-based (post-stratified / Horvitz-Thompson type) estimator: unbiased under stratified random sampling with known sampling fractions; no homogeneity assumption. RECOMMENDED primary estimator.",
+      "analytic_se": 0.014165119729319595
+    },
+    "c_absolute_difference": {
+      "value": 0.2532527923829869,
+      "formula": "prod_rate - (srvNo_rate_common - srvYes_rate_common)",
+      "statistical_property": "Assumes a single additive effect homogeneous across strata. The common-frame difference (8.65pp on the 50/50 sample) over-weights the sig stratum where the absolute loss is largest (22.7pp loss vs 5.0pp gain), overstating the universe-level reduction (true stratified loss ~4.4pp) -> DOWNWARD biased, the most biased of the three (25.3% < 28.0% < 29.6%)."
+    },
+    "summary_values": {
+      "a_ratio": 0.2802200307578791,
+      "b_stratified": 0.2919220451892158,
+      "c_absdiff": 0.2532527923829869
+    },
+    "recommended": "b_stratified_weighting"
+  },
+  "ci_for_recommended_estimator": {
+    "method": "stratified percentile bootstrap, 10,000 resamples of the 393 common genes within production strata, seed 20260924",
+    "point": 0.2919220451892158,
+    "ci95": [
+      0.26441712173164744,
+      0.320929331852266
+    ],
+    "analytic_normal_ci95": [
+      0.26415841051974936,
+      0.3196856798586822
+    ],
+    "reviewer_guess_25_31_verified": false,
+    "note": "CI covers sampling uncertainty of the srv-Yes reruns only; universe composition (34.0%/66.0%) is the full-production-run quantity, treated as fixed."
+  },
+  "propagation_to_classification": {
+    "method": "v7 rule (g>r+0.15 & sig -> GD; r>g+0.15 & !sig -> RD; r>g+0.15 & sig & g>0.3 -> dual; else neutral; RELAX-relaxed modifier) re-applied to the 393 common genes with sig := sig_srv; stratum x class transition probabilities extrapolated to the 4,974-gene universe; RELAX/Selectome/GDS/RDS inputs held fixed (no srv-RELAX rerun available).",
+    "rule_replication_agreement_on_4974": 1.0,
+    "transition_matrix_393": {
+      "gene-driven": {
+        "gene-driven": 106,
+        "gene-driven (relaxed)": 0,
+        "neutral": 3,
+        "regulation-driven": 0
+      },
+      "gene-driven (relaxed)": {
+        "gene-driven": 0,
+        "gene-driven (relaxed)": 3,
+        "neutral": 0,
+        "regulation-driven": 0
+      },
+      "neutral": {
+        "gene-driven": 33,
+        "gene-driven (relaxed)": 2,
+        "neutral": 226,
+        "regulation-driven": 0
+      },
+      "regulation-driven": {
+        "gene-driven": 0,
+        "gene-driven (relaxed)": 0,
+        "neutral": 2,
+        "regulation-driven": 18
+      }
+    },
+    "gd_srv_sensitive_in_sample": {
+      "n_gd_in_common": 144,
+      "n_gd_lost_under_srvYes": 35,
+      "fraction": 0.24305555555555555,
+      "note": "GD genes losing BUSTED significance under srv Yes drop out of GD (to neutral per v7 rule)"
+    },
+    "universe_class_counts_srvNo": {
+      "gene-driven": 1214.0,
+      "gene-driven (relaxed)": 52.0,
+      "dual-driven": 11.0,
+      "regulation-driven": 293.0,
+      "neutral": 3404.0
+    },
+    "universe_class_counts_srvYes_expected": {
+      "gene-driven": 975.9126642819823,
+      "gene-driven (relaxed)": 31.2,
+      "dual-driven": 11.0,
+      "regulation-driven": 308.88461538461536,
+      "neutral": 3647.0027203334025
+    },
+    "gd_universe_srvYes": {
+      "point_strict": 975.9126642819823,
+      "ci95_strict": [
+        873.3881592125208,
+        1079.9807712697802
+      ],
+      "point_relaxed": 31.2,
+      "note": "strict GD = headline 24.4% definition (excludes gene-driven (relaxed))"
+    },
+    "rd_universe_srvYes": {
+      "point": 308.88461538461536,
+      "ci95": [
+        293.0,
+        333.4901960784314
+      ]
+    },
+    "headline_comparison": {
+      "srvNo": {
+        "GD_pct": 24.406915963007638,
+        "RD_pct": 5.890631282669884,
+        "GD_over_RD_ratio": 4.143344709897611
+      },
+      "srvYes": {
+        "GD_pct": 19.62027873506197,
+        "RD_pct": 6.209984225665769,
+        "GD_pct_ci95": [
+          17.559070350070787,
+          21.712520532162856
+        ],
+        "RD_pct_ci95": [
+          5.890631282669884,
+          6.704668196188809
+        ],
+        "GD_over_RD_ratio": 3.1594732002654142
+      },
+      "gd_far_exceeds_rd_under_srvYes": true
+    },
+    "rd_logic_chain": "RD requires NOT significant. srv Yes has two opposing flows: (i) flip-IN genes (gain significance) leave RD -> become dual-driven (if g>0.3) or neutral; (ii) flip-OUT genes (lose significance) with r>g+0.15 newly enter RD (mainly from dual-driven and from sig-neutral genes). Net effect estimated via transition matrix above."
+  }
+}

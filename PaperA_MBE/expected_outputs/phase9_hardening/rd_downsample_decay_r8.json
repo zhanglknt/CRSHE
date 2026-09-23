@@ -1,0 +1,23 @@
+{
+  "task": "R8 task4 RD downsample decay reference",
+  "n_downsample": 148,
+  "reps": 100,
+  "seed": 20260924,
+  "method": "148-gene uniform subsamples of the 293 full-RD genes; per-trait Fisher one-sided p; BH q over the same 32 tier2 rows (other classes' p fixed at observed); trait membership within RD genes assigned at random preserving per-trait k_T marginals (independence across traits)",
+  "baseline_counts": {
+    "full_293": 8,
+    "LOO-caMPRA_800": 6,
+    "LOO-tau_148": 5,
+    "LOO-brain_613": 6
+  },
+  "sig_trait_count_distribution": {
+    "3": 2,
+    "4": 16,
+    "5": 30,
+    "6": 35,
+    "7": 15,
+    "8": 2
+  },
+  "median": 6.0,
+  "prob_count_le_5": 0.48
+}

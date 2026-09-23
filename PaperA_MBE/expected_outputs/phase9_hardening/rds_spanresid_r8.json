@@ -1,0 +1,568 @@
+{
+  "v7_reproduction": {
+    "match": 4974,
+    "n": 4974,
+    "counts": {
+      "neutral": 3404,
+      "gene-driven": 1214,
+      "regulation-driven": 293,
+      "dual-driven": 11,
+      "gene-driven (relaxed)": 52
+    }
+  },
+  "n_missing_span": 0,
+  "verify_claims": {
+    "v7_rd_median_span_bp": 133590.0,
+    "universe_median_span_bp": 31721.0,
+    "ratio": 4.211405693389238,
+    "component_span_spearman": {
+      "doan": {
+        "spearman_rho": 0.08610796097307681,
+        "p": 1.1819423812057998e-09
+      },
+      "tau": {
+        "spearman_rho": -0.06909501475923659,
+        "p": 1.07362155513938e-06
+      },
+      "nc": {
+        "spearman_rho": 0.47194502056778764,
+        "p": 2.1791863145452122e-274
+      },
+      "brain": {
+        "spearman_rho": 0.0647998738910955,
+        "p": 4.790191120957579e-06
+      }
+    },
+    "v7_rd_dominant_counts": {
+      "doan": 41,
+      "tau": 72,
+      "nc": 147,
+      "brain": 33
+    },
+    "v7_rd_nc_dominant_share": 0.5017064846416383
+  },
+  "residualization": {
+    "doan": {
+      "slope": 0.024362154624739014,
+      "intercept": -0.08990523936028785,
+      "pearson_r": 0.10087886913694906,
+      "p": 9.960513304254566e-13,
+      "n_used": 4974
+    },
+    "tau": {
+      "slope": -0.009326568140032443,
+      "intercept": 0.7736883239289637,
+      "pearson_r": -0.024895082781981045,
+      "p": 0.07915739934170872,
+      "n_used": 4974
+    },
+    "nc": {
+      "slope": 1.1986881059827172,
+      "intercept": -2.66110927818305,
+      "pearson_r": 0.48619823822669983,
+      "p": 1.5387679488561205e-293,
+      "n_used": 4974
+    },
+    "brain": {
+      "slope": 0.001549139947744948,
+      "intercept": -0.0042671596315265285,
+      "pearson_r": 0.03315069638816037,
+      "p": 0.019384107186430608,
+      "n_used": 4974
+    }
+  },
+  "new_classification_counts": {
+    "neutral": 2498,
+    "regulation-driven": 1675,
+    "gene-driven": 645,
+    "dual-driven": 136,
+    "gene-driven (relaxed)": 20
+  },
+  "v7_counts": {
+    "neutral": 3404,
+    "gene-driven": 1214,
+    "regulation-driven": 293,
+    "dual-driven": 11,
+    "gene-driven (relaxed)": 52
+  },
+  "flip_matrix": {
+    "neutral -> neutral": 1918,
+    "neutral -> regulation-driven": 1412,
+    "gene-driven -> neutral": 523,
+    "gene-driven -> gene-driven": 637,
+    "regulation-driven -> regulation-driven": 263,
+    "regulation-driven -> neutral": 30,
+    "gene-driven -> dual-driven": 54,
+    "dual-driven -> dual-driven": 11,
+    "gene-driven (relaxed) -> neutral": 27,
+    "neutral -> dual-driven": 65,
+    "gene-driven (relaxed) -> gene-driven (relaxed)": 19,
+    "neutral -> gene-driven": 8,
+    "gene-driven (relaxed) -> dual-driven": 6,
+    "neutral -> gene-driven (relaxed)": 1
+  },
+  "new_rd": {
+    "n": 1675,
+    "median_span_bp": 19645.0,
+    "universe_median_span_bp": 31721.0,
+    "span_ratio": 0.6193058226411525,
+    "dominant_component_counts": {
+      "doan": 46,
+      "tau": 493,
+      "nc": 565,
+      "brain": 571
+    },
+    "mean_component_share": {
+      "doan": 0.257,
+      "tau": 0.245,
+      "nc": 0.24,
+      "brain": 0.257
+    }
+  },
+  "rd_set_algebra": {
+    "v7_rd": 293,
+    "new_rd": 1675,
+    "intersection": 263,
+    "new_only": 1412,
+    "v7_only": 30,
+    "v7_rd_retained_frac": 0.8976109215017065
+  },
+  "downstream_har_hcondel": {
+    "HAR_new_RD": {
+      "table": [
+        [
+          141,
+          335
+        ],
+        [
+          1534,
+          2964
+        ]
+      ],
+      "k": 141,
+      "class_n": 1675,
+      "OR": 0.8132557551226917,
+      "p": 0.979018408191305,
+      "CI95": [
+        0.661732922864518,
+        0.9994741086436622
+      ]
+    },
+    "hCONDEL_new_RD": {
+      "table": [
+        [
+          39,
+          73
+        ],
+        [
+          1636,
+          3226
+        ]
+      ],
+      "k": 39,
+      "class_n": 1675,
+      "OR": 1.0534715477107546,
+      "p": 0.4330216926575819,
+      "CI95": [
+        0.7109322907878642,
+        1.5610520385931486
+      ]
+    },
+    "HAR_v7_RD_reference": {
+      "table": [
+        [
+          81,
+          395
+        ],
+        [
+          212,
+          4286
+        ]
+      ],
+      "k": 81,
+      "class_n": 293,
+      "OR": 4.145760687843325,
+      "p": 3.348880227113217e-20,
+      "CI95": [
+        3.1459081087930665,
+        5.463392790408333
+      ]
+    },
+    "hCONDEL_v7_RD_reference": {
+      "table": [
+        [
+          18,
+          94
+        ],
+        [
+          275,
+          4587
+        ]
+      ],
+      "k": 18,
+      "class_n": 293,
+      "OR": 3.1940425531914896,
+      "p": 7.809426913882364e-05,
+      "CI95": [
+        1.9013250700096949,
+        5.365683118850367
+      ]
+    }
+  },
+  "downstream_enrichment": {
+    "SynGO": {
+      "terms_tested": 74,
+      "n_fdr005_new": 0,
+      "fdr_terms_new": [],
+      "v7_fdr_terms_still_sig": [],
+      "n_v7_fdr_still_sig": 0,
+      "lengthcorr_survivors_still_sig": [],
+      "n_survivors_still_sig": 0,
+      "n_v7_fdr_terms": 11,
+      "n_lengthcorr_survivors": 7
+    },
+    "GO_BP": {
+      "terms_tested": 2507,
+      "n_fdr005_new": 0,
+      "fdr_terms_new": [],
+      "v7_fdr_terms_still_sig": [],
+      "n_v7_fdr_still_sig": 0,
+      "lengthcorr_survivors_still_sig": [],
+      "n_survivors_still_sig": 0,
+      "n_v7_fdr_terms": 18,
+      "n_lengthcorr_survivors": 18
+    }
+  },
+  "key_verdict": {
+    "HAR_survives": false,
+    "hCONDEL_survives": false,
+    "SynGO_survivors_alive": 0,
+    "SynGO_survivors_total": 7,
+    "GO_BP_survivors_alive": 0,
+    "GO_BP_survivors_total": 18
+  },
+  "post_residualization_span_correlation": {
+    "rds_doan_spanresid_pct": {
+      "spearman_rho": -0.9371909912029454,
+      "p": 0.0
+    },
+    "rds_tau_spanresid_pct": {
+      "spearman_rho": -0.03436855535839824,
+      "p": 0.0153504410077311
+    },
+    "rds_nc_spanresid_pct": {
+      "spearman_rho": 0.025385683114312583,
+      "p": 0.07342109401599499
+    },
+    "rds_brain_spanresid_pct": {
+      "spearman_rho": -0.9600542344429627,
+      "p": 0.0
+    },
+    "rds_spanresid": {
+      "spearman_rho": -0.8432404881627708,
+      "p": 0.0
+    },
+    "rds_v7": {
+      "spearman_rho": 0.35088102158258466,
+      "p": 4.573108329041686e-144
+    }
+  },
+  "secondary_variants": {
+    "B_nc_only": {
+      "counts": {
+        "neutral": 3437,
+        "gene-driven": 1238,
+        "regulation-driven": 237,
+        "dual-driven": 10,
+        "gene-driven (relaxed)": 52
+      },
+      "rds_span_spearman_post": {
+        "rho": -0.00777154350880199,
+        "p": 0.583711825677308
+      },
+      "new_rd": {
+        "n": 237,
+        "median_span_bp": 87894.0,
+        "span_ratio": 2.770845811922701
+      },
+      "rd_set_algebra": {
+        "v7_rd": 293,
+        "new_rd": 237,
+        "intersection": 217,
+        "new_only": 20,
+        "v7_only": 76,
+        "v7_rd_retained_frac": 0.7406143344709898
+      },
+      "HAR_new_RD": {
+        "table": [
+          [
+            60,
+            416
+          ],
+          [
+            177,
+            4321
+          ]
+        ],
+        "k": 60,
+        "class_n": 237,
+        "OR": 3.521023468057366,
+        "p": 3.488179095390841e-13,
+        "CI95": [
+          2.583522948707625,
+          4.7987211682452715
+        ]
+      },
+      "hCONDEL_new_RD": {
+        "table": [
+          [
+            14,
+            98
+          ],
+          [
+            223,
+            4639
+          ]
+        ],
+        "k": 14,
+        "class_n": 237,
+        "OR": 2.9718129404228057,
+        "p": 0.0007781891270385279,
+        "CI95": [
+          1.6707753379106358,
+          5.285972298291621
+        ]
+      },
+      "enrichment": {
+        "SynGO": {
+          "terms_tested": 74,
+          "n_fdr005_new": 11,
+          "fdr_terms_new": [
+            "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+            "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+            "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC",
+            "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+            "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+            "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+            "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+            "Postsynapse (GO:0098794) CC",
+            "Regulation Of Postsynapse Assembly (GO:0150052) BP",
+            "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP",
+            "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP"
+          ],
+          "n_v7_fdr_still_sig": 11,
+          "v7_fdr_terms_still_sig": [
+            "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+            "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+            "Integral Component Of Postsynaptic Specialization Membrane (GO:0099060) CC",
+            "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+            "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+            "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+            "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+            "Postsynapse (GO:0098794) CC",
+            "Regulation Of Postsynapse Assembly (GO:0150052) BP",
+            "Regulation Of Postsynaptic Membrane Potential (GO:0060078) BP",
+            "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP"
+          ],
+          "n_survivors_still_sig": 7,
+          "lengthcorr_survivors_still_sig": [
+            "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+            "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+            "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+            "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+            "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+            "Postsynapse (GO:0098794) CC",
+            "Synapse Adhesion Between Pre- And Post-Synapse (GO:0099560) BP"
+          ]
+        },
+        "GO_BP": {
+          "terms_tested": 2507,
+          "n_fdr005_new": 23,
+          "fdr_terms_new": [
+            "Adenylate Cyclase-Activating G Protein-Coupled Receptor Signaling Pathway (GO:0007189)",
+            "Anterograde Trans-Synaptic Signaling (GO:0098916)",
+            "Axon Guidance (GO:0007411)",
+            "Axonogenesis (GO:0007409)",
+            "Calcium Ion Transmembrane Import Into Cytosol (GO:0097553)",
+            "Calcium Ion Transmembrane Transport (GO:0070588)",
+            "Cellular Response To Ketone (GO:1901655)",
+            "Cellular Response To Organic Cyclic Compound (GO:0071407)",
+            "Chemical Synaptic Transmission (GO:0007268)",
+            "Cyclic Nucleotide Biosynthetic Process (GO:0009190)",
+            "Glutamate Receptor Signaling Pathway (GO:0007215)",
+            "Inorganic Cation Import Across Plasma Membrane (GO:0098659)",
+            "Inorganic Cation Transmembrane Transport (GO:0098662)",
+            "Modulation Of Chemical Synaptic Transmission (GO:0050804)",
+            "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+            "Neuron Projection Guidance (GO:0097485)",
+            "Peptidyl-Tyrosine Modification (GO:0018212)",
+            "Peptidyl-Tyrosine Phosphorylation (GO:0018108)",
+            "Phospholipid Transport (GO:0015914)",
+            "Positive Regulation Of Synaptic Transmission (GO:0050806)",
+            "Protein Phosphorylation (GO:0006468)",
+            "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+            "Regulation Of Focal Adhesion Assembly (GO:0051893)"
+          ],
+          "n_v7_fdr_still_sig": 12,
+          "v7_fdr_terms_still_sig": [
+            "Axon Guidance (GO:0007411)",
+            "Axonogenesis (GO:0007409)",
+            "Cellular Response To Organic Cyclic Compound (GO:0071407)",
+            "Cyclic Nucleotide Biosynthetic Process (GO:0009190)",
+            "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+            "Neuron Projection Guidance (GO:0097485)",
+            "Peptidyl-Tyrosine Modification (GO:0018212)",
+            "Phospholipid Transport (GO:0015914)",
+            "Positive Regulation Of Synaptic Transmission (GO:0050806)",
+            "Protein Phosphorylation (GO:0006468)",
+            "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+            "Regulation Of Focal Adhesion Assembly (GO:0051893)"
+          ],
+          "n_survivors_still_sig": 12,
+          "lengthcorr_survivors_still_sig": [
+            "Axon Guidance (GO:0007411)",
+            "Axonogenesis (GO:0007409)",
+            "Cellular Response To Organic Cyclic Compound (GO:0071407)",
+            "Cyclic Nucleotide Biosynthetic Process (GO:0009190)",
+            "Monoatomic Cation Transmembrane Transport (GO:0098655)",
+            "Neuron Projection Guidance (GO:0097485)",
+            "Peptidyl-Tyrosine Modification (GO:0018212)",
+            "Phospholipid Transport (GO:0015914)",
+            "Positive Regulation Of Synaptic Transmission (GO:0050806)",
+            "Protein Phosphorylation (GO:0006468)",
+            "Purine Ribonucleotide Biosynthetic Process (GO:0009152)",
+            "Regulation Of Focal Adhesion Assembly (GO:0051893)"
+          ]
+        }
+      },
+      "key_verdict": {
+        "HAR_survives": true,
+        "hCONDEL_survives": true,
+        "SynGO_survivors_alive": 7,
+        "GO_BP_survivors_alive": 12
+      }
+    },
+    "C_continuous_only": {
+      "counts": {
+        "neutral": 3287,
+        "gene-driven": 1037,
+        "regulation-driven": 595,
+        "dual-driven": 20,
+        "gene-driven (relaxed)": 35
+      },
+      "rds_span_spearman_post": {
+        "rho": -0.5192413202681202,
+        "p": 0.0
+      },
+      "new_rd": {
+        "n": 595,
+        "median_span_bp": 38227.0,
+        "span_ratio": 1.2051007219192333
+      },
+      "rd_set_algebra": {
+        "v7_rd": 293,
+        "new_rd": 595,
+        "intersection": 245,
+        "new_only": 350,
+        "v7_only": 48,
+        "v7_rd_retained_frac": 0.8361774744027304
+      },
+      "HAR_new_RD": {
+        "table": [
+          [
+            87,
+            389
+          ],
+          [
+            508,
+            3990
+          ]
+        ],
+        "k": 87,
+        "class_n": 595,
+        "OR": 1.756624091654353,
+        "p": 1.560747283681777e-05,
+        "CI95": [
+          1.36791082844979,
+          2.255796310112874
+        ]
+      },
+      "hCONDEL_new_RD": {
+        "table": [
+          [
+            21,
+            91
+          ],
+          [
+            574,
+            4288
+          ]
+        ],
+        "k": 21,
+        "class_n": 595,
+        "OR": 1.7239346019833826,
+        "p": 0.02294922803696186,
+        "CI95": [
+          1.0641640468141425,
+          2.792755986084031
+        ]
+      },
+      "enrichment": {
+        "SynGO": {
+          "terms_tested": 74,
+          "n_fdr005_new": 8,
+          "fdr_terms_new": [
+            "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+            "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+            "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+            "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+            "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+            "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP",
+            "Postsynapse Organization (GO:0099173) BP",
+            "Synapse (GO:0045202) CC"
+          ],
+          "n_v7_fdr_still_sig": 6,
+          "v7_fdr_terms_still_sig": [
+            "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+            "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+            "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+            "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+            "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP",
+            "Modulation Of Chemical Synaptic Transmission (GO:0050804) BP"
+          ],
+          "n_survivors_still_sig": 5,
+          "lengthcorr_survivors_still_sig": [
+            "Integral Component Of Postsynaptic Density Membrane (GO:0099061) CC",
+            "Integral Component Of Postsynaptic Membrane (GO:0099055) CC",
+            "Integral Component Of Presynaptic Active Zone Membrane (GO:0099059) CC",
+            "Integral Component Of Presynaptic Membrane (GO:0099056) CC",
+            "Ligand-Gated IC Activity Involved In Regulation Of Presynaptic Membrane Potential (GO:0099507) BP"
+          ]
+        },
+        "GO_BP": {
+          "terms_tested": 2507,
+          "n_fdr005_new": 2,
+          "fdr_terms_new": [
+            "Monoatomic Ion Transport (GO:0006811)",
+            "Protein Phosphorylation (GO:0006468)"
+          ],
+          "n_v7_fdr_still_sig": 1,
+          "v7_fdr_terms_still_sig": [
+            "Protein Phosphorylation (GO:0006468)"
+          ],
+          "n_survivors_still_sig": 1,
+          "lengthcorr_survivors_still_sig": [
+            "Protein Phosphorylation (GO:0006468)"
+          ]
+        }
+      },
+      "key_verdict": {
+        "HAR_survives": true,
+        "hCONDEL_survives": true,
+        "SynGO_survivors_alive": 5,
+        "GO_BP_survivors_alive": 1
+      }
+    }
+  },
+  "secondary_variants_note": "Primary all-four OLS residualization overcorrects binary doan and zero-inflated brain_tau (percentile of OLS resid inherits monotone span dependence with flipped sign: rho up to -0.96). Variant B (nc-only) is the direct test of reviewer M2's stated concern; variant C residualizes only the three continuous components."
+}

@@ -1,0 +1,50 @@
+{
+  "seed": 20260924,
+  "n_perm": 1000,
+  "method": "span-decile matched permutation; null = size-237 gene sets drawn per-decile without replacement matching RD237's own decile spectrum; statistic = one-sided Fisher OR; empirical p = (1+#ge)/(NPERM+1)",
+  "rd237_decile_spectrum": {
+    "0": 2,
+    "1": 6,
+    "2": 13,
+    "3": 14,
+    "4": 17,
+    "5": 18,
+    "6": 25,
+    "7": 26,
+    "8": 38,
+    "9": 78
+  },
+  "HAR_476": {
+    "obs_k": 60,
+    "class_n": 237,
+    "feature_n": 476,
+    "obs_OR": 3.521023468057366,
+    "obs_nominal_fisher_p": 3.488179095390841e-13,
+    "null_k_median": 39.0,
+    "null_OR_median": 1.9381457596560572,
+    "null_OR_q95": 2.5568906690402016,
+    "empirical_p": 0.000999000999000999
+  },
+  "hCONDEL_112": {
+    "obs_k": 14,
+    "class_n": 237,
+    "feature_n": 112,
+    "obs_OR": 2.9718129404228057,
+    "obs_nominal_fisher_p": 0.0007781891270385279,
+    "null_k_median": 10.0,
+    "null_OR_median": 2.001813941435605,
+    "null_OR_q95": 3.232098077458902,
+    "empirical_p": 0.1258741258741259
+  },
+  "dual_support_22": {
+    "obs_k": 6,
+    "class_n": 237,
+    "feature_n": 22,
+    "obs_OR": 7.663961038961039,
+    "obs_nominal_fisher_p": 0.0004301648664176062,
+    "null_k_median": 3.0,
+    "null_OR_median": 3.183535762483131,
+    "null_OR_q95": 7.663961038961039,
+    "empirical_p": 0.07592407592407592
+  }
+}

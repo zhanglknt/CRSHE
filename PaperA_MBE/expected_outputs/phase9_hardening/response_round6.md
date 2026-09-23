@@ -153,3 +153,33 @@ general-purpose-30 验证（blind_verification_r7_batch9g.md）：1 FAIL + 2 备
 - CRSHE 新增 R7 交付物：phase9_hardening 19 个 JSON/CSV + gard_rerun/ 50 JSON + 五份 R7 评审 + 两轮盲验证报告 + 本日志
 - CRSHE commit **3d89dce**，已推送
 - **R7 闭环状态：5/5 P0 关闭 + 9A–9H 全部整合 + 两轮盲验证核销（batch9: 2 FAIL+5 备注已修；batch9g: 1 FAIL+1 备注已修）——"解决所有问题后交叉验证"指令完成**
+
+## R8（2026-09-24）五审均分 6.9（3 Minor + 2 Major）→ 修复开工
+
+分数：editor 8.0 Minor / stats 7.5 Minor / reggenomics 6.5 Minor(条件) / popgen 6.5 Major / molevol 6.0 Major。stats 对 S5 全表 192 行 q 值复算误差 <1e-15，无计算错误。报告 review_round8_{molevol,popgen,reggenomics,stats,editor}.md。
+
+去重为 7 P0 簇：P0-1 GWAS 长度混杂+呈现层级（editor+popgen）；P0-2 RDS 未对跨度残差化（popgen+reggenomics）；P0-3 srv 估计量+CI+传播分类（molevol+stats）；P0-4 重比对解读对称化（molevol+stats）；P0-5 GARD 清洁比对对照（molevol）；P0-6 hCONDEL 异质性检验替换 93% power + 措辞降级（reggenomics+stats）；P0-7 Fig 4 误标 + 联合变体缺口（reggenomics+popgen）。
+
+派工 6 路并行：r7-length-syngo→P0-1 长度匹配置换+pooled z；r7-hcondel-sens→P0-6/7 联合变体+异质性+decile 置换+148 下采样；r7-family-census→审计簇 5 项；r8-fix-rds-span→P0-2；r8-fix-srv→P0-3；fix-busted-wsl→P0-5 GARD 对照+可选 null 校准。
+
+### batch 10A（worker 无关修复，12 处，已完成）
+1. 12.2%→12.1%（2 处，604/4,974=12.14%，与摘要统一）
+2. Main_Tables Table 2 unclassified 68.5%→68.4%（与 Table 1 一致）
+3. +14.8pp 补精确率注（49.36%/64.12%，消除显示 14.7 矛盾）
+4. **P0-4 对称化**：重比对因果解读"降功效非假阳性"撤下——补披露 Jaccard 0.538 / Spearman 0.385 / 68,680 框内终止子 / 254 非 3 倍数；改为"界定比对方法学敏感性区间 49.4–64.1%，与 srv 方向对称，不裁决单一真值"（L142 全文 + L176 短版）
+5. 摘要 "primary independent validation" 语法挂靠修正（明确挂 hCONDEL 删除结果）
+6. "BH exact"→"conservative"（KS P=3.6e-7，molevol M4）
+7. "empirical FDR"术语→"null rejection rate"（3 处 + cover letter 1 处）+ 披露 12/400 bootstrap 失败 + n=400 上界 ~0.9%
+8. Fig 2e ω 解释句（62% >1、中位 1.96 为类特异 MLE 非全基因 dN/dS，大抽样方差，非全基因组适应证据）
+
+### R8 batch 10C 大整合 (2026-09-24)
+
+全部 Windows 计算到齐后整合（28 处，跨 5 文件）：
+- **P0-1 GWAS 降级**：长度匹配置换 0/48 存活（full/joint；LOO-brain EA q=0.048 唯一擦线）+ span×CDS 双分层 0/12；族间 pooled z 性状相关修正后存活（z=2.84 p=0.004 / 2.06 p=0.039）但基于未校正 OR → 全文定位 "family-level residual signal, not robust to gene-length confounding at the trait level"；衰减链非单调获得功效解释（148 下采样中位 6/8，LOO-tau 5/8 居 48 分位）
+- **P0-2 span 残差化（变体 B nc-only，RD=237）**：RDS-span ρ=-0.008；HAR 3.52 / hCONDEL 2.97 / SynGO 7/7 / GO_BP 12/18 全存活；全组分 OLS 残差化为方法学瑕疵（二元/零膨胀组分伪相关 ρ≈-0.95）不报告
+- **P0-3 srv**：主口径改分层加权 29.2% [26.4-32.1]（≈1,450；比率 28.0%/绝对 25.3% 下夹）；翻转不对称披露（44/194 vs 10/199，retention 77.3%）；传播到分类：GD srv 敏感 24.3%，srv Yes 下 GD 19.6% [17.6-21.7] vs RD 6.2% [5.9-6.7]，标题级结论稳健
+- **P0-6/7 验证链重新定位**：主验证=SynGO 长度稳健核心 + HAR（full/joint 置换 p=0.001，caMPRA 嵌套保留为 caveat）；hCONDEL 降级为 supporting（LOO-nc 0.032 / 双支持 0.035 / span-resid OR=2.97；full 0.22）；93% post-hoc power 删除→异质性检验 OR=6.23 p=1.4e-3；GD 耗竭软化（置换 0.084）；LOO-caMPRA 衰减=循环性+长度（0.886/0.623）
+- **Table 3**：joint LOO-brain-tau 行（1,256†/403/3.86/3.05）+ 权重与集合代数千脚注
+- **图注**：Fig 4a/4b 十二检验+joint；4c 异质性；4f 长度限定；7c 未校正警示
+- **cover letter**：srv 29.2% CI + 重比对对称化 + hCONDEL 降级
+- 摘要词数三口径检查（见输出）

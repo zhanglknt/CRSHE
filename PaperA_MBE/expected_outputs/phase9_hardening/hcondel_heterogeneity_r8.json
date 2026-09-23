@@ -1,0 +1,33 @@
+{
+  "task": "R8 task2 dual vs hCONDEL-only heterogeneity",
+  "groups": {
+    "dual_support": {
+      "n": 22,
+      "rd": 9
+    },
+    "hcondel_only": {
+      "n": 90,
+      "rd": 9
+    }
+  },
+  "table": [
+    [
+      9,
+      13
+    ],
+    [
+      9,
+      81
+    ]
+  ],
+  "OR": 6.230769230769231,
+  "CI95": [
+    2.086768931198198,
+    18.60411309881309
+  ],
+  "fisher_two_sided_p": 0.0014354433426967677,
+  "fisher_greater_p": 0.0014354433426967675,
+  "logOR_Z": 3.278005133963027,
+  "logOR_Z_p": 0.001045434941980065,
+  "reviewer_claim": "Fisher OR=6.23, P=1.4e-3"
+}
