@@ -1,0 +1,1776 @@
+{
+  "description": "R8 P0-5: decisive control for the GARD alignment-artifact verdict. GARD (Faster mode, codon, rc=4 and rc=2) rerun on codon-aware clean realignments (protein MAFFT + back-translation + >50%-gap column filter) of the SAME input sequences used in the original nucleotide-alignment GARD screening. Layered interpretation: (1) the OLD breakpoint positions and pathological partition trees were alignment artifacts (positions shift or trees become healthy after realignment); (2) breakpoints did NOT universally vanish - a residual subset persists at the same sites with healthy trees and strong delta-cAIC, so recombination confounding cannot be claimed excluded for that subset; (3) the screened 50 genes are all classification_v7=gene-driven because they were selected as top-LRT BUSTED hits, so the residual-recombination scope falls entirely within gene-driven claims.",
+  "n_genes": 50,
+  "old_n_with_breakpoints": 50,
+  "new_rc4_n_with_breakpoints": 50,
+  "new_rc2_n_with_breakpoints": 49,
+  "old_pathological_trees": 44,
+  "new_rc4_pathological_trees": 8,
+  "rc4_trees_fixed_old_patho_to_healthy": 38,
+  "rc4_breakpoint_vanished": 0,
+  "rc4_persist_same_site_healthy_tree": 13,
+  "rc4_persist_same_site_patho_tree": 2,
+  "rc4_persist_diff_site": 35,
+  "median_old_delta_cAIC": 1210.85,
+  "median_new_rc4_delta_cAIC": 341.65,
+  "median_old_max_branch_length": 2244.145,
+  "median_new_rc4_max_branch_length": 1.57,
+  "frac_rc4_vanished": 0.0,
+  "frac_rc4_persist_same_site_healthy": 0.26,
+  "frac_rc4_trees_fixed": 0.864,
+  "old_alignment_identity_contrast_at_breakpoints_mean": 0.003,
+  "old_alignment_identity_contrast_background_mean": 0.01,
+  "classification_overlap": {
+    "persist_any": {
+      "n": 50,
+      "GD": 50,
+      "GD_of_which_relaxed": 1,
+      "RD": 0,
+      "dual": 0,
+      "neutral": 0,
+      "unclassified": 0,
+      "GD_plus_dual": 50
+    },
+    "persist_same_site_healthy_tree": {
+      "n": 13,
+      "GD": 13,
+      "GD_of_which_relaxed": 0,
+      "RD": 0,
+      "dual": 0,
+      "neutral": 0,
+      "unclassified": 0,
+      "GD_plus_dual": 13
+    },
+    "vanished": {
+      "n": 0,
+      "GD": 0,
+      "GD_of_which_relaxed": 0,
+      "RD": 0,
+      "dual": 0,
+      "neutral": 0,
+      "unclassified": 0,
+      "GD_plus_dual": 0
+    },
+    "all_screened_50": {
+      "n": 50,
+      "GD": 50,
+      "GD_of_which_relaxed": 1,
+      "RD": 0,
+      "dual": 0,
+      "neutral": 0,
+      "unclassified": 0,
+      "GD_plus_dual": 50
+    },
+    "genome_wide_baseline": {
+      "n": 4974,
+      "GD": 1266,
+      "GD_of_which_relaxed": 52,
+      "RD": 293,
+      "dual": 11,
+      "neutral": 3404,
+      "unclassified": 0,
+      "GD_plus_dual": 1277
+    },
+    "note": "GD counts include 'gene-driven (relaxed)'; genome_wide_baseline gives the full-universe expectation for enrichment comparison."
+  },
+  "overall_verdict": "mixed_artifact_dominant_with_residual_recombination",
+  "provenance_note": "The original GARD screening used phase3 column-stripped alignments (cleaned_alignments/*.clean.fa, zero gaps remain), which differ substantially from the fasta_v3 alignments used for BUSTED (with gaps, ~10x longer); the clean realignments here start from the SAME .clean.fa sequences as the original GARD, isolating the alignment-method variable.",
+  "per_gene": [
+    {
+      "gene": "ENSG00000012822",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        284
+      ],
+      "old_delta": 2010.5,
+      "old_max_bl": 6112.97,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        407
+      ],
+      "new_rc4_delta": 418.4,
+      "new_rc4_max_bl": 1.58,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        305
+      ],
+      "new_rc2_delta": 385.8,
+      "new_rc2_max_bl": 1.56,
+      "identity_contrast_at_old_bp": [
+        0.009
+      ],
+      "identity_contrast_background_mean": 0.01,
+      "clean_frac_removed": 0.5097,
+      "clean_kept_cols": 606,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 123,
+      "new_rc4_shift_frac_of_len": 0.203,
+      "new_rc2_shift_min_codons": 21,
+      "new_rc2_shift_frac_of_len": 0.035
+    },
+    {
+      "gene": "ENSG00000014138",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        443
+      ],
+      "old_delta": 1568.8,
+      "old_max_bl": 102.97,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        272
+      ],
+      "new_rc4_delta": 308.1,
+      "new_rc4_max_bl": 1.23,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        272
+      ],
+      "new_rc2_delta": 308.1,
+      "new_rc2_max_bl": 1.23,
+      "identity_contrast_at_old_bp": [
+        -0.025
+      ],
+      "identity_contrast_background_mean": 0.019,
+      "clean_frac_removed": 0.6146,
+      "clean_kept_cols": 437,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 171,
+      "new_rc4_shift_frac_of_len": 0.391,
+      "new_rc2_shift_min_codons": 171,
+      "new_rc2_shift_frac_of_len": 0.391
+    },
+    {
+      "gene": "ENSG00000032219",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        341
+      ],
+      "old_delta": 755.3,
+      "old_max_bl": 4774.27,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        422
+      ],
+      "new_rc4_delta": 647.3,
+      "new_rc4_max_bl": 1.61,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        422
+      ],
+      "new_rc2_delta": 647.3,
+      "new_rc2_max_bl": 1.61,
+      "identity_contrast_at_old_bp": [
+        0.033
+      ],
+      "identity_contrast_background_mean": 0.004,
+      "clean_frac_removed": 0.526,
+      "clean_kept_cols": 757,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 81,
+      "new_rc4_shift_frac_of_len": 0.107,
+      "new_rc2_shift_min_codons": 81,
+      "new_rc2_shift_frac_of_len": 0.107
+    },
+    {
+      "gene": "ENSG00000060339",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        221
+      ],
+      "old_delta": 554.4,
+      "old_max_bl": 1947.86,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        332
+      ],
+      "new_rc4_delta": 397.4,
+      "new_rc4_max_bl": 1.79,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        332
+      ],
+      "new_rc2_delta": 397.5,
+      "new_rc2_max_bl": 1.8,
+      "identity_contrast_at_old_bp": [
+        0.001
+      ],
+      "identity_contrast_background_mean": 0.004,
+      "clean_frac_removed": 0.4365,
+      "clean_kept_cols": 515,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 111,
+      "new_rc4_shift_frac_of_len": 0.216,
+      "new_rc2_shift_min_codons": 111,
+      "new_rc2_shift_frac_of_len": 0.216
+    },
+    {
+      "gene": "ENSG00000064763",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        173
+      ],
+      "old_delta": 1255.1,
+      "old_max_bl": 356.04,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        347
+      ],
+      "new_rc4_delta": 690.8,
+      "new_rc4_max_bl": 1.56,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        350
+      ],
+      "new_rc2_delta": 693.0,
+      "new_rc2_max_bl": 1.32,
+      "identity_contrast_at_old_bp": [
+        0.009
+      ],
+      "identity_contrast_background_mean": 0.015,
+      "clean_frac_removed": 0.533,
+      "clean_kept_cols": 411,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 174,
+      "new_rc4_shift_frac_of_len": 0.423,
+      "new_rc2_shift_min_codons": 177,
+      "new_rc2_shift_frac_of_len": 0.431
+    },
+    {
+      "gene": "ENSG00000065357",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        149
+      ],
+      "old_delta": 853.2,
+      "old_max_bl": 4626.97,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        302
+      ],
+      "new_rc4_delta": 528.7,
+      "new_rc4_max_bl": 1.46,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        302
+      ],
+      "new_rc2_delta": 527.6,
+      "new_rc2_max_bl": 1.47,
+      "identity_contrast_at_old_bp": [
+        0.011
+      ],
+      "identity_contrast_background_mean": 0.005,
+      "clean_frac_removed": 0.6883,
+      "clean_kept_cols": 510,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 153,
+      "new_rc4_shift_frac_of_len": 0.3,
+      "new_rc2_shift_min_codons": 153,
+      "new_rc2_shift_frac_of_len": 0.3
+    },
+    {
+      "gene": "ENSG00000072134",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        467
+      ],
+      "old_delta": 1688.6,
+      "old_max_bl": 5560.04,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        365
+      ],
+      "new_rc4_delta": 720.7,
+      "new_rc4_max_bl": 0.88,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        365
+      ],
+      "new_rc2_delta": 720.7,
+      "new_rc2_max_bl": 0.88,
+      "identity_contrast_at_old_bp": [
+        -0.022
+      ],
+      "identity_contrast_background_mean": 0.009,
+      "clean_frac_removed": 0.549,
+      "clean_kept_cols": 479,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 102,
+      "new_rc4_shift_frac_of_len": 0.213,
+      "new_rc2_shift_min_codons": 102,
+      "new_rc2_shift_frac_of_len": 0.213
+    },
+    {
+      "gene": "ENSG00000089169",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        188
+      ],
+      "old_delta": 2002.0,
+      "old_max_bl": 6826.0,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        242
+      ],
+      "new_rc4_delta": 705.3,
+      "new_rc4_max_bl": 1.69,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        245
+      ],
+      "new_rc2_delta": 556.4,
+      "new_rc2_max_bl": 1.69,
+      "identity_contrast_at_old_bp": [
+        0.001
+      ],
+      "identity_contrast_background_mean": 0.02,
+      "clean_frac_removed": 0.596,
+      "clean_kept_cols": 509,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 54,
+      "new_rc4_shift_frac_of_len": 0.106,
+      "new_rc2_shift_min_codons": 57,
+      "new_rc2_shift_frac_of_len": 0.112
+    },
+    {
+      "gene": "ENSG00000092529",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        713
+      ],
+      "old_delta": 1060.3,
+      "old_max_bl": 72.0,
+      "old_pathological_tree": false,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        392
+      ],
+      "new_rc4_delta": 250.4,
+      "new_rc4_max_bl": 3538.03,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        500
+      ],
+      "new_rc2_delta": 249.9,
+      "new_rc2_max_bl": 1.36,
+      "identity_contrast_at_old_bp": [
+        -0.013
+      ],
+      "identity_contrast_background_mean": 0.011,
+      "clean_frac_removed": 0.6159,
+      "clean_kept_cols": 628,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 321,
+      "new_rc4_shift_frac_of_len": 0.511,
+      "new_rc2_shift_min_codons": 213,
+      "new_rc2_shift_frac_of_len": 0.339
+    },
+    {
+      "gene": "ENSG00000092871",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        305
+      ],
+      "old_delta": 2375.6,
+      "old_max_bl": 2866.94,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        263
+      ],
+      "new_rc4_delta": 435.8,
+      "new_rc4_max_bl": 1.67,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        263
+      ],
+      "new_rc2_delta": 435.8,
+      "new_rc2_max_bl": 1.67,
+      "identity_contrast_at_old_bp": [
+        0.008
+      ],
+      "identity_contrast_background_mean": 0.023,
+      "clean_frac_removed": 0.5714,
+      "clean_kept_cols": 282,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 42,
+      "new_rc4_shift_frac_of_len": 0.149,
+      "new_rc2_shift_min_codons": 42,
+      "new_rc2_shift_frac_of_len": 0.149
+    },
+    {
+      "gene": "ENSG00000100796",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        647
+      ],
+      "old_delta": 1366.8,
+      "old_max_bl": 9664.68,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        356
+      ],
+      "new_rc4_delta": 280.0,
+      "new_rc4_max_bl": 1.25,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        356
+      ],
+      "new_rc2_delta": 280.0,
+      "new_rc2_max_bl": 3418.94,
+      "identity_contrast_at_old_bp": [
+        0.001
+      ],
+      "identity_contrast_background_mean": -0.008,
+      "clean_frac_removed": 0.5757,
+      "clean_kept_cols": 667,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 291,
+      "new_rc4_shift_frac_of_len": 0.436,
+      "new_rc2_shift_min_codons": 291,
+      "new_rc2_shift_frac_of_len": 0.436
+    },
+    {
+      "gene": "ENSG00000109046",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        281
+      ],
+      "old_delta": 656.0,
+      "old_max_bl": 215.77,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        305
+      ],
+      "new_rc4_delta": 411.4,
+      "new_rc4_max_bl": 1.58,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        305
+      ],
+      "new_rc2_delta": 408.8,
+      "new_rc2_max_bl": 1.57,
+      "identity_contrast_at_old_bp": [
+        0.015
+      ],
+      "identity_contrast_background_mean": 0.008,
+      "clean_frac_removed": 0.5292,
+      "clean_kept_cols": 322,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 24,
+      "new_rc4_shift_frac_of_len": 0.075,
+      "new_rc2_shift_min_codons": 24,
+      "new_rc2_shift_frac_of_len": 0.075
+    },
+    {
+      "gene": "ENSG00000110844",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        620
+      ],
+      "old_delta": 2090.1,
+      "old_max_bl": 4237.85,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        500
+      ],
+      "new_rc4_delta": 786.4,
+      "new_rc4_max_bl": 4326.92,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        491
+      ],
+      "new_rc2_delta": 773.1,
+      "new_rc2_max_bl": 732.31,
+      "identity_contrast_at_old_bp": [
+        -0.025
+      ],
+      "identity_contrast_background_mean": 0.012,
+      "clean_frac_removed": 0.5693,
+      "clean_kept_cols": 637,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 120,
+      "new_rc4_shift_frac_of_len": 0.188,
+      "new_rc2_shift_min_codons": 129,
+      "new_rc2_shift_frac_of_len": 0.203
+    },
+    {
+      "gene": "ENSG00000111424",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        233
+      ],
+      "old_delta": 1514.1,
+      "old_max_bl": 349.4,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        296
+      ],
+      "new_rc4_delta": 547.5,
+      "new_rc4_max_bl": 1.03,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        296
+      ],
+      "new_rc2_delta": 547.5,
+      "new_rc2_max_bl": 1.17,
+      "identity_contrast_at_old_bp": [
+        -0.017
+      ],
+      "identity_contrast_background_mean": 0.011,
+      "clean_frac_removed": 0.4745,
+      "clean_kept_cols": 392,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 63,
+      "new_rc4_shift_frac_of_len": 0.161,
+      "new_rc2_shift_min_codons": 63,
+      "new_rc2_shift_frac_of_len": 0.161
+    },
+    {
+      "gene": "ENSG00000115839",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        428
+      ],
+      "old_delta": 1042.2,
+      "old_max_bl": 2219.87,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        314
+      ],
+      "new_rc4_delta": 667.4,
+      "new_rc4_max_bl": 1.62,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        314
+      ],
+      "new_rc2_delta": 667.4,
+      "new_rc2_max_bl": 1.62,
+      "identity_contrast_at_old_bp": [
+        -0.006
+      ],
+      "identity_contrast_background_mean": 0.0,
+      "clean_frac_removed": 0.6582,
+      "clean_kept_cols": 798,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 114,
+      "new_rc4_shift_frac_of_len": 0.143,
+      "new_rc2_shift_min_codons": 114,
+      "new_rc2_shift_frac_of_len": 0.143
+    },
+    {
+      "gene": "ENSG00000134897",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        401
+      ],
+      "old_delta": 1708.8,
+      "old_max_bl": 48.86,
+      "old_pathological_tree": false,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        422
+      ],
+      "new_rc4_delta": 2717.7,
+      "new_rc4_max_bl": 35.01,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        422
+      ],
+      "new_rc2_delta": 2717.7,
+      "new_rc2_max_bl": 25.04,
+      "identity_contrast_at_old_bp": [
+        0.061
+      ],
+      "identity_contrast_background_mean": 0.011,
+      "clean_frac_removed": 0.4458,
+      "clean_kept_cols": 440,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 21,
+      "new_rc4_shift_frac_of_len": 0.048,
+      "new_rc2_shift_min_codons": 21,
+      "new_rc2_shift_frac_of_len": 0.048
+    },
+    {
+      "gene": "ENSG00000134899",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        410
+      ],
+      "old_delta": 1807.5,
+      "old_max_bl": 144.19,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        422
+      ],
+      "new_rc4_delta": 2157.6,
+      "new_rc4_max_bl": 2603.66,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        422
+      ],
+      "new_rc2_delta": 2157.6,
+      "new_rc2_max_bl": 1.69,
+      "identity_contrast_at_old_bp": [
+        0.037
+      ],
+      "identity_contrast_background_mean": 0.009,
+      "clean_frac_removed": 0.4416,
+      "clean_kept_cols": 440,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_patho_tree",
+      "new_rc4_shift_min_codons": 12,
+      "new_rc4_shift_frac_of_len": 0.027,
+      "new_rc2_shift_min_codons": 12,
+      "new_rc2_shift_frac_of_len": 0.027
+    },
+    {
+      "gene": "ENSG00000135119",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        281
+      ],
+      "old_delta": 669.6,
+      "old_max_bl": 2635.42,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        302
+      ],
+      "new_rc4_delta": 48.9,
+      "new_rc4_max_bl": 1.45,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        302
+      ],
+      "new_rc2_delta": 48.9,
+      "new_rc2_max_bl": 1.45,
+      "identity_contrast_at_old_bp": [
+        0.009
+      ],
+      "identity_contrast_background_mean": 0.021,
+      "clean_frac_removed": 0.5513,
+      "clean_kept_cols": 398,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 21,
+      "new_rc4_shift_frac_of_len": 0.053,
+      "new_rc2_shift_min_codons": 21,
+      "new_rc2_shift_frac_of_len": 0.053
+    },
+    {
+      "gene": "ENSG00000136942",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        101
+      ],
+      "old_delta": 344.6,
+      "old_max_bl": 186.67,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        95
+      ],
+      "new_rc4_delta": 97.8,
+      "new_rc4_max_bl": 2.04,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        95
+      ],
+      "new_rc2_delta": 97.8,
+      "new_rc2_max_bl": 2.03,
+      "identity_contrast_at_old_bp": [
+        0.058
+      ],
+      "identity_contrast_background_mean": 0.074,
+      "clean_frac_removed": 0.4803,
+      "clean_kept_cols": 119,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 6,
+      "new_rc4_shift_frac_of_len": 0.05,
+      "new_rc2_shift_min_codons": 6,
+      "new_rc2_shift_frac_of_len": 0.05
+    },
+    {
+      "gene": "ENSG00000137075",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        278
+      ],
+      "old_delta": 795.1,
+      "old_max_bl": 1905.33,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        365
+      ],
+      "new_rc4_delta": 825.5,
+      "new_rc4_max_bl": 1.62,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        365
+      ],
+      "new_rc2_delta": 822.9,
+      "new_rc2_max_bl": 1.62,
+      "identity_contrast_at_old_bp": [
+        0.017
+      ],
+      "identity_contrast_background_mean": 0.01,
+      "clean_frac_removed": 0.5258,
+      "clean_kept_cols": 405,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 87,
+      "new_rc4_shift_frac_of_len": 0.215,
+      "new_rc2_shift_min_codons": 87,
+      "new_rc2_shift_frac_of_len": 0.215
+    },
+    {
+      "gene": "ENSG00000137700",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        305
+      ],
+      "old_delta": 1299.1,
+      "old_max_bl": 193.54,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        362
+      ],
+      "new_rc4_delta": 274.6,
+      "new_rc4_max_bl": 1.25,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        362
+      ],
+      "new_rc2_delta": 423.2,
+      "new_rc2_max_bl": 1.24,
+      "identity_contrast_at_old_bp": [
+        0.014
+      ],
+      "identity_contrast_background_mean": 0.015,
+      "clean_frac_removed": 0.5758,
+      "clean_kept_cols": 389,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 57,
+      "new_rc4_shift_frac_of_len": 0.147,
+      "new_rc2_shift_min_codons": 57,
+      "new_rc2_shift_frac_of_len": 0.147
+    },
+    {
+      "gene": "ENSG00000137727",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        839
+      ],
+      "old_delta": 2213.9,
+      "old_max_bl": 4872.35,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        761
+      ],
+      "new_rc4_delta": 638.1,
+      "new_rc4_max_bl": 1.59,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        761
+      ],
+      "new_rc2_delta": 638.1,
+      "new_rc2_max_bl": 1.6,
+      "identity_contrast_at_old_bp": [
+        0.014
+      ],
+      "identity_contrast_background_mean": 0.002,
+      "clean_frac_removed": 0.5873,
+      "clean_kept_cols": 785,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 78,
+      "new_rc4_shift_frac_of_len": 0.099,
+      "new_rc2_shift_min_codons": 78,
+      "new_rc2_shift_frac_of_len": 0.099
+    },
+    {
+      "gene": "ENSG00000139131",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        431
+      ],
+      "old_delta": 1166.6,
+      "old_max_bl": 5575.59,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        350
+      ],
+      "new_rc4_delta": 642.8,
+      "new_rc4_max_bl": 3646.26,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        110
+      ],
+      "new_rc2_delta": 82.4,
+      "new_rc2_max_bl": 3580.77,
+      "identity_contrast_at_old_bp": [
+        0.019
+      ],
+      "identity_contrast_background_mean": 0.016,
+      "clean_frac_removed": 0.2697,
+      "clean_kept_cols": 463,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 81,
+      "new_rc4_shift_frac_of_len": 0.175,
+      "new_rc2_shift_min_codons": 321,
+      "new_rc2_shift_frac_of_len": 0.693
+    },
+    {
+      "gene": "ENSG00000139155",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        365
+      ],
+      "old_delta": 1512.9,
+      "old_max_bl": 428.6,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        494
+      ],
+      "new_rc4_delta": 953.0,
+      "new_rc4_max_bl": 1.4,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        494
+      ],
+      "new_rc2_delta": 953.0,
+      "new_rc2_max_bl": 1.39,
+      "identity_contrast_at_old_bp": [
+        -0.065
+      ],
+      "identity_contrast_background_mean": 0.015,
+      "clean_frac_removed": 0.4883,
+      "clean_kept_cols": 591,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 129,
+      "new_rc4_shift_frac_of_len": 0.218,
+      "new_rc2_shift_min_codons": 129,
+      "new_rc2_shift_frac_of_len": 0.218
+    },
+    {
+      "gene": "ENSG00000139567",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        356
+      ],
+      "old_delta": 656.8,
+      "old_max_bl": 2646.2,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        440
+      ],
+      "new_rc4_delta": 548.1,
+      "new_rc4_max_bl": 1.37,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        323
+      ],
+      "new_rc2_delta": 554.5,
+      "new_rc2_max_bl": 2508.4,
+      "identity_contrast_at_old_bp": [
+        0.0
+      ],
+      "identity_contrast_background_mean": -0.001,
+      "clean_frac_removed": 0.5181,
+      "clean_kept_cols": 465,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 84,
+      "new_rc4_shift_frac_of_len": 0.181,
+      "new_rc2_shift_min_codons": 33,
+      "new_rc2_shift_frac_of_len": 0.071
+    },
+    {
+      "gene": "ENSG00000139579",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        83
+      ],
+      "old_delta": 159.7,
+      "old_max_bl": 1549.71,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        98
+      ],
+      "new_rc4_delta": 75.7,
+      "new_rc4_max_bl": 1.34,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        98
+      ],
+      "new_rc2_delta": 75.6,
+      "new_rc2_max_bl": 1.35,
+      "identity_contrast_at_old_bp": [
+        0.012
+      ],
+      "identity_contrast_background_mean": 0.048,
+      "clean_frac_removed": 0.3039,
+      "clean_kept_cols": 126,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 15,
+      "new_rc4_shift_frac_of_len": 0.119,
+      "new_rc2_shift_min_codons": 15,
+      "new_rc2_shift_frac_of_len": 0.119
+    },
+    {
+      "gene": "ENSG00000139636",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        341
+      ],
+      "old_delta": 801.8,
+      "old_max_bl": 2697.4,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        194
+      ],
+      "new_rc4_delta": 131.0,
+      "new_rc4_max_bl": 1.42,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        191
+      ],
+      "new_rc2_delta": 136.2,
+      "new_rc2_max_bl": 1.4,
+      "identity_contrast_at_old_bp": [
+        -0.066
+      ],
+      "identity_contrast_background_mean": 0.016,
+      "clean_frac_removed": 0.6667,
+      "clean_kept_cols": 387,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 147,
+      "new_rc4_shift_frac_of_len": 0.38,
+      "new_rc2_shift_min_codons": 150,
+      "new_rc2_shift_frac_of_len": 0.388
+    },
+    {
+      "gene": "ENSG00000144401",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        113
+      ],
+      "old_delta": 469.4,
+      "old_max_bl": 6977.66,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        65
+      ],
+      "new_rc4_delta": 30.7,
+      "new_rc4_max_bl": 1.48,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        65
+      ],
+      "new_rc2_delta": 30.7,
+      "new_rc2_max_bl": 1.48,
+      "identity_contrast_at_old_bp": [
+        0.054
+      ],
+      "identity_contrast_background_mean": 0.007,
+      "clean_frac_removed": 0.7524,
+      "clean_kept_cols": 103,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 48,
+      "new_rc4_shift_frac_of_len": 0.466,
+      "new_rc2_shift_min_codons": 48,
+      "new_rc2_shift_frac_of_len": 0.466
+    },
+    {
+      "gene": "ENSG00000149091",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        425
+      ],
+      "old_delta": 2641.6,
+      "old_max_bl": 7438.28,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        326
+      ],
+      "new_rc4_delta": 518.6,
+      "new_rc4_max_bl": 1.2,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        326
+      ],
+      "new_rc2_delta": 518.5,
+      "new_rc2_max_bl": 1.2,
+      "identity_contrast_at_old_bp": [
+        -0.007
+      ],
+      "identity_contrast_background_mean": 0.013,
+      "clean_frac_removed": 0.6215,
+      "clean_kept_cols": 847,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 99,
+      "new_rc4_shift_frac_of_len": 0.117,
+      "new_rc2_shift_min_codons": 99,
+      "new_rc2_shift_frac_of_len": 0.117
+    },
+    {
+      "gene": "ENSG00000151461",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        575
+      ],
+      "old_delta": 1319.3,
+      "old_max_bl": 3943.14,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        779
+      ],
+      "new_rc4_delta": 1328.8,
+      "new_rc4_max_bl": 1.07,
+      "new_rc2_n_bp": null,
+      "new_rc2_bp_sites": null,
+      "new_rc2_delta": null,
+      "new_rc2_max_bl": null,
+      "identity_contrast_at_old_bp": [
+        0.0
+      ],
+      "identity_contrast_background_mean": -0.011,
+      "clean_frac_removed": 0.5796,
+      "clean_kept_cols": 832,
+      "classification_v7": "gene-driven (relaxed)",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 204,
+      "new_rc4_shift_frac_of_len": 0.245
+    },
+    {
+      "gene": "ENSG00000151746",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        383
+      ],
+      "old_delta": 2625.8,
+      "old_max_bl": 131.84,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        227
+      ],
+      "new_rc4_delta": 233.7,
+      "new_rc4_max_bl": 4726.62,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        227
+      ],
+      "new_rc2_delta": 233.7,
+      "new_rc2_max_bl": 1.78,
+      "identity_contrast_at_old_bp": [
+        0.004
+      ],
+      "identity_contrast_background_mean": 0.024,
+      "clean_frac_removed": 0.5691,
+      "clean_kept_cols": 717,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 156,
+      "new_rc4_shift_frac_of_len": 0.218,
+      "new_rc2_shift_min_codons": 156,
+      "new_rc2_shift_frac_of_len": 0.218
+    },
+    {
+      "gene": "ENSG00000153179",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        167
+      ],
+      "old_delta": 264.5,
+      "old_max_bl": 1445.94,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        86
+      ],
+      "new_rc4_delta": 3.0,
+      "new_rc4_max_bl": 1024.14,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        86
+      ],
+      "new_rc2_delta": 3.0,
+      "new_rc2_max_bl": 1242.35,
+      "identity_contrast_at_old_bp": [
+        -0.012
+      ],
+      "identity_contrast_background_mean": 0.005,
+      "clean_frac_removed": 0.622,
+      "clean_kept_cols": 251,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 81,
+      "new_rc4_shift_frac_of_len": 0.323,
+      "new_rc2_shift_min_codons": 81,
+      "new_rc2_shift_frac_of_len": 0.323
+    },
+    {
+      "gene": "ENSG00000162065",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        290
+      ],
+      "old_delta": 762.0,
+      "old_max_bl": 277.05,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        668
+      ],
+      "new_rc4_delta": 173.6,
+      "new_rc4_max_bl": 1.05,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        668
+      ],
+      "new_rc2_delta": 173.6,
+      "new_rc2_max_bl": 1.05,
+      "identity_contrast_at_old_bp": [
+        -0.063
+      ],
+      "identity_contrast_background_mean": -0.018,
+      "clean_frac_removed": 0.2442,
+      "clean_kept_cols": 687,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 378,
+      "new_rc4_shift_frac_of_len": 0.55,
+      "new_rc2_shift_min_codons": 378,
+      "new_rc2_shift_frac_of_len": 0.55
+    },
+    {
+      "gene": "ENSG00000166866",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        788
+      ],
+      "old_delta": 1409.5,
+      "old_max_bl": 13.47,
+      "old_pathological_tree": false,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        293
+      ],
+      "new_rc4_delta": 30.6,
+      "new_rc4_max_bl": 2679.95,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        767
+      ],
+      "new_rc2_delta": 68.5,
+      "new_rc2_max_bl": 1709.98,
+      "identity_contrast_at_old_bp": [
+        -0.007
+      ],
+      "identity_contrast_background_mean": -0.005,
+      "clean_frac_removed": 0.4128,
+      "clean_kept_cols": 855,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 495,
+      "new_rc4_shift_frac_of_len": 0.579,
+      "new_rc2_shift_min_codons": 21,
+      "new_rc2_shift_frac_of_len": 0.025
+    },
+    {
+      "gene": "ENSG00000167612",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        32
+      ],
+      "old_delta": 126.0,
+      "old_max_bl": 193.4,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        155
+      ],
+      "new_rc4_delta": 100.3,
+      "new_rc4_max_bl": 1.18,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        155
+      ],
+      "new_rc2_delta": 100.3,
+      "new_rc2_max_bl": 1.36,
+      "identity_contrast_at_old_bp": [
+        0.102
+      ],
+      "identity_contrast_background_mean": -0.006,
+      "clean_frac_removed": 0.1612,
+      "clean_kept_cols": 229,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 123,
+      "new_rc4_shift_frac_of_len": 0.537,
+      "new_rc2_shift_min_codons": 123,
+      "new_rc2_shift_frac_of_len": 0.537
+    },
+    {
+      "gene": "ENSG00000167965",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        116
+      ],
+      "old_delta": 758.1,
+      "old_max_bl": 451.74,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        212
+      ],
+      "new_rc4_delta": 336.5,
+      "new_rc4_max_bl": 0.85,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        227
+      ],
+      "new_rc2_delta": 340.4,
+      "new_rc2_max_bl": 0.91,
+      "identity_contrast_at_old_bp": [
+        -0.002
+      ],
+      "identity_contrast_background_mean": 0.005,
+      "clean_frac_removed": 0.6582,
+      "clean_kept_cols": 256,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 96,
+      "new_rc4_shift_frac_of_len": 0.375,
+      "new_rc2_shift_min_codons": 111,
+      "new_rc2_shift_frac_of_len": 0.434
+    },
+    {
+      "gene": "ENSG00000168961",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        317
+      ],
+      "old_delta": 1356.1,
+      "old_max_bl": 41.24,
+      "old_pathological_tree": false,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        122
+      ],
+      "new_rc4_delta": 254.2,
+      "new_rc4_max_bl": 37.81,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        122
+      ],
+      "new_rc2_delta": 240.0,
+      "new_rc2_max_bl": 47.86,
+      "identity_contrast_at_old_bp": [
+        0.036
+      ],
+      "identity_contrast_background_mean": 0.011,
+      "clean_frac_removed": 0.7146,
+      "clean_kept_cols": 244,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 195,
+      "new_rc4_shift_frac_of_len": 0.799,
+      "new_rc2_shift_min_codons": 195,
+      "new_rc2_shift_frac_of_len": 0.799
+    },
+    {
+      "gene": "ENSG00000171723",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        506
+      ],
+      "old_delta": 1288.6,
+      "old_max_bl": 7911.19,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        152
+      ],
+      "new_rc4_delta": 241.4,
+      "new_rc4_max_bl": 2.05,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        152
+      ],
+      "new_rc2_delta": 241.4,
+      "new_rc2_max_bl": 2.0,
+      "identity_contrast_at_old_bp": [
+        0.007
+      ],
+      "identity_contrast_background_mean": 0.004,
+      "clean_frac_removed": 0.703,
+      "clean_kept_cols": 513,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 354,
+      "new_rc4_shift_frac_of_len": 0.69,
+      "new_rc2_shift_min_codons": 354,
+      "new_rc2_shift_frac_of_len": 0.69
+    },
+    {
+      "gene": "ENSG00000176658",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        137
+      ],
+      "old_delta": 1648.1,
+      "old_max_bl": 10839.74,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        137
+      ],
+      "new_rc4_delta": 346.8,
+      "new_rc4_max_bl": 103.72,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        137
+      ],
+      "new_rc2_delta": 346.7,
+      "new_rc2_max_bl": 1.2,
+      "identity_contrast_at_old_bp": [
+        -0.014
+      ],
+      "identity_contrast_background_mean": 0.004,
+      "clean_frac_removed": 0.7121,
+      "clean_kept_cols": 592,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_patho_tree",
+      "new_rc4_shift_min_codons": 0,
+      "new_rc4_shift_frac_of_len": 0.0,
+      "new_rc2_shift_min_codons": 0,
+      "new_rc2_shift_frac_of_len": 0.0
+    },
+    {
+      "gene": "ENSG00000177119",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        200
+      ],
+      "old_delta": 1519.1,
+      "old_max_bl": 9678.22,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        491
+      ],
+      "new_rc4_delta": 329.0,
+      "new_rc4_max_bl": 1.3,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        422
+      ],
+      "new_rc2_delta": 294.7,
+      "new_rc2_max_bl": 0.75,
+      "identity_contrast_at_old_bp": [
+        0.021
+      ],
+      "identity_contrast_background_mean": 0.006,
+      "clean_frac_removed": 0.7294,
+      "clean_kept_cols": 588,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 291,
+      "new_rc4_shift_frac_of_len": 0.495,
+      "new_rc2_shift_min_codons": 222,
+      "new_rc2_shift_frac_of_len": 0.378
+    },
+    {
+      "gene": "ENSG00000179580",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        203
+      ],
+      "old_delta": 1719.1,
+      "old_max_bl": 4551.77,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        155
+      ],
+      "new_rc4_delta": 57.2,
+      "new_rc4_max_bl": 0.51,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        155
+      ],
+      "new_rc2_delta": 57.2,
+      "new_rc2_max_bl": 0.51,
+      "identity_contrast_at_old_bp": [
+        0.013
+      ],
+      "identity_contrast_background_mean": 0.006,
+      "clean_frac_removed": 0.5597,
+      "clean_kept_cols": 214,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 48,
+      "new_rc4_shift_frac_of_len": 0.224,
+      "new_rc2_shift_min_codons": 48,
+      "new_rc2_shift_frac_of_len": 0.224
+    },
+    {
+      "gene": "ENSG00000182732",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        239
+      ],
+      "old_delta": 1089.7,
+      "old_max_bl": 4986.9,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        233
+      ],
+      "new_rc4_delta": 280.8,
+      "new_rc4_max_bl": 1.61,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        221
+      ],
+      "new_rc2_delta": 309.4,
+      "new_rc2_max_bl": 1.61,
+      "identity_contrast_at_old_bp": [
+        -0.006
+      ],
+      "identity_contrast_background_mean": 0.021,
+      "clean_frac_removed": 0.6515,
+      "clean_kept_cols": 336,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 6,
+      "new_rc4_shift_frac_of_len": 0.018,
+      "new_rc2_shift_min_codons": 18,
+      "new_rc2_shift_frac_of_len": 0.054
+    },
+    {
+      "gene": "ENSG00000183621",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        455
+      ],
+      "old_delta": 1287.6,
+      "old_max_bl": 1855.18,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        389
+      ],
+      "new_rc4_delta": 2050.3,
+      "new_rc4_max_bl": 0.85,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        395
+      ],
+      "new_rc2_delta": 2053.5,
+      "new_rc2_max_bl": 0.87,
+      "identity_contrast_at_old_bp": [
+        -0.021
+      ],
+      "identity_contrast_background_mean": 0.008,
+      "clean_frac_removed": 0.5512,
+      "clean_kept_cols": 670,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 66,
+      "new_rc4_shift_frac_of_len": 0.099,
+      "new_rc2_shift_min_codons": 60,
+      "new_rc2_shift_frac_of_len": 0.09
+    },
+    {
+      "gene": "ENSG00000185033",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        110
+      ],
+      "old_delta": 263.6,
+      "old_max_bl": 2534.02,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        194
+      ],
+      "new_rc4_delta": 81.2,
+      "new_rc4_max_bl": 1.77,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        194
+      ],
+      "new_rc2_delta": 81.2,
+      "new_rc2_max_bl": 2083.59,
+      "identity_contrast_at_old_bp": [
+        -0.017
+      ],
+      "identity_contrast_background_mean": 0.014,
+      "clean_frac_removed": 0.5575,
+      "clean_kept_cols": 743,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 84,
+      "new_rc4_shift_frac_of_len": 0.113,
+      "new_rc2_shift_min_codons": 84,
+      "new_rc2_shift_frac_of_len": 0.113
+    },
+    {
+      "gene": "ENSG00000185591",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        269
+      ],
+      "old_delta": 525.7,
+      "old_max_bl": 38.59,
+      "old_pathological_tree": false,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        296
+      ],
+      "new_rc4_delta": 455.5,
+      "new_rc4_max_bl": 1.23,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        290
+      ],
+      "new_rc2_delta": 474.7,
+      "new_rc2_max_bl": 1.26,
+      "identity_contrast_at_old_bp": [
+        -0.015
+      ],
+      "identity_contrast_background_mean": 0.003,
+      "clean_frac_removed": 0.2885,
+      "clean_kept_cols": 629,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 27,
+      "new_rc4_shift_frac_of_len": 0.043,
+      "new_rc2_shift_min_codons": 21,
+      "new_rc2_shift_frac_of_len": 0.033
+    },
+    {
+      "gene": "ENSG00000196547",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        257
+      ],
+      "old_delta": 1926.5,
+      "old_max_bl": 34.42,
+      "old_pathological_tree": false,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        767
+      ],
+      "new_rc4_delta": 424.1,
+      "new_rc4_max_bl": 1.16,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        767
+      ],
+      "new_rc2_delta": 420.0,
+      "new_rc2_max_bl": 1.15,
+      "identity_contrast_at_old_bp": [
+        -0.006
+      ],
+      "identity_contrast_background_mean": 0.006,
+      "clean_frac_removed": 0.7124,
+      "clean_kept_cols": 793,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 510,
+      "new_rc4_shift_frac_of_len": 0.643,
+      "new_rc2_shift_min_codons": 510,
+      "new_rc2_shift_frac_of_len": 0.643
+    },
+    {
+      "gene": "ENSG00000197859",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        77
+      ],
+      "old_delta": 889.7,
+      "old_max_bl": 1298.69,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        107
+      ],
+      "new_rc4_delta": 48.3,
+      "new_rc4_max_bl": 1.31,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        104
+      ],
+      "new_rc2_delta": 42.3,
+      "new_rc2_max_bl": 1.28,
+      "identity_contrast_at_old_bp": [
+        0.007
+      ],
+      "identity_contrast_background_mean": 0.021,
+      "clean_frac_removed": 0.4925,
+      "clean_kept_cols": 135,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 30,
+      "new_rc4_shift_frac_of_len": 0.222,
+      "new_rc2_shift_min_codons": 27,
+      "new_rc2_shift_frac_of_len": 0.2
+    },
+    {
+      "gene": "ENSG00000198040",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        20
+      ],
+      "old_delta": 78.3,
+      "old_max_bl": 2564.05,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        248
+      ],
+      "new_rc4_delta": 266.1,
+      "new_rc4_max_bl": 1.3,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        242
+      ],
+      "new_rc2_delta": 279.1,
+      "new_rc2_max_bl": 1.3,
+      "identity_contrast_at_old_bp": [
+        0.006
+      ],
+      "identity_contrast_background_mean": -0.001,
+      "clean_frac_removed": 0.5327,
+      "clean_kept_cols": 422,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_diff_site",
+      "new_rc4_shift_min_codons": 228,
+      "new_rc4_shift_frac_of_len": 0.54,
+      "new_rc2_shift_min_codons": 222,
+      "new_rc2_shift_frac_of_len": 0.526
+    },
+    {
+      "gene": "ENSG00000198353",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        227
+      ],
+      "old_delta": 626.0,
+      "old_max_bl": 5668.86,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        248
+      ],
+      "new_rc4_delta": 216.7,
+      "new_rc4_max_bl": 2.29,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        248
+      ],
+      "new_rc2_delta": 216.7,
+      "new_rc2_max_bl": 2.29,
+      "identity_contrast_at_old_bp": [
+        -0.003
+      ],
+      "identity_contrast_background_mean": 0.017,
+      "clean_frac_removed": 0.3258,
+      "clean_kept_cols": 267,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 21,
+      "new_rc4_shift_frac_of_len": 0.079,
+      "new_rc2_shift_min_codons": 21,
+      "new_rc2_shift_frac_of_len": 0.079
+    },
+    {
+      "gene": "ENSG00000205937",
+      "old_n_bp": 1,
+      "old_bp_sites": [
+        215
+      ],
+      "old_delta": 378.0,
+      "old_max_bl": 2268.42,
+      "old_pathological_tree": true,
+      "new_rc4_n_bp": 1,
+      "new_rc4_bp_sites": [
+        194
+      ],
+      "new_rc4_delta": 224.4,
+      "new_rc4_max_bl": 3.54,
+      "new_rc2_n_bp": 1,
+      "new_rc2_bp_sites": [
+        209
+      ],
+      "new_rc2_delta": 211.0,
+      "new_rc2_max_bl": 322.11,
+      "identity_contrast_at_old_bp": [
+        -0.028
+      ],
+      "identity_contrast_background_mean": 0.005,
+      "clean_frac_removed": 0.4652,
+      "clean_kept_cols": 238,
+      "classification_v7": "gene-driven",
+      "verdict": "breakpoint_persist_same_site_healthy_tree",
+      "new_rc4_shift_min_codons": 21,
+      "new_rc4_shift_frac_of_len": 0.088,
+      "new_rc2_shift_min_codons": 6,
+      "new_rc2_shift_frac_of_len": 0.025
+    }
+  ]
+}

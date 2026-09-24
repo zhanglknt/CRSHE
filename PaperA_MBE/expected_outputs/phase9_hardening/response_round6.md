@@ -212,3 +212,14 @@ general-purpose-30 盲验证 batch 10：**8/8 项 PASS，0 FAIL**（覆盖 GWAS 
 - 均分 6.9（R5 7.5 / R6 7.5 / R7 6.6 / R8 6.9），3 Minor + 2 Major
 - 7 个 P0 簇全部关闭；P0-5 GARD 清洁比对对照待 WSL 黑名单解除（50 基因 Faster rc2/rc4 双跑已就绪，~3-4h）
 - 用户侧待决：标题、Zenodo DOI、基金号、AI 披露、审稿人邮箱（Scally/Fraser）、**MBE 格式决策（Discoveries 短格式 vs full Research Article，editor 警告 desk return 风险）**
+
+### R8 P0-5 GARD 清洁比对对照闭环 (2026-09-24)
+
+- **计算**：50 个 top-LRT GD 基因 codon-aware 清洁重比对（蛋白 MAFFT + 回译 + >50% gap 列剔除）+ GARD Faster rc=4/rc=2 双跑，100/100 成功 0 FAIL；team-lead 名下 Windows 侧分钟级看门狗（三层免疫）值守 5h 完成
+- **终版裁决 `mixed_artifact_dominant_with_residual_recombination`**（gard_clean_control_r8.json/csv）：
+  - (i) 旧断点位置+病态树=比对伪影：44 棵病态树 38 棵修复（86.4%），清洁后病态 8/50；maxBL 中位 2,244→1.57；35/50（70%）断点移位 10–80% 比对长度——伪影诊断被验证而非推翻
+  - (ii) 但断点 0/50 消失；13/50（26%）同位点（±50 codon）持续+树健康+强支持（Δc-AIC 30.7–2,718 中位 217；rc=2 双跑 13/13 一致）——重组/等价谱系异质签名对该子集不可排除，13 基因正选择判定标 tentative
+  - (iii) 范围有界：50/50 全 GD（top-LRT 筛选结构所致），13/1,214 ≈ 1.1%，prevalence 支柱与标题结论不受影响
+- **整合（5 锚点，Branch D 三层叙事）**：Methods L32 GARD 句 / Results L106 括号句 / Discussion L142 段末插入句 / Limitations (3) 整条两层重写 / Supplementary S2 GARD 整段两段式重写；串行 python 脚本 + count==1 断言
+- **盲验证**（verify-gard-r8 独立从 JSON/CSV 重算，blind_verification_r8_gard.md）：初判 6/7 PASS，声明 3 FAIL——Limitations 句括号把全 50 树中位数（2,244/1.57）误挂到 44/38 子集（子集真值 2,599.7→1.435）；已改箭头式 screen-wide 表述（与 L106/S2 一致），复核后转 PASS
+- **交付链**：docx×2 + 单 PDF + zip 重建（详见当日日志）；CRSHE 同步 gard_clean_control_r8.json/csv + 盲验证报告 + 本日志
