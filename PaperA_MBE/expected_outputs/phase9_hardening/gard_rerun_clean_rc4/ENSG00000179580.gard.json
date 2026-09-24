@@ -1,0 +1,111 @@
+{
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond",
+   "citation":"**Automated Phylogenetic Detection of Recombination Using a Genetic Algorithm**, _Mol Biol Evol 23(10), 1891–1901",
+   "contact":"spond@temple.edu",
+   "info":"GARD : Genetic Algorithms for Recombination Detection. Implements a heuristic\n    approach to screening alignments of sequences for recombination, by using the CHC genetic algorithm to search for phylogenetic\n    incongruence among different partitions of the data. The number of partitions is determined using a step-up procedure, while the\n    placement of breakpoints is searched for with the GA. The best fitting model (based on c-AIC) is returned; and additional post-hoc\n    tests run to distinguish topological incongruence from rate-variation. v0.2 adds  and spooling results to JSON after each breakpoint search conclusion",
+   "requirements":"A sequence alignment.",
+   "version":"0.2"
+  },
+ "baselineScore":3754.336394450287,
+ "bestModelAICc":3697.170920413496,
+ "breakpointData":{
+   "0":{
+     "bps":      [
+[1, 155] 
+      ],
+     "tree":"((human:0,bonobo:0)Node1:0.006469236542151765,gorilla:0,(((((gibbon:0.07354811706004143,baboon:0.004028998985148518)Node9:0.03385380435973825,marmoset:0.009804480736428429)Node8:0.04331608195021458,squirrel:0.1483643437783099)Node7:0.5139372522431679,vervet:0.01883840418415796)Node6:0.0007175611715983949,rhesus:0.006273692561304216)Node5:0.03984991466509084)"
+    },
+   "1":{
+     "bps":      [
+[156, 214] 
+      ],
+     "tree":"((((human:0.09653585274333382,bonobo:0)Node3:0,gorilla:0.003785396090337294)Node2:0.2643805682875482,squirrel:0.04556009489433708)Node1:1.392945291275255e-18,(gibbon:0.04606292307177096,(baboon:0.002573250299844687,(rhesus:0,vervet:0.02616145267163701)Node12:0.04890478194823036)Node10:0.03847336585415096)Node8:0.1174793935386233,marmoset:0.07638216643984379)"
+    }
+  },
+ "improvements":{
+   "0":{
+     "breakpoints":      [
+[155] 
+      ],
+     "deltaAICc":57.16547403679078
+    }
+  },
+ "input":{
+   "file name":"/root/hyphy_work_phase9/gard_fasta_clean/ENSG00000179580.fasta",
+   "number of sequences":9,
+   "number of sites":214,
+   "partition count":1
+  },
+ "masterList":{
+   "{\n{107} \n}":4364.741142861239,
+   "{\n{110} \n}":4180.833016149458,
+   "{\n{113} \n}":4187.111308086672,
+   "{\n{116} \n}":4212.673018801186,
+   "{\n{119} \n}":3834.416758146035,
+   "{\n{131} \n}":4413.182213657152,
+   "{\n{134} \n}":3797.768258721775,
+   "{\n{137} \n}":3803.90710657903,
+   "{\n{149} \n}":3714.287910200766,
+   "{\n{152} \n}":3771.682886472911,
+   "{\n{155} \n}":3697.170920413496,
+   "{\n{158} \n}":3754.506188649701,
+   "{\n{161} \n}":3818.1603505132,
+   "{\n{164} \n}":3822.217512198535,
+   "{\n{167} \n}":3771.825154213567,
+   "{\n{170} \n}":3843.616800834147,
+   "{\n{173} \n}":3818.603049302902,
+   "{\n{176} \n}":3827.512731146106,
+   "{\n{179} \n}":3829.858063163181,
+   "{\n{182} \n}":3748.067339275593,
+   "{\n{188} \n}":3822.554736494566,
+   "{\n{191} \n}":3826.697321215195,
+   "{\n{194} \n}":3750.707058461467,
+   "{\n{197} \n}":3776.762216602414,
+   "{\n{53} \n}":3814.876874626103,
+   "{\n{77} \n}":3910.744412810328,
+   "{\n{83} \n}":4377.310571851909,
+   "{\n}":3754.336394450287
+  },
+ "potentialBreakpoints":110,
+ "singleTreeAICc":3720.696509294905,
+ "siteBreakPointSupport":{
+   "107":1.093666016411996e-145,
+   "110":9.419482020514649e-106,
+   "113":4.080498752713096e-107,
+   "116":1.148307744356522e-112,
+   "119":1.575294177235971e-30,
+   "131":3.31161503285242e-156,
+   "134":1.430481358851992e-22,
+   "137":6.644286148764824e-24,
+   "149":0.0001918710966248427,
+   "152":6.604634910122214e-17,
+   "155":0.9998081288913954,
+   "158":3.545858140319811e-13,
+   "161":5.338210964528076e-27,
+   "164":7.020923919176612e-28,
+   "167":6.151142219646424e-17,
+   "170":1.58342603481052e-32,
+   "173":4.278237717771573e-27,
+   "176":4.972239991083672e-29,
+   "179":1.539110161884534e-29,
+   "182":8.869512154905448e-12,
+   "188":5.931532870453202e-28,
+   "191":7.475084372170234e-29,
+   "194":2.36969250599814e-12,
+   "197":5.21058268850477e-18,
+   "53":2.75672511318499e-26,
+   "77":4.19780295632901e-47,
+   "83":2.03923788932908e-148
+  },
+ "timeElapsed":196,
+ "totalModelCount":28,
+ "trees":{
+   "0":{
+     "newickString":"((human:0,bonobo:0)Node1:0.006469236542151765,gorilla:0,(((((gibbon:0.07354811706004143,baboon:0.004028998985148518)Node9:0.03385380435973825,marmoset:0.009804480736428429)Node8:0.04331608195021458,squirrel:0.1483643437783099)Node7:0.5139372522431679,vervet:0.01883840418415796)Node6:0.0007175611715983949,rhesus:0.006273692561304216)Node5:0.03984991466509084)"
+    },
+   "1":{
+     "newickString":"((((human:0.09653585274333382,bonobo:0)Node3:0,gorilla:0.003785396090337294)Node2:0.2643805682875482,squirrel:0.04556009489433708)Node1:1.392945291275255e-18,(gibbon:0.04606292307177096,(baboon:0.002573250299844687,(rhesus:0,vervet:0.02616145267163701)Node12:0.04890478194823036)Node10:0.03847336585415096)Node8:0.1174793935386233,marmoset:0.07638216643984379)"
+    }
+  }
+}
