@@ -222,7 +222,7 @@ general-purpose-30 盲验证 batch 10：**8/8 项 PASS，0 FAIL**（覆盖 GWAS 
   - (iii) 范围有界：50/50 全 GD（top-LRT 筛选结构所致），13/1,214 ≈ 1.1%，prevalence 支柱与标题结论不受影响
 - **整合（5 锚点，Branch D 三层叙事）**：Methods L32 GARD 句 / Results L106 括号句 / Discussion L142 段末插入句 / Limitations (3) 整条两层重写 / Supplementary S2 GARD 整段两段式重写；串行 python 脚本 + count==1 断言
 - **盲验证**（verify-gard-r8 独立从 JSON/CSV 重算，blind_verification_r8_gard.md）：初判 6/7 PASS，声明 3 FAIL——Limitations 句括号把全 50 树中位数（2,244/1.57）误挂到 44/38 子集（子集真值 2,599.7→1.435）；已改箭头式 screen-wide 表述（与 L106/S2 一致），复核后转 PASS
-- **交付链（终版，tmp_delivery_r9gard.py）**：docx×4 重建 + 同步入包；单 PDF **62 页**（R8 为 61），**40/40 探针全过**（新增 GARD 探针 clean-realignment control / 38 of 44 / 13 of 50 / 2,244 / 13 of 1,214；旧探针 alignment-block 因 PDF  hyphen 断词替换为 codon site model——探针仅换词不换证据）；zip **9.37 MB / 150 文件** CRC OK
+- **交付链（终版）**：docx×4 重建 + 同步入包；单 PDF **62 页**（R8 为 61），**41/41 探针全过**（新增 GARD 探针 clean-realignment control / 38 of 44 / 13 of 50 / 2,244 / 13 of 1,214；旧探针 alignment-block 的 manuscript 锚点已被 GARD 整合措辞取代、S2 残留不在单 PDF 收录范围 → 同步替换为 alignment artifacts，主稿 4 处命中）；zip **15.22 MB / 150 文件** CRC OK
   - 包文件数较 R8（191）少 41：R6 时代 expected_outputs/phase9_hardening/gwas_confound_*.csv 28 个中间表源文件已清理不可恢复（汇总 gwas_confound_calibration.json + 生成脚本在包内，可完整重算）；其余为历史结构漂移
   - 事故记录：交付前曾误跑 v8 时代旧打包脚本（paperA_build_submission_package.py），purge 重建包内 code/data/expected_outputs/manuscript/supplementary 并覆盖 zip；numbered 目录（01–07）未受损，R6 内容已按 tmp_delivery_r6.py 重放恢复（30 脚本 + 20 输出 + README 附录）；早前后台任务的 UnicodeDecodeError 为 subprocess UTF-8/GBK 解码冲突，新脚本全部 subprocess 加 encoding/errors=replace 根除
-- **CRSHE**：gard_clean_control_r8.json/csv + gard_rerun_clean_rc4/（50）+ gard_rerun_clean_rc2/（50）+ blind_verification_r8_gard.md + 本日志 → commit **96f27f2**；本条目更新同步见下一 commit
+- **CRSHE**：gard_clean_control_r8.json/csv + blind_verification_r8_gard.md + 本日志 → commit **e9074a6**；gard_rerun_clean_rc4/（50）+ gard_rerun_clean_rc2/（50）+ 本条目更新 → commit **1f3d654**
