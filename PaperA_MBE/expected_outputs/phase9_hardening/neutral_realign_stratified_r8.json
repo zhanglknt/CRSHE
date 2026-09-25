@@ -1,0 +1,279 @@
+{
+  "description": "R8 mechanism decomposition of the null realignment inflation (companion to neutral_realign_calibration_r8.json). Null deltas are per-stratum (realigned p<0.05 rate - matched-baseline p<0.05 rate). Real-data block recomputes the stratified-400 gain shape on identical axes (frac_removed / kept_cols terciles), with both BH-q-based rates (comparable to the +14.8pp headline) and raw p<0.05 rates (strictly matched to the null calibration metric). LRT-tercile stratification is degenerate under null (74.7%/45.7% of baseline nulls have LRT=0, p=0.5 point mass) and is therefore not reported.",
+  "null_r7_parametric": {
+    "set": "R7_parametric_null",
+    "n_common": 383,
+    "by_frac_removed": [
+      {
+        "tercile": "low",
+        "frac_removed_range": [
+          0.0,
+          0.5437
+        ],
+        "n": 127,
+        "baseline_p_lt_0.05": 0.0236,
+        "realigned_p_lt_0.05": 0.1102,
+        "delta_pp": 8.66,
+        "baseline_n_sig": 3,
+        "realigned_n_sig": 14
+      },
+      {
+        "tercile": "mid",
+        "frac_removed_range": [
+          0.5442,
+          0.6864
+        ],
+        "n": 128,
+        "baseline_p_lt_0.05": 0.0078,
+        "realigned_p_lt_0.05": 0.1484,
+        "delta_pp": 14.06,
+        "baseline_n_sig": 1,
+        "realigned_n_sig": 19
+      },
+      {
+        "tercile": "high",
+        "frac_removed_range": [
+          0.6879,
+          0.9218
+        ],
+        "n": 128,
+        "baseline_p_lt_0.05": 0.0078,
+        "realigned_p_lt_0.05": 0.125,
+        "delta_pp": 11.72,
+        "baseline_n_sig": 1,
+        "realigned_n_sig": 16
+      }
+    ],
+    "by_kept_cols": [
+      {
+        "tercile": "low",
+        "kept_cols_range": [
+          76.0,
+          446.0
+        ],
+        "n": 127,
+        "baseline_p_lt_0.05": 0.0079,
+        "realigned_p_lt_0.05": 0.0394,
+        "delta_pp": 3.15,
+        "baseline_n_sig": 1,
+        "realigned_n_sig": 5
+      },
+      {
+        "tercile": "mid",
+        "kept_cols_range": [
+          449.0,
+          871.0
+        ],
+        "n": 128,
+        "baseline_p_lt_0.05": 0.0234,
+        "realigned_p_lt_0.05": 0.125,
+        "delta_pp": 10.16,
+        "baseline_n_sig": 3,
+        "realigned_n_sig": 16
+      },
+      {
+        "tercile": "high",
+        "kept_cols_range": [
+          873.0,
+          3746.0
+        ],
+        "n": 128,
+        "baseline_p_lt_0.05": 0.0078,
+        "realigned_p_lt_0.05": 0.2188,
+        "delta_pp": 21.09,
+        "baseline_n_sig": 1,
+        "realigned_n_sig": 28
+      }
+    ]
+  },
+  "null_r6_fixed": {
+    "set": "R6_fixed_param_null",
+    "n_common": 398,
+    "by_frac_removed": [
+      {
+        "tercile": "low",
+        "frac_removed_range": [
+          0.0,
+          0.519
+        ],
+        "n": 132,
+        "baseline_p_lt_0.05": 0.0076,
+        "realigned_p_lt_0.05": 0.1742,
+        "delta_pp": 16.67,
+        "baseline_n_sig": 1,
+        "realigned_n_sig": 23
+      },
+      {
+        "tercile": "mid",
+        "frac_removed_range": [
+          0.5227,
+          0.65
+        ],
+        "n": 133,
+        "baseline_p_lt_0.05": 0.0226,
+        "realigned_p_lt_0.05": 0.188,
+        "delta_pp": 16.54,
+        "baseline_n_sig": 3,
+        "realigned_n_sig": 25
+      },
+      {
+        "tercile": "high",
+        "frac_removed_range": [
+          0.6515,
+          0.9618
+        ],
+        "n": 133,
+        "baseline_p_lt_0.05": 0.0226,
+        "realigned_p_lt_0.05": 0.2105,
+        "delta_pp": 18.8,
+        "baseline_n_sig": 3,
+        "realigned_n_sig": 28
+      }
+    ],
+    "by_kept_cols": [
+      {
+        "tercile": "low",
+        "kept_cols_range": [
+          37.0,
+          423.0
+        ],
+        "n": 132,
+        "baseline_p_lt_0.05": 0.0076,
+        "realigned_p_lt_0.05": 0.1364,
+        "delta_pp": 12.88,
+        "baseline_n_sig": 1,
+        "realigned_n_sig": 18
+      },
+      {
+        "tercile": "mid",
+        "kept_cols_range": [
+          430.0,
+          912.0
+        ],
+        "n": 133,
+        "baseline_p_lt_0.05": 0.0226,
+        "realigned_p_lt_0.05": 0.203,
+        "delta_pp": 18.05,
+        "baseline_n_sig": 3,
+        "realigned_n_sig": 27
+      },
+      {
+        "tercile": "high",
+        "kept_cols_range": [
+          917.0,
+          3848.0
+        ],
+        "n": 133,
+        "baseline_p_lt_0.05": 0.0226,
+        "realigned_p_lt_0.05": 0.2331,
+        "delta_pp": 21.05,
+        "baseline_n_sig": 3,
+        "realigned_n_sig": 31
+      }
+    ]
+  },
+  "real_data": {
+    "set": "real_data_stratified_400",
+    "n_common": 393,
+    "by_frac_removed": [
+      {
+        "tercile": "low",
+        "frac_removed_range": [
+          0.0,
+          0.554
+        ],
+        "n": 131,
+        "baseline_qsig_rate": 0.3664,
+        "realign_qsig_rate": 0.5191,
+        "delta_qsig_pp": 15.27,
+        "gained": 28,
+        "lost": 8,
+        "baseline_p_lt_0.05": 0.374,
+        "realign_p_lt_0.05": 0.5191,
+        "delta_p_lt_0.05_pp": 14.5
+      },
+      {
+        "tercile": "mid",
+        "frac_removed_range": [
+          0.557,
+          0.6818
+        ],
+        "n": 131,
+        "baseline_qsig_rate": 0.4962,
+        "realign_qsig_rate": 0.7099,
+        "delta_qsig_pp": 21.37,
+        "gained": 39,
+        "lost": 11,
+        "baseline_p_lt_0.05": 0.4962,
+        "realign_p_lt_0.05": 0.7176,
+        "delta_p_lt_0.05_pp": 22.14
+      },
+      {
+        "tercile": "high",
+        "frac_removed_range": [
+          0.6826,
+          0.9145
+        ],
+        "n": 131,
+        "baseline_qsig_rate": 0.6183,
+        "realign_qsig_rate": 0.6947,
+        "delta_qsig_pp": 7.63,
+        "gained": 29,
+        "lost": 19,
+        "baseline_p_lt_0.05": 0.6336,
+        "realign_p_lt_0.05": 0.6947,
+        "delta_p_lt_0.05_pp": 6.11
+      }
+    ],
+    "by_kept_cols": [
+      {
+        "tercile": "low",
+        "kept_cols_range": [
+          79.0,
+          474.0
+        ],
+        "n": 131,
+        "baseline_qsig_rate": 0.3817,
+        "realign_qsig_rate": 0.4275,
+        "delta_qsig_pp": 4.58,
+        "gained": 25,
+        "lost": 19,
+        "baseline_p_lt_0.05": 0.3817,
+        "realign_p_lt_0.05": 0.4275,
+        "delta_p_lt_0.05_pp": 4.58
+      },
+      {
+        "tercile": "mid",
+        "kept_cols_range": [
+          475.0,
+          937.0
+        ],
+        "n": 131,
+        "baseline_qsig_rate": 0.4809,
+        "realign_qsig_rate": 0.626,
+        "delta_qsig_pp": 14.5,
+        "gained": 31,
+        "lost": 12,
+        "baseline_p_lt_0.05": 0.4962,
+        "realign_p_lt_0.05": 0.6336,
+        "delta_p_lt_0.05_pp": 13.74
+      },
+      {
+        "tercile": "high",
+        "kept_cols_range": [
+          937.0,
+          3579.0
+        ],
+        "n": 131,
+        "baseline_qsig_rate": 0.6183,
+        "realign_qsig_rate": 0.8702,
+        "delta_qsig_pp": 25.19,
+        "gained": 40,
+        "lost": 7,
+        "baseline_p_lt_0.05": 0.626,
+        "realign_p_lt_0.05": 0.8702,
+        "delta_p_lt_0.05_pp": 24.43
+      }
+    ]
+  }
+}

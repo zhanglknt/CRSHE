@@ -1,0 +1,33 @@
+realigned: n_json=800 with_p=790 bad=10
+  realign_bad ENSG00000009790 lt50bytes
+  realign_bad ENSG00000033100 lt50bytes
+  realign_bad ENSG00000050165 lt50bytes
+  realign_bad ENSG00000060339 lt50bytes
+  realign_bad ENSG00000065243 lt50bytes
+  realign_bad ENSG00000087116 lt50bytes
+  realign_bad ENSG00000106462 lt50bytes
+  realign_bad ENSG00000135677 lt50bytes
+  realign_bad ENSG00000150760 lt50bytes
+  realign_bad ENSG00000160767 lt50bytes
+sim2 baseline: with_p=388 bad=12
+  sim2_bad ENSG00000004700 lt50bytes
+  sim2_bad ENSG00000006042 lt50bytes
+  sim2_bad ENSG00000050165 lt50bytes
+  sim2_bad ENSG00000060339 lt50bytes
+  sim2_bad ENSG00000106723 lt50bytes
+  sim2_bad ENSG00000142606 lt50bytes
+  sim2_bad ENSG00000150760 lt50bytes
+  sim2_bad ENSG00000151694 lt50bytes
+  sim2_bad ENSG00000153294 lt50bytes
+  sim2_bad ENSG00000155755 lt50bytes
+sim(R6) baseline: with_p=400 bad=0
+[R7(sim2)] baseline_with_p=388 realigned_with_p=790 common=383 missing_in_realigned=5 realigned_not_in_baseline=407
+  missing_in_realigned_list=ENSG00000065243;ENSG00000087116;ENSG00000106462;ENSG00000135677;ENSG00000160767
+[R6(sim)] baseline_with_p=400 realigned_with_p=790 common=398 missing_in_realigned=2 realigned_not_in_baseline=392
+  missing_in_realigned_list=ENSG00000009790;ENSG00000033100
+spot-check realigned JSONs:
+  ENSG00000181754 size=107699 p=0.5 LRT=-7.75541548136971e-05 shared_k=False
+  ENSG00000106268 size=52962 p=0.5 LRT=0 shared_k=False
+  ENSG00000053328 size=97881 p=0.5 LRT=-0.001065601621121459 shared_k=False
+  ENSG00000213231 size=41783 p=0.2809176384297678 LRT=1.153093147368054 shared_k=False
+  ENSG00000136286 size=498496 p=0.5 LRT=0 shared_k=False

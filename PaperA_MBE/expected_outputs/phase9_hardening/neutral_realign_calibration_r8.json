@@ -1,0 +1,65 @@
+{
+  "description": "R8 optional Task 2: matched neutral calibration for the +14.8pp detection-rate increase observed after codon-aware realignment of the stratified 400 genes. The same realignment+filtering pipeline applied to omega=1 neutral simulations; BUSTED srv=No with per-gene trees; all alignments null by construction. Primary comparison uses the R7 Task 2 parametric-bootstrap set (per-gene null MLE params); the R6 fixed-param set serves as an independent replication (the realign output directory accumulated both sets, and each is compared only to its OWN matched baseline). If realignment inflated detection under null, the artifact interpretation would hold; if rates stay at the conservative null level, the +14.8pp reflects genuine power gain.",
+  "primary_r7_parametric": {
+    "set": "R7_parametric_null_400",
+    "n_common": 383,
+    "baseline": {
+      "n": 383,
+      "p_lt_0.05": 0.013054830287206266,
+      "p_eq_0.5": 0.7467362924281984,
+      "bh_fdr": 0.0026109660574412533,
+      "n_rejections": 1
+    },
+    "realigned": {
+      "n": 383,
+      "p_lt_0.05": 0.1279373368146214,
+      "p_eq_0.5": 0.6422976501305483,
+      "bh_fdr": 0.09660574412532637,
+      "n_rejections": 37
+    },
+    "delta_p_lt_0.05_pp": 11.49,
+    "delta_bh_fdr_pp": 9.4
+  },
+  "replication_r6_fixed": {
+    "set": "R6_fixed_param_null_400",
+    "n_common": 398,
+    "baseline": {
+      "n": 398,
+      "p_lt_0.05": 0.017587939698492462,
+      "p_eq_0.5": 0.457286432160804,
+      "bh_fdr": 0.0,
+      "n_rejections": 0
+    },
+    "realigned": {
+      "n": 398,
+      "p_lt_0.05": 0.19095477386934673,
+      "p_eq_0.5": 0.41959798994974873,
+      "bh_fdr": 0.17839195979899497,
+      "n_rejections": 71
+    },
+    "delta_p_lt_0.05_pp": 17.34,
+    "delta_bh_fdr_pp": 17.84
+  },
+  "combined": {
+    "set": "combined_800",
+    "n_common": 781,
+    "baseline": {
+      "n": 781,
+      "p_lt_0.05": 0.015364916773367477,
+      "p_eq_0.5": 0.5992317541613317,
+      "bh_fdr": 0.0012804097311139564,
+      "n_rejections": 1
+    },
+    "realigned": {
+      "n": 781,
+      "p_lt_0.05": 0.16005121638924455,
+      "p_eq_0.5": 0.528809218950064,
+      "bh_fdr": 0.1382842509603073,
+      "n_rejections": 108
+    },
+    "delta_p_lt_0.05_pp": 14.47,
+    "delta_bh_fdr_pp": 13.7
+  },
+  "n_realigned_total": 790,
+  "reference_real_data": "stratified 400: baseline 49.4% -> realigned 64.1% (+14.8pp)"
+}

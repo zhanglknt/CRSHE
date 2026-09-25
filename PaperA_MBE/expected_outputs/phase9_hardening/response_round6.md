@@ -226,3 +226,15 @@ general-purpose-30 盲验证 batch 10：**8/8 项 PASS，0 FAIL**（覆盖 GWAS 
   - 包文件数较 R8（191）少 41：R6 时代 expected_outputs/phase9_hardening/gwas_confound_*.csv 28 个中间表源文件已清理不可恢复（汇总 gwas_confound_calibration.json + 生成脚本在包内，可完整重算）；其余为历史结构漂移
   - 事故记录：交付前曾误跑 v8 时代旧打包脚本（paperA_build_submission_package.py），purge 重建包内 code/data/expected_outputs/manuscript/supplementary 并覆盖 zip；numbered 目录（01–07）未受损，R6 内容已按 tmp_delivery_r6.py 重放恢复（30 脚本 + 20 输出 + README 附录）；早前后台任务的 UnicodeDecodeError 为 subprocess UTF-8/GBK 解码冲突，新脚本全部 subprocess 加 encoding/errors=replace 根除
 - **CRSHE**：gard_clean_control_r8.json/csv + blind_verification_r8_gard.md + 本日志 → commit **e9074a6**；gard_rerun_clean_rc4/（50）+ gard_rerun_clean_rc2/（50）+ 本条目更新 → commit **1f3d654**
+
+## R8 交付后补充（可选任务 2 收口）：匹配 null 校准 → +14.8pp 解读反转（9/24 下午，用户决策 A 立即整合）
+
+- **计算**：800 个 ω=1 零模拟（R7 参数化 400 + R6 固定参数 400）经同一 codon-aware 重比对+过滤管线重跑 BUSTED（08:37→11:24，790/800 完成，10 个超时截断文件）
+- **结果（neutral_realign_calibration_r8.json；lead 独立复算 + 盲验证双重核销）**：null 检出率 R7 1.31%→12.79%（**+11.49pp**，BH 拒绝 1→37）、R6 1.76%→19.10%（**+17.34pp**，0→71）、combined（n=781）1.54%→16.01%（**+14.47pp**，1→108）——与真数据 +14.8pp 同向同量级；p=0.5 截断点质量 74.7%→64.2% / 45.7%→42.0%（重比对向 null 注入 LRT>0 噪声的指纹）
+- **机制（neutral_realign_stratified_r8.json）**：kept_cols（重比对后比对长度）轴三组全单调递增（R7 +3.1/+10.2/+21.1、R6 +12.9/+18.0/+21.1、真数据 BH 口径 +4.6/+14.5/+25.2）——真数据增益形态与 null 伪影形态平行（长度依赖指纹）；frac_removed 轴无单调剂量反应；LRT 分层退化（null 点质量）未报
+- **判读反转**：R7 Task 1"重比对=去噪增功率"解读撤回——重比对敏感性不能作功率增益证据；主口径回 production 基线（样本内 49.4% / 全域 srv 29.2% [26.4–32.1]）；64.1% 仅作方法学界限。限定保留：indel-free 模拟 gap 系事后叠加（与序列变异解耦，对重比对最不利），幅度或高估，但不恢复功率解读。基线 49.4% vs null 1.5%（33×）→ BUSTED 主体结论不动
+- **对 R8 审稿的回应**：stats 第 4 条（"对该变体跑同一 evolver null"）已实证完成且证实其担忧；molevol M1-iv（srv×realign 交叉）以"该变体已被自家 null 校准证为 FP 膨胀、交叉无信息量"合理 decline
+- **整合（5 锚点，串行脚本 + count==1 断言）**：L142 Discussion"不裁决"句→校准裁决句（主口径回 production）/ L176 Limitations (2) 短版补校准+限定 / L32 Methods 补校准设计句 / Supplementary 新增 S7 节（校准全数字+机制+自身局限）/ cover letter 表述改为"校准归因于管线 null 膨胀，production 为主"
+- **盲验证（verify-nullcal-r8，blind_verification_r8_nullcal.md）**：A–G **7/7 PASS 可交付**；三条低优先注释已修（+3.2→+3.1 三处、+18.1→+18.0 一处，按精确计数舍入；S7 "balanced across sets" 措辞中性化——10 个超时文件的分组归属不可证明）
+- **交付链**：docx×4 重建 + 入包；单 PDF **63 页**（+1），**44/44 探针全过**（新增 matched null calibration / 16.0% / +14.5 / Supplementary Text S7）；zip **15.24 MB / 158 文件** CRC OK（+8：3 个校准产物入 expected_outputs/phase9_hardening + 5 个 phase9_r8 脚本入 code/analysis/phase9_r8/）；800 个 per-gene BUSTED JSON（164MB）按 neutral_sim_* 先例不入 CRSHE（汇总 JSON + pvalues CSV + collector 脚本齐备，可完整重算）
+- **CRSHE**：本条目随本次提交推送（hash 见 git log）
